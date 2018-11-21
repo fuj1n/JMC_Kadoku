@@ -8,4 +8,4 @@ Team
 | ------ | ---- |
 | Arthur Uzulin | Programmer |
 | Fabian Figueroa | Artist/Designer |
-| Jin Lun Tang | 3D Artist |
+| Teng Jing Lun | 3D Artist |
