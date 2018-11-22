@@ -41,6 +41,11 @@ public static class BlockFactory
     /// <returns>The game object that contains the given block</returns>
     public static GameObject CreateBlock(RectTransform parent, Vector2 anchorMin, Vector2 anchorMax, Vector2 pos, Vector2 size, Color color, int fillType, params int[] types)
     {
+        return CreateBlock(parent, anchorMin, anchorMax, pos, size, color, null, null, fillType, types);
+    }
+
+    public static GameObject CreateBlock(RectTransform parent, Vector2 anchorMin, Vector2 anchorMax, Vector2 pos, Vector2 size, Color color, Vector2[] inConnectors, Vector2[] outConnectors, int fillType, params int[] types)
+    {
         // Ensure the length of types is 4, and resize it using various strategies based on length
         if (types.Length != 4)
         {
