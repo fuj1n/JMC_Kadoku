@@ -9,6 +9,7 @@ public class ScrollableArea : MonoBehaviour, IDragHandler, IScrollHandler
     public Button centerButton;
 
     public float zoomSensitivity = 0.25F;
+    public RectTransform zoomAnchor;
 
     public Image grid;
     public TextMeshProUGUI coords;
@@ -23,7 +24,12 @@ public class ScrollableArea : MonoBehaviour, IDragHandler, IScrollHandler
             centerButton.onClick.AddListener(() => content.anchoredPosition = Vector2.zero);
 
         if (grid)
+        {
             gridRect = grid.GetComponent<RectTransform>();
+
+            gridRect.offsetMin = -grid.sprite.rect.size;
+            gridRect.offsetMax = grid.sprite.rect.size;
+        }
 
         if (coords)
         {
@@ -38,8 +44,8 @@ public class ScrollableArea : MonoBehaviour, IDragHandler, IScrollHandler
 
         if (grid)
         {
-            float y = content.anchoredPosition.y % (grid.sprite.bounds.size.y * grid.sprite.pixelsPerUnit * gridRect.localScale.y);
-            float x = content.anchoredPosition.x % (grid.sprite.bounds.size.x * grid.sprite.pixelsPerUnit * gridRect.localScale.x);
+            float x = (content.anchoredPosition.x * zoomAnchor.localScale.x) % (grid.sprite.rect.size.x * gridRect.localScale.x);
+            float y = (content.anchoredPosition.y * zoomAnchor.localScale.x) % (grid.sprite.rect.size.y * gridRect.localScale.y);
 
             gridRect.anchoredPosition = new Vector2(x, y);
         }
@@ -49,13 +55,13 @@ public class ScrollableArea : MonoBehaviour, IDragHandler, IScrollHandler
 
     public void OnScroll(PointerEventData eventData)
     {
-        content.localScale += Vector3.one * eventData.scrollDelta.y * zoomSensitivity;
+        Vector3 zoom = zoomAnchor.localScale + Vector3.one * eventData.scrollDelta.y * zoomSensitivity;
 
-        float x = Mathf.Clamp(content.localScale.x, .25F, 4F);
-        float y = Mathf.Clamp(content.localScale.y, .25F, 4F);
-        float z = Mathf.Clamp(content.localScale.z, .25F, 4F);
+        zoom.x = Mathf.Clamp(zoom.x, .25F, 4F);
+        zoom.y = Mathf.Clamp(zoom.y, .25F, 4F);
+        zoom.z = Mathf.Clamp(zoom.z, .25F, 4F);
 
-        content.localScale = new Vector3(x, y, z);
+        zoomAnchor.localScale = zoom;
     }
 
     private void UpdateCoords()
