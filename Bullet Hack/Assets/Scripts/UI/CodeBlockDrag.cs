@@ -11,21 +11,17 @@ public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, 
     private RectTransform rect;
     private Outline outline;
 
-    private CanvasScaler scaler;
-
     private void Awake()
     {
         rect = GetComponent<RectTransform>();
 
         outline = GetComponent<Outline>();
         outline.DOFade(0F, 0F);
-
-        scaler = GetComponentInParent<CanvasScaler>();
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        rect.anchoredPosition += eventData.delta / scaler.transform.lossyScale;
+        rect.anchoredPosition += eventData.delta / rect.parent.lossyScale;
     }
 
     public void OnEndDrag(PointerEventData eventData)

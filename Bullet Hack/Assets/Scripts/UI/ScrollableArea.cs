@@ -14,14 +14,11 @@ public class ScrollableArea : MonoBehaviour, IDragHandler, IScrollHandler
     public TextMeshProUGUI coords;
 
     private RectTransform gridRect;
-    private CanvasScaler scaler;
 
     private string coordsFormat;
 
     private void Awake()
     {
-        scaler = GetComponentInParent<CanvasScaler>();
-
         if (centerButton)
             centerButton.onClick.AddListener(() => content.anchoredPosition = Vector2.zero);
 
@@ -37,7 +34,7 @@ public class ScrollableArea : MonoBehaviour, IDragHandler, IScrollHandler
 
     public void OnDrag(PointerEventData eventData)
     {
-        content.anchoredPosition += eventData.delta / scaler.transform.localScale.x;
+        content.anchoredPosition += eventData.delta / content.parent.lossyScale;
 
         if (grid)
         {
