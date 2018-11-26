@@ -11,6 +11,7 @@ public class ScrollableArea : MonoBehaviour, IDragHandler, IScrollHandler
 
     public float zoomSensitivity = 0.1F;
     public RectTransform zoomAnchor;
+    public Vector2 zoomRange = new Vector2(.25F, 4F);
 
     public Image grid;
     public TextMeshProUGUI coords;
@@ -32,8 +33,7 @@ public class ScrollableArea : MonoBehaviour, IDragHandler, IScrollHandler
         {
             gridRect = grid.GetComponent<RectTransform>();
 
-            gridRect.offsetMin = -grid.sprite.rect.size;
-            gridRect.offsetMax = grid.sprite.rect.size;
+            gridRect.localScale = Vector3.one * zoomAmount;
         }
 
         if (coords)
@@ -60,9 +60,12 @@ public class ScrollableArea : MonoBehaviour, IDragHandler, IScrollHandler
 
     public void OnScroll(PointerEventData eventData)
     {
-        zoomAmount = Mathf.Clamp(zoomAmount + eventData.scrollDelta.y * zoomSensitivity, .25F, 4F);
+        zoomAmount = Mathf.Clamp(zoomAmount + eventData.scrollDelta.y * zoomSensitivity, zoomRange.x, zoomRange.y);
 
         zoomAnchor.DOScale(zoomAmount, .25F);
+
+        if (grid)
+            gridRect.DOScale(zoomAmount, .25F);
     }
 
     private void UpdateCoords()
