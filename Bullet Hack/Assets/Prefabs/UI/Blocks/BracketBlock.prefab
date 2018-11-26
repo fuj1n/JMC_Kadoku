@@ -181,7 +181,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb86dbc4a69627043a64dd770906ed0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cloneDrag: 0
+  cloneTarget: {fileID: 0}
+  undeletable: 0
   outlineHover: {r: 0, g: 1, b: 1, a: 1}
+  outlineDelete: {r: 1, g: 0, b: 0, a: 1}
   fadeTime: 0.5
 --- !u!114 &114619445481450044
 MonoBehaviour:
