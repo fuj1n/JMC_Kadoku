@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
-public class BlockConnectorIn : MonoBehaviour {
+public class BlockConnectorIn : MonoBehaviour
+{
     private CodeBlockDrag parent;
 
     private Transform anchor;

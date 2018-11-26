@@ -19,6 +19,8 @@ public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, 
     private RectTransform rect;
     private Outline outline;
 
+    private BlockManagerBase blockManager;
+
     private EventSystem system;
 
     private Transform inAnchor;
@@ -27,6 +29,7 @@ public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, 
     private void Awake()
     {
         rect = GetComponent<RectTransform>();
+        blockManager = GetComponent<BlockManager>();
 
         outline = GetComponent<Outline>();
         outline.DOFade(0F, 0F);
@@ -44,6 +47,9 @@ public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, 
             system.SetSelectedGameObject(null, eventData);
             cloneDrag = false;
         }
+
+        if (blockManager is BlockManager)
+            ((BlockManager)blockManager).DisconnectParent();
 
         transform.SetParent(root, true);
         transform.localScale = Vector3.one;
@@ -71,18 +77,18 @@ public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, 
         else if (!eventData.hovered.Contains(gameObject))
             outline.DOFade(0F, fadeTime);
 
-        if (target)
+        if (target && blockManager is BlockManager)
         {
-            // Prevent snapping when there's already a block there
-            foreach (Transform t in target)
-                if (t.CompareTag("UI-Block"))
-                    return;
+            BlockManagerBase bm = target.GetComponentInParent<BlockManagerBase>();
+            if (!bm)
+                return;
+
+            RectTransform anchor = bm.Connect(target, (BlockManager)blockManager);
+
+            if (!anchor)
+                return;
 
             rect.SetParent(target);
-
-            Transform anchor = target.Find("Anchor");
-            if (!anchor)
-                anchor = target;
 
             rect.position += anchor.position - inAnchor.position;
         }

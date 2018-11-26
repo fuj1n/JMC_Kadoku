@@ -71,6 +71,7 @@ GameObject:
   - component: {fileID: 114140182329845732}
   - component: {fileID: 114325134179140582}
   - component: {fileID: 114243128745824782}
+  - component: {fileID: 114730895285975364}
   m_Layer: 5
   m_Name: StartBlock
   m_TagString: UI-Block
@@ -275,6 +276,19 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &114730895285975364
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1867309994815626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c04f6a4d6e8b1446a87dda5361790aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outAnchor: {fileID: 224580714236670928}
+  outConnector: {fileID: 0}
 --- !u!222 &222605432559729236
 CanvasRenderer:
   m_ObjectHideFlags: 1

@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 224913256156787252}
   - component: {fileID: 61190925686350856}
   m_Layer: 5
-  m_Name: Block
+  m_Name: Bracket
   m_TagString: Block_OUT
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 114619445481450044}
   - component: {fileID: 114772798308417744}
   - component: {fileID: 114470184886502232}
-  - component: {fileID: 114769737402046240}
+  - component: {fileID: 114424605186125848}
   m_Layer: 5
   m_Name: BracketBlock
   m_TagString: UI-Block
@@ -249,6 +249,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec4dd83e4070ae042b6b1447f6841ffa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114424605186125848
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1640836221852848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 402fab7070253d941ac0bad235d78dfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outAnchor: {fileID: 224694022040495240}
+  outConnector: {fileID: 0}
+  inAnchor: {fileID: 224852282691029508}
+  inConnector: {fileID: 0}
+  bracketAnchor: {fileID: 224029353943890260}
+  bracketConnector: {fileID: 0}
 --- !u!114 &114470184886502232
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -409,19 +426,6 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &114769737402046240
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1640836221852848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0a6a31738db0df479361231ac3f4d45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  expandPoint: {fileID: 224913256156787252}
-  inputHeight: 32
 --- !u!114 &114772798308417744
 MonoBehaviour:
   m_ObjectHideFlags: 1
