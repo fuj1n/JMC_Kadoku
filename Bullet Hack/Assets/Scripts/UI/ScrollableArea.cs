@@ -2,13 +2,14 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class ScrollableArea : MonoBehaviour, IDragHandler, IScrollHandler
 {
     public RectTransform content;
     public Button centerButton;
 
-    public float zoomSensitivity = 0.25F;
+    public float zoomSensitivity = 0.1F;
     public RectTransform zoomAnchor;
 
     public Image grid;
@@ -18,8 +19,12 @@ public class ScrollableArea : MonoBehaviour, IDragHandler, IScrollHandler
 
     private string coordsFormat;
 
+    private float zoomAmount = 1F;
+
     private void Awake()
     {
+        zoomAnchor.localScale = Vector3.one * zoomAmount;
+
         if (centerButton)
             centerButton.onClick.AddListener(() => content.anchoredPosition = Vector2.zero);
 
@@ -55,13 +60,9 @@ public class ScrollableArea : MonoBehaviour, IDragHandler, IScrollHandler
 
     public void OnScroll(PointerEventData eventData)
     {
-        Vector3 zoom = zoomAnchor.localScale + Vector3.one * eventData.scrollDelta.y * zoomSensitivity;
+        zoomAmount = Mathf.Clamp(zoomAmount + eventData.scrollDelta.y * zoomSensitivity, .25F, 4F);
 
-        zoom.x = Mathf.Clamp(zoom.x, .25F, 4F);
-        zoom.y = Mathf.Clamp(zoom.y, .25F, 4F);
-        zoom.z = Mathf.Clamp(zoom.z, .25F, 4F);
-
-        zoomAnchor.localScale = zoom;
+        zoomAnchor.DOScale(zoomAmount, .25F);
     }
 
     private void UpdateCoords()

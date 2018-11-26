@@ -32,7 +32,9 @@ public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, 
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        outline.effectColor = outlineHover;
+        Color c = outlineHover;
+        c.a = outline.effectColor.a;
+        outline.effectColor = c;
         outline.DOFade(1F, fadeTime);
     }
 

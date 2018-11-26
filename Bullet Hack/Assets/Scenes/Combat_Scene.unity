@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44875962, g: 0.49516672, b: 0.5560866, a: 1}
+  m_IndirectSpecularColor: {r: 0.44875914, g: 0.49516612, b: 0.556086, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1923,7 +1923,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   content: {fileID: 587255821}
   centerButton: {fileID: 1034019934}
-  zoomSensitivity: 0.25
+  zoomSensitivity: 0.1
   zoomAnchor: {fileID: 1586128123}
   grid: {fileID: 968902596}
   coords: {fileID: 26199364}
@@ -2674,7 +2674,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0000067263677, y: -0.000012045042}
+  m_AnchoredPosition: {x: 0.0000067263677, y: 0.000033731325}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &666481186
