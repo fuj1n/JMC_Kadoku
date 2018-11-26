@@ -30,6 +30,7 @@ TextureImporter:
     21300050: box_square
     21300052: box_bevel
     21300054: box_square_tab
+    21300056: block_IN
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -227,6 +228,26 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 8e1ed2ab7e70e534f891c75ea486ad7c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: block_IN
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 2004
+        width: 78
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7807c68629f35ba41a9cb6d03ec38a65
       vertices: []
       indices: 
       edges: []

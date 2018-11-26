@@ -7,8 +7,8 @@ using UnityEngine.UI;
 public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, IPointerExitHandler, IBeginDragHandler, IEndDragHandler
 {
     public bool cloneDrag;
-    [ConditionalHide(true, ConditionalSourceField = "cloneDrag")]
-    public RectTransform cloneTarget;
+
+    public RectTransform root;
 
     public bool undeletable;
 
@@ -20,6 +20,9 @@ public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, 
     private Outline outline;
 
     private EventSystem system;
+
+    private Transform inAnchor;
+    private Transform target;
 
     private void Awake()
     {
@@ -33,14 +36,18 @@ public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, 
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        if (cloneDrag && cloneTarget)
+        target = null;
+
+        if (cloneDrag)
         {
             Instantiate(gameObject, transform.parent).name = gameObject.name;
-            transform.SetParent(cloneTarget, true);
-            transform.localScale = Vector3.one;
             system.SetSelectedGameObject(null, eventData);
             cloneDrag = false;
         }
+
+        transform.SetParent(root, true);
+        transform.localScale = Vector3.one;
+        transform.SetAsLastSibling();
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -62,6 +69,13 @@ public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, 
             Destroy(gameObject);
         else if (!eventData.hovered.Contains(gameObject))
             outline.DOFade(0F, fadeTime);
+
+        if (target)
+        {
+
+
+            
+        }
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -78,5 +92,11 @@ public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, 
             return;
 
         outline.DOFade(0F, fadeTime);
+    }
+
+    public void SetTargetBlock(Transform inAnchor, Transform t)
+    {
+        this.inAnchor = inAnchor;
+        target = t;
     }
 }
