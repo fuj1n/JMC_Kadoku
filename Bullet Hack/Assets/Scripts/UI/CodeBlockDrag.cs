@@ -73,6 +73,11 @@ public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, 
 
         if (target)
         {
+            // Prevent snapping when there's already a block there
+            foreach (Transform t in target)
+                if (t.CompareTag("UI-Block"))
+                    return;
+
             rect.SetParent(target);
 
             Transform anchor = target.Find("Anchor");
