@@ -27,7 +27,7 @@ public class ScrollableArea : MonoBehaviour, IDragHandler, IScrollHandler
         zoomAnchor.localScale = Vector3.one * zoomAmount;
 
         if (centerButton)
-            centerButton.onClick.AddListener(() => content.anchoredPosition = Vector2.zero);
+            centerButton.onClick.AddListener(() => UpdatePosition(Vector2.zero));
 
         if (grid)
         {
@@ -45,7 +45,12 @@ public class ScrollableArea : MonoBehaviour, IDragHandler, IScrollHandler
 
     public void OnDrag(PointerEventData eventData)
     {
-        content.anchoredPosition += eventData.delta / content.parent.lossyScale;
+        UpdatePosition(content.anchoredPosition + eventData.delta / content.parent.lossyScale);
+    }
+
+    public void UpdatePosition(Vector2 newPosition)
+    {
+        content.anchoredPosition = newPosition;
 
         if (grid)
         {
