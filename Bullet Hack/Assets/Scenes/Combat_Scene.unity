@@ -253,7 +253,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -888,7 +888,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -1035,12 +1035,12 @@ Prefab:
     - target: {fileID: 224417669768281122, guid: 3808a90f8b026cd46b8f18932cb0b6c7,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 0.000061035156
       objectReference: {fileID: 0}
     - target: {fileID: 224417669768281122, guid: 3808a90f8b026cd46b8f18932cb0b6c7,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -288
+      value: -142.30006
       objectReference: {fileID: 0}
     - target: {fileID: 224417669768281122, guid: 3808a90f8b026cd46b8f18932cb0b6c7,
         type: 2}
@@ -1080,7 +1080,7 @@ Prefab:
     - target: {fileID: 224417669768281122, guid: 3808a90f8b026cd46b8f18932cb0b6c7,
         type: 2}
       propertyPath: m_Pivot.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114470184886502232, guid: 3808a90f8b026cd46b8f18932cb0b6c7,
         type: 2}
@@ -1096,11 +1096,6 @@ Prefab:
         type: 2}
       propertyPath: m_isInputParsingRequired
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114769737402046240, guid: 3808a90f8b026cd46b8f18932cb0b6c7,
-        type: 2}
-      propertyPath: inputHeight
-      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3808a90f8b026cd46b8f18932cb0b6c7, type: 2}
@@ -1337,7 +1332,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -2205,7 +2200,7 @@ Prefab:
     - target: {fileID: 224417669768281122, guid: 3808a90f8b026cd46b8f18932cb0b6c7,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -450.00006
+      value: -304.3
       objectReference: {fileID: 0}
     - target: {fileID: 224417669768281122, guid: 3808a90f8b026cd46b8f18932cb0b6c7,
         type: 2}
@@ -2245,7 +2240,7 @@ Prefab:
     - target: {fileID: 224417669768281122, guid: 3808a90f8b026cd46b8f18932cb0b6c7,
         type: 2}
       propertyPath: m_Pivot.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114470184886502232, guid: 3808a90f8b026cd46b8f18932cb0b6c7,
         type: 2}
@@ -5911,7 +5906,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
