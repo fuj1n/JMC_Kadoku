@@ -52,10 +52,11 @@ public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, 
 
     public void OnDrag(PointerEventData eventData)
     {
-        if(!undeletable && eventData.hovered.Any(x => x.CompareTag("UI-Bin")))
+        if (!undeletable && eventData.hovered.Any(x => x && x.CompareTag("UI-Bin")))
         {
             outline.DOColor(outlineDelete, fadeTime);
-        } else
+        }
+        else
         {
             outline.DOColor(outlineHover, fadeTime);
         }
@@ -72,9 +73,13 @@ public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, 
 
         if (target)
         {
+            rect.SetParent(target);
 
+            Transform anchor = target.Find("Anchor");
+            if (!anchor)
+                anchor = target;
 
-            
+            rect.position += anchor.position - inAnchor.position;
         }
     }
 

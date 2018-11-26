@@ -104,9 +104,10 @@ GameObject:
   - component: {fileID: 114619445481450044}
   - component: {fileID: 114772798308417744}
   - component: {fileID: 114470184886502232}
+  - component: {fileID: 114769737402046240}
   m_Layer: 5
   m_Name: BracketBlock
-  m_TagString: Untagged
+  m_TagString: UI-Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -408,6 +409,18 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &114769737402046240
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1640836221852848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a6a31738db0df479361231ac3f4d45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expandPoint: {fileID: 224913256156787252}
 --- !u!114 &114772798308417744
 MonoBehaviour:
   m_ObjectHideFlags: 1
