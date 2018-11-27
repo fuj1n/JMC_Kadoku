@@ -72,6 +72,7 @@ GameObject:
   - component: {fileID: 114325134179140582}
   - component: {fileID: 114243128745824782}
   - component: {fileID: 114730895285975364}
+  - component: {fileID: 114062530741512976}
   m_Layer: 5
   m_Name: StartBlock
   m_TagString: UI-Block
@@ -104,6 +105,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 64, y: 47}
   m_EdgeRadius: 0
+--- !u!114 &114062530741512976
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1867309994815626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 799fb7923f371744d9a2a92538cfaed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: {fileID: 114421682128895540}
 --- !u!114 &114140182329845732
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -339,7 +352,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 199.2}
+  m_AnchoredPosition: {x: -144, y: 411}
   m_SizeDelta: {x: 266, y: 113.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224287237597039016

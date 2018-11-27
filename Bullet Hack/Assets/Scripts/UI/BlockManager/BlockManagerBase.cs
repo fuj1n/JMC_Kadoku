@@ -47,4 +47,9 @@ public class BlockManagerBase : MonoBehaviour
             OnHierarchyChanged();
         }
     }
+
+    public virtual BlockManager GetOutConnection()
+    {
+        return outConnector;
+    }
 }
