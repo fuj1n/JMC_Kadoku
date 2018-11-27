@@ -54,8 +54,8 @@ public class ScrollableArea : MonoBehaviour, IDragHandler, IScrollHandler
 
         if (grid)
         {
-            float x = (content.anchoredPosition.x * zoomAnchor.localScale.x) % (grid.sprite.rect.size.x * gridRect.localScale.x);
-            float y = (content.anchoredPosition.y * zoomAnchor.localScale.x) % (grid.sprite.rect.size.y * gridRect.localScale.y);
+            float x = content.anchoredPosition.x % (grid.sprite.rect.size.x * gridRect.localScale.x);
+            float y = content.anchoredPosition.y % (grid.sprite.rect.size.y * gridRect.localScale.y);
 
             gridRect.anchoredPosition = new Vector2(x, y);
         }
@@ -68,9 +68,6 @@ public class ScrollableArea : MonoBehaviour, IDragHandler, IScrollHandler
         zoomAmount = Mathf.Clamp(zoomAmount + eventData.scrollDelta.y * zoomSensitivity, zoomRange.x, zoomRange.y);
 
         zoomAnchor.DOScale(zoomAmount, .25F);
-
-        if (grid)
-            gridRect.DOScale(zoomAmount, .25F);
     }
 
     private void UpdateCoords()
