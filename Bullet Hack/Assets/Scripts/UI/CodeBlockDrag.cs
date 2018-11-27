@@ -39,6 +39,9 @@ public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, 
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        if (CombatManager.Instance.Script.IsRunning)
+            return;
+
         target = null;
 
         if (cloneDrag)
@@ -58,6 +61,9 @@ public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, 
 
     public void OnDrag(PointerEventData eventData)
     {
+        if (CombatManager.Instance.Script.IsRunning)
+            return;
+
         if (!undeletable && eventData.hovered.Any(x => x && x.CompareTag("UI-Bin")))
         {
             outline.DOColor(outlineDelete, fadeTime);
@@ -72,6 +78,9 @@ public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, 
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        if (CombatManager.Instance.Script.IsRunning)
+            return;
+
         if (!undeletable && eventData.hovered.Any(x => x.CompareTag("UI-Bin")))
             Destroy(gameObject);
         else if (!eventData.hovered.Contains(gameObject))
@@ -96,6 +105,9 @@ public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, 
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        if (CombatManager.Instance.Script.IsRunning)
+            return;
+
         Color c = outlineHover;
         c.a = outline.effectColor.a;
         outline.effectColor = c;
