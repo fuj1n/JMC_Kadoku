@@ -27,4 +27,7 @@ public abstract class ActionBase : MonoBehaviour
     public virtual BlockManagerBase GetManager() => manager;
 
     public abstract string GetName();
+
+    [System.AttributeUsage(System.AttributeTargets.Field, Inherited = true, AllowMultiple = false)]
+    public sealed class InputVarAttribute : System.Attribute{}
 }
