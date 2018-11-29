@@ -1383,7 +1383,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 353875709}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2009726533}
+        m_MethodName: FastForward
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &353875709
@@ -2166,7 +2177,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 588816744}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2009726533}
+        m_MethodName: Run
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &588816744
@@ -4527,7 +4549,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1215803933}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2009726533}
+        m_MethodName: Step
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1215803933
@@ -4639,7 +4672,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1219159243}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2009726533}
+        m_MethodName: Pause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1219159243
@@ -5937,6 +5981,12 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1850348909}
   m_CullTransparentMesh: 0
+--- !u!114 &1866370328 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114062530741512976, guid: 7061110e450a8584b8993a6280376bba,
+    type: 2}
+  m_PrefabInternal: {fileID: 486146209}
+  m_Script: {fileID: 11500000, guid: 799fb7923f371744d9a2a92538cfaed4, type: 3}
 --- !u!1 &1896487901
 GameObject:
   m_ObjectHideFlags: 0
@@ -6253,8 +6303,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timePerTurn: 1
   fastForwardMultiplier: 4
-  runningHighlight: {r: 0, g: 0, b: 0, a: 0}
-  playerStart: {fileID: 0}
+  runningHighlight: {r: 0, g: 1, b: 1, a: 1}
+  playerStart: {fileID: 1866370328}
   enemyStart: {fileID: 0}
 --- !u!4 &2009726534
 Transform:
