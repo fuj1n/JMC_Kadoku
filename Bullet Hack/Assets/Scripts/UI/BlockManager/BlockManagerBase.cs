@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using DG.Tweening;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class BlockManagerBase : MonoBehaviour
 {
@@ -9,9 +11,12 @@ public class BlockManagerBase : MonoBehaviour
     [HideInInspector]
     public BlockManager outConnector;
 
+    private Outline outline;
+
     protected virtual void Start()
     {
         rect = GetComponent<RectTransform>();
+        outline = GetComponent<Outline>();
     }
 
     public virtual void OnHierarchyChanged()
@@ -51,5 +56,10 @@ public class BlockManagerBase : MonoBehaviour
     public virtual BlockManager GetOutConnection()
     {
         return outConnector;
+    }
+
+    public void SetOutline(Color c, float time)
+    {
+        outline.DOColor(c, time);
     }
 }

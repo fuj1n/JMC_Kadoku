@@ -8,7 +8,7 @@ public abstract class ActionBase : MonoBehaviour
     protected BlockManagerBase manager;
 
     public abstract void Execute();
-    public virtual ActionBase GetNextAction() => GetNextActionRaw().GetComponent<ActionBase>();
+    public virtual ActionBase GetNextAction() => GetNextActionRaw()?.GetComponent<ActionBase>();
     public virtual BlockManagerBase GetNextActionRaw() => manager.GetOutConnection();
 
     protected virtual void Start()
@@ -23,6 +23,8 @@ public abstract class ActionBase : MonoBehaviour
     {
 
     }
+
+    public virtual BlockManagerBase GetManager() => manager;
 
     public abstract string GetName();
 }
