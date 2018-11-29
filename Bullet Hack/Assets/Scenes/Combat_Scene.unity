@@ -5304,7 +5304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.60784316}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -6253,6 +6253,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timePerTurn: 1
   fastForwardMultiplier: 4
+  runningHighlight: {r: 0, g: 0, b: 0, a: 0}
+  playerStart: {fileID: 0}
+  enemyStart: {fileID: 0}
 --- !u!4 &2009726534
 Transform:
   m_ObjectHideFlags: 0
