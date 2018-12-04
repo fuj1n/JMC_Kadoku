@@ -24,6 +24,9 @@ public class ScriptController : MonoBehaviour
         if (!IsRunning)
             return;
 
+        if (float.IsInfinity(currentSpeed))
+            return;
+
         timer += Time.deltaTime;
         if (timer > currentSpeed)
         {
@@ -58,7 +61,7 @@ public class ScriptController : MonoBehaviour
 
     public void Pause()
     {
-        currentSpeed = 0F;
+        currentSpeed = float.PositiveInfinity;
     }
 
     public void Step()
@@ -72,6 +75,10 @@ public class ScriptController : MonoBehaviour
 
     private void Next()
     {
+        float currentSpeed = this.currentSpeed;
+        if (float.IsInfinity(currentSpeed))
+            currentSpeed = 0F;
+
         if (playerAction)
         {
             playerAction.Execute();
