@@ -1,19 +1,64 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class BlockLoader {
+public static class BlockLoader
+{
     public const string TEMPLATE_PATH = "Prefabs/UI/Blocks/";
     public static readonly GameObject BLOCK_GENERAL = Resources.Load<GameObject>(TEMPLATE_PATH + "GeneralBlock");
     public static readonly GameObject BLOCK_BRACKET = Resources.Load<GameObject>(TEMPLATE_PATH + "BracketBlock");
 
     private static Block[] blocks;
 
+    public static GameObject[] CreateBlocks()
+    {
+        GameObject[] blocks = new GameObject[BlockLoader.blocks.Length];
+
+        for (int b = 0; b < blocks.Length; b++)
+        {
+            Block block = BlockLoader.blocks[b];
+
+            blocks[b] = Object.Instantiate(block.template);
+            ActionBase action = (ActionBase)blocks[b].AddComponent(block.component);
+
+            RectTransform vars = blocks[b].transform.Find("Vars")?.GetComponent<RectTransform>();
+            if (!vars)
+                vars = blocks[b].GetComponent<RectTransform>();
+
+            foreach (FieldInfo input in block.inputs)
+            {
+                GameObject box = new GameObject(input.Name + " box");
+                RectTransform boxRect = box.AddComponent<RectTransform>();
+                box.AddComponent<ContentSizeFitter>().verticalFit = ContentSizeFitter.FitMode.MinSize;
+                box.AddComponent<VerticalLayoutGroup>();
+                boxRect.SetParent(vars);
+
+                GameObject label = new GameObject("Label");
+                label.AddComponent<RectTransform>().SetParent(boxRect);
+                label.AddComponent<TextMeshProUGUI>().text = input.Name; // TODO: friendly name
+
+                if (input.FieldType.IsEnum)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+        }
+
+        return blocks;
+    }
+
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private static void Initialize()
     {
+        Debug.Log("variableNameThatIWantToBeFriendly".ToFriendly());
+
         // Find all the classes that have the BlockAttribute attribute
         var discoveredBlocks = from assembly in System.AppDomain.CurrentDomain.GetAssemblies()
                                from t in assembly.GetTypes()
@@ -28,8 +73,13 @@ public class BlockLoader {
         {
             BlockAttribute.BlockType type = found.attribute.blockType;
 
-            Block block = new Block();
-            block.component = found.type;
+            Block block = new Block
+            {
+                component = found.type,
+                inputs = (from field in found.type.GetFields(BindingFlags.NonPublic | BindingFlags.Instance)
+                          where field.GetCustomAttribute<ActionBase.InputVarAttribute>(true) != null
+                          select field).ToArray()
+            };
 
             switch (type)
             {
@@ -42,10 +92,6 @@ public class BlockLoader {
             }
 
             RectTransform rect = block.template.GetComponent<RectTransform>();
-
-            block.inputs = (from field in found.type.GetFields()
-                            where field.GetCustomAttribute<ActionBase.InputVarAttribute>(true) != null
-                            select field).ToArray();
 
             loadedBlocks.Add(block);
         }
@@ -61,7 +107,8 @@ public class BlockLoader {
     }
 
     [System.AttributeUsage(System.AttributeTargets.Class, Inherited = false, AllowMultiple = false)]
-    public sealed class BlockAttribute : System.Attribute {
+    public sealed class BlockAttribute : System.Attribute
+    {
         public BlockType blockType;
 
         public BlockAttribute(BlockType blockType)
