@@ -107,7 +107,6 @@ GameObject:
   - component: {fileID: 114776837128023462}
   - component: {fileID: 114907527199074404}
   - component: {fileID: 114152565346991930}
-  - component: {fileID: 114285782188907174}
   m_Layer: 5
   m_Name: GeneralBlock
   m_TagString: UI-Block
@@ -241,18 +240,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec4dd83e4070ae042b6b1447f6841ffa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114285782188907174
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1744705710908626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 799fb7923f371744d9a2a92538cfaed4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameText: {fileID: 114317241995240422}
 --- !u!114 &114317241995240422
 MonoBehaviour:
   m_ObjectHideFlags: 1
