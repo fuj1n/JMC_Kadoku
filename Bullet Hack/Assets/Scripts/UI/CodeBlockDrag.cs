@@ -26,6 +26,8 @@ public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, 
     private Transform inAnchor;
     private Transform target;
 
+    public ValueBinder[] binders;
+
     private void Awake()
     {
         rect = GetComponent<RectTransform>();
@@ -37,6 +39,11 @@ public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, 
         system = FindObjectOfType<EventSystem>();
     }
 
+    private void Start()
+    {
+        binders = GetComponentsInChildren<ValueBinder>();
+    }
+
     public void OnBeginDrag(PointerEventData eventData)
     {
         if (CombatManager.Instance.Script.IsRunning)
@@ -46,7 +53,11 @@ public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, 
 
         if (cloneDrag)
         {
-            Instantiate(gameObject, transform.parent).name = gameObject.name;
+            GameObject go = Instantiate(gameObject, transform.parent);
+            go.name = gameObject.name;
+
+            go.GetComponent<CodeBlockDrag>().UpdateBinders(binders);
+
             system.SetSelectedGameObject(null, eventData);
             cloneDrag = false;
         }
@@ -126,5 +137,14 @@ public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, 
     {
         this.inAnchor = inAnchor;
         target = t;
+    }
+
+    private void UpdateBinders(ValueBinder[] binds)
+    {
+        for (int i = 0; i < binders.Length; i++)
+        {
+            binders[i].field = binds[i].field;
+            binders[i].obj = GetComponent<ActionBase>();
+        }
     }
 }

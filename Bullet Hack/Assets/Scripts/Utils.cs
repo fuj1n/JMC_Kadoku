@@ -4,7 +4,7 @@ public static class Utils
 {
     public static readonly Regex LOWER_UPPER_TRANSITION = new Regex("[a-z]()[A-Z]", RegexOptions.Compiled);
 
-    public static string ToFriendly(this string s)
+    public static string ToFriendly(this string s, bool titleCase = false)
     {
         Match match = LOWER_UPPER_TRANSITION.Match(s);
 
@@ -17,8 +17,11 @@ public static class Utils
 
         s = s.ToLower();
 
+        string[] sfrag = s.Split(' ');
 
+        for (int i = 0; i < (!titleCase ? 1 : sfrag.Length); i++)
+            sfrag[i] = sfrag[i].Substring(0, 1).ToUpper() + sfrag[i].Substring(1);
 
-        return s;
+        return string.Join(" ", sfrag);
     }
 }

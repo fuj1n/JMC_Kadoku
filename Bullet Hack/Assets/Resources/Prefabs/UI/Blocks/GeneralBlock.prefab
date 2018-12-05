@@ -371,7 +371,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 5
+  m_Spacing: 20
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -434,6 +434,7 @@ MonoBehaviour:
   outlineHover: {r: 0, g: 1, b: 1, a: 1}
   outlineDelete: {r: 1, g: 0, b: 0, a: 1}
   fadeTime: 0.5
+  binders: []
 --- !u!222 &222013051885647488
 CanvasRenderer:
   m_ObjectHideFlags: 1

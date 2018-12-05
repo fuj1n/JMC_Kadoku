@@ -3,7 +3,6 @@ using System.Linq;
 using System.Reflection;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public static class BlockLoader
 {
@@ -23,6 +22,7 @@ public static class BlockLoader
 
             blocks[b] = Object.Instantiate(block.template);
             ActionBase action = (ActionBase)blocks[b].AddComponent(block.component);
+            action.nameText = blocks[b].GetComponentInChildren<TextMeshProUGUI>();
 
             RectTransform vars = blocks[b].transform.Find("Vars")?.GetComponent<RectTransform>();
             if (!vars)
@@ -32,23 +32,70 @@ public static class BlockLoader
             {
                 GameObject box = new GameObject(input.Name + " box");
                 RectTransform boxRect = box.AddComponent<RectTransform>();
-                box.AddComponent<ContentSizeFitter>().verticalFit = ContentSizeFitter.FitMode.MinSize;
-                box.AddComponent<VerticalLayoutGroup>();
-                boxRect.SetParent(vars);
+                boxRect.SetParent(vars, true);
+
+                boxRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Bottom, 0F, vars.sizeDelta.y);
+                boxRect.localScale = Vector3.one;
 
                 GameObject label = new GameObject("Label");
-                label.AddComponent<RectTransform>().SetParent(boxRect);
-                label.AddComponent<TextMeshProUGUI>().text = input.Name; // TODO: friendly name
+
+                RectTransform labelRect = label.AddComponent<RectTransform>();
+                labelRect.SetParent(boxRect, true);
+                labelRect.localScale = Vector3.one;
+
+                labelRect.anchorMin = new Vector2(0, 1);
+                labelRect.anchorMax = new Vector2(1, 1);
+
+                TextMeshProUGUI lblText = label.AddComponent<TextMeshProUGUI>();
+                lblText.text = input.Name.ToFriendly(true) + ":";
+                lblText.alignment = TextAlignmentOptions.MidlineLeft;
+                lblText.enableAutoSizing = true;
+                lblText.fontSizeMin = 0F;
+
+                labelRect.offsetMin = Vector2.zero;
+                labelRect.offsetMax = Vector2.zero;
+                labelRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Top, 0F, boxRect.sizeDelta.y / 2F);
+
+                RectTransform vRect;
+                ValueBinder binder;
 
                 if (input.FieldType.IsEnum)
                 {
+                    GameObject dropdown = Object.Instantiate(CommonResources.DROPDOWN, boxRect);
 
+                    binder = dropdown.AddComponent<EnumBinder>();
+
+                    vRect = dropdown.GetComponent<RectTransform>();
+                }
+                else if (input.FieldType == typeof(bool))
+                {
+                    GameObject toggle = Object.Instantiate(CommonResources.TOGGLE, boxRect);
+
+                    binder = toggle.AddComponent<BoolBinder>();
+
+                    vRect = toggle.GetComponent<RectTransform>();
                 }
                 else
                 {
+                    GameObject ifield = Object.Instantiate(CommonResources.INPUT_FIELD, boxRect);
 
+                    binder = ifield.AddComponent<ValueBinder>();
+
+                    vRect = ifield.GetComponent<RectTransform>();
                 }
+
+                binder.field = input;
+                binder.obj = action;
+
+                vRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Left, 0F, boxRect.sizeDelta.x);
+                vRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Bottom, 0F, boxRect.sizeDelta.y / 2F);
             }
+
+            Canvas.ForceUpdateCanvases();
+            RectTransform blockRect = blocks[b].GetComponent<RectTransform>();
+            blockRect.sizeDelta = new Vector2(blockRect.sizeDelta.x + vars.sizeDelta.x, blockRect.sizeDelta.y);
+
+            blockRect.localScale = Vector3.one;
         }
 
         return blocks;
@@ -57,8 +104,6 @@ public static class BlockLoader
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private static void Initialize()
     {
-        Debug.Log("variableNameThatIWantToBeFriendly".ToFriendly());
-
         // Find all the classes that have the BlockAttribute attribute
         var discoveredBlocks = from assembly in System.AppDomain.CurrentDomain.GetAssemblies()
                                from t in assembly.GetTypes()
@@ -90,8 +135,6 @@ public static class BlockLoader
                     block.template = BLOCK_BRACKET;
                     break;
             }
-
-            RectTransform rect = block.template.GetComponent<RectTransform>();
 
             loadedBlocks.Add(block);
         }
