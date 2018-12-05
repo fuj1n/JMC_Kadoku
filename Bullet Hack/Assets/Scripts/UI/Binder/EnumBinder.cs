@@ -15,7 +15,7 @@ public class EnumBinder : ValueBinder
 
         TMP_Dropdown dropdown = GetComponent<TMP_Dropdown>();
         dropdown.ClearOptions();
-        dropdown.AddOptions(names.ToList());
+        dropdown.AddOptions(names.Select(x => x.ToFriendly()).ToList());
         dropdown.value = values.IndexOf(field.GetValue(obj));
         dropdown.RefreshShownValue();
 

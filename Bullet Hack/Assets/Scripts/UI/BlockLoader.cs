@@ -35,6 +35,7 @@ public static class BlockLoader
                 boxRect.SetParent(vars, true);
 
                 boxRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Bottom, 0F, vars.sizeDelta.y);
+                boxRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Left, 0F, 160F);
                 boxRect.localScale = Vector3.one;
 
                 GameObject label = new GameObject("Label");
@@ -51,10 +52,11 @@ public static class BlockLoader
                 lblText.alignment = TextAlignmentOptions.MidlineLeft;
                 lblText.enableAutoSizing = true;
                 lblText.fontSizeMin = 0F;
+                lblText.fontSizeMax = 24F;
 
                 labelRect.offsetMin = Vector2.zero;
                 labelRect.offsetMax = Vector2.zero;
-                labelRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Top, 0F, boxRect.sizeDelta.y / 2F);
+                labelRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Top, 0F, boxRect.sizeDelta.y * .4F);
 
                 RectTransform vRect;
                 ValueBinder binder;
@@ -88,7 +90,7 @@ public static class BlockLoader
                 binder.obj = action;
 
                 vRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Left, 0F, boxRect.sizeDelta.x);
-                vRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Bottom, 0F, boxRect.sizeDelta.y / 2F);
+                vRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Bottom, 0F, boxRect.sizeDelta.y * .6F);
             }
 
             Canvas.ForceUpdateCanvases();

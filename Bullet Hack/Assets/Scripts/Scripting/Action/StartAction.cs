@@ -3,4 +3,6 @@
     public override void Execute() { }
 
     public override string GetName() => "Start";
+
+    public override void DownscaleByText() { }
 }
