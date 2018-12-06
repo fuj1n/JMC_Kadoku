@@ -79,31 +79,41 @@ public class ScriptController : MonoBehaviour
         Next();
     }
 
+    public float GetTweenSpeed()
+    {
+        float tweenSpeed = currentSpeed;
+        if (float.IsInfinity(tweenSpeed))
+            tweenSpeed = 0F;
+
+        return tweenSpeed;
+    }
+
     private void Next()
     {
-        float currentSpeed = this.currentSpeed;
-        if (float.IsInfinity(currentSpeed))
-            currentSpeed = 0F;
+        float tweenSpeed = GetTweenSpeed();
+
+        playerAvatar.tweenSpeed = tweenSpeed;
+        enemyAvatar.tweenSpeed = tweenSpeed;
 
         if (playerAction)
         {
             currentAvatar = playerAvatar;
             playerAction.Execute();
 
-            playerAction.GetManager().SetOutline(new Color(), currentSpeed * .5F);
+            playerAction.GetManager().SetOutline(new Color(), tweenSpeed * .5F);
             playerAction = playerAction.GetNextAction();
             if (playerAction)
-                playerAction.GetManager().SetOutline(runningHighlight, currentSpeed * .5F);
+                playerAction.GetManager().SetOutline(runningHighlight, tweenSpeed * .5F);
         }
 
         if (enemyAction)
         {
             currentAvatar = enemyAvatar;
             enemyAction.Execute();
-            enemyAction.GetManager().SetOutline(new Color(), currentSpeed * .5F);
+            enemyAction.GetManager().SetOutline(new Color(), tweenSpeed * .5F);
             enemyAction = enemyAction.GetNextAction();
             if (enemyAction)
-                enemyAction.GetManager().SetOutline(runningHighlight, currentSpeed * .5F);
+                enemyAction.GetManager().SetOutline(runningHighlight, tweenSpeed * .5F);
         }
     }
 }

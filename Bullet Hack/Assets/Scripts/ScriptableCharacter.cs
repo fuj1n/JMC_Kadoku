@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using DG.Tweening;
 
 public class ScriptableCharacter : MonoBehaviour {
     public int X
@@ -13,7 +14,7 @@ public class ScriptableCharacter : MonoBehaviour {
             int diff = value - pos.x;
             pos.x = value;
 
-            transform.position += Vector3.right * diff * coordOffset;
+            Move(Vector3.right * diff * coordOffset);
         }
     }
 
@@ -29,11 +30,14 @@ public class ScriptableCharacter : MonoBehaviour {
             int diff = pos.y - value;
             pos.y = value;
 
-            transform.position += Vector3.forward * diff * coordOffset;
+            Move(Vector3.forward * diff * coordOffset);
         }
     }
 
     public float coordOffset = 1F;
+
+    [HideInInspector]
+    public float tweenSpeed;
 
     public Vector2Int gridSize = new Vector2Int(3, 3);
     [SerializeField]
@@ -55,5 +59,10 @@ public class ScriptableCharacter : MonoBehaviour {
                 Gizmos.DrawWireCube(startPos + Vector3.right * x * coordOffset + Vector3.forward * z * coordOffset, Vector3.one);
             }
         }
+    }
+
+    private void Move(Vector3 val)
+    {
+        transform.DOJump(transform.position + val, 1F, 1, tweenSpeed / 2F);
     }
 }
