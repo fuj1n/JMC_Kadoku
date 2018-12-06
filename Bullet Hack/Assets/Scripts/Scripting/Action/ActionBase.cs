@@ -11,6 +11,8 @@ public abstract class ActionBase : MonoBehaviour
     public virtual ActionBase GetNextAction() => GetNextActionRaw()?.GetComponent<ActionBase>();
     public virtual BlockManagerBase GetNextActionRaw() => manager.GetOutConnection();
 
+    public bool doDownscale = true;
+
     protected virtual void Start()
     {
         manager = GetComponent<BlockManagerBase>();
@@ -21,7 +23,9 @@ public abstract class ActionBase : MonoBehaviour
 
             nameText.ForceMeshUpdate();
 
-            DownscaleByText();
+            if (doDownscale)
+                DownscaleByText();
+            doDownscale = false;
         }
     }
 
