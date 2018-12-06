@@ -44,12 +44,14 @@
     public abstract bool ShouldExecute();
     public abstract void Next();
 
-    public void Break()
+    public bool Break()
     {
-        isBroken = true;
-        if (currentInstruction)
-            currentInstruction.GetManager().FadeOutline(0F, CombatManager.Instance.Script.GetTweenSpeed() * .5F);
+        isBroken = CanBreak();
+
+        return CanBreak();
     }
+
+    protected virtual bool CanBreak() => true;
 
     public override void ResetState()
     {

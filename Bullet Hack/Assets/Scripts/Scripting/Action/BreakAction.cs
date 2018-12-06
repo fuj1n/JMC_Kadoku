@@ -9,8 +9,8 @@ public class BreakAction : ActionBase
         {
             if (manager is BracketBlockManager)
             {
-                manager.GetComponent<ActionBlockBase>()?.Break();
-                break;
+                if ((bool)manager.GetComponent<ActionBlockBase>()?.Break())
+                    break;
             }
 
             manager = ((BlockManager)manager).inConnector;
