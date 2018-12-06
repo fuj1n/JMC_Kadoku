@@ -52,6 +52,8 @@ public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, 
 
             go.GetComponent<CodeBlockDrag>().UpdateBinders(binders);
 
+            go.transform.SetSiblingIndex(transform.GetSiblingIndex());
+
             system.SetSelectedGameObject(null, eventData);
             cloneDrag = false;
         }
