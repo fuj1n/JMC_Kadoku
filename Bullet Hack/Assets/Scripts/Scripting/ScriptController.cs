@@ -12,6 +12,12 @@ public class ScriptController : MonoBehaviour
     public StartAction playerStart;
     public StartAction enemyStart;
 
+    public ScriptableCharacter playerAvatar;
+    public ScriptableCharacter enemyAvatar;
+
+    [HideInInspector]
+    public ScriptableCharacter currentAvatar;
+
     private float currentSpeed;
 
     private float timer;
@@ -81,6 +87,7 @@ public class ScriptController : MonoBehaviour
 
         if (playerAction)
         {
+            currentAvatar = playerAvatar;
             playerAction.Execute();
 
             playerAction.GetManager().SetOutline(new Color(), currentSpeed * .5F);
@@ -91,6 +98,7 @@ public class ScriptController : MonoBehaviour
 
         if (enemyAction)
         {
+            currentAvatar = enemyAvatar;
             enemyAction.Execute();
             enemyAction.GetManager().SetOutline(new Color(), currentSpeed * .5F);
             enemyAction = enemyAction.GetNextAction();
