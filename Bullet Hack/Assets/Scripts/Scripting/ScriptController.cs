@@ -100,7 +100,7 @@ public class ScriptController : MonoBehaviour
             currentAvatar = playerAvatar;
             playerAction.Execute();
 
-            playerAction.GetManager().SetOutline(new Color(), tweenSpeed * .5F);
+            playerAction.GetManager().FadeOutline(0F, tweenSpeed * .5F);
             playerAction = playerAction.GetNextAction();
             if (playerAction)
                 playerAction.GetManager().SetOutline(runningHighlight, tweenSpeed * .5F);
@@ -110,7 +110,7 @@ public class ScriptController : MonoBehaviour
         {
             currentAvatar = enemyAvatar;
             enemyAction.Execute();
-            enemyAction.GetManager().SetOutline(new Color(), tweenSpeed * .5F);
+            enemyAction.GetManager().FadeOutline(0F, tweenSpeed * .5F);
             enemyAction = enemyAction.GetNextAction();
             if (enemyAction)
                 enemyAction.GetManager().SetOutline(runningHighlight, tweenSpeed * .5F);

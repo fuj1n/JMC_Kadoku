@@ -1,8 +1,8 @@
-﻿using UnityEngine;
-
-public abstract class ActionBlockBase : ActionBase
+﻿public abstract class ActionBlockBase : ActionBase
 {
     private ActionBase currentInstruction;
+
+    private bool isBroken;
 
     public override void Execute()
     {
@@ -19,22 +19,22 @@ public abstract class ActionBlockBase : ActionBase
 
         ScriptController script = CombatManager.Instance.Script;
 
-        currentInstruction.GetManager().SetOutline(new Color(), script.GetTweenSpeed() * .5F);
+        currentInstruction.GetManager().FadeOutline(0F, script.GetTweenSpeed() * .5F);
         currentInstruction = currentInstruction.GetNextAction();
-        if (currentInstruction)
+        if (currentInstruction && !isBroken)
             currentInstruction.GetManager().SetOutline(script.runningHighlight, script.GetTweenSpeed() * .5F);
     }
 
     public override ActionBase GetNextAction()
     {
-        if (currentInstruction || ShouldExecute())
+        if (!isBroken && (currentInstruction || ShouldExecute()))
             return this;
         return base.GetNextAction();
     }
 
     public override BlockManagerBase GetNextActionRaw()
     {
-        if (currentInstruction || ShouldExecute())
+        if (!isBroken && (currentInstruction || ShouldExecute()))
             return manager;
 
         ResetState();
@@ -44,9 +44,18 @@ public abstract class ActionBlockBase : ActionBase
     public abstract bool ShouldExecute();
     public abstract void Next();
 
+    public void Break()
+    {
+        isBroken = true;
+        if (currentInstruction)
+            currentInstruction.GetManager().FadeOutline(0F, CombatManager.Instance.Script.GetTweenSpeed() * .5F);
+    }
+
     public override void ResetState()
     {
         base.ResetState();
+
+        isBroken = false;
 
         if (manager is BracketBlockManager)
             ((BracketBlockManager)manager).GetBracketConnection()?.GetComponent<ActionBlockBase>()?.ResetState();
