@@ -37,9 +37,9 @@ public abstract class ActionBase : MonoBehaviour
         RectTransform rect = GetComponent<RectTransform>();
 
         RectTransform tRect = nameText.GetComponent<RectTransform>();
-        float dx = tRect.sizeDelta.x - nameText.preferredWidth;
+        float dx = tRect.sizeDelta.x - (nameText.preferredWidth + 20F);
         tRect.sizeDelta = new Vector2(nameText.preferredWidth, tRect.sizeDelta.y);
-        rect.sizeDelta = new Vector2(rect.sizeDelta.x + dx, rect.sizeDelta.y);
+        rect.sizeDelta = new Vector2(rect.sizeDelta.x - dx, rect.sizeDelta.y);
     }
 
     public abstract string GetName();

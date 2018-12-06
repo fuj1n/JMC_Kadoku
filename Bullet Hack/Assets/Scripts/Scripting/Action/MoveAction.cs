@@ -4,7 +4,7 @@
 public class MoveAction : ActionBase
 {
     [InputVar]
-    private Direction direction = Direction.RIGHT;
+    private Direction direction;
 
     public override void Execute()
     {
