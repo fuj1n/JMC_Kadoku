@@ -1,4 +1,6 @@
-﻿public abstract class ActionBlockBase : ActionBase
+﻿using UnityEngine;
+
+public abstract class ActionBlockBase : ActionBase
 {
     private ActionBase currentInstruction;
 
@@ -14,7 +16,13 @@
             return;
 
         currentInstruction.Execute();
+
+        ScriptController script = CombatManager.Instance.Script;
+
+        currentInstruction.GetManager().SetOutline(new Color(), script.GetTweenSpeed() * .5F);
         currentInstruction = currentInstruction.GetNextAction();
+        if (currentInstruction)
+            currentInstruction.GetManager().SetOutline(script.runningHighlight, script.GetTweenSpeed() * .5F);
     }
 
     public override ActionBase GetNextAction()

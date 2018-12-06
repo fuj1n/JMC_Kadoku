@@ -1,8 +1,6 @@
-﻿using DG.Tweening;
-using System.Linq;
+﻿using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, IPointerExitHandler, IBeginDragHandler, IEndDragHandler
 {
@@ -17,7 +15,6 @@ public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, 
     public float fadeTime = .5F;
 
     private RectTransform rect;
-    private Outline outline;
 
     private BlockManagerBase blockManager;
 
@@ -31,10 +28,7 @@ public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, 
     private void Awake()
     {
         rect = GetComponent<RectTransform>();
-        blockManager = GetComponent<BlockManager>();
-
-        outline = GetComponent<Outline>();
-        outline.DOFade(0F, 0F);
+        blockManager = GetComponent<BlockManagerBase>();
 
         system = FindObjectOfType<EventSystem>();
     }
@@ -77,11 +71,11 @@ public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, 
 
         if (!undeletable && eventData.hovered.Any(x => x && x.CompareTag("UI-Bin")))
         {
-            outline.DOColor(outlineDelete, fadeTime);
+            blockManager.SetOutline(outlineDelete, fadeTime, propagate: true);
         }
         else
         {
-            outline.DOColor(outlineHover, fadeTime);
+            blockManager.SetOutline(outlineHover, fadeTime, propagate: true);
         }
 
         rect.anchoredPosition += eventData.delta / rect.parent.lossyScale;
@@ -95,7 +89,7 @@ public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, 
         if (!undeletable && eventData.hovered.Any(x => x.CompareTag("UI-Bin")))
             Destroy(gameObject);
         else if (!eventData.hovered.Contains(gameObject))
-            outline.DOFade(0F, fadeTime);
+            blockManager.FadeOutline(0F, fadeTime, true);
 
         if (target && blockManager is BlockManager)
         {
@@ -119,10 +113,11 @@ public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, 
         if (CombatManager.Instance.Script.IsRunning)
             return;
 
-        Color c = outlineHover;
-        c.a = outline.effectColor.a;
-        outline.effectColor = c;
-        outline.DOFade(1F, fadeTime);
+        if (eventData.pointerCurrentRaycast.gameObject != gameObject)
+            return;
+
+        blockManager.SetOutline(outlineHover, 0F, false, true);
+        blockManager.FadeOutline(1F, fadeTime, true);
     }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -130,7 +125,7 @@ public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, 
         if (eventData.dragging && eventData.pointerDrag == gameObject)
             return;
 
-        outline.DOFade(0F, fadeTime);
+        blockManager.FadeOutline(0F, fadeTime, true);
     }
 
     public void SetTargetBlock(Transform inAnchor, Transform t)

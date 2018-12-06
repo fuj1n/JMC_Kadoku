@@ -61,4 +61,20 @@ public class BracketBlockManager : BlockManager
     {
         return bracketConnector;
     }
+
+    public override void SetOutline(Color c, float time, bool setAlpha = true, bool propagate = false)
+    {
+        base.SetOutline(c, time, setAlpha, propagate);
+
+        if (propagate && bracketConnector)
+            bracketConnector.SetOutline(c, time, setAlpha, propagate);
+    }
+
+    public override void FadeOutline(float f, float time, bool propagate = false)
+    {
+        base.FadeOutline(f, time, propagate);
+
+        if (propagate && bracketConnector)
+            bracketConnector.FadeOutline(f, time, propagate);
+    }
 }

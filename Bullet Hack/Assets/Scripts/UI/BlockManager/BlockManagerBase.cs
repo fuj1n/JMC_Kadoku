@@ -17,6 +17,8 @@ public class BlockManagerBase : MonoBehaviour
     {
         rect = GetComponent<RectTransform>();
         outline = GetComponent<Outline>();
+
+        FadeOutline(0F, 0F);
     }
 
     public virtual void OnHierarchyChanged()
@@ -58,8 +60,22 @@ public class BlockManagerBase : MonoBehaviour
         return outConnector;
     }
 
-    public void SetOutline(Color c, float time)
+    public virtual void SetOutline(Color c, float time, bool setAlpha = true, bool propagate = false)
     {
+        if (!setAlpha)
+            c.a = outline.effectColor.a;
+
         outline.DOColor(c, time);
+
+        if (propagate && outConnector)
+            outConnector.SetOutline(c, time, propagate);
+    }
+
+    public virtual void FadeOutline(float f, float time, bool propagate = false)
+    {
+        outline.DOFade(f, time);
+
+        if (propagate && outConnector)
+            outConnector.FadeOutline(f, time, propagate);
     }
 }
