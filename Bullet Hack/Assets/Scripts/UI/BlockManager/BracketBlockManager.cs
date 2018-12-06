@@ -56,4 +56,9 @@ public class BracketBlockManager : BlockManager
         else
             base.Disconnect(child);
     }
+
+    public BlockManager GetBracketConnection()
+    {
+        return bracketConnector;
+    }
 }

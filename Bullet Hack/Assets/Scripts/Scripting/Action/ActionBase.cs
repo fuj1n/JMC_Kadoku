@@ -31,7 +31,7 @@ public abstract class ActionBase : MonoBehaviour
 
     public virtual void ResetState()
     {
-
+        manager.GetOutConnection()?.GetComponent<ActionBlockBase>()?.ResetState();
     }
 
     public virtual BlockManagerBase GetManager() => manager;

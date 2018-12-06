@@ -7,7 +7,7 @@
         if (!currentInstruction && ShouldExecute())
         {
             Next();
-            currentInstruction = ((BracketBlockManager)manager).bracketConnector.GetComponent<ActionBase>();
+            currentInstruction = ((BracketBlockManager)manager).bracketConnector?.GetComponent<ActionBase>();
         }
 
         if (!currentInstruction)
@@ -28,6 +28,8 @@
     {
         if (currentInstruction || ShouldExecute())
             return manager;
+
+        ResetState();
         return base.GetNextActionRaw();
     }
 
@@ -37,6 +39,10 @@
     public override void ResetState()
     {
         base.ResetState();
+
+        if (manager is BracketBlockManager)
+            ((BracketBlockManager)manager).GetBracketConnection()?.GetComponent<ActionBlockBase>()?.ResetState();
+
         currentInstruction = null;
     }
 }

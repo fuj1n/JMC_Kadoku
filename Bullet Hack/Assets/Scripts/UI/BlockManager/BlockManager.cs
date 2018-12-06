@@ -7,6 +7,11 @@ public class BlockManager : BlockManagerBase
     [HideInInspector]
     public BlockManagerBase inConnector;
 
+    public virtual BlockManagerBase GetInConnection()
+    {
+        return inConnector;
+    }
+
     public override void OnHierarchyChanged()
     {
         base.OnHierarchyChanged();
