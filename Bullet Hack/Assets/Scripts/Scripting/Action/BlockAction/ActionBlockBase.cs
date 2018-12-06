@@ -6,6 +6,7 @@
     {
         if (!currentInstruction && ShouldExecute())
         {
+            Next();
             currentInstruction = ((BracketBlockManager)manager).bracketConnector.GetComponent<ActionBase>();
         }
 
@@ -31,6 +32,7 @@
     }
 
     public abstract bool ShouldExecute();
+    public abstract void Next();
 
     public override void ResetState()
     {

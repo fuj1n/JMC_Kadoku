@@ -25,8 +25,6 @@ public class MoveAction : ActionBase
                 character.X++;
                 break;
         }
-
-        Debug.Log(direction);
     }
 
     public override string GetName() => "Move";
