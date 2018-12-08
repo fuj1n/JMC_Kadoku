@@ -1,7 +1,8 @@
-﻿using UnityEngine;
-using DG.Tweening;
+﻿using DG.Tweening;
+using UnityEngine;
 
-public class ScriptableCharacter : MonoBehaviour {
+public class ScriptableCharacter : MonoBehaviour
+{
     public int X
     {
         get
@@ -41,7 +42,12 @@ public class ScriptableCharacter : MonoBehaviour {
 
     public Vector2Int gridSize = new Vector2Int(3, 3);
     [SerializeField]
-    private Vector2Int pos = new Vector2Int(1,1);
+    private Vector2Int pos = new Vector2Int(1, 1);
+
+    private void Move(Vector3 val)
+    {
+        transform.DOJump(transform.position + val, 1F, 1, tweenSpeed / 2F);
+    }
 
     private void OnDrawGizmos()
     {
@@ -50,19 +56,17 @@ public class ScriptableCharacter : MonoBehaviour {
 
         Vector3 startPos = new Vector3(transform.position.x - coordOffset * pos.x, transform.position.y, transform.position.z - coordOffset * pos.y);
 
-        Gizmos.color = Color.magenta;
+        Renderer rend = GetComponent<Renderer>();
+        Gizmos.color = rend ? rend.sharedMaterial.color : Color.magenta;
 
-        for(int x = 0; x < gridSize.x; x++)
+
+
+        for (int x = 0; x < gridSize.x; x++)
         {
-            for(int z = 0; z < gridSize.y; z++)
+            for (int z = 0; z < gridSize.y; z++)
             {
                 Gizmos.DrawWireCube(startPos + Vector3.right * x * coordOffset + Vector3.forward * z * coordOffset, Vector3.one);
             }
         }
-    }
-
-    private void Move(Vector3 val)
-    {
-        transform.DOJump(transform.position + val, 1F, 1, tweenSpeed / 2F);
     }
 }
