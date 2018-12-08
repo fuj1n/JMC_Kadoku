@@ -107,6 +107,28 @@ public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, 
             rect.SetParent(target);
 
             rect.position += anchor.position - inAnchor.position;
+
+
+
+            // Tries to find the top of the chain, and makes it the topmost child
+            BlockManagerBase topmost = bm;
+
+            while (topmost)
+            {
+                if (topmost is BlockManager)
+                {
+                    BlockManagerBase upper = ((BlockManager)topmost).GetInConnection();
+
+                    if (upper)
+                        topmost = upper;
+                    else
+                        break;
+                }
+                else
+                    break;
+            }
+
+            topmost?.transform.SetAsLastSibling();
         }
     }
 
