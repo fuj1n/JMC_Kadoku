@@ -1,6 +1,7 @@
 ﻿[BlockLoader.Block(BlockLoader.BlockAttribute.BlockType.BRACKET)]
-public class RepeatTimesBlock : ActionBlockBase {
-    [InputVar]
+public class RepeatTimesBlock : ActionBlockBase
+{
+    [InputVar(Reverse = true)]
     private int times;
 
     private int currentTimes;

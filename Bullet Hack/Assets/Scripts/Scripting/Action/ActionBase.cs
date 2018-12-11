@@ -49,5 +49,8 @@ public abstract class ActionBase : MonoBehaviour
     public abstract string GetName();
 
     [System.AttributeUsage(System.AttributeTargets.Field, Inherited = true, AllowMultiple = false)]
-    public sealed class InputVarAttribute : System.Attribute { }
+    public sealed class InputVarAttribute : System.Attribute
+    {
+        public bool Reverse { get; set; }
+    }
 }

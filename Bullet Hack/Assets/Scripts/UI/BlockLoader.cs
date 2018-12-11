@@ -30,6 +30,8 @@ public static class BlockLoader
 
             foreach (FieldInfo input in block.inputs)
             {
+                bool reverse = block.reversed.Contains(input);
+
                 GameObject box = new GameObject(input.Name + " box");
                 RectTransform boxRect = box.AddComponent<RectTransform>();
                 boxRect.SetParent(vars, true);
@@ -48,7 +50,7 @@ public static class BlockLoader
                 labelRect.anchorMax = new Vector2(1, 1);
 
                 TextMeshProUGUI lblText = label.AddComponent<TextMeshProUGUI>();
-                lblText.text = input.Name.ToFriendly(true) + ":";
+                lblText.text = input.Name.ToFriendly(true);
                 lblText.alignment = TextAlignmentOptions.MidlineLeft;
                 lblText.enableAutoSizing = true;
                 lblText.fontSizeMin = 0F;
@@ -56,7 +58,7 @@ public static class BlockLoader
 
                 labelRect.offsetMin = Vector2.zero;
                 labelRect.offsetMax = Vector2.zero;
-                labelRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Top, 0F, boxRect.sizeDelta.y * .4F);
+                labelRect.SetInsetAndSizeFromParentEdge(reverse ? RectTransform.Edge.Bottom : RectTransform.Edge.Top, 0F, boxRect.sizeDelta.y * .4F);
 
                 RectTransform vRect;
                 ValueBinder binder;
@@ -90,7 +92,7 @@ public static class BlockLoader
                 binder.obj = action;
 
                 vRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Left, 0F, boxRect.sizeDelta.x);
-                vRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Bottom, 0F, boxRect.sizeDelta.y * .6F);
+                vRect.SetInsetAndSizeFromParentEdge(reverse ? RectTransform.Edge.Top : RectTransform.Edge.Bottom, 0F, boxRect.sizeDelta.y * .6F);
             }
 
             Canvas.ForceUpdateCanvases();
@@ -125,8 +127,12 @@ public static class BlockLoader
                 component = found.type,
                 inputs = (from field in found.type.GetFields(BindingFlags.NonPublic | BindingFlags.Instance)
                           where field.GetCustomAttribute<ActionBase.InputVarAttribute>(true) != null
-                          select field).ToArray()
+                          select field).ToArray(),
             };
+
+            block.reversed = (from field in block.inputs
+                              where field.GetCustomAttribute<ActionBase.InputVarAttribute>(true).Reverse
+                              select field).ToList();
 
             switch (type)
             {
@@ -149,6 +155,7 @@ public static class BlockLoader
         public GameObject template;
         public System.Type component;
         public FieldInfo[] inputs;
+        public List<FieldInfo> reversed;
     }
 
     [System.AttributeUsage(System.AttributeTargets.Class, Inherited = false, AllowMultiple = false)]
