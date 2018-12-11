@@ -30,13 +30,13 @@ public class ScriptController : MonoBehaviour
         if (!IsRunning)
             return;
 
+        timer -= Time.deltaTime;
         if (float.IsInfinity(currentSpeed))
             return;
 
-        timer += Time.deltaTime;
-        if (timer > currentSpeed)
+        if (timer <= 0F)
         {
-            timer = 0;
+            timer = currentSpeed;
             Next();
         }
     }
@@ -76,14 +76,15 @@ public class ScriptController : MonoBehaviour
             Run();
         Pause();
 
-        Next();
+        if (timer <= 0F)
+            Next();
     }
 
     public float GetTweenSpeed()
     {
         float tweenSpeed = currentSpeed;
         if (float.IsInfinity(tweenSpeed))
-            tweenSpeed = 0F;
+            tweenSpeed = .02F;
 
         return tweenSpeed;
     }
