@@ -45,30 +45,8 @@ public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, 
 
         if (cloneDrag || (Input.GetKey(KeyCode.LeftControl) && !undeletable))
         {
-            GameObject go = Instantiate(gameObject, transform.parent);
-            go.name = gameObject.name;
-
-            CodeBlockDrag[] oldHierarchy = GetComponentsInChildren<CodeBlockDrag>();
-            CodeBlockDrag[] newHierarchy = go.GetComponentsInChildren<CodeBlockDrag>();
-
-            for (int i = 0; i < oldHierarchy.Length; i++)
-            {
-                newHierarchy[i].UpdateBinders(oldHierarchy[i].binders);
-            }
-
-            go.transform.SetSiblingIndex(transform.GetSiblingIndex());
-
             system.SetSelectedGameObject(null, eventData);
-            cloneDrag = false;
-
-            if (blockManager is BlockManager)
-            {
-                BlockManagerBase inConnector = ((BlockManager)blockManager).GetInConnection();
-
-                ((BlockManager)blockManager).DisconnectParent();
-                if (inConnector)
-                    inConnector.Connect(blockManager.outAnchor, (BlockManager)blockManager);
-            }
+            Clone(transform.parent, root, true);
         }
 
         if (blockManager is BlockManager)
@@ -106,43 +84,7 @@ public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, 
         else if (!eventData.hovered.Contains(gameObject))
             blockManager.FadeOutline(0F, fadeTime, true);
 
-        if (target && blockManager is BlockManager)
-        {
-            BlockManagerBase bm = target.GetComponentInParent<BlockManagerBase>();
-            if (!bm)
-                return;
-
-            RectTransform anchor = bm.Connect(target, (BlockManager)blockManager);
-
-            if (!anchor)
-                return;
-
-            rect.SetParent(target);
-
-            rect.position += anchor.position - inAnchor.position;
-
-
-
-            // Tries to find the top of the chain, and makes it the topmost child
-            BlockManagerBase topmost = bm;
-
-            while (topmost)
-            {
-                if (topmost is BlockManager)
-                {
-                    BlockManagerBase upper = ((BlockManager)topmost).GetInConnection();
-
-                    if (upper)
-                        topmost = upper;
-                    else
-                        break;
-                }
-                else
-                    break;
-            }
-
-            topmost?.transform.SetAsLastSibling();
-        }
+        ConnectTo(target, inAnchor);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -169,6 +111,92 @@ public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, 
     {
         this.inAnchor = inAnchor;
         target = t;
+    }
+
+    public CodeBlockDrag Clone(Transform parent, RectTransform root, bool reverse = false)
+    {
+        GameObject go = Instantiate(gameObject, parent);
+        go.name = gameObject.name;
+
+        CodeBlockDrag drag = go.GetComponent<CodeBlockDrag>();
+        drag.root = root;
+
+        CodeBlockDrag[] oldHierarchy = GetComponentsInChildren<CodeBlockDrag>();
+        CodeBlockDrag[] newHierarchy = go.GetComponentsInChildren<CodeBlockDrag>();
+
+        for (int i = 0; i < oldHierarchy.Length; i++)
+        {
+            newHierarchy[i].UpdateBinders(oldHierarchy[i].binders);
+        }
+
+        go.transform.SetSiblingIndex(transform.GetSiblingIndex());
+
+        if (reverse)
+            cloneDrag = false;
+        else
+            drag.cloneDrag = false;
+
+        if (blockManager is BlockManager)
+        {
+            BlockManagerBase inConnector = ((BlockManager)blockManager).GetInConnection();
+
+            ((BlockManager)blockManager).DisconnectParent();
+            if (inConnector)
+                inConnector.Connect(blockManager.outAnchor, (BlockManager)blockManager);
+        }
+
+        go.transform.localScale = Vector3.one;
+
+        return drag;
+    }
+
+    public void ConnectTo(Transform target, Transform inAnchor = null)
+    {
+        if (target.GetComponentInParent<CodeBlockDrag>().root != root)
+            return;
+
+        if (!inAnchor)
+        {
+            if (!(blockManager is BlockManager))
+                return;
+
+            inAnchor = ((BlockManager)blockManager).inAnchor;
+        }
+
+        if (target && blockManager is BlockManager)
+        {
+            BlockManagerBase bm = target.GetComponentInParent<BlockManagerBase>();
+            if (!bm)
+                return;
+
+            RectTransform anchor = bm.Connect(target, (BlockManager)blockManager);
+
+            if (!anchor)
+                return;
+
+            rect.SetParent(target);
+            rect.position += anchor.position - inAnchor.position;
+
+            // Tries to find the top of the chain, and makes it the topmost child
+            BlockManagerBase topmost = bm;
+
+            while (topmost)
+            {
+                if (topmost is BlockManager)
+                {
+                    BlockManagerBase upper = ((BlockManager)topmost).GetInConnection();
+
+                    if (upper)
+                        topmost = upper;
+                    else
+                        break;
+                }
+                else
+                    break;
+            }
+
+            topmost?.transform.SetAsLastSibling();
+        }
     }
 
     public void UpdateBinders(ValueBinder[] binds)
