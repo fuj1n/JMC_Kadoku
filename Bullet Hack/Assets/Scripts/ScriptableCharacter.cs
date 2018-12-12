@@ -35,6 +35,8 @@ public class ScriptableCharacter : MonoBehaviour
         }
     }
 
+    public int health = 3;
+
     [ColorUsage(false)]
     public Color gizmo;
 
@@ -47,9 +49,28 @@ public class ScriptableCharacter : MonoBehaviour
     [SerializeField]
     private Vector2Int pos = new Vector2Int(1, 1);
 
+    public GameObject bullet;
+
     private void Move(Vector3 val)
     {
         transform.DOJump(transform.position + val, 1F, 1, tweenSpeed / 2F);
+    }
+
+    private void Update()
+    {
+        if (health <= 0)
+            Destroy(gameObject);
+    }
+
+    public void Shoot()
+    {
+        GameObject b = Instantiate(bullet);
+        b.transform.position = transform.position;
+        b.transform.forward = transform.forward;
+
+        Bullet bObj = b.GetComponent<Bullet>();
+        if (bObj)
+            bObj.target = CombatManager.Instance.Script.OtherAvatar.transform;
     }
 
     private void OnDrawGizmos()

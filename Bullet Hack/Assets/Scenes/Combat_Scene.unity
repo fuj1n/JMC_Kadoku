@@ -2450,14 +2450,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 726575451}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 14, y: 1.3, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 980097537}
   m_Father: {fileID: 2119786022}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!114 &726575456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2469,11 +2469,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69f0f6ab5c4295749955566f6f2fb0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 3
   gizmo: {r: 1, g: 0, b: 0, a: 1}
   coordOffset: 2
   tweenSpeed: 0
   gridSize: {x: 3, y: 3}
   pos: {x: 1, y: 1}
+  bullet: {fileID: 1222815285345734, guid: 84478a9fb1363174eb9c23d2e612e5ea, type: 2}
 --- !u!54 &726575457
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3129,13 +3131,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 980097536}
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: -0.55, y: 0.33000004, z: 0}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0.7071068, w: 0}
+  m_LocalPosition: {x: 0, y: 0.33000004, z: 0.55}
   m_LocalScale: {x: 0.39999998, y: 0.19999999, z: 0.19999999}
   m_Children: []
   m_Father: {fileID: 726575455}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 180}
 --- !u!65 &980097538
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4187,11 +4189,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1419621976}
   m_CullTransparentMesh: 0
---- !u!1 &1430692776 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1914970514447346, guid: ae47fb22cb50dfb41b0a03c78c5ff36e,
-    type: 2}
-  m_PrefabInternal: {fileID: 1141013199}
 --- !u!4 &1430692777 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4462417560974634, guid: ae47fb22cb50dfb41b0a03c78c5ff36e,
@@ -4203,21 +4200,6 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1141013199}
   m_Script: {fileID: 11500000, guid: 69f0f6ab5c4295749955566f6f2fb0fb, type: 3}
---- !u!54 &1430692779
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1430692776}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1001 &1455006441
 Prefab:
   m_ObjectHideFlags: 0
