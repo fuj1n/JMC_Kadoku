@@ -37,6 +37,8 @@ public class ScriptableCharacter : MonoBehaviour
 
     public int health = 3;
 
+    public float rotateIntensity = 2F;
+
     [ColorUsage(false)]
     public Color gizmo;
 
@@ -53,7 +55,17 @@ public class ScriptableCharacter : MonoBehaviour
 
     private void Move(Vector3 val)
     {
-        transform.DOJump(transform.position + val, 1F, 1, tweenSpeed / 2F);
+        Vector3 direction = val / val.magnitude;
+
+        Sequence move = DOTween.Sequence();
+
+        move.Append(transform.DOBlendableLocalRotateBy(-direction * rotateIntensity, tweenSpeed * .2F));
+        move.AppendInterval(tweenSpeed * .6F);
+        move.Append(transform.DORotateQuaternion(transform.rotation, tweenSpeed * .2F));
+
+        transform.DOMove(transform.position + val, tweenSpeed).SetEase(Ease.InOutSine);
+
+        move.Play();
     }
 
     private void Update()
