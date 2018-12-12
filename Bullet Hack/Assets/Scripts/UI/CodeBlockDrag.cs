@@ -43,8 +43,6 @@ public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, 
         if (CombatManager.Instance.Script.IsRunning)
             return;
 
-        target = null;
-
         if (cloneDrag || (Input.GetKey(KeyCode.LeftControl) && !undeletable))
         {
             GameObject go = Instantiate(gameObject, transform.parent);
@@ -173,7 +171,7 @@ public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, 
         target = t;
     }
 
-    private void UpdateBinders(ValueBinder[] binds)
+    public void UpdateBinders(ValueBinder[] binds)
     {
         for (int i = 0; i < binders.Length; i++)
         {
