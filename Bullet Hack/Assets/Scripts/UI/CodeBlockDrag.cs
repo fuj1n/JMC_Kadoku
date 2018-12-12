@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -45,17 +45,32 @@ public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, 
 
         target = null;
 
-        if (cloneDrag)
+        if (cloneDrag || (Input.GetKey(KeyCode.LeftControl) && !undeletable))
         {
             GameObject go = Instantiate(gameObject, transform.parent);
             go.name = gameObject.name;
 
-            go.GetComponent<CodeBlockDrag>().UpdateBinders(binders);
+            CodeBlockDrag[] oldHierarchy = GetComponentsInChildren<CodeBlockDrag>();
+            CodeBlockDrag[] newHierarchy = go.GetComponentsInChildren<CodeBlockDrag>();
+
+            for (int i = 0; i < oldHierarchy.Length; i++)
+            {
+                newHierarchy[i].UpdateBinders(oldHierarchy[i].binders);
+            }
 
             go.transform.SetSiblingIndex(transform.GetSiblingIndex());
 
             system.SetSelectedGameObject(null, eventData);
             cloneDrag = false;
+
+            if (blockManager is BlockManager)
+            {
+                BlockManagerBase inConnector = ((BlockManager)blockManager).GetInConnection();
+
+                ((BlockManager)blockManager).DisconnectParent();
+                if (inConnector)
+                    inConnector.Connect(blockManager.outAnchor, (BlockManager)blockManager);
+            }
         }
 
         if (blockManager is BlockManager)

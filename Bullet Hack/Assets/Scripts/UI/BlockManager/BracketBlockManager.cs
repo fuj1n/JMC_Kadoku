@@ -7,13 +7,21 @@ public class BracketBlockManager : BlockManager
     [HideInInspector]
     public BlockManager bracketConnector;
 
-    private float minSize;
+    [HideInInspector]
+    public float minSize;
+
+    [HideInInspector]
+    public bool sizeCalculated = false;
 
     protected override void Start()
     {
         base.Start();
 
-        minSize = rect.sizeDelta.y;
+        if (!sizeCalculated)
+        {
+            minSize = rect.sizeDelta.y;
+            sizeCalculated = true;
+        }
     }
 
     public override void OnHierarchyChanged()
