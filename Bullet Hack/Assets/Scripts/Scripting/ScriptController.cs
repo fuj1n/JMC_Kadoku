@@ -28,6 +28,8 @@ public class ScriptController : MonoBehaviour
         }
     }
 
+    public Bounds gameArea;
+
     private float currentSpeed;
 
     private float timer;
@@ -36,6 +38,12 @@ public class ScriptController : MonoBehaviour
     private ActionBase enemyAction;
 
     private List<TickingEntity> entities = new List<TickingEntity>();
+    private List<GameObject> boundsWatch = new List<GameObject>();
+
+    private void Awake()
+    {
+        gameArea.center += transform.position;
+    }
 
     private void Update()
     {
@@ -101,11 +109,14 @@ public class ScriptController : MonoBehaviour
         return tweenSpeed;
     }
 
-    public void AddTickingEntity(TickingEntity entity)
+    public void AddTickingEntity(TickingEntity entity, bool keepInBounds = false)
     {
         if (!entity)
             return;
         entities.Add(entity);
+
+        if (keepInBounds)
+            boundsWatch.Add(entity.gameObject);
     }
 
     private void Next()
@@ -137,12 +148,26 @@ public class ScriptController : MonoBehaviour
         }
 
         // Filter out dead entities
-        entities = entities.Where(e => e).ToList();
+        boundsWatch = boundsWatch.Where(e => e).ToList();
+        boundsWatch.ForEach((e) =>
+        {
+            if (!gameArea.Contains(e.transform.position))
+                Destroy(e);
+        });
 
+        // Filter out dead entities
+        entities = entities.Where(e => e).ToList();
         entities.ForEach((e) =>
         {
             e.tweenSpeed = tweenSpeed;
             e.Tick();
         });
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+
+        Gizmos.DrawWireCube(transform.position + gameArea.center, gameArea.size);
     }
 }

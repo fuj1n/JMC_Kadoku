@@ -7,8 +7,9 @@ public abstract class TickingEntity : MonoBehaviour
 
     private void Awake()
     {
-        CombatManager.Instance.Script.AddTickingEntity(this);
+        CombatManager.Instance.Script.AddTickingEntity(this, BoundsAware());
     }
 
     public abstract void Tick();
+    public virtual bool BoundsAware() => true;
 }
