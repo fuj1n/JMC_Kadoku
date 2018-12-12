@@ -87,7 +87,7 @@ public class ScriptableCharacter : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        if (UnityEditor.EditorApplication.isPlaying)
+        if (Application.isPlaying)
             return;
 
         Vector3 startPos = new Vector3(transform.position.x - coordOffset * pos.x, transform.position.y, transform.position.z - coordOffset * pos.y);

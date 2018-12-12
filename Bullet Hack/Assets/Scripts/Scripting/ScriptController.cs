@@ -166,6 +166,9 @@ public class ScriptController : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        if (Application.isPlaying)
+            return;
+
         Gizmos.color = Color.green;
 
         Gizmos.DrawWireCube(transform.position + gameArea.center, gameArea.size);
