@@ -36,9 +36,4 @@ public class BlockList : MonoBehaviour
             return null;
         return blocks[block];
     }
-
-    //public GameObject LoadFromString(string s)
-    //{
-
-    //}
 }

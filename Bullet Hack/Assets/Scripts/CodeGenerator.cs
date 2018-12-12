@@ -13,7 +13,14 @@ public class CodeGenerator : MonoBehaviour
 
     private void Start()
     {
-        CodeBlockDrag repeatBlock = BlockList.Instance.GetBlock("Repeat Forever").GetComponent<CodeBlockDrag>().Clone(root, root);
-        repeatBlock.ConnectTo(manager.outAnchor.parent);
+        Invoke("Test", 1F);
+
+        //CodeBlockDrag repeatBlock = BlockList.Instance.GetBlock("Repeat Forever").GetComponent<CodeBlockDrag>().Clone(root, root);
+        //repeatBlock.ConnectTo(manager.outAnchor.parent);
+    }
+
+    void Test()
+    {
+        SerializedBlock.Deserialize("{\"name\": \"Move\",\"values\": { \"direction\": 3},\"child\":{\"name\": \"Move\",\"values\":{\"direction\": 2}}}", root).GetComponent<CodeBlockDrag>().ConnectTo(manager.outAnchor.parent);
     }
 }

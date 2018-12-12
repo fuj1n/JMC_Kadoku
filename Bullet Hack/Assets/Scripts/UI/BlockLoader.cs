@@ -100,6 +100,8 @@ public static class BlockLoader
             blockRect.sizeDelta = new Vector2(blockRect.sizeDelta.x + vars.sizeDelta.x, blockRect.sizeDelta.y);
 
             blockRect.localScale = Vector3.one;
+
+            blocks[b].GetComponent<CodeBlockDrag>().InitBinders();
         }
 
         return blocks;

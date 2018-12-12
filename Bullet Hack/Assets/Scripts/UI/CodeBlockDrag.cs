@@ -33,7 +33,7 @@ public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, 
         system = FindObjectOfType<EventSystem>();
     }
 
-    private void Start()
+    public void InitBinders()
     {
         binders = GetComponentsInChildren<ValueBinder>();
     }
@@ -152,6 +152,9 @@ public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, 
 
     public void ConnectTo(Transform target, Transform inAnchor = null)
     {
+        if (!target)
+            return;
+
         if (target.GetComponentInParent<CodeBlockDrag>().root != root)
             return;
 
