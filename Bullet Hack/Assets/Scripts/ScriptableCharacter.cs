@@ -51,7 +51,9 @@ public class ScriptableCharacter : MonoBehaviour
     [SerializeField]
     private Vector2Int pos = new Vector2Int(1, 1);
 
+    [Header("Templates")]
     public GameObject bullet;
+    public GameObject deathParticles;
 
     private void Move(Vector3 val)
     {
@@ -71,7 +73,14 @@ public class ScriptableCharacter : MonoBehaviour
     private void Update()
     {
         if (health <= 0)
+        {
             Destroy(gameObject);
+
+            if (deathParticles)
+                Instantiate(deathParticles).transform.position = transform.position;
+
+            return;
+        }
     }
 
     public void Shoot()

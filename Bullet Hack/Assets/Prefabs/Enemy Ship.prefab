@@ -993,3 +993,5 @@ MonoBehaviour:
   gridSize: {x: 3, y: 3}
   pos: {x: 1, y: 1}
   bullet: {fileID: 1222815285345734, guid: 84478a9fb1363174eb9c23d2e612e5ea, type: 2}
+  deathParticles: {fileID: 1573319659033752, guid: 5de40e4b205a435498b309593af33492,
+    type: 2}
