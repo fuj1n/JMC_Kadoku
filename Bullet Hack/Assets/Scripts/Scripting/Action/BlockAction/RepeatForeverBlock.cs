@@ -1,4 +1,4 @@
-﻿[BlockLoader.Block(BlockLoader.BlockAttribute.BlockType.BRACKET)]
+﻿[BlockLoader.Block]
 public class RepeatForeverBlock : ActionBlockBase
 {
     public override string GetName() => "Repeat Forever";

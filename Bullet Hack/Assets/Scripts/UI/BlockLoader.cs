@@ -120,7 +120,7 @@ public static class BlockLoader
 
         foreach (var found in discoveredBlocks)
         {
-            BlockAttribute.BlockType type = found.attribute.blockType;
+            bool isBracketBlock = typeof(ActionBlockBase).IsAssignableFrom(found.type);
 
             Block block = new Block
             {
@@ -134,15 +134,7 @@ public static class BlockLoader
                               where field.GetCustomAttribute<ActionBase.InputVarAttribute>(true).Reverse
                               select field).ToList();
 
-            switch (type)
-            {
-                case BlockAttribute.BlockType.STANDARD:
-                    block.template = BLOCK_GENERAL;
-                    break;
-                case BlockAttribute.BlockType.BRACKET:
-                    block.template = BLOCK_BRACKET;
-                    break;
-            }
+            block.template = isBracketBlock ? BLOCK_BRACKET : BLOCK_GENERAL;
 
             loadedBlocks.Add(block);
         }
@@ -159,19 +151,5 @@ public static class BlockLoader
     }
 
     [System.AttributeUsage(System.AttributeTargets.Class, Inherited = false, AllowMultiple = false)]
-    public sealed class BlockAttribute : System.Attribute
-    {
-        public BlockType blockType;
-
-        public BlockAttribute(BlockType blockType)
-        {
-            this.blockType = blockType;
-        }
-
-        public enum BlockType
-        {
-            STANDARD,
-            BRACKET
-        }
-    }
+    public sealed class BlockAttribute : System.Attribute { }
 }
