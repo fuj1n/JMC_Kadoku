@@ -35,6 +35,9 @@ public class ScriptableCharacter : MonoBehaviour
         }
     }
 
+    [ColorUsage(false)]
+    public Color gizmo;
+
     public float coordOffset = 1F;
 
     [HideInInspector]
@@ -56,10 +59,8 @@ public class ScriptableCharacter : MonoBehaviour
 
         Vector3 startPos = new Vector3(transform.position.x - coordOffset * pos.x, transform.position.y, transform.position.z - coordOffset * pos.y);
 
-        Renderer rend = GetComponent<Renderer>();
-        Gizmos.color = rend ? rend.sharedMaterial.color : Color.magenta;
-
-
+        gizmo.a = 1;
+        Gizmos.color = gizmo;
 
         for (int x = 0; x < gridSize.x; x++)
         {
