@@ -36,7 +36,14 @@ public class CodeGenerator : MonoBehaviour
         {
             SerializedBlock block = new SerializedBlock("Move");
 
-            block.values.Add("direction", Random.Range(0, 3));
+            int direction;
+
+            if (Random.Range(0, 100) < 80)
+                direction = Random.Range(2, 4);
+            else
+                direction = Random.Range(0, 2);
+
+            block.values.Add("direction", direction);
 
             return block;
         }
