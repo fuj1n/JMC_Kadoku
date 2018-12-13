@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class SerializedBlock
@@ -10,7 +11,7 @@ public class SerializedBlock
 
     public SerializedBlock blockIn;
 
-    public SerializedBlock(){}
+    public SerializedBlock() { }
     public SerializedBlock(string name) : this()
     {
         this.name = name;
@@ -18,11 +19,89 @@ public class SerializedBlock
 
     public static string Serialize(BlockManagerBase manager)
     {
-        return "";
+        if (!manager)
+            return "";
+
+        return JsonConvert.SerializeObject(Serialize(manager, true), Formatting.Indented);
+    }
+
+    public static SerializedBlock Serialize(BlockManagerBase manager, bool partial)
+    {
+        if (!manager)
+            return null;
+
+        SerializedBlock root = SerializeSingle(manager);
+
+        if (manager is BracketBlockManager && ((BracketBlockManager)manager).GetBracketConnection())
+            Serialize(root, ((BracketBlockManager)manager).GetBracketConnection(), true);
+
+        if (manager.GetOutConnection())
+            Serialize(root, manager.GetOutConnection());
+
+        return root;
+    }
+
+    private static void Serialize(SerializedBlock block, BlockManagerBase manager, bool bracket = false)
+    {
+        if (!manager)
+            return;
+
+        SerializedBlock next;
+
+        if (bracket)
+        {
+            block.blockIn = SerializeSingle(manager);
+
+            next = block.blockIn;
+        }
+        else
+        {
+            block.child = SerializeSingle(manager);
+
+            next = block.child;
+        }
+
+        if (manager is BracketBlockManager && ((BracketBlockManager)manager).GetBracketConnection())
+            Serialize(next, ((BracketBlockManager)manager).GetBracketConnection(), true);
+
+        if (manager.GetOutConnection())
+            Serialize(next, manager.GetOutConnection());
+    }
+
+    public static SerializedBlock SerializeSingle(BlockManagerBase manager)
+    {
+        if (!manager)
+            return null;
+
+        ActionBase action = manager.GetComponent<ActionBase>();
+
+        SerializedBlock block = new SerializedBlock(action.GetName());
+
+        foreach (ValueBinder binder in action.transform.Find("Vars").GetComponentsInChildren<ValueBinder>())
+        {
+            object value = binder.field.GetValue(binder.obj);
+
+            if (binder.field.FieldType.IsEnum)
+            {
+                System.Array vals = System.Enum.GetValues(binder.field.FieldType);
+                List<string> names = System.Enum.GetNames(binder.field.FieldType).ToList();
+
+                block.values.Add(binder.field.Name, vals.GetValue(names.IndexOf(System.Enum.GetName(binder.field.FieldType, value))));
+            }
+            else
+            {
+                block.values.Add(binder.field.Name, value);
+            }
+        }
+
+        return block;
     }
 
     public static BlockManagerBase Deserialize(string s, RectTransform root)
     {
+        if (string.IsNullOrWhiteSpace(s))
+            return null;
+
         SerializedBlock block = JsonConvert.DeserializeObject<SerializedBlock>(s);
 
         return Deserialize(block, root);
@@ -30,6 +109,9 @@ public class SerializedBlock
 
     public static BlockManagerBase Deserialize(SerializedBlock block, RectTransform root)
     {
+        if (block == null)
+            return null;
+
         BlockList list = BlockList.Instance;
 
         CodeBlockDrag drag = list.GetBlock(block.name).GetComponent<CodeBlockDrag>().Clone(root, root);

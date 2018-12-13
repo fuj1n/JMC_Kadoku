@@ -37,7 +37,7 @@ public class Bullet : TickingEntity
             {
                 GameObject particles = Instantiate(hitParticles);
                 particles.transform.position = transform.position;
-                particles.transform.forward = -transform.forward;
+                particles.transform.forward = transform.forward;
             }
 
             Destroy(gameObject);
