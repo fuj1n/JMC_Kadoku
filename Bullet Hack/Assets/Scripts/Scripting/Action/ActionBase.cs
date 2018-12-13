@@ -13,10 +13,13 @@ public abstract class ActionBase : MonoBehaviour
 
     public bool doDownscale = true;
 
-    protected virtual void Start()
+    private void Awake()
     {
         manager = GetComponent<BlockManagerBase>();
+    }
 
+    protected virtual void Start()
+    {
         if (nameText)
         {
             nameText.text = GetName();

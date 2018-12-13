@@ -13,14 +13,41 @@ public class CodeGenerator : MonoBehaviour
 
     private void Start()
     {
-        Invoke("Test", 1F);
+        SerializedBlock rootBlock = new SerializedBlock("Repeat Forever");
 
-        //CodeBlockDrag repeatBlock = BlockList.Instance.GetBlock("Repeat Forever").GetComponent<CodeBlockDrag>().Clone(root, root);
-        //repeatBlock.ConnectTo(manager.outAnchor.parent);
+        SerializedBlock current = Generate();
+        rootBlock.blockIn = current;
+
+        for(int i = 0; i < Random.Range(5, 20); i++)
+        {
+            SerializedBlock next = Generate();
+            current.child = next;
+            current = next;
+        }
+
+
+
+        SerializedBlock.Deserialize(rootBlock, root).GetComponent<CodeBlockDrag>().ConnectTo(manager.outAnchor.parent);
     }
 
-    void Test()
+    private SerializedBlock Generate()
     {
-        SerializedBlock.Deserialize("{\"name\": \"Move\",\"values\": { \"direction\": 3},\"child\":{\"name\": \"Move\",\"values\":{\"direction\": 2}}}", root).GetComponent<CodeBlockDrag>().ConnectTo(manager.outAnchor.parent);
+        if(Random.Range(0, 100) < 50)
+        {
+            SerializedBlock block = new SerializedBlock("Move");
+
+            block.values.Add("direction", Random.Range(0, 3));
+
+            return block;
+        }
+        else
+        {
+            return new SerializedBlock("Fire");
+        }
     }
+
+    //void Test()
+    //{
+    //    SerializedBlock.Deserialize("{\"name\": \"Move\",\"values\": { \"direction\": 3},\"child\":{\"name\": \"Move\",\"values\":{\"direction\": 2}}}", root).GetComponent<CodeBlockDrag>().ConnectTo(manager.outAnchor.parent);
+    //}
 }

@@ -10,6 +10,12 @@ public class SerializedBlock
 
     public SerializedBlock blockIn;
 
+    public SerializedBlock(){}
+    public SerializedBlock(string name) : this()
+    {
+        this.name = name;
+    }
+
     public static string Serialize(BlockManagerBase manager)
     {
         return "";
@@ -60,6 +66,22 @@ public class SerializedBlock
         drag.ConnectTo(outConnector);
 
         BlockManagerBase manager = drag.GetComponent<BlockManagerBase>();
+
+        foreach (ValueBinder binder in drag.GetComponentsInChildren<ValueBinder>())
+        {
+            if (block.values.ContainsKey(binder.field.Name))
+            {
+                object value = block.values[binder.field.Name];
+
+                if (value is long && ((long)value) >= int.MinValue && ((long)value) <= int.MaxValue)
+                    value = System.Convert.ToInt32(value);
+
+                if (binder.field.FieldType.IsEnum)
+                    binder.field.SetValue(binder.obj, System.Enum.ToObject(binder.field.FieldType, value));
+                else
+                    binder.field.SetValue(binder.obj, System.Convert.ChangeType(value, binder.field.FieldType));
+            }
+        }
 
         if (manager is BracketBlockManager && block.blockIn != null)
             Deserialize(list, block.blockIn, ((BracketBlockManager)manager).bracketAnchor.parent, root);

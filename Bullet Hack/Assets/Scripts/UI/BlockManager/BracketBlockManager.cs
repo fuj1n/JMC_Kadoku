@@ -13,19 +13,17 @@ public class BracketBlockManager : BlockManager
     [HideInInspector]
     public bool sizeCalculated = false;
 
-    protected override void Start()
+    private void Start()
     {
-        base.Start();
-
         if (!sizeCalculated)
-        {
-            minSize = rect.sizeDelta.y;
-            sizeCalculated = true;
-        }
+            CalculateSize();
     }
 
     public override void OnHierarchyChanged()
     {
+        if (!sizeCalculated)
+            CalculateSize();
+
         rect.sizeDelta = new Vector2(rect.sizeDelta.x, minSize + ComputeSize(bracketConnector));
 
         base.OnHierarchyChanged();
@@ -84,5 +82,11 @@ public class BracketBlockManager : BlockManager
 
         if (propagate && bracketConnector)
             bracketConnector.FadeOutline(f, time, propagate);
+    }
+
+    private void CalculateSize()
+    {
+        minSize = rect.sizeDelta.y;
+        sizeCalculated = true;
     }
 }

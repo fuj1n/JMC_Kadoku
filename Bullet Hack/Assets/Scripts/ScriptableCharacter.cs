@@ -90,7 +90,7 @@ public class ScriptableCharacter : MonoBehaviour
         b.transform.forward = transform.forward;
 
         Bullet bObj = b.GetComponent<Bullet>();
-        if (bObj)
+        if (bObj && CombatManager.Instance.Script.OtherAvatar)
             bObj.target = CombatManager.Instance.Script.OtherAvatar.transform;
     }
 
