@@ -7,17 +7,23 @@ public class BracketBlockManager : BlockManager
     [HideInInspector]
     public BlockManager bracketConnector;
 
-    private float minSize;
+    [HideInInspector]
+    public float minSize;
 
-    protected override void Start()
+    [HideInInspector]
+    public bool sizeCalculated = false;
+
+    private void Start()
     {
-        base.Start();
-
-        minSize = rect.sizeDelta.y;
+        if (!sizeCalculated)
+            CalculateSize();
     }
 
     public override void OnHierarchyChanged()
     {
+        if (!sizeCalculated)
+            CalculateSize();
+
         rect.sizeDelta = new Vector2(rect.sizeDelta.x, minSize + ComputeSize(bracketConnector));
 
         base.OnHierarchyChanged();
@@ -76,5 +82,11 @@ public class BracketBlockManager : BlockManager
 
         if (propagate && bracketConnector)
             bracketConnector.FadeOutline(f, time, propagate);
+    }
+
+    private void CalculateSize()
+    {
+        minSize = rect.sizeDelta.y;
+        sizeCalculated = true;
     }
 }

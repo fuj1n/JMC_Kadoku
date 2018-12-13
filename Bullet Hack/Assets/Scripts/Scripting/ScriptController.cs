@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
 
 public class ScriptController : MonoBehaviour
 {
@@ -18,12 +20,30 @@ public class ScriptController : MonoBehaviour
     [HideInInspector]
     public ScriptableCharacter currentAvatar;
 
+    public ScriptableCharacter OtherAvatar
+    {
+        get
+        {
+            return currentAvatar == playerAvatar ? enemyAvatar : playerAvatar;
+        }
+    }
+
+    public Bounds gameArea;
+
     private float currentSpeed;
 
     private float timer;
 
     private ActionBase playerAction;
     private ActionBase enemyAction;
+
+    private List<TickingEntity> entities = new List<TickingEntity>();
+    private List<GameObject> boundsWatch = new List<GameObject>();
+
+    private void Awake()
+    {
+        gameArea.center += transform.position;
+    }
 
     private void Update()
     {
@@ -89,6 +109,16 @@ public class ScriptController : MonoBehaviour
         return tweenSpeed;
     }
 
+    public void AddTickingEntity(TickingEntity entity, bool keepInBounds = false)
+    {
+        if (!entity)
+            return;
+        entities.Add(entity);
+
+        if (keepInBounds)
+            boundsWatch.Add(entity.gameObject);
+    }
+
     private void Next()
     {
         float tweenSpeed = GetTweenSpeed();
@@ -116,5 +146,31 @@ public class ScriptController : MonoBehaviour
             if (enemyAction)
                 enemyAction.GetManager().SetOutline(runningHighlight, tweenSpeed * .5F);
         }
+
+        // Filter out dead entities
+        boundsWatch = boundsWatch.Where(e => e).ToList();
+        boundsWatch.ForEach((e) =>
+        {
+            if (!gameArea.Contains(e.transform.position))
+                Destroy(e);
+        });
+
+        // Filter out dead entities
+        entities = entities.Where(e => e).ToList();
+        entities.ForEach((e) =>
+        {
+            e.tweenSpeed = tweenSpeed;
+            e.Tick();
+        });
+    }
+
+    private void OnDrawGizmos()
+    {
+        if (Application.isPlaying)
+            return;
+
+        Gizmos.color = Color.green;
+
+        Gizmos.DrawWireCube(transform.position + gameArea.center, gameArea.size);
     }
 }

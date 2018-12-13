@@ -35,6 +35,10 @@ public class ScriptableCharacter : MonoBehaviour
         }
     }
 
+    public int health = 3;
+
+    public float rotateIntensity = 2F;
+
     [ColorUsage(false)]
     public Color gizmo;
 
@@ -47,14 +51,52 @@ public class ScriptableCharacter : MonoBehaviour
     [SerializeField]
     private Vector2Int pos = new Vector2Int(1, 1);
 
+    [Header("Templates")]
+    public GameObject bullet;
+    public GameObject deathParticles;
+
     private void Move(Vector3 val)
     {
-        transform.DOJump(transform.position + val, 1F, 1, tweenSpeed / 2F);
+        Vector3 direction = val / val.magnitude;
+
+        Sequence move = DOTween.Sequence();
+
+        move.Append(transform.DOBlendableLocalRotateBy(-direction * rotateIntensity, tweenSpeed * .2F));
+        move.AppendInterval(tweenSpeed * .6F);
+        move.Append(transform.DORotateQuaternion(transform.rotation, tweenSpeed * .2F));
+
+        transform.DOMove(transform.position + val, tweenSpeed).SetEase(Ease.InOutSine);
+
+        move.Play();
+    }
+
+    private void Update()
+    {
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+
+            if (deathParticles)
+                Instantiate(deathParticles).transform.position = transform.position;
+
+            return;
+        }
+    }
+
+    public void Shoot()
+    {
+        GameObject b = Instantiate(bullet);
+        b.transform.position = transform.position;
+        b.transform.forward = transform.forward;
+
+        Bullet bObj = b.GetComponent<Bullet>();
+        if (bObj && CombatManager.Instance.Script.OtherAvatar)
+            bObj.target = CombatManager.Instance.Script.OtherAvatar.transform;
     }
 
     private void OnDrawGizmos()
     {
-        if (UnityEditor.EditorApplication.isPlaying)
+        if (Application.isPlaying)
             return;
 
         Vector3 startPos = new Vector3(transform.position.x - coordOffset * pos.x, transform.position.y, transform.position.z - coordOffset * pos.y);

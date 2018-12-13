@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-[BlockLoader.Block(BlockLoader.BlockAttribute.BlockType.STANDARD)]
+[BlockLoader.Block]
 public class MoveAction : ActionBase
 {
     [InputVar]

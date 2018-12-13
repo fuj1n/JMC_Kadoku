@@ -1,4 +1,4 @@
-﻿[BlockLoader.Block(BlockLoader.BlockAttribute.BlockType.STANDARD)]
+﻿[BlockLoader.Block]
 public class AwaitAction : ActionBase
 {
     [InputVar(Reverse = true)]

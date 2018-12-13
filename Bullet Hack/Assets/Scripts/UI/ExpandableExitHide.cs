@@ -10,6 +10,11 @@ public class ExpandableExitHide : MonoBehaviour, IPointerExitHandler
         system = FindObjectOfType<EventSystem>();
     }
 
+    private void Start()
+    {
+        gameObject.SetActive(false);
+    }
+
     public void OnPointerExit(PointerEventData eventData)
     {
         system.SetSelectedGameObject(null, eventData);

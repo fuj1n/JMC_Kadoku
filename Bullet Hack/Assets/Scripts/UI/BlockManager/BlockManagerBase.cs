@@ -13,7 +13,7 @@ public class BlockManagerBase : MonoBehaviour
 
     private Outline outline;
 
-    protected virtual void Start()
+    public virtual void Awake()
     {
         rect = GetComponent<RectTransform>();
         outline = GetComponent<Outline>();
