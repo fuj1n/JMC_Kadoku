@@ -140,9 +140,13 @@ public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, 
         {
             BlockManagerBase inConnector = ((BlockManager)blockManager).GetInConnection();
 
-            ((BlockManager)blockManager).DisconnectParent();
             if (inConnector)
-                inConnector.Connect(blockManager.outAnchor, (BlockManager)blockManager);
+            {
+                Transform inAnchor = transform.parent;
+
+                inConnector.Disconnect((BlockManager)blockManager);
+                inConnector.Connect(inAnchor, (BlockManager)drag.blockManager);
+            }
         }
 
         go.transform.localScale = Vector3.one;
