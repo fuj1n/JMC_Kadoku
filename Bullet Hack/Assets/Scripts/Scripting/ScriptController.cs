@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ScriptController : MonoBehaviour
 {
@@ -40,6 +41,8 @@ public class ScriptController : MonoBehaviour
     private List<TickingEntity> entities = new List<TickingEntity>();
     private List<GameObject> boundsWatch = new List<GameObject>();
 
+    private bool gameOver = false;
+
     private void Awake()
     {
         gameArea.center += transform.position;
@@ -47,6 +50,19 @@ public class ScriptController : MonoBehaviour
 
     private void Update()
     {
+        if (!playerAvatar || !enemyAvatar)
+        {
+            IsRunning = false;
+
+            if (!gameOver)
+            {
+                gameOver = true;
+                Invoke("Restart", 2F);
+            }
+
+            return;
+        }
+
         if (!IsRunning)
             return;
 
@@ -172,5 +188,10 @@ public class ScriptController : MonoBehaviour
         Gizmos.color = Color.green;
 
         Gizmos.DrawWireCube(transform.position + gameArea.center, gameArea.size);
+    }
+
+    private void Restart()
+    {
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
     }
 }
