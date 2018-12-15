@@ -210,8 +210,10 @@ public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, 
     {
         for (int i = 0; i < binders.Length; i++)
         {
-            binders[i].field = binds[i].field;
             binders[i].obj = GetComponent<ActionBase>();
+            binders[i].field = binds[i].field;
+
+            binders[i].field.SetValue(binders[i].obj, binds[i].field.GetValue(binds[i].obj));
         }
     }
 }
