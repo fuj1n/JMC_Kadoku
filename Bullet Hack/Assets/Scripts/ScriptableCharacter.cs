@@ -51,6 +51,10 @@ public class ScriptableCharacter : MonoBehaviour
     [SerializeField]
     private Vector2Int pos = new Vector2Int(1, 1);
 
+    [Header("Audio")]
+    public AudioClip shootSound;
+    public AudioClip deathSound;
+
     [Header("Templates")]
     public GameObject bullet;
     public GameObject deathParticles;
@@ -79,6 +83,9 @@ public class ScriptableCharacter : MonoBehaviour
             if (deathParticles)
                 Instantiate(deathParticles).transform.position = transform.position;
 
+            if (deathSound)
+                AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position);
+
             return;
         }
     }
@@ -92,6 +99,9 @@ public class ScriptableCharacter : MonoBehaviour
         Bullet bObj = b.GetComponent<Bullet>();
         if (bObj && CombatManager.Instance.Script.OtherAvatar)
             bObj.target = CombatManager.Instance.Script.OtherAvatar.transform;
+
+        if (shootSound)
+            AudioSource.PlayClipAtPoint(shootSound, Camera.main.transform.position);
     }
 
     private void OnDrawGizmos()
