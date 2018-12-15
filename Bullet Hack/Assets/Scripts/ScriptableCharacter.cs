@@ -61,7 +61,14 @@ public class ScriptableCharacter : MonoBehaviour
 
     private void Move(Vector3 val)
     {
+        if (val.sqrMagnitude == 0)
+        {
+            transform.DOShakeRotation(tweenSpeed / 2F, rotateIntensity);
+            return;
+        }
+
         Vector3 direction = val / val.magnitude;
+        direction.y = 0F;
 
         Sequence move = DOTween.Sequence();
 
