@@ -69,7 +69,7 @@ namespace BulletHack.UI.Blocks
             outline.DOColor(c, time);
 
             if (propagate && outConnector)
-                outConnector.SetOutline(c, time, true);
+                outConnector.SetOutline(c, time, setAlpha, true);
         }
 
         public virtual void FadeOutline(float f, float time, bool propagate = false)
