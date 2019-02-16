@@ -1,5 +1,5 @@
 ﻿using BulletHack.Scripting;
-using BulletHack.UI.BlockManager;
+using BulletHack.UI.Blocks;
 using TMPro;
 using UnityEngine;
 

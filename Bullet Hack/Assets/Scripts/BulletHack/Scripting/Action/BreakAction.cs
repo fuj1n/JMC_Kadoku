@@ -1,6 +1,6 @@
 ﻿using BulletHack.Scripting.Action.BlockAction;
 using BulletHack.UI;
-using BulletHack.UI.BlockManager;
+using BulletHack.UI.Blocks;
 
 namespace BulletHack.Scripting.Action
 {

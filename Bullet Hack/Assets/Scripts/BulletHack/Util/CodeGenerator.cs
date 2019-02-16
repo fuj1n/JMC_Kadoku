@@ -1,6 +1,6 @@
 ﻿using BulletHack.Scripting;
 using BulletHack.UI;
-using BulletHack.UI.BlockManager;
+using BulletHack.UI.Blocks;
 using UnityEngine;
 
 namespace BulletHack.Util

@@ -3,7 +3,7 @@ using System.Linq;
 using BulletHack.Scripting.Action;
 using BulletHack.UI;
 using BulletHack.UI.Binder;
-using BulletHack.UI.BlockManager;
+using BulletHack.UI.Blocks;
 using JetBrains.Annotations;
 using Newtonsoft.Json;
 using UnityEngine;

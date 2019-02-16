@@ -1912,13 +1912,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb86dbc4a69627043a64dd770906ed0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cloneDrag: 0
   root: {fileID: 224820227476419778}
   undeletable: 1
   outlineHover: {r: 0, g: 1, b: 1, a: 1}
   outlineDelete: {r: 1, g: 0, b: 0, a: 1}
   fadeTime: 0.5
-  binders: []
 --- !u!114 &114910530773389696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2900,6 +2898,7 @@ GameObject:
   - component: {fileID: 222576609064072126}
   - component: {fileID: 114958711593232240}
   - component: {fileID: 8467563259402686672}
+  - component: {fileID: 3085483716983318979}
   m_Layer: 5
   m_Name: ActionButtonGrp
   m_TagString: Untagged
@@ -2991,6 +2990,20 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
+--- !u!114 &3085483716983318979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822670588230166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2473143a49eba5a42aee64897ad61838, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  root: {fileID: 224820227476419778}
+  startBlock: {fileID: 114910530773389696}
 --- !u!1 &1853679120058836
 GameObject:
   m_ObjectHideFlags: 0
@@ -3272,7 +3285,7 @@ GameObject:
   - component: {fileID: 3651516486419716659}
   - component: {fileID: 7890847901710296308}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: Repeat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3374,7 +3387,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3651516486419716659}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3085483716983318979}
+        m_MethodName: Create
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: repeat
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &1574113077191665036
@@ -3627,7 +3651,7 @@ GameObject:
   - component: {fileID: 3299855253762648430}
   - component: {fileID: 100086026153987746}
   m_Layer: 5
-  m_Name: Button (4)
+  m_Name: Escape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3729,7 +3753,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3299855253762648430}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3085483716983318979}
+        m_MethodName: Create
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: escape
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &2895432967209855809
@@ -3745,7 +3780,7 @@ GameObject:
   - component: {fileID: 5203810300501546823}
   - component: {fileID: 3772778633865746071}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3847,7 +3882,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5203810300501546823}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3085483716983318979}
+        m_MethodName: Create
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: fire
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &4232011671247872855
@@ -4021,7 +4067,7 @@ GameObject:
   - component: {fileID: 5155078420330115928}
   - component: {fileID: 2235189304830685727}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Move
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4123,7 +4169,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5155078420330115928}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3085483716983318979}
+        m_MethodName: Create
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: move
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &8874790336130350677
@@ -4139,7 +4196,7 @@ GameObject:
   - component: {fileID: 4716718050827765388}
   - component: {fileID: 3753128330741156904}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Wait
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4241,6 +4298,17 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4716718050827765388}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3085483716983318979}
+        m_MethodName: Create
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: wait
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null

@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace BulletHack.UI.BlockManager
+namespace BulletHack.UI.Blocks
 {
     public class BlockManagerBase : MonoBehaviour
     {
@@ -69,7 +69,7 @@ namespace BulletHack.UI.BlockManager
             outline.DOColor(c, time);
 
             if (propagate && outConnector)
-                outConnector.SetOutline(c, time, propagate);
+                outConnector.SetOutline(c, time, true);
         }
 
         public virtual void FadeOutline(float f, float time, bool propagate = false)
@@ -77,7 +77,7 @@ namespace BulletHack.UI.BlockManager
             outline.DOFade(f, time);
 
             if (propagate && outConnector)
-                outConnector.FadeOutline(f, time, propagate);
+                outConnector.FadeOutline(f, time, true);
         }
     }
 }

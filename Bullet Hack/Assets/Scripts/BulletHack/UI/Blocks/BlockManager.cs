@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace BulletHack.UI.BlockManager
+namespace BulletHack.UI.Blocks
 {
     public class BlockManager : BlockManagerBase
     {

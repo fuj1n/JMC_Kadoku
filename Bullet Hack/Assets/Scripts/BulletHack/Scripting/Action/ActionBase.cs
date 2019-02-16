@@ -1,6 +1,6 @@
 ﻿using System;
 using BulletHack.Scripting.Action.BlockAction;
-using BulletHack.UI.BlockManager;
+using BulletHack.UI.Blocks;
 using JetBrains.Annotations;
 using TMPro;
 using UnityEngine;
@@ -67,9 +67,9 @@ namespace BulletHack.Scripting.Action
             Id = id;
         }
 
-        [System.AttributeUsage(System.AttributeTargets.Field)]
+        [AttributeUsage(AttributeTargets.Field)]
         [MeansImplicitUse]
-        public sealed class InputVarAttribute : System.Attribute
+        public sealed class InputVarAttribute : Attribute
         {
             public bool Reverse { get; set; }
         }

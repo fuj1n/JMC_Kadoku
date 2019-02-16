@@ -1,6 +1,6 @@
 using System.Linq;
 using BulletHack.Scripting;
-using BulletHack.UI.BlockManager;
+using BulletHack.UI.Blocks;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -44,8 +44,8 @@ namespace BulletHack.UI
                 Clone(transform.parent, root);
             }
 
-            if (blockManager is BlockManager.BlockManager)
-                ((BlockManager.BlockManager) blockManager).DisconnectParent();
+            if (blockManager is BlockManager)
+                ((BlockManager) blockManager).DisconnectParent();
 
             transform.SetParent(root, true);
             transform.localScale = Vector3.one;
@@ -119,16 +119,16 @@ namespace BulletHack.UI
 
             go.transform.SetSiblingIndex(transform.GetSiblingIndex());
 
-            if (blockManager is BlockManager.BlockManager)
+            if (blockManager is BlockManager)
             {
-                BlockManagerBase inConnector = ((BlockManager.BlockManager) blockManager).GetInConnection();
+                BlockManagerBase inConnector = ((BlockManager) blockManager).GetInConnection();
 
                 if (inConnector)
                 {
                     Transform inAnchor = transform.parent;
 
-                    inConnector.Disconnect((BlockManager.BlockManager) blockManager);
-                    inConnector.Connect(inAnchor, (BlockManager.BlockManager) drag.blockManager);
+                    inConnector.Disconnect((BlockManager) blockManager);
+                    inConnector.Connect(inAnchor, (BlockManager) drag.blockManager);
                 }
             }
 
@@ -147,19 +147,19 @@ namespace BulletHack.UI
 
             if (!inAnchor)
             {
-                if (!(blockManager is BlockManager.BlockManager))
+                if (!(blockManager is BlockManager))
                     return;
 
-                inAnchor = ((BlockManager.BlockManager) blockManager).inAnchor;
+                inAnchor = ((BlockManager) blockManager).inAnchor;
             }
 
-            if (target && blockManager is BlockManager.BlockManager)
+            if (target && blockManager is BlockManager)
             {
                 BlockManagerBase bm = target.GetComponentInParent<BlockManagerBase>();
                 if (!bm)
                     return;
 
-                RectTransform anchor = bm.Connect(target, (BlockManager.BlockManager) blockManager);
+                RectTransform anchor = bm.Connect(target, (BlockManager) blockManager);
 
                 if (!anchor)
                     return;
@@ -172,9 +172,9 @@ namespace BulletHack.UI
 
                 while (topmost)
                 {
-                    if (topmost is BlockManager.BlockManager)
+                    if (topmost is BlockManager)
                     {
-                        BlockManagerBase upper = ((BlockManager.BlockManager) topmost).GetInConnection();
+                        BlockManagerBase upper = ((BlockManager) topmost).GetInConnection();
 
                         if (upper)
                             topmost = upper;
