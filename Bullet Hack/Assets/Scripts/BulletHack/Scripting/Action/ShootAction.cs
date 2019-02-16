@@ -2,7 +2,7 @@
 
 namespace BulletHack.Scripting.Action
 {
-    [BlockLoader.Block]
+    [BlockLoader.Block("fire")]
     public class ActionShoot : ActionBase
     {
         public override void Execute()

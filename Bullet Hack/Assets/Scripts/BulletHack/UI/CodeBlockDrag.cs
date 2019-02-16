@@ -1,5 +1,5 @@
 using System.Linq;
-using BulletHack.Scripting.Action;
+using BulletHack.Scripting;
 using BulletHack.UI.Binder;
 using BulletHack.UI.BlockManager;
 using UnityEngine;
@@ -9,9 +9,7 @@ namespace BulletHack.UI
 {
     public class CodeBlockDrag : MonoBehaviour, IDragHandler, IPointerEnterHandler, IPointerExitHandler, IBeginDragHandler, IEndDragHandler
     {
-        public bool cloneDrag;
-
-        public RectTransform root;
+        public Transform root;
 
         public bool undeletable;
 
@@ -28,8 +26,6 @@ namespace BulletHack.UI
         private Transform inAnchor;
         private Transform target;
 
-        public ValueBinder[] binders;
-
         private void Awake()
         {
             rect = GetComponent<RectTransform>();
@@ -37,21 +33,16 @@ namespace BulletHack.UI
 
             system = FindObjectOfType<EventSystem>();
         }
-
-        public void InitBinders()
-        {
-            binders = GetComponentsInChildren<ValueBinder>();
-        }
-
+        
         public void OnBeginDrag(PointerEventData eventData)
         {
             if (CombatManager.Instance.Script.IsRunning)
                 return;
 
-            if (cloneDrag || Input.GetKey(KeyCode.LeftControl) && !undeletable)
+            if (Input.GetKey(KeyCode.LeftControl) && !undeletable)
             {
                 system.SetSelectedGameObject(null, eventData);
-                Clone(transform.parent, root, true);
+                Clone(transform.parent, root);
             }
 
             if (blockManager is BlockManager.BlockManager)
@@ -118,28 +109,16 @@ namespace BulletHack.UI
             target = t;
         }
 
-        public CodeBlockDrag Clone(Transform parent, RectTransform root, bool reverse = false)
+        public CodeBlockDrag Clone(Transform parent, Transform root)
         {
-            GameObject go = Instantiate(gameObject, parent);
-            go.name = gameObject.name;
+            GameObject go = SerializedBlock.Clone(blockManager, root).gameObject;
+            go.transform.SetParent(parent);
+            go.transform.position = transform.position;
 
             CodeBlockDrag drag = go.GetComponent<CodeBlockDrag>();
             drag.root = root;
 
-            CodeBlockDrag[] oldHierarchy = GetComponentsInChildren<CodeBlockDrag>();
-            CodeBlockDrag[] newHierarchy = go.GetComponentsInChildren<CodeBlockDrag>();
-
-            for (int i = 0; i < oldHierarchy.Length; i++)
-            {
-                newHierarchy[i].UpdateBinders(oldHierarchy[i].binders);
-            }
-
             go.transform.SetSiblingIndex(transform.GetSiblingIndex());
-
-            if (reverse)
-                cloneDrag = false;
-            else
-                drag.cloneDrag = false;
 
             if (blockManager is BlockManager.BlockManager)
             {
@@ -209,17 +188,6 @@ namespace BulletHack.UI
 
                 if (topmost)
                     topmost.transform.SetAsLastSibling();
-            }
-        }
-
-        public void UpdateBinders(ValueBinder[] binds)
-        {
-            for (int i = 0; i < binders.Length; i++)
-            {
-                binders[i].obj = GetComponent<ActionBase>();
-                binders[i].field = binds[i].field;
-
-                binders[i].field.SetValue(binders[i].obj, binds[i].field.GetValue(binds[i].obj));
             }
         }
     }

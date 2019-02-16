@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using BulletHack.Scripting.Action;
@@ -7,6 +8,7 @@ using BulletHack.UI.Binder;
 using BulletHack.Util;
 using TMPro;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace BulletHack.UI
 {
@@ -16,33 +18,33 @@ namespace BulletHack.UI
         public static readonly GameObject BLOCK_GENERAL = Resources.Load<GameObject>(TEMPLATE_PATH + "GeneralBlock");
         public static readonly GameObject BLOCK_BRACKET = Resources.Load<GameObject>(TEMPLATE_PATH + "BracketBlock");
 
-        private static Block[] blocks;
+        private static Dictionary<string, Block> blocks = new Dictionary<string, Block>();
 
-        public static IEnumerable<GameObject> CreateBlocks()
+        public static GameObject CreateBlock(string id, Transform root = null)
         {
-            GameObject[] blocks = new GameObject[BlockLoader.blocks.Length];
+            if(!blocks.ContainsKey(id))
+                throw new ArgumentException("Block " + id + " does not exist or is not yet loaded.");
+            
+            Block block = blocks[id];
 
-            for (int b = 0; b < blocks.Length; b++)
+            GameObject blockObj = Object.Instantiate(block.template, root);
+            ActionBase action = (ActionBase) blockObj.AddComponent(block.component);
+            action.nameText = blockObj.GetComponentInChildren<TextMeshProUGUI>();
+            action.SetId(block.id);
+
+            RectTransform varsContainer = blockObj.transform.Find("Vars")?.GetComponent<RectTransform>();
+            if (!varsContainer)
+                varsContainer = blockObj.GetComponent<RectTransform>();
+
+            foreach (FieldInfo input in block.inputs)
             {
-                Block block = BlockLoader.blocks[b];
-
-                blocks[b] = Object.Instantiate(block.template);
-                ActionBase action = (ActionBase) blocks[b].AddComponent(block.component);
-                action.nameText = blocks[b].GetComponentInChildren<TextMeshProUGUI>();
-
-                RectTransform vars = blocks[b].transform.Find("Vars")?.GetComponent<RectTransform>();
-                if (!vars)
-                    vars = blocks[b].GetComponent<RectTransform>();
-
-                foreach (FieldInfo input in block.inputs)
-                {
-                    bool reverse = block.reversed.Contains(input);
-
+                bool reverse = block.reversed.Contains(input);
+                
                     GameObject box = new GameObject(input.Name + " box");
                     RectTransform boxRect = box.AddComponent<RectTransform>();
-                    boxRect.SetParent(vars, true);
+                    boxRect.SetParent(varsContainer, true);
 
-                    boxRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Bottom, 0F, vars.sizeDelta.y);
+                    boxRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Bottom, 0F, varsContainer.sizeDelta.y);
                     boxRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Left, 0F, 160F);
                     boxRect.localScale = Vector3.one;
 
@@ -99,25 +101,26 @@ namespace BulletHack.UI
 
                     vRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Left, 0F, boxRect.sizeDelta.x);
                     vRect.SetInsetAndSizeFromParentEdge(reverse ? RectTransform.Edge.Top : RectTransform.Edge.Bottom, 0F, boxRect.sizeDelta.y * .6F);
-                }
-
-                Canvas.ForceUpdateCanvases();
-                RectTransform blockRect = blocks[b].GetComponent<RectTransform>();
-                blockRect.sizeDelta = new Vector2(blockRect.sizeDelta.x + vars.sizeDelta.x, blockRect.sizeDelta.y);
-
-                blockRect.localScale = Vector3.one;
-
-                blocks[b].GetComponent<CodeBlockDrag>().InitBinders();
             }
+            
+            Canvas.ForceUpdateCanvases();
+            RectTransform blockRect = blockObj.GetComponent<RectTransform>();
+            blockRect.sizeDelta = new Vector2(blockRect.sizeDelta.x + varsContainer.sizeDelta.x, blockRect.sizeDelta.y);
 
-            return blocks;
+            blockRect.localScale = Vector3.one;
+
+            CodeBlockDrag drag = blockObj.GetComponent<CodeBlockDrag>();
+            
+            drag.root = root;
+            
+            return blockObj;
         }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         private static void Initialize()
         {
             // Find all the classes that have the BlockAttribute attribute
-            var discoveredBlocks = from assembly in System.AppDomain.CurrentDomain.GetAssemblies()
+            var discoveredBlocks = from assembly in AppDomain.CurrentDomain.GetAssemblies()
                     from t in assembly.GetTypes()
                     where typeof(ActionBase).IsAssignableFrom(t)
                     let attrib = t.GetCustomAttribute<BlockAttribute>(false)
@@ -132,6 +135,7 @@ namespace BulletHack.UI
 
                 Block block = new Block
                 {
+                        id = found.attribute.id,
                         component = found.type,
                         inputs = (from field in found.type.GetFields(BindingFlags.NonPublic | BindingFlags.Instance)
                                 where field.GetCustomAttribute<ActionBase.InputVarAttribute>(true) != null
@@ -147,20 +151,28 @@ namespace BulletHack.UI
                 loadedBlocks.Add(block);
             }
 
-            blocks = loadedBlocks.ToArray();
+            blocks = loadedBlocks.ToDictionary(x => x.id);
         }
 
         private struct Block
         {
+            public string id;
+            
             public GameObject template;
-            public System.Type component;
+            public Type component;
             public FieldInfo[] inputs;
             public List<FieldInfo> reversed;
         }
 
-        [System.AttributeUsage(System.AttributeTargets.Class, Inherited = false, AllowMultiple = false)]
-        public sealed class BlockAttribute : System.Attribute
+        [System.AttributeUsage(AttributeTargets.Class, Inherited = false)]
+        public sealed class BlockAttribute : Attribute
         {
+            public readonly string id;
+            
+            public BlockAttribute(string id)
+            {
+                this.id = id;
+            }
         }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace BulletHack.Scripting.Action.BlockAction
 {
-    [BlockLoader.Block]
+    [BlockLoader.Block("repeat.forever")]
     public class RepeatForeverBlock : ActionBlockBase
     {
         public override string GetName() => "Repeat Forever";

@@ -11,8 +11,8 @@ namespace BulletHack.Scripting
 {
     public class SerializedBlock
     {
-        public readonly string name;
-        public readonly Dictionary<string, object> values = new Dictionary<string, object>();
+        public string id;
+        public Dictionary<string, object> values = new Dictionary<string, object>();
         public SerializedBlock child;
 
         public SerializedBlock blockIn;
@@ -21,9 +21,9 @@ namespace BulletHack.Scripting
         {
         }
 
-        public SerializedBlock(string name) : this()
+        public SerializedBlock(string id) : this()
         {
-            this.name = name;
+            this.id = id;
         }
 
         public static string Serialize(BlockManagerBase manager)
@@ -90,7 +90,7 @@ namespace BulletHack.Scripting
 
             ActionBase action = manager.GetComponent<ActionBase>();
 
-            SerializedBlock block = new SerializedBlock(action.GetName());
+            SerializedBlock block = new SerializedBlock(action.Id);
 
             foreach (ValueBinder binder in action.transform.Find("Vars").GetComponentsInChildren<ValueBinder>())
             {
@@ -112,7 +112,7 @@ namespace BulletHack.Scripting
             return block;
         }
 
-        public static BlockManagerBase Deserialize(string s, RectTransform root)
+        public static BlockManagerBase Deserialize(string s, Transform root)
         {
             if (string.IsNullOrWhiteSpace(s))
                 return null;
@@ -122,14 +122,12 @@ namespace BulletHack.Scripting
             return Deserialize(block, root);
         }
 
-        public static BlockManagerBase Deserialize(SerializedBlock block, RectTransform root)
+        public static BlockManagerBase Deserialize(SerializedBlock block, Transform root)
         {
             if (block == null)
                 return null;
 
-            BlockList list = BlockList.Instance;
-
-            CodeBlockDrag drag = list.GetBlock(block.name).GetComponent<CodeBlockDrag>().Clone(root, root);
+            CodeBlockDrag drag = BlockLoader.CreateBlock(block.id, root).GetComponent<CodeBlockDrag>();
             BlockManagerBase manager = drag.GetComponent<BlockManagerBase>();
 
             foreach (ValueBinder binder in drag.GetComponentsInChildren<ValueBinder>())
@@ -149,19 +147,19 @@ namespace BulletHack.Scripting
             }
 
             if (manager is BracketBlockManager && block.blockIn != null)
-                Deserialize(list, block.blockIn, ((BracketBlockManager) manager).bracketAnchor.parent, root);
+                Deserialize(block.blockIn, ((BracketBlockManager) manager).bracketAnchor.parent, root);
 
             if (block.child != null)
-                Deserialize(list, block.child, manager.outAnchor.parent, root);
+                Deserialize(block.child, manager.outAnchor.parent, root);
 
             return manager;
         }
 
-        private static void Deserialize(BlockList list, SerializedBlock block, Transform outConnector, RectTransform root)
+        private static void Deserialize(SerializedBlock block, Transform outConnector, Transform root)
         {
             while (true)
             {
-                CodeBlockDrag drag = list.GetBlock(block.name).GetComponent<CodeBlockDrag>().Clone(root, root);
+                CodeBlockDrag drag = BlockLoader.CreateBlock(block.id, root).GetComponent<CodeBlockDrag>();
                 drag.ConnectTo(outConnector);
 
                 BlockManagerBase manager = drag.GetComponent<BlockManagerBase>();
@@ -182,7 +180,7 @@ namespace BulletHack.Scripting
                 }
 
                 if (manager is BracketBlockManager && block.blockIn != null)
-                    Deserialize(list, block.blockIn, ((BracketBlockManager) manager).bracketAnchor.parent, root);
+                    Deserialize(block.blockIn, ((BracketBlockManager) manager).bracketAnchor.parent, root);
 
                 if (block.child != null)
                 {
@@ -193,6 +191,14 @@ namespace BulletHack.Scripting
 
                 break;
             }
+        }
+
+        public static BlockManagerBase Clone(BlockManagerBase manager, Transform newRoot = null)
+        {
+            if (newRoot == null)
+                newRoot = manager.GetComponent<CodeBlockDrag>().root;
+
+            return Deserialize(Serialize(manager), newRoot);
         }
     }
 }

@@ -8,7 +8,7 @@ namespace BulletHack.Util
     public class CodeGenerator : MonoBehaviour
     {
         private BlockManagerBase manager;
-        private RectTransform root;
+        private Transform root;
 
         private void Awake()
         {
@@ -18,7 +18,7 @@ namespace BulletHack.Util
 
         private void Start()
         {
-            SerializedBlock rootBlock = new SerializedBlock("Repeat Forever");
+            SerializedBlock rootBlock = new SerializedBlock("repeat.forever");
 
             SerializedBlock current = Generate();
             rootBlock.blockIn = current;
@@ -36,8 +36,8 @@ namespace BulletHack.Util
 
         private static SerializedBlock Generate()
         {
-            if (Random.Range(0, 100) >= 50) return new SerializedBlock("Fire");
-            SerializedBlock block = new SerializedBlock("Move");
+            if (Random.Range(0, 100) >= 50) return new SerializedBlock("fire");
+            SerializedBlock block = new SerializedBlock("move");
 
             int direction = Random.Range(0, 100) < 80 ? Random.Range(2, 4) : Random.Range(0, 2);
 

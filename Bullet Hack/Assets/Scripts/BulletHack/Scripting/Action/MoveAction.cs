@@ -3,7 +3,7 @@ using BulletHack.UI;
 
 namespace BulletHack.Scripting.Action
 {
-    [BlockLoader.Block]
+    [BlockLoader.Block("move")]
     public class MoveAction : ActionBase
     {
         [InputVar]

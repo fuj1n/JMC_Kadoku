@@ -1,4 +1,5 @@
-﻿using BulletHack.Scripting.Action.BlockAction;
+﻿using System;
+using BulletHack.Scripting.Action.BlockAction;
 using BulletHack.UI.BlockManager;
 using JetBrains.Annotations;
 using TMPro;
@@ -18,6 +19,8 @@ namespace BulletHack.Scripting.Action
 
         public bool doDownscale = true;
 
+        public string Id { get; private set; }
+        
         private void Awake()
         {
             manager = GetComponent<BlockManagerBase>();
@@ -56,6 +59,14 @@ namespace BulletHack.Scripting.Action
 
         public abstract string GetName();
 
+        public void SetId(string id)
+        {
+            if (Id != null)
+                throw new ArgumentException("Attempted to set action ID twice");
+
+            Id = id;
+        }
+        
         [System.AttributeUsage(System.AttributeTargets.Field)]
         [MeansImplicitUse]
         public sealed class InputVarAttribute : System.Attribute

@@ -2,7 +2,7 @@
 
 namespace BulletHack.Scripting.Action.BlockAction
 {
-    [BlockLoader.Block]
+    [BlockLoader.Block("repeat")]
     public class RepeatTimesBlock : ActionBlockBase
     {
         [InputVar(Reverse = true)]

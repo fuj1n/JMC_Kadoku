@@ -3,7 +3,7 @@ using BulletHack.UI.BlockManager;
 
 namespace BulletHack.Scripting.Action
 {
-    [BlockLoader.Block]
+    [BlockLoader.Block("wait")]
     public class AwaitAction : ActionBase
     {
         [InputVar(Reverse = true)]

@@ -185,7 +185,6 @@
                 <e p="ValueBinder.cs" t="Include" />
               </e>
               <e p="BlockConnectorIn.cs" t="Include" />
-              <e p="BlockList.cs" t="Include" />
               <e p="BlockLoader.cs" t="Include" />
               <e p="BlockManager" t="Include">
                 <e p="BlockManager.cs" t="Include" />

@@ -35,8 +35,7 @@ namespace BulletHack.UI.Binder
             {
                 if (field.FieldType == typeof(int))
                 {
-                    int current = (int) field.GetValue(obj);
-                    int.TryParse(s, out current);
+                    int.TryParse(s, out int current);
                     field.SetValue(obj, current);
                 }
                 else if (field.FieldType == typeof(string))
@@ -51,7 +50,7 @@ namespace BulletHack.UI.Binder
         private void Update()
         {
             if (sync)
-                sync.interactable = !CombatManager.Instance.Script.IsRunning && !drag.cloneDrag;
+                sync.interactable = !CombatManager.Instance.Script.IsRunning;
         }
     }
 }

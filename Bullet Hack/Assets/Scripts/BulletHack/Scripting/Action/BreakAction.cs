@@ -4,7 +4,7 @@ using BulletHack.UI.BlockManager;
 
 namespace BulletHack.Scripting.Action
 {
-    [BlockLoader.Block]
+    [BlockLoader.Block("escape")]
     public class BreakAction : ActionBase
     {
         public override void Execute()
