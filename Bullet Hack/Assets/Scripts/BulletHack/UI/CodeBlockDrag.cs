@@ -1,6 +1,5 @@
 using System.Linq;
 using BulletHack.Scripting;
-using BulletHack.UI.Binder;
 using BulletHack.UI.BlockManager;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -33,7 +32,7 @@ namespace BulletHack.UI
 
             system = FindObjectOfType<EventSystem>();
         }
-        
+
         public void OnBeginDrag(PointerEventData eventData)
         {
             if (CombatManager.Instance.Script.IsRunning)

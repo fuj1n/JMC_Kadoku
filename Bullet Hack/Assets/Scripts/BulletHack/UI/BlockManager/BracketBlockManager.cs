@@ -75,7 +75,7 @@ namespace BulletHack.UI.BlockManager
             base.SetOutline(c, time, setAlpha, propagate);
 
             if (propagate && bracketConnector)
-                bracketConnector.SetOutline(c, time, setAlpha, propagate);
+                bracketConnector.SetOutline(c, time, setAlpha, true);
         }
 
         public override void FadeOutline(float f, float time, bool propagate = false)
@@ -83,7 +83,7 @@ namespace BulletHack.UI.BlockManager
             base.FadeOutline(f, time, propagate);
 
             if (propagate && bracketConnector)
-                bracketConnector.FadeOutline(f, time, propagate);
+                bracketConnector.FadeOutline(f, time, true);
         }
 
         private void CalculateSize()

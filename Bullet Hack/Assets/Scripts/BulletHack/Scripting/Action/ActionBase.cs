@@ -20,7 +20,7 @@ namespace BulletHack.Scripting.Action
         public bool doDownscale = true;
 
         public string Id { get; private set; }
-        
+
         private void Awake()
         {
             manager = GetComponent<BlockManagerBase>();
@@ -66,7 +66,7 @@ namespace BulletHack.Scripting.Action
 
             Id = id;
         }
-        
+
         [System.AttributeUsage(System.AttributeTargets.Field)]
         [MeansImplicitUse]
         public sealed class InputVarAttribute : System.Attribute

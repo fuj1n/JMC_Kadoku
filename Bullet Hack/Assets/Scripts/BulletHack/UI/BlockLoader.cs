@@ -22,9 +22,9 @@ namespace BulletHack.UI
 
         public static GameObject CreateBlock(string id, Transform root = null)
         {
-            if(!blocks.ContainsKey(id))
+            if (!blocks.ContainsKey(id))
                 throw new ArgumentException("Block " + id + " does not exist or is not yet loaded.");
-            
+
             Block block = blocks[id];
 
             GameObject blockObj = Object.Instantiate(block.template, root);
@@ -39,70 +39,70 @@ namespace BulletHack.UI
             foreach (FieldInfo input in block.inputs)
             {
                 bool reverse = block.reversed.Contains(input);
-                
-                    GameObject box = new GameObject(input.Name + " box");
-                    RectTransform boxRect = box.AddComponent<RectTransform>();
-                    boxRect.SetParent(varsContainer, true);
 
-                    boxRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Bottom, 0F, varsContainer.sizeDelta.y);
-                    boxRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Left, 0F, 160F);
-                    boxRect.localScale = Vector3.one;
+                GameObject box = new GameObject(input.Name + " box");
+                RectTransform boxRect = box.AddComponent<RectTransform>();
+                boxRect.SetParent(varsContainer, true);
 
-                    GameObject label = new GameObject("Label");
+                boxRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Bottom, 0F, varsContainer.sizeDelta.y);
+                boxRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Left, 0F, 160F);
+                boxRect.localScale = Vector3.one;
 
-                    RectTransform labelRect = label.AddComponent<RectTransform>();
-                    labelRect.SetParent(boxRect, true);
-                    labelRect.localScale = Vector3.one;
+                GameObject label = new GameObject("Label");
 
-                    labelRect.anchorMin = new Vector2(0, 1);
-                    labelRect.anchorMax = new Vector2(1, 1);
+                RectTransform labelRect = label.AddComponent<RectTransform>();
+                labelRect.SetParent(boxRect, true);
+                labelRect.localScale = Vector3.one;
 
-                    TextMeshProUGUI lblText = label.AddComponent<TextMeshProUGUI>();
-                    lblText.text = input.Name.ToFriendly(true);
-                    lblText.alignment = TextAlignmentOptions.MidlineLeft;
-                    lblText.enableAutoSizing = true;
-                    lblText.fontSizeMin = 0F;
-                    lblText.fontSizeMax = 24F;
+                labelRect.anchorMin = new Vector2(0, 1);
+                labelRect.anchorMax = new Vector2(1, 1);
 
-                    labelRect.offsetMin = Vector2.zero;
-                    labelRect.offsetMax = Vector2.zero;
-                    labelRect.SetInsetAndSizeFromParentEdge(reverse ? RectTransform.Edge.Bottom : RectTransform.Edge.Top, 0F, boxRect.sizeDelta.y * .4F);
+                TextMeshProUGUI lblText = label.AddComponent<TextMeshProUGUI>();
+                lblText.text = input.Name.ToFriendly(true);
+                lblText.alignment = TextAlignmentOptions.MidlineLeft;
+                lblText.enableAutoSizing = true;
+                lblText.fontSizeMin = 0F;
+                lblText.fontSizeMax = 24F;
 
-                    RectTransform vRect;
-                    ValueBinder binder;
+                labelRect.offsetMin = Vector2.zero;
+                labelRect.offsetMax = Vector2.zero;
+                labelRect.SetInsetAndSizeFromParentEdge(reverse ? RectTransform.Edge.Bottom : RectTransform.Edge.Top, 0F, boxRect.sizeDelta.y * .4F);
 
-                    if (input.FieldType.IsEnum)
-                    {
-                        GameObject dropdown = Object.Instantiate(CommonResources.DROPDOWN, boxRect);
+                RectTransform vRect;
+                ValueBinder binder;
 
-                        binder = dropdown.AddComponent<EnumBinder>();
+                if (input.FieldType.IsEnum)
+                {
+                    GameObject dropdown = Object.Instantiate(CommonResources.DROPDOWN, boxRect);
 
-                        vRect = dropdown.GetComponent<RectTransform>();
-                    }
-                    else if (input.FieldType == typeof(bool))
-                    {
-                        GameObject toggle = Object.Instantiate(CommonResources.TOGGLE, boxRect);
+                    binder = dropdown.AddComponent<EnumBinder>();
 
-                        binder = toggle.AddComponent<BoolBinder>();
+                    vRect = dropdown.GetComponent<RectTransform>();
+                }
+                else if (input.FieldType == typeof(bool))
+                {
+                    GameObject toggle = Object.Instantiate(CommonResources.TOGGLE, boxRect);
 
-                        vRect = toggle.GetComponent<RectTransform>();
-                    }
-                    else
-                    {
-                        GameObject ifield = Object.Instantiate(CommonResources.INPUT_FIELD, boxRect);
+                    binder = toggle.AddComponent<BoolBinder>();
 
-                        binder = ifield.AddComponent<ValueBinder>();
+                    vRect = toggle.GetComponent<RectTransform>();
+                }
+                else
+                {
+                    GameObject ifield = Object.Instantiate(CommonResources.INPUT_FIELD, boxRect);
 
-                        vRect = ifield.GetComponent<RectTransform>();
-                    }
+                    binder = ifield.AddComponent<ValueBinder>();
 
-                    binder.field = input;
-                    binder.obj = action;
+                    vRect = ifield.GetComponent<RectTransform>();
+                }
 
-                    vRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Left, 0F, boxRect.sizeDelta.x);
-                    vRect.SetInsetAndSizeFromParentEdge(reverse ? RectTransform.Edge.Top : RectTransform.Edge.Bottom, 0F, boxRect.sizeDelta.y * .6F);
+                binder.field = input;
+                binder.obj = action;
+
+                vRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Left, 0F, boxRect.sizeDelta.x);
+                vRect.SetInsetAndSizeFromParentEdge(reverse ? RectTransform.Edge.Top : RectTransform.Edge.Bottom, 0F, boxRect.sizeDelta.y * .6F);
             }
-            
+
             Canvas.ForceUpdateCanvases();
             RectTransform blockRect = blockObj.GetComponent<RectTransform>();
             blockRect.sizeDelta = new Vector2(blockRect.sizeDelta.x + varsContainer.sizeDelta.x, blockRect.sizeDelta.y);
@@ -110,9 +110,9 @@ namespace BulletHack.UI
             blockRect.localScale = Vector3.one;
 
             CodeBlockDrag drag = blockObj.GetComponent<CodeBlockDrag>();
-            
+
             drag.root = root;
-            
+
             return blockObj;
         }
 
@@ -157,18 +157,18 @@ namespace BulletHack.UI
         private struct Block
         {
             public string id;
-            
+
             public GameObject template;
             public Type component;
             public FieldInfo[] inputs;
             public List<FieldInfo> reversed;
         }
 
-        [System.AttributeUsage(AttributeTargets.Class, Inherited = false)]
+        [AttributeUsage(AttributeTargets.Class, Inherited = false)]
         public sealed class BlockAttribute : Attribute
         {
             public readonly string id;
-            
+
             public BlockAttribute(string id)
             {
                 this.id = id;

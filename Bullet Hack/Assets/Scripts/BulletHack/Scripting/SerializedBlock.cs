@@ -4,11 +4,13 @@ using BulletHack.Scripting.Action;
 using BulletHack.UI;
 using BulletHack.UI.Binder;
 using BulletHack.UI.BlockManager;
+using JetBrains.Annotations;
 using Newtonsoft.Json;
 using UnityEngine;
 
 namespace BulletHack.Scripting
 {
+    [UsedImplicitly(ImplicitUseTargetFlags.Members)]
     public class SerializedBlock
     {
         public string id;

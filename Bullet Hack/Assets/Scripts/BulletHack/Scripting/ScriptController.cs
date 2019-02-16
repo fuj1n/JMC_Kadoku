@@ -25,10 +25,7 @@ namespace BulletHack.Scripting
         [HideInInspector]
         public ScriptableCharacter currentAvatar;
 
-        public ScriptableCharacter OtherAvatar
-        {
-            get { return currentAvatar == playerAvatar ? enemyAvatar : playerAvatar; }
-        }
+        public ScriptableCharacter OtherAvatar => currentAvatar == playerAvatar ? enemyAvatar : playerAvatar;
 
         public Bounds gameArea;
 
@@ -58,7 +55,7 @@ namespace BulletHack.Scripting
                 if (!gameOver)
                 {
                     gameOver = true;
-                    Invoke("Restart", 2F);
+                    Invoke(nameof(Restart), 2F);
                 }
 
                 return;
