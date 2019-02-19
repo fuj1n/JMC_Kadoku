@@ -34,7 +34,7 @@ namespace BulletHack.Scripting.Action
 
         public override string GetName() => "Move";
 
-        private enum Direction
+        public enum Direction
         {
             UP,
             DOWN,
