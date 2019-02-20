@@ -131,10 +131,5 @@ namespace BulletHack.Util
 
             return current;
         }
-
-        //void Test()
-        //{
-        //    SerializedBlock.Deserialize("{\"name\": \"Move\",\"values\": { \"direction\": 3},\"child\":{\"name\": \"Move\",\"values\":{\"direction\": 2}}}", root).GetComponent<CodeBlockDrag>().ConnectTo(manager.outAnchor.parent);
-        //}
     }
 }

@@ -82,6 +82,7 @@ namespace BulletHack
         private void Update()
         {
             if (health > 0) return;
+            transform.DOKill();
             Destroy(gameObject);
 
             if (deathParticles)

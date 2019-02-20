@@ -196,6 +196,7 @@
               <e p="CodeRunningOverlay.cs" t="Include" />
               <e p="Expandable.cs" t="Include" />
               <e p="ExpandableExitHide.cs" t="Include" />
+              <e p="HeartsController.cs" t="Include" />
               <e p="ScrollableArea.cs" t="Include" />
               <e p="SerializeDeserializeController.cs" t="Include" />
             </e>
