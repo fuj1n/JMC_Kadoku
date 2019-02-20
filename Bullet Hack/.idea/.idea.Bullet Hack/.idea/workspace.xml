@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84682f92-91d4-4b62-b5e0-a3379472445a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Bullet Hack/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bullet Hack/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Combat_Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Combat_Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHack/ScriptableCharacter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHack/ScriptableCharacter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHack/Util/CodeGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHack/Util/CodeGenerator.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,17 +15,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Util/CodeGenerator.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="703">
-              <caret line="97" column="13" lean-forward="true" selection-start-line="97" selection-start-column="13" selection-end-line="97" selection-end-column="13" />
+            <state relative-caret-position="1350">
+              <caret line="97" column="13" selection-start-line="97" selection-start-column="13" selection-end-line="97" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/HeartsController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+            <state relative-caret-position="420">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
             </state>
           </provider>
         </entry>
@@ -37,16 +34,16 @@
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/BlockAction/RepeatTimesBlock.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+              <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/ScriptController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="868">
-              <caret line="170" selection-start-line="170" selection-end-line="170" />
+            <state relative-caret-position="465">
+              <caret line="61" column="77" selection-start-line="61" selection-start-column="77" selection-end-line="61" selection-end-column="77" />
             </state>
           </provider>
         </entry>
@@ -64,7 +61,7 @@
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/ScriptableCharacter.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="480">
-              <caret line="35" column="30" lean-forward="true" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
+              <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -81,6 +78,7 @@
       <find>GameMa</find>
       <find>gameco</find>
       <find>GameCon</find>
+      <find>Next</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -152,7 +150,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/BlockAction/RepeatForeverBlock.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/ActionBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/Binder/ValueBinder.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/ScriptController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/SerializedBlock.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/BlockManager/BracketBlockManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/BlockLoader.cs" />
@@ -166,6 +163,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/ScriptableCharacter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/Util/CodeGenerator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/HeartsController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/ScriptController.cs" />
       </list>
     </option>
   </component>
@@ -189,8 +187,8 @@
       <pane id="SolutionExplorer">
         <option name="show-all-files" value="false" />
       </pane>
-      <pane id="FileSystemExplorer" />
       <pane id="AssemblyExplorer" />
+      <pane id="FileSystemExplorer" />
       <pane id="UnityExplorer">
         <subPane>
           <expand>
@@ -343,11 +341,13 @@
       <workItem from="1550591501300" duration="1617000" />
       <workItem from="1550629754943" duration="1071000" />
       <workItem from="1550643476622" duration="3081000" />
+      <workItem from="1550648363980" duration="287000" />
+      <workItem from="1550648673918" duration="486000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18017000" />
+    <option name="totallyTimeSpent" value="18790000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -367,7 +367,6 @@
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Captures" order="5" />
-      <window_info anchor="bottom" id="Build" weight="0.32936078" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -387,6 +386,7 @@
       <window_info anchor="bottom" id="Database Changes" order="16" />
       <window_info anchor="bottom" id="Version Control" order="17" />
       <window_info anchor="bottom" id="Unity" order="18" weight="0.32936078" />
+      <window_info anchor="bottom" id="Build" order="19" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -900,24 +900,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Entity/Ticking/Bullet.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="40" column="69" selection-start-line="40" selection-start-column="69" selection-end-line="40" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D19E8A38-5444-4F3D-A5A4-C530527191EF/7d/edc8aa0b/ShortcutExtensions.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
           <caret line="1275" column="22" selection-start-line="1275" selection-start-column="22" selection-end-line="1275" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/ScriptController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="868">
-          <caret line="170" selection-start-line="170" selection-end-line="170" />
         </state>
       </provider>
     </entry>
@@ -928,31 +914,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/BlockAction/RepeatTimesBlock.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Util/CodeGenerator.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+        <state relative-caret-position="1350">
+          <caret line="97" column="13" selection-start-line="97" selection-start-column="13" selection-end-line="97" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Util/CodeGenerator.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/HeartsController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="97" column="13" lean-forward="true" selection-start-line="97" selection-start-column="13" selection-end-line="97" selection-end-column="13" />
+        <state relative-caret-position="420">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/BlockAction/RepeatTimesBlock.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Entity/Ticking/Bullet.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="40" column="69" selection-start-line="40" selection-start-column="69" selection-end-line="40" selection-end-column="69" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/ScriptableCharacter.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
-          <caret line="35" column="30" lean-forward="true" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
+          <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/HeartsController.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/ScriptController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="465">
+          <caret line="61" column="77" selection-start-line="61" selection-start-column="77" selection-end-line="61" selection-end-column="77" />
         </state>
       </provider>
     </entry>

@@ -2,6 +2,7 @@
 using System.Linq;
 using BulletHack.Scripting.Action;
 using BulletHack.Scripting.Entity.Ticking;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -29,6 +30,12 @@ namespace BulletHack.Scripting
 
         public Bounds gameArea;
 
+        public int maxTurns = 10;
+        public TextMeshProUGUI maxTurnsDisplay;
+        private string maxTurnsFormat;
+
+        private int currentTurn = -1;
+
         private float currentSpeed;
 
         private float timer;
@@ -46,6 +53,15 @@ namespace BulletHack.Scripting
             gameArea.center += transform.position;
         }
 
+        private void Start()
+        {
+            if (maxTurnsDisplay)
+                maxTurnsFormat = maxTurnsDisplay.text;
+            
+            if (maxTurnsDisplay)
+                maxTurnsDisplay.text = string.Format(maxTurnsFormat, maxTurns);
+        }
+        
         private void Update()
         {
             if (!playerAvatar || !enemyAvatar)
@@ -135,6 +151,12 @@ namespace BulletHack.Scripting
 
         private void Next()
         {
+            if (currentTurn >= maxTurns)
+            {
+                // TODO: reset logic
+                return;
+            }
+            
             float tweenSpeed = GetTweenSpeed();
 
             playerAvatar.tweenSpeed = tweenSpeed;
@@ -176,6 +198,10 @@ namespace BulletHack.Scripting
                 e.tweenSpeed = tweenSpeed;
                 e.Tick();
             });
+            
+            currentTurn++;
+            if (maxTurnsDisplay)
+                maxTurnsDisplay.text = string.Format(maxTurnsFormat, maxTurns - currentTurn);
         }
 
         private void OnDrawGizmos()
