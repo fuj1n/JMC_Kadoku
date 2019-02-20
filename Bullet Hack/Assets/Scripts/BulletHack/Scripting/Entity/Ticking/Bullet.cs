@@ -24,7 +24,7 @@ namespace BulletHack.Scripting.Entity.Ticking
 
         public override void Tick()
         {
-            transform.DOMove(transform.position + transform.forward * 2, tweenSpeed / 2F);
+            transform.DOMove(transform.position + transform.forward * 2, tweenSpeed);
         }
 
         private void OnTriggerEnter(Collider other)
