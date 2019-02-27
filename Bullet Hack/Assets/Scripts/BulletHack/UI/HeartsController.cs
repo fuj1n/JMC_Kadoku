@@ -9,7 +9,7 @@ public class HeartsController : MonoBehaviour
 {
     public ScriptableCharacter character;
     
-    private const int SPRITES_LENGTH = 5;
+    private const int SPRITES_LENGTH = 2;
 
     private RectTransform transform2D;
 
@@ -34,7 +34,7 @@ public class HeartsController : MonoBehaviour
 
     private void Update()
     {
-        if (Mathf.CeilToInt(maxHealth / 2F) != hearts.Length)
+        if (maxHealth != hearts.Length)
             SetupHearts();
 
         int health = character.health;
@@ -42,30 +42,18 @@ public class HeartsController : MonoBehaviour
             return;
         cachedHealth = health;
 
-        float partialHealth = health / 2F;
+        int partialHealth = health;
 
         for (int i = 0; i < hearts.Length; i++)
         {
-            int offset = 0;
-
-            if (i + 1 == hearts.Length && maxHealth % 2 != 0)
-            {
-                offset = 3;
-            }
-
             if (partialHealth >= 1)
             {
-                partialHealth -= 1F;
-                hearts[i].sprite = sprites[2];
-            }
-            else if (partialHealth >= 0.5F)
-            {
-                partialHealth -= 0.5F;
-                hearts[i].sprite = sprites[offset + 1];
+                partialHealth -= 1;
+                hearts[i].sprite = sprites[1];
             }
             else
             {
-                hearts[i].sprite = sprites[offset + 0];
+                hearts[i].sprite = sprites[0];
             }
         }
     }
@@ -81,7 +69,7 @@ public class HeartsController : MonoBehaviour
         transform2D.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, spriteSize);
         transform2D.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, spriteSize * Mathf.CeilToInt(maxHealth / 2F));
 
-        hearts = new Image[Mathf.CeilToInt(maxHealth / 2F)];
+        hearts = new Image[maxHealth];
 
         for (int i = 0; i < hearts.Length; i++)
         {
@@ -92,7 +80,7 @@ public class HeartsController : MonoBehaviour
             rect.sizeDelta = new Vector2(spriteSize, spriteSize);
 
             hearts[i] = go.AddComponent<Image>();
-            hearts[i].sprite = sprites[2];
+            hearts[i].sprite = sprites[1];
             if (reverse)
                 hearts[i].transform.localScale = new Vector3(-1F, 1F, 1F);
             hearts[i].color = colorMultiplier;

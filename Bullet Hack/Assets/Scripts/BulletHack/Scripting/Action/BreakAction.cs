@@ -4,7 +4,7 @@ using BulletHack.UI.Blocks;
 
 namespace BulletHack.Scripting.Action
 {
-    [BlockLoader.Block("escape")]
+    [BlockLoader.Block("break")]
     public class BreakAction : ActionBase
     {
         public override void Execute()
@@ -23,6 +23,6 @@ namespace BulletHack.Scripting.Action
             }
         }
 
-        public override string GetName() => "Escape";
+        public override string GetName() => "Break Out";
     }
 }
