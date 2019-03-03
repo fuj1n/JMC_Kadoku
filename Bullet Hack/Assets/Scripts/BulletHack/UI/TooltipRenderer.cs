@@ -14,6 +14,8 @@ namespace BulletHack.UI
         private RectTransform rect;
 
         private Canvas canvas;
+
+        private float maxWidth;
         
         private void Awake()
         {
@@ -31,6 +33,8 @@ namespace BulletHack.UI
             tooltipFormat = tooltip.text;
             
             rect.gameObject.SetActive(false);
+
+            maxWidth = rect.sizeDelta.x;
         }
 
         private void LateUpdate()
@@ -66,10 +70,12 @@ namespace BulletHack.UI
         private void _SetTooltip(string name, string description)
         {
             tooltip.text = string.Format(tooltipFormat, name, description).Trim(' ', '\n', '\r');
+            rect.sizeDelta = new Vector2(maxWidth, 0F);
+            
             rect.gameObject.SetActive(true);
             tooltip.ForceMeshUpdate();
             
-            rect.sizeDelta = new Vector2(rect.sizeDelta.x, tooltip.preferredHeight + 24F);
+            rect.sizeDelta = new Vector2(Mathf.Clamp(tooltip.preferredWidth + 24F, 0F, maxWidth), tooltip.preferredHeight + 24F);
             tooltip.ForceMeshUpdate();
         }
     }

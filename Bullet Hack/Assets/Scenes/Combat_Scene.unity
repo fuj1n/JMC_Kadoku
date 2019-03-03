@@ -962,6 +962,7 @@ GameObject:
   - component: {fileID: 353875710}
   - component: {fileID: 353875709}
   - component: {fileID: 353875708}
+  - component: {fileID: 353875711}
   m_Layer: 5
   m_Name: ButtonFastForward
   m_TagString: Untagged
@@ -1080,6 +1081,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 353875706}
   m_CullTransparentMesh: 0
+--- !u!114 &353875711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353875706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a2f37ca59c1db34fba37844e2dd5a5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Fast Forward
+  description: 
 --- !u!1001 &375824832
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2210,6 +2225,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224424718355260512, guid: 03fd8290ca0e80a41813a45eaf6aa7b4,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224424718355260512, guid: 03fd8290ca0e80a41813a45eaf6aa7b4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -334
+      objectReference: {fileID: 0}
+    - target: {fileID: 224424718355260512, guid: 03fd8290ca0e80a41813a45eaf6aa7b4,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 4764
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03fd8290ca0e80a41813a45eaf6aa7b4, type: 3}
 --- !u!224 &576106494 stripped
@@ -2230,6 +2260,7 @@ GameObject:
   - component: {fileID: 588816745}
   - component: {fileID: 588816744}
   - component: {fileID: 588816743}
+  - component: {fileID: 588816746}
   m_Layer: 5
   m_Name: ButtonPlay
   m_TagString: Untagged
@@ -2347,6 +2378,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 588816741}
   m_CullTransparentMesh: 0
+--- !u!114 &588816746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588816741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a2f37ca59c1db34fba37844e2dd5a5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Play
+  description: 
 --- !u!4 &625636151 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4642502150382764, guid: 410c007cde085e64b917523b2d243c5b,
@@ -3366,6 +3411,7 @@ GameObject:
   - component: {fileID: 1215803934}
   - component: {fileID: 1215803933}
   - component: {fileID: 1215803932}
+  - component: {fileID: 1215803935}
   m_Layer: 5
   m_Name: ButtonStep
   m_TagString: Untagged
@@ -3483,6 +3529,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1215803930}
   m_CullTransparentMesh: 0
+--- !u!114 &1215803935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215803930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a2f37ca59c1db34fba37844e2dd5a5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Step
+  description: 
 --- !u!1 &1219159240
 GameObject:
   m_ObjectHideFlags: 0
@@ -3495,6 +3555,7 @@ GameObject:
   - component: {fileID: 1219159244}
   - component: {fileID: 1219159243}
   - component: {fileID: 1219159242}
+  - component: {fileID: 1219159245}
   m_Layer: 5
   m_Name: ButtonPause
   m_TagString: Untagged
@@ -3612,6 +3673,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1219159240}
   m_CullTransparentMesh: 0
+--- !u!114 &1219159245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219159240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a2f37ca59c1db34fba37844e2dd5a5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Pause
+  description: 
 --- !u!1 &1223752436
 GameObject:
   m_ObjectHideFlags: 0

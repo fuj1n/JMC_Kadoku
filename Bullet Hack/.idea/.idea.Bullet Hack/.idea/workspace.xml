@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84682f92-91d4-4b62-b5e0-a3379472445a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Bullet Hack/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bullet Hack/riderModule.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/CodeArea.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/CodeArea.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Blocks/GeneralBlock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Blocks/GeneralBlock.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Combat_Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Combat_Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/block.tif" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/block.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/block.tif.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/block.tif.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/TooltipRenderer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/TooltipRenderer.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -106,17 +99,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/TooltipRenderer.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="42" column="12" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="12" />
+            <state relative-caret-position="613">
+              <caret line="73" column="12" selection-start-line="73" selection-start-column="12" selection-end-line="73" selection-end-column="12" />
               <folding>
-                <marker date="1551616375908" expanded="true" signature="6:31" ph="..." />
-                <marker date="1551616375908" expanded="true" signature="56:2271" ph="{...}" />
-                <marker date="1551616375908" expanded="true" signature="107:2269" ph="{...}" />
-                <marker date="1551616375908" expanded="true" signature="400:907" ph="{...}" />
-                <marker date="1551616375908" expanded="true" signature="942:1588" ph="{...}" />
-                <marker date="1551616375908" expanded="true" signature="1660:1733" ph="{...}" />
-                <marker date="1551616375908" expanded="true" signature="1776:1851" ph="{...}" />
-                <marker date="1551616375908" expanded="true" signature="1918:2263" ph="{...}" />
+                <marker date="1551625983402" expanded="true" signature="6:31" ph="..." />
+                <marker date="1551625983402" expanded="true" signature="56:2454" ph="{...}" />
+                <marker date="1551625983402" expanded="true" signature="107:2452" ph="{...}" />
+                <marker date="1551625983402" expanded="true" signature="433:982" ph="{...}" />
+                <marker date="1551625983402" expanded="true" signature="1017:1663" ph="{...}" />
+                <marker date="1551625983402" expanded="true" signature="1735:1808" ph="{...}" />
+                <marker date="1551625983402" expanded="true" signature="1851:1926" ph="{...}" />
+                <marker date="1551625983402" expanded="true" signature="1993:2446" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -587,12 +580,12 @@
       <workItem from="1550648363980" duration="287000" />
       <workItem from="1550648673918" duration="486000" />
       <workItem from="1551247227870" duration="3772000" />
-      <workItem from="1551605881179" duration="7390000" />
+      <workItem from="1551605881179" duration="9102000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29952000" />
+    <option name="totallyTimeSpent" value="31664000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1394,17 +1387,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/TooltipRenderer.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="42" column="12" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="12" />
+        <state relative-caret-position="613">
+          <caret line="73" column="12" selection-start-line="73" selection-start-column="12" selection-end-line="73" selection-end-column="12" />
           <folding>
-            <marker date="1551616375908" expanded="true" signature="6:31" ph="..." />
-            <marker date="1551616375908" expanded="true" signature="56:2271" ph="{...}" />
-            <marker date="1551616375908" expanded="true" signature="107:2269" ph="{...}" />
-            <marker date="1551616375908" expanded="true" signature="400:907" ph="{...}" />
-            <marker date="1551616375908" expanded="true" signature="942:1588" ph="{...}" />
-            <marker date="1551616375908" expanded="true" signature="1660:1733" ph="{...}" />
-            <marker date="1551616375908" expanded="true" signature="1776:1851" ph="{...}" />
-            <marker date="1551616375908" expanded="true" signature="1918:2263" ph="{...}" />
+            <marker date="1551625983402" expanded="true" signature="6:31" ph="..." />
+            <marker date="1551625983402" expanded="true" signature="56:2454" ph="{...}" />
+            <marker date="1551625983402" expanded="true" signature="107:2452" ph="{...}" />
+            <marker date="1551625983402" expanded="true" signature="433:982" ph="{...}" />
+            <marker date="1551625983402" expanded="true" signature="1017:1663" ph="{...}" />
+            <marker date="1551625983402" expanded="true" signature="1735:1808" ph="{...}" />
+            <marker date="1551625983402" expanded="true" signature="1851:1926" ph="{...}" />
+            <marker date="1551625983402" expanded="true" signature="1993:2446" ph="{...}" />
           </folding>
         </state>
       </provider>
