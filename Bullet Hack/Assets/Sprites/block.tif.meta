@@ -40,6 +40,7 @@ TextureImporter:
     21300070: icon_pause
     21300072: icon_step
     21300074: check
+    21300076: outline_fancy
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -69,7 +70,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -437,6 +438,26 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 665e2fc155a2b5b498d77638cf6a2842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: outline_fancy
+      rect:
+        serializedVersion: 2
+        x: 2020
+        y: 1560
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 10, y: 10, z: 10, w: 10}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db6abd2bbc39ec647a725941abbc5a93
       vertices: []
       indices: 
       edges: []

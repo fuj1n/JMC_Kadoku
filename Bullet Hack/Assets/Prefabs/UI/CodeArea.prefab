@@ -3433,6 +3433,7 @@ GameObject:
   - component: {fileID: 200109633527395276}
   - component: {fileID: 3651516486419716659}
   - component: {fileID: 7890847901710296308}
+  - component: {fileID: 3141085897628871646}
   m_Layer: 5
   m_Name: Repeat
   m_TagString: Untagged
@@ -3550,6 +3551,22 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &3141085897628871646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190695358841352053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a2f37ca59c1db34fba37844e2dd5a5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Repeat
+  description: A special code block, select this to create a loop where the code block
+    pieces inserted into it will repeat themselves for as many turns entered on the
+    drop down menu of the Repeat Action code block.
 --- !u!1 &2869514546816711809
 GameObject:
   m_ObjectHideFlags: 0
@@ -3562,6 +3579,7 @@ GameObject:
   - component: {fileID: 6042729857410424644}
   - component: {fileID: 3299855253762648430}
   - component: {fileID: 100086026153987746}
+  - component: {fileID: 6068780103623527401}
   m_Layer: 5
   m_Name: Break
   m_TagString: Untagged
@@ -3679,6 +3697,20 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &6068780103623527401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2869514546816711809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a2f37ca59c1db34fba37844e2dd5a5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Break Out
+  description: Breaks out of a repeat (non-useful)
 --- !u!1 &2895432967209855809
 GameObject:
   m_ObjectHideFlags: 0
@@ -3691,6 +3723,7 @@ GameObject:
   - component: {fileID: 3974007744936481531}
   - component: {fileID: 5203810300501546823}
   - component: {fileID: 3772778633865746071}
+  - component: {fileID: 8013827322813164444}
   m_Layer: 5
   m_Name: Fire
   m_TagString: Untagged
@@ -3808,6 +3841,22 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &8013827322813164444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2895432967209855809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a2f37ca59c1db34fba37844e2dd5a5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Fire
+  description: Add a code block that will cause the Avatar ship to fire down the row
+    they are currently on. For each Fire Action added to the line the Avatar ship
+    will fire one shot each turn. Each shot will travel one space forward each turn.
 --- !u!1 &6583238600256853736
 GameObject:
   m_ObjectHideFlags: 0
@@ -3894,6 +3943,7 @@ GameObject:
   - component: {fileID: 5714009166972248346}
   - component: {fileID: 5155078420330115928}
   - component: {fileID: 2235189304830685727}
+  - component: {fileID: 7030119337550576379}
   m_Layer: 5
   m_Name: Move
   m_TagString: Untagged
@@ -4011,6 +4061,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &7030119337550576379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7232933796248996385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a2f37ca59c1db34fba37844e2dd5a5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Move
+  description: Add a code block that will move your Avatar ship one space in the direction
+    entered on the drop down menu of the code block (Up, Down, Left, Right).
 --- !u!1 &8163310559928738458
 GameObject:
   m_ObjectHideFlags: 0
@@ -4171,6 +4236,7 @@ GameObject:
   - component: {fileID: 4789690342891210545}
   - component: {fileID: 4716718050827765388}
   - component: {fileID: 3753128330741156904}
+  - component: {fileID: 5938840490447462113}
   m_Layer: 5
   m_Name: Wait
   m_TagString: Untagged
@@ -4288,6 +4354,22 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &5938840490447462113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8874790336130350677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a2f37ca59c1db34fba37844e2dd5a5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Wait
+  description: Add a code block that will cause the Avatar ship to Wait in place and
+    not take any action for the amount of turns entered in the drop down menu of the
+    code block.
 --- !u!1 &8875900117760614488
 GameObject:
   m_ObjectHideFlags: 0
@@ -4299,6 +4381,7 @@ GameObject:
   - component: {fileID: 40382554045312939}
   - component: {fileID: 8727158438871700247}
   - component: {fileID: 8907449590920108602}
+  - component: {fileID: 579877977838087447}
   m_Layer: 5
   m_Name: DeleteUnitFrame
   m_TagString: Untagged
@@ -4363,3 +4446,17 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &579877977838087447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8875900117760614488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a2f37ca59c1db34fba37844e2dd5a5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Delete
+  description: Drag blocks here to be deleted
