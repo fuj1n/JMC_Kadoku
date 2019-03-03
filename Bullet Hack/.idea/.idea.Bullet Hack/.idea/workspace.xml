@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84682f92-91d4-4b62-b5e0-a3379472445a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/TooltipRenderer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/TooltipRenderer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/CodeArea.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/CodeArea.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Combat_Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Combat_Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,23 +14,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/BreakAction.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
-              <folding>
-                <marker date="1551605755724" expanded="false" signature="6:95" ph="..." />
-                <marker date="1551605755724" expanded="true" signature="134:744" ph="{...}" />
-                <marker date="1551605755724" expanded="true" signature="211:742" ph="{...}" />
-                <marker date="1551605755724" expanded="true" signature="256:678" ph="{...}" />
-                <marker date="1551605755724" expanded="true" signature="375:668" ph="{...}" />
-                <marker date="1551605755724" expanded="true" signature="441:589" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/BlockAction/RepeatTimesBlock.cs">
           <provider selected="true" editor-type-id="text-editor">
@@ -84,7 +69,7 @@
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/Tooltip.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+              <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
               <folding>
                 <marker date="1551608909736" expanded="true" signature="6:50" ph="..." />
                 <marker date="1551608909736" expanded="true" signature="75:530" ph="{...}" />
@@ -196,7 +181,7 @@
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/ActionBase.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-62">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
               <folding>
                 <marker date="1550310529305" expanded="false" signature="6:149" ph="..." />
                 <marker date="1550310529305" expanded="true" signature="188:2182" ph="{...}" />
@@ -390,6 +375,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/HeartsController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/Tooltip.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/TooltipRenderer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/FixUnpackEnvironmentUIParent.cs" />
       </list>
     </option>
   </component>
@@ -436,90 +422,6 @@
               <item name="Project" type="e068e287:UnityExplorerRootNode" />
               <item name="Assets" type="48f920db:UnityExplorerNode$AssetsRoot" />
               <item name="Scripts" type="1045f7f1:UnityExplorerNode" />
-            </path>
-            <path>
-              <item name="Project" type="e068e287:UnityExplorerRootNode" />
-              <item name="Assets" type="48f920db:UnityExplorerNode$AssetsRoot" />
-              <item name="Scripts" type="1045f7f1:UnityExplorerNode" />
-              <item name="BulletHack" type="1045f7f1:UnityExplorerNode" />
-            </path>
-            <path>
-              <item name="Project" type="e068e287:UnityExplorerRootNode" />
-              <item name="Assets" type="48f920db:UnityExplorerNode$AssetsRoot" />
-              <item name="Scripts" type="1045f7f1:UnityExplorerNode" />
-              <item name="BulletHack" type="1045f7f1:UnityExplorerNode" />
-              <item name="FX" type="1045f7f1:UnityExplorerNode" />
-            </path>
-            <path>
-              <item name="Project" type="e068e287:UnityExplorerRootNode" />
-              <item name="Assets" type="48f920db:UnityExplorerNode$AssetsRoot" />
-              <item name="Scripts" type="1045f7f1:UnityExplorerNode" />
-              <item name="BulletHack" type="1045f7f1:UnityExplorerNode" />
-              <item name="Scripting" type="1045f7f1:UnityExplorerNode" />
-            </path>
-            <path>
-              <item name="Project" type="e068e287:UnityExplorerRootNode" />
-              <item name="Assets" type="48f920db:UnityExplorerNode$AssetsRoot" />
-              <item name="Scripts" type="1045f7f1:UnityExplorerNode" />
-              <item name="BulletHack" type="1045f7f1:UnityExplorerNode" />
-              <item name="Scripting" type="1045f7f1:UnityExplorerNode" />
-              <item name="Action" type="1045f7f1:UnityExplorerNode" />
-            </path>
-            <path>
-              <item name="Project" type="e068e287:UnityExplorerRootNode" />
-              <item name="Assets" type="48f920db:UnityExplorerNode$AssetsRoot" />
-              <item name="Scripts" type="1045f7f1:UnityExplorerNode" />
-              <item name="BulletHack" type="1045f7f1:UnityExplorerNode" />
-              <item name="Scripting" type="1045f7f1:UnityExplorerNode" />
-              <item name="Action" type="1045f7f1:UnityExplorerNode" />
-              <item name="BlockAction" type="1045f7f1:UnityExplorerNode" />
-            </path>
-            <path>
-              <item name="Project" type="e068e287:UnityExplorerRootNode" />
-              <item name="Assets" type="48f920db:UnityExplorerNode$AssetsRoot" />
-              <item name="Scripts" type="1045f7f1:UnityExplorerNode" />
-              <item name="BulletHack" type="1045f7f1:UnityExplorerNode" />
-              <item name="Scripting" type="1045f7f1:UnityExplorerNode" />
-              <item name="Entity" type="1045f7f1:UnityExplorerNode" />
-            </path>
-            <path>
-              <item name="Project" type="e068e287:UnityExplorerRootNode" />
-              <item name="Assets" type="48f920db:UnityExplorerNode$AssetsRoot" />
-              <item name="Scripts" type="1045f7f1:UnityExplorerNode" />
-              <item name="BulletHack" type="1045f7f1:UnityExplorerNode" />
-              <item name="Scripting" type="1045f7f1:UnityExplorerNode" />
-              <item name="Entity" type="1045f7f1:UnityExplorerNode" />
-              <item name="Ticking" type="1045f7f1:UnityExplorerNode" />
-            </path>
-            <path>
-              <item name="Project" type="e068e287:UnityExplorerRootNode" />
-              <item name="Assets" type="48f920db:UnityExplorerNode$AssetsRoot" />
-              <item name="Scripts" type="1045f7f1:UnityExplorerNode" />
-              <item name="BulletHack" type="1045f7f1:UnityExplorerNode" />
-              <item name="UI" type="1045f7f1:UnityExplorerNode" />
-            </path>
-            <path>
-              <item name="Project" type="e068e287:UnityExplorerRootNode" />
-              <item name="Assets" type="48f920db:UnityExplorerNode$AssetsRoot" />
-              <item name="Scripts" type="1045f7f1:UnityExplorerNode" />
-              <item name="BulletHack" type="1045f7f1:UnityExplorerNode" />
-              <item name="UI" type="1045f7f1:UnityExplorerNode" />
-              <item name="Binder" type="1045f7f1:UnityExplorerNode" />
-            </path>
-            <path>
-              <item name="Project" type="e068e287:UnityExplorerRootNode" />
-              <item name="Assets" type="48f920db:UnityExplorerNode$AssetsRoot" />
-              <item name="Scripts" type="1045f7f1:UnityExplorerNode" />
-              <item name="BulletHack" type="1045f7f1:UnityExplorerNode" />
-              <item name="UI" type="1045f7f1:UnityExplorerNode" />
-              <item name="Blocks" type="1045f7f1:UnityExplorerNode" />
-            </path>
-            <path>
-              <item name="Project" type="e068e287:UnityExplorerRootNode" />
-              <item name="Assets" type="48f920db:UnityExplorerNode$AssetsRoot" />
-              <item name="Scripts" type="1045f7f1:UnityExplorerNode" />
-              <item name="BulletHack" type="1045f7f1:UnityExplorerNode" />
-              <item name="Util" type="1045f7f1:UnityExplorerNode" />
             </path>
           </expand>
           <select />
@@ -580,12 +482,12 @@
       <workItem from="1550648363980" duration="287000" />
       <workItem from="1550648673918" duration="486000" />
       <workItem from="1551247227870" duration="3772000" />
-      <workItem from="1551605881179" duration="9102000" />
+      <workItem from="1551605881179" duration="10399000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31664000" />
+    <option name="totallyTimeSpent" value="32961000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -652,7 +554,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A472C64C-4DD8-4280-8AE1-2CA6BB00788E/ef/aabfbcf4/JsonConvert.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/BlockAction/ActionBlockBase.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-446">
@@ -1280,7 +1181,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/Tooltip.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
           <folding>
             <marker date="1551608909736" expanded="true" signature="6:50" ph="..." />
             <marker date="1551608909736" expanded="true" signature="75:530" ph="{...}" />
@@ -1294,7 +1195,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/ActionBase.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-62">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
           <folding>
             <marker date="1550310529305" expanded="false" signature="6:149" ph="..." />
             <marker date="1550310529305" expanded="true" signature="188:2182" ph="{...}" />
@@ -1382,6 +1283,13 @@
             <marker date="1551610399130" expanded="true" signature="11264:11333" ph="///   &lt;para&gt;Vertical.&lt;/para&gt; ... " />
             <marker date="1551610399130" expanded="true" signature="11361:11507" ph="///   &lt;para&gt;Delegate used for the reapplyDrivenProperties event.&lt;/para&gt; ... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Editor/FixUnpackEnvironmentUIParent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
         </state>
       </provider>
     </entry>
