@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 222758322087833448}
   - component: {fileID: 114482478737011702}
   - component: {fileID: 114126763513962008}
+  - component: {fileID: 6880271927535782131}
   m_Layer: 5
   m_Name: Center
   m_TagString: Untagged
@@ -118,6 +119,20 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &6880271927535782131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018087472626602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a2f37ca59c1db34fba37844e2dd5a5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: 
+  description: Re-centers the view at 0, 0
 --- !u!1 &1037625215665936
 GameObject:
   m_ObjectHideFlags: 0

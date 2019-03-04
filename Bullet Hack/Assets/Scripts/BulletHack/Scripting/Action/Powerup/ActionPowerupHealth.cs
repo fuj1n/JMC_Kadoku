@@ -16,5 +16,7 @@ namespace BulletHack.Scripting.Action.Powerup
         public override int GetPowerupCount() => CombatManager.Instance.Script.currentAvatar.powerups.health;
 
         public override void DecrPowerupCount() => CombatManager.Instance.Script.currentAvatar.powerups.health--;
+        
+        public override Color GetColor() => Color.green;
     }
 }

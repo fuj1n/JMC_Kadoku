@@ -9,6 +9,9 @@ namespace BulletHack.UI
         
         public GameObject tooltipTemplate;
 
+        [Multiline]
+        public string simplifiedFormat;
+        
         private string tooltipFormat;
         private TextMeshProUGUI tooltip;
         private RectTransform rect;
@@ -69,7 +72,11 @@ namespace BulletHack.UI
 
         private void _SetTooltip(string name, string description)
         {
-            tooltip.text = string.Format(tooltipFormat, name, description).Trim(' ', '\n', '\r');
+            string format = tooltipFormat;
+            if (string.IsNullOrWhiteSpace(name))
+                format = simplifiedFormat;
+            
+            tooltip.text = string.Format(format, name, description).Trim(' ', '\n', '\r');
             rect.sizeDelta = new Vector2(maxWidth, 0F);
             
             rect.gameObject.SetActive(true);

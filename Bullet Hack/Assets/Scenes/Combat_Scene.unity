@@ -5485,6 +5485,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tooltipTemplate: {fileID: 7172495985999061657, guid: 77f16afac3eeccc48a9c0ebfe9725cf0,
     type: 3}
+  simplifiedFormat: '{1}'
 --- !u!1 &2119786021
 GameObject:
   m_ObjectHideFlags: 0
