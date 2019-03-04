@@ -2,6 +2,7 @@
 using System.Linq;
 using BulletHack.Scripting.Action;
 using BulletHack.Scripting.Entity.Ticking;
+using BulletHack.Util;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -48,9 +49,12 @@ namespace BulletHack.Scripting
 
         private bool gameOver;
 
+        private CodeGenerator generator;
+        
         private void Awake()
         {
             gameArea.center += transform.position;
+            generator = enemyStart.GetComponent<CodeGenerator>();
         }
 
         private void Start()
@@ -151,36 +155,33 @@ namespace BulletHack.Scripting
 
         private void Next()
         {
-            if (currentTurn >= maxTurns)
-            {
-                // TODO: reset logic
-                return;
-            }
-            
             float tweenSpeed = GetTweenSpeed();
 
             playerAvatar.tweenSpeed = tweenSpeed;
             enemyAvatar.tweenSpeed = tweenSpeed;
 
-            if (playerAction)
+            if (currentTurn < maxTurns)
             {
-                currentAvatar = playerAvatar;
-                playerAction.Execute();
-
-                playerAction.GetManager().FadeOutline(0F, tweenSpeed * .5F);
-                playerAction = playerAction.GetNextAction();
                 if (playerAction)
-                    playerAction.GetManager().SetOutline(runningHighlight, tweenSpeed * .5F);
-            }
+                {
+                    currentAvatar = playerAvatar;
+                    playerAction.Execute();
 
-            if (enemyAction)
-            {
-                currentAvatar = enemyAvatar;
-                enemyAction.Execute();
-                enemyAction.GetManager().FadeOutline(0F, tweenSpeed * .5F);
-                enemyAction = enemyAction.GetNextAction();
+                    playerAction.GetManager().FadeOutline(0F, tweenSpeed * .5F);
+                    playerAction = playerAction.GetNextAction();
+                    if (playerAction)
+                        playerAction.GetManager().SetOutline(runningHighlight, tweenSpeed * .5F);
+                }
+
                 if (enemyAction)
-                    enemyAction.GetManager().SetOutline(runningHighlight, tweenSpeed * .5F);
+                {
+                    currentAvatar = enemyAvatar;
+                    enemyAction.Execute();
+                    enemyAction.GetManager().FadeOutline(0F, tweenSpeed * .5F);
+                    enemyAction = enemyAction.GetNextAction();
+                    if (enemyAction)
+                        enemyAction.GetManager().SetOutline(runningHighlight, tweenSpeed * .5F);
+                }
             }
 
             // Filter out dead entities
@@ -198,10 +199,19 @@ namespace BulletHack.Scripting
                 e.tweenSpeed = tweenSpeed;
                 e.Tick();
             });
-            
-            currentTurn++;
-            if (maxTurnsDisplay)
-                maxTurnsDisplay.text = string.Format(maxTurnsFormat, maxTurns - currentTurn);
+
+            if (currentTurn < maxTurns)
+            {
+                currentTurn++;
+                if (maxTurnsDisplay)
+                    maxTurnsDisplay.text = string.Format(maxTurnsFormat, maxTurns - currentTurn);
+            } else if (entities.Count == 0)
+            {
+                IsRunning = false;
+                generator.startPos = new Vector2Int(enemyAvatar.X, enemyAvatar.Y);
+                generator.GenerateCode();
+                currentTurn = -1;
+            }
         }
 
         private void OnDrawGizmos()

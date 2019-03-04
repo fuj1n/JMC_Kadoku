@@ -30,6 +30,20 @@ namespace BulletHack.Util
 
         private void Start()
         {
+            GenerateCode();
+            
+            GenerateCode();
+        }
+
+        public void GenerateCode()
+        {
+            if (manager.outConnector)
+            {
+                BlockManager man = manager.outConnector;
+                manager.Disconnect(man);
+                Destroy(man.gameObject);
+            }
+            
             Vector2Int pos = startPos;
             
             SerializedBlock rootBlock = new SerializedBlock("repeat.forever");
@@ -44,7 +58,7 @@ namespace BulletHack.Util
                 current = next;
             }
 
-            current.child = GenerateReturnPath(pos);
+//            current.child = GenerateReturnPath(pos);
             
             SerializedBlock.Deserialize(rootBlock, root).GetComponent<CodeBlockDrag>().ConnectTo(manager.outAnchor.parent);
         }
