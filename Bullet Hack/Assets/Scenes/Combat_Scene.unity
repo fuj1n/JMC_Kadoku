@@ -1577,6 +1577,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3980865922691034939, guid: 03fd8290ca0e80a41813a45eaf6aa7b4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -65.799805
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03fd8290ca0e80a41813a45eaf6aa7b4, type: 3}
 --- !u!224 &411358037 stripped
@@ -2544,6 +2549,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3980865922691034939, guid: 03fd8290ca0e80a41813a45eaf6aa7b4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -65.799805
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03fd8290ca0e80a41813a45eaf6aa7b4, type: 3}
@@ -3566,7 +3576,7 @@ PrefabInstance:
         type: 3}
       propertyPath: character
       value: 
-      objectReference: {fileID: 1430692778}
+      objectReference: {fileID: 1428862879}
     - target: {fileID: 17776974548980057, guid: d74156009a28e4841b00d551b3483023,
         type: 3}
       propertyPath: colorMultiplier.r
