@@ -42,6 +42,8 @@ TextureImporter:
     21300074: check
     21300076: outline_fancy
     21300078: box_button
+    21300080: circle_bar
+    21300082: circle_border
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -284,26 +286,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: myHopesAndDreams
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 190
-        height: 190
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 93f215a4f1510114bb949f4e501126f8
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: arrow_up
       rect:
         serializedVersion: 2
@@ -479,6 +461,46 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: bdad23ac6521c8e4989a594ce84c1da7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: circle_bar
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2029ca6f0e9972e4cb30dbcf3c884d46
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: circle_border
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 130
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89bf10a6aead1ef4ea0ae014dc234f0f
       vertices: []
       indices: 
       edges: []

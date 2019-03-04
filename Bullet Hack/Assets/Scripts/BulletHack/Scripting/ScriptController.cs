@@ -3,9 +3,11 @@ using System.Linq;
 using BulletHack.Scripting.Action;
 using BulletHack.Scripting.Entity.Ticking;
 using BulletHack.Util;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace BulletHack.Scripting
 {
@@ -31,10 +33,14 @@ namespace BulletHack.Scripting
 
         public Bounds gameArea;
 
+        [Header("Max Turns")]
         public int maxTurns = 10;
-        public TextMeshProUGUI maxTurnsDisplay;
-        private string maxTurnsFormat;
+        public TextMeshProUGUI maxTurnsText;
+        public Image maxTurnsFill;
 
+        public Color maxTurnsFull = Color.green;
+        public Color maxTurnsEmpty = Color.red;
+        
         private int currentTurn = -1;
 
         private float currentSpeed;
@@ -59,11 +65,7 @@ namespace BulletHack.Scripting
 
         private void Start()
         {
-            if (maxTurnsDisplay)
-                maxTurnsFormat = maxTurnsDisplay.text;
-            
-            if (maxTurnsDisplay)
-                maxTurnsDisplay.text = string.Format(maxTurnsFormat, maxTurns);
+            UpdateTurnCounter(0F);
         }
         
         private void Update()
@@ -203,14 +205,14 @@ namespace BulletHack.Scripting
             if (currentTurn < maxTurns)
             {
                 currentTurn++;
-                if (maxTurnsDisplay)
-                    maxTurnsDisplay.text = string.Format(maxTurnsFormat, maxTurns - currentTurn);
+                UpdateTurnCounter(tweenSpeed);
             } else if (entities.Count == 0)
             {
                 IsRunning = false;
                 generator.startPos = new Vector2Int(enemyAvatar.X, enemyAvatar.Y);
                 generator.GenerateCode();
                 currentTurn = -1;
+                UpdateTurnCounter(1.5F);
             }
         }
 
@@ -227,6 +229,19 @@ namespace BulletHack.Scripting
         private void Restart()
         {
             SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+        }
+
+        private void UpdateTurnCounter(float tweenSpeed)
+        {
+            int currentTurn = Mathf.Clamp(this.currentTurn, 0, maxTurns);
+            
+            if (maxTurnsText)
+                maxTurnsText.text = (maxTurns - currentTurn).ToString();
+            if (maxTurnsFill)
+            {
+                maxTurnsFill.DOFillAmount(1F - (float) currentTurn / maxTurns, tweenSpeed);
+                maxTurnsFill.DOColor(Color.Lerp(maxTurnsFull, maxTurnsEmpty, (float)currentTurn / maxTurns), tweenSpeed);
+            }
         }
     }
 }
