@@ -1,6 +1,7 @@
 ﻿using System;
 using BulletHack.Scripting.Entity.Ticking;
 using DG.Tweening;
+using TMPro;
 using UnityEngine;
 
 namespace BulletHack
@@ -128,6 +129,11 @@ namespace BulletHack
                 AudioSource.PlayClipAtPoint(shootSound, Camera.main.transform.position);
         }
 
+        private void Update()
+        {
+            powerups.Update();
+        }
+
         private void OnDrawGizmos()
         {
             if (Application.isPlaying)
@@ -153,6 +159,21 @@ namespace BulletHack
             public int health, shield, spread;
 
             public bool shieldActive;
+
+            [Header("Display")]
+            public TextMeshProUGUI healthText;
+            public TextMeshProUGUI shieldText;
+            public TextMeshProUGUI spreadText;
+
+            public void Update()
+            {
+                if (healthText)
+                    healthText.text = health.ToString();
+                if (shieldText)
+                    shieldText.text = shield.ToString();
+                if (spreadText)
+                    spreadText.text = spread.ToString();
+            }
         }
     }
 }

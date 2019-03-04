@@ -15471,6 +15471,9 @@ MonoBehaviour:
     shield: 0
     spread: 0
     shieldActive: 0
+    healthText: {fileID: 0}
+    shieldText: {fileID: 0}
+    spreadText: {fileID: 0}
 --- !u!65 &65318922652001824
 BoxCollider:
   m_ObjectHideFlags: 0
