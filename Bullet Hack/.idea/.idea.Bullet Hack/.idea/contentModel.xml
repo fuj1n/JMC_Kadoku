@@ -168,6 +168,12 @@
                 </e>
                 <e p="BreakAction.cs" t="Include" />
                 <e p="MoveAction.cs" t="Include" />
+                <e p="Powerup" t="Include">
+                  <e p="ActionPowerup.cs" t="Include" />
+                  <e p="ActionPowerupHealth.cs" t="Include" />
+                  <e p="ActionPowerupShield.cs" t="Include" />
+                  <e p="ActionPowerupSpread.cs" t="Include" />
+                </e>
                 <e p="ShootAction.cs" t="Include" />
                 <e p="StartAction.cs" t="Include" />
               </e>
