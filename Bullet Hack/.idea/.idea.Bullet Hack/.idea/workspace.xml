@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="84682f92-91d4-4b62-b5e0-a3379472445a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/CodeArea.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/CodeArea.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Combat_Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Combat_Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
-    </list>
+    <list default="true" id="84682f92-91d4-4b62-b5e0-a3379472445a" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,7 +222,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Entity/Ticking/Bullet.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
+            <state relative-caret-position="285">
               <caret line="40" column="69" selection-start-line="40" selection-start-column="69" selection-end-line="40" selection-end-column="69" />
               <folding>
                 <marker date="1550658771869" expanded="false" signature="6:37" ph="..." />
@@ -246,7 +242,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/ScriptableCharacter.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
+            <state relative-caret-position="300">
               <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
               <folding>
                 <marker date="1550658778824" expanded="false" signature="6:94" ph="..." />
@@ -374,8 +370,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/BreakAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/HeartsController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/Tooltip.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/TooltipRenderer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/FixUnpackEnvironmentUIParent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/TooltipRenderer.cs" />
       </list>
     </option>
   </component>
@@ -482,12 +478,12 @@
       <workItem from="1550648363980" duration="287000" />
       <workItem from="1550648673918" duration="486000" />
       <workItem from="1551247227870" duration="3772000" />
-      <workItem from="1551605881179" duration="10399000" />
+      <workItem from="1551605881179" duration="11373000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32961000" />
+    <option name="totallyTimeSpent" value="33935000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -500,7 +496,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1020,7 +1015,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Entity/Ticking/Bullet.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
+        <state relative-caret-position="285">
           <caret line="40" column="69" selection-start-line="40" selection-start-column="69" selection-end-line="40" selection-end-column="69" />
           <folding>
             <marker date="1550658771869" expanded="false" signature="6:37" ph="..." />
@@ -1038,7 +1033,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/ScriptableCharacter.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
+        <state relative-caret-position="300">
           <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
           <folding>
             <marker date="1550658778824" expanded="false" signature="6:94" ph="..." />
