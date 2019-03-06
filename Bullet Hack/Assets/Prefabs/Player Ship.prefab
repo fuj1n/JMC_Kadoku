@@ -201,7 +201,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -15483,8 +15483,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04383716907d3e14a96e77f7445a04ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationDamping: 0.1
   movementSpeed: 8
+  tiltAmount: 15
+  tiltDamping: 0.25
+  rotationDamping: 0.1
+  particles:
+  - {fileID: 198945736325758690}
+  - {fileID: 198030419568645232}
+  - {fileID: 198233287097602686}
+  particleMinSpeed: 5
+  particleMaxSpeed: 7.5
 --- !u!1 &1936302780919586
 GameObject:
   m_ObjectHideFlags: 0
