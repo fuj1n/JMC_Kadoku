@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657993, g: 0.4964143, b: 0.5748183, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657934, g: 0.49641317, b: 0.5748175, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2265,6 +2265,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 96
       objectReference: {fileID: 0}
+    - target: {fileID: 3980865922691034939, guid: 03fd8290ca0e80a41813a45eaf6aa7b4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -65.799805
+      objectReference: {fileID: 0}
     - target: {fileID: 1820447989599324, guid: 03fd8290ca0e80a41813a45eaf6aa7b4, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -2467,11 +2472,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: -116
-      objectReference: {fileID: 0}
-    - target: {fileID: 3980865922691034939, guid: 03fd8290ca0e80a41813a45eaf6aa7b4,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -65.799805
       objectReference: {fileID: 0}
     - target: {fileID: 4407281814014470793, guid: 03fd8290ca0e80a41813a45eaf6aa7b4,
         type: 3}
@@ -3679,6 +3679,11 @@ PrefabInstance:
       propertyPath: colorMultiplier.b
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 17776974548980057, guid: d74156009a28e4841b00d551b3483023,
+        type: 3}
+      propertyPath: reverse
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2419908477883435937, guid: d74156009a28e4841b00d551b3483023,
         type: 3}
       propertyPath: m_ChildAlignment
@@ -3687,7 +3692,7 @@ PrefabInstance:
     - target: {fileID: 2419908477883435937, guid: d74156009a28e4841b00d551b3483023,
         type: 3}
       propertyPath: m_StartCorner
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d74156009a28e4841b00d551b3483023, type: 3}
