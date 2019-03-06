@@ -180,9 +180,11 @@
               <e p="Entity" t="Include">
                 <e p="Ticking" t="Include">
                   <e p="Bullet.cs" t="Include" />
+                  <e p="PowerupTimer.cs" t="Include" />
                   <e p="TickingEntity.cs" t="Include" />
                 </e>
               </e>
+              <e p="PowerupHost.cs" t="Include" />
               <e p="ScriptController.cs" t="Include" />
               <e p="SerializedBlock.cs" t="Include" />
             </e>

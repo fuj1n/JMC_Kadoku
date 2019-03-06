@@ -40,6 +40,9 @@ namespace BulletHack.Scripting
 
         public Color maxTurnsFull = Color.green;
         public Color maxTurnsEmpty = Color.red;
+
+        [Space]
+        public PowerupHost powerupHost;
         
         private int currentTurn = -1;
 
@@ -61,6 +64,9 @@ namespace BulletHack.Scripting
         {
             gameArea.center += transform.position;
             generator = enemyStart.GetComponent<CodeGenerator>();
+            
+            if(powerupHost)
+                powerupHost.CreatePowerups();
         }
 
         private void Start()
@@ -213,6 +219,9 @@ namespace BulletHack.Scripting
                 generator.GenerateCode();
                 currentTurn = -1;
                 UpdateTurnCounter(1.5F);
+                
+                if(powerupHost)
+                    powerupHost.CreatePowerups();
             }
         }
 

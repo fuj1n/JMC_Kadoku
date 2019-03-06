@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657934, g: 0.49641317, b: 0.5748175, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657993, g: 0.4964143, b: 0.5748183, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2859,7 +2859,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4179216466411588, guid: f5eccd1eed2910a458869c10c9066d7e, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4179216466411588, guid: f5eccd1eed2910a458869c10c9066d7e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3806,7 +3806,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4462417560974634, guid: ae47fb22cb50dfb41b0a03c78c5ff36e, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4462417560974634, guid: ae47fb22cb50dfb41b0a03c78c5ff36e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4247,6 +4247,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69f0f6ab5c4295749955566f6f2fb0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1440243141
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1440243142}
+  - component: {fileID: 1440243143}
+  m_Layer: 0
+  m_Name: PowerupHost
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1440243142
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440243141}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 8, y: 1.2939999, z: 3}
+  m_LocalScale: {x: 0.002000003, y: 0.002, z: 0.002000003}
+  m_Children: []
+  m_Father: {fileID: 2119786022}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1440243143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440243141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be5f00fb4108da14e8d6fe247518df2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 1430692778}
+  powerupTypes:
+  - {fileID: 3287673481550298606, guid: 43f38a0caf55f3a4891bf63f7ea043e9, type: 3}
+  - {fileID: 3287673481550298606, guid: 75794fe0e2ddaad43ab5efe9e9f01ebc, type: 3}
+  - {fileID: 3287673481550298606, guid: db3db5deffd23c244a43939f7d569175, type: 3}
+  powerupCount: {x: 1, y: 2}
+  startPos: {x: 1, y: 1}
+  gizmo: {r: 1, g: 0, b: 0.72107124, a: 1}
 --- !u!1001 &1455006441
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5057,6 +5108,7 @@ MonoBehaviour:
   maxTurnsFill: {fileID: 851940176}
   maxTurnsFull: {r: 0, g: 1, b: 0, a: 1}
   maxTurnsEmpty: {r: 1, g: 0, b: 0, a: 1}
+  powerupHost: {fileID: 1440243143}
 --- !u!4 &2009726534
 Transform:
   m_ObjectHideFlags: 0
@@ -5521,6 +5573,7 @@ Transform:
   - {fileID: 534669905}
   - {fileID: 170076735}
   - {fileID: 1664077972}
+  - {fileID: 1440243142}
   - {fileID: 1430692777}
   - {fileID: 722711184}
   m_Father: {fileID: 0}
