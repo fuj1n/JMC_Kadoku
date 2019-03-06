@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\auzulins\.Rider2018.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\auzulins\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Bullet Hack.-2064519268.00" t="ExcludeRecursive" />
-    <e p="C:\Users\auzulins\Desktop\JMC_Kadoku\Bullet Hack" t="IncludeRecursive">
+    <e p="C:\Users\fuj1n\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\fuj1n\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Bullet Hack.1592839508.00" t="ExcludeRecursive" />
+    <e p="C:\Users\fuj1n\AppData\local\Android\Sdk\Platforms\android-28\data\res" t="IncludeRecursive" />
+    <e p="C:\Users\fuj1n\AppData\local\Android\Sdk\sources\android-28" t="IncludeRecursive" />
+    <e p="D:\Libraries\Documents\Unity Projects\JMC_Kadoku\Bullet Hack" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -166,6 +168,12 @@
                 </e>
                 <e p="BreakAction.cs" t="Include" />
                 <e p="MoveAction.cs" t="Include" />
+                <e p="Powerup" t="Include">
+                  <e p="ActionPowerup.cs" t="Include" />
+                  <e p="ActionPowerupHealth.cs" t="Include" />
+                  <e p="ActionPowerupShield.cs" t="Include" />
+                  <e p="ActionPowerupSpread.cs" t="Include" />
+                </e>
                 <e p="ShootAction.cs" t="Include" />
                 <e p="StartAction.cs" t="Include" />
               </e>
@@ -196,8 +204,11 @@
               <e p="CodeRunningOverlay.cs" t="Include" />
               <e p="Expandable.cs" t="Include" />
               <e p="ExpandableExitHide.cs" t="Include" />
+              <e p="HeartsController.cs" t="Include" />
               <e p="ScrollableArea.cs" t="Include" />
               <e p="SerializeDeserializeController.cs" t="Include" />
+              <e p="Tooltip.cs" t="Include" />
+              <e p="TooltipRenderer.cs" t="Include" />
             </e>
             <e p="Util" t="Include">
               <e p="CodeGenerator.cs" t="Include" />

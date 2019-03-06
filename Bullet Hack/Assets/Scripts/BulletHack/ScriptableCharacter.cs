@@ -1,6 +1,7 @@
 ﻿using System;
 using BulletHack.Scripting.Entity.Ticking;
 using DG.Tweening;
+using TMPro;
 using UnityEngine;
 
 namespace BulletHack
@@ -9,7 +10,7 @@ namespace BulletHack
     {
         public int X
         {
-            get { return pos.x; }
+            get => pos.x;
             set
             {
                 value = Mathf.Clamp(value, 0, gridSize.x - 1);
@@ -22,7 +23,7 @@ namespace BulletHack
 
         public int Y
         {
-            get { return pos.y; }
+            get => pos.y;
             set
             {
                 value = Mathf.Clamp(value, 0, gridSize.y - 1);
@@ -33,7 +34,35 @@ namespace BulletHack
             }
         }
 
-        public int health = 3;
+        public int Health
+        {
+            get => health;
+            set
+            {
+                if (!powerups.shieldActive)
+                {
+                    health = Mathf.Clamp(value, 0, maxHealth);
+                    Shake();
+                }
+
+                powerups.shieldActive = false;
+                
+                if (health > 0) return;
+                
+                transform.DOKill();
+                Destroy(gameObject);
+
+                if (deathParticles)
+                    Instantiate(deathParticles).transform.position = transform.position;
+
+                if (deathSound)
+                    AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position);
+            }
+        }
+
+        [SerializeField]
+        private int health = 3;
+        public int maxHealth = 3;
 
         public float rotateIntensity = 2F;
 
@@ -57,11 +86,13 @@ namespace BulletHack
         public GameObject bullet;
         public GameObject deathParticles;
 
+        public PowerupState powerups;
+
         private void Move(Vector3 val)
         {
             if (Math.Abs(val.sqrMagnitude) < .025F)
             {
-                transform.DOShakeRotation(tweenSpeed / 2F, rotateIntensity);
+                Shake();
                 return;
             }
 
@@ -79,22 +110,15 @@ namespace BulletHack
             move.Play();
         }
 
-        private void Update()
+        public void Shake()
         {
-            if (health > 0) return;
-            Destroy(gameObject);
-
-            if (deathParticles)
-                Instantiate(deathParticles).transform.position = transform.position;
-
-            if (deathSound)
-                AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position);
+            transform.DOShakeRotation(tweenSpeed / 2F, rotateIntensity);
         }
 
-        public void Shoot()
+        public void Shoot(int offset = 0)
         {
             GameObject b = Instantiate(bullet);
-            b.transform.position = transform.position;
+            b.transform.position = transform.position + Vector3.right * offset * coordOffset;
             b.transform.forward = transform.forward;
 
             Bullet bObj = b.GetComponent<Bullet>();
@@ -103,6 +127,11 @@ namespace BulletHack
 
             if (shootSound)
                 AudioSource.PlayClipAtPoint(shootSound, Camera.main.transform.position);
+        }
+
+        private void Update()
+        {
+            powerups.Update();
         }
 
         private void OnDrawGizmos()
@@ -121,6 +150,29 @@ namespace BulletHack
                 {
                     Gizmos.DrawWireCube(startPos + Vector3.right * x * coordOffset + Vector3.forward * z * coordOffset, Vector3.one);
                 }
+            }
+        }
+
+        [System.Serializable]
+        public struct PowerupState
+        {
+            public int health, shield, spread;
+
+            public bool shieldActive;
+
+            [Header("Display")]
+            public TextMeshProUGUI healthText;
+            public TextMeshProUGUI shieldText;
+            public TextMeshProUGUI spreadText;
+
+            public void Update()
+            {
+                if (healthText)
+                    healthText.text = health.ToString();
+                if (shieldText)
+                    shieldText.text = shield.ToString();
+                if (spreadText)
+                    spreadText.text = spread.ToString();
             }
         }
     }

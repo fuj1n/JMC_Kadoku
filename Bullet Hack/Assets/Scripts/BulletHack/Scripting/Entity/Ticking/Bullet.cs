@@ -33,7 +33,7 @@ namespace BulletHack.Scripting.Entity.Ticking
             {
                 ScriptableCharacter character = other.GetComponent<ScriptableCharacter>();
                 if (character)
-                    character.health--;
+                    character.Health--;
 
                 if (hitParticles)
                 {

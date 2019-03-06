@@ -4,6 +4,7 @@ using BulletHack.UI.Blocks;
 using JetBrains.Annotations;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace BulletHack.Scripting.Action
 {
@@ -38,6 +39,9 @@ namespace BulletHack.Scripting.Action
                     DownscaleByText();
                 doDownscale = false;
             }
+
+            if (GetColor() != default)
+                GetComponent<Graphic>().color = GetColor();
         }
 
         public virtual void ResetState()
@@ -58,6 +62,7 @@ namespace BulletHack.Scripting.Action
         }
 
         public abstract string GetName();
+        public virtual Color GetColor() => default;
 
         public void SetId(string id)
         {
