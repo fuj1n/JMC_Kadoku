@@ -216,6 +216,11 @@
               <e p="DeathTimer.cs" t="Include" />
               <e p="Utils.cs" t="Include" />
             </e>
+            <e p="Utility.cs" t="Include" />
+            <e p="World" t="Include">
+              <e p="CameraSystem.cs" t="Include" />
+              <e p="PlayerController.cs" t="Include" />
+            </e>
           </e>
         </e>
       </e>
