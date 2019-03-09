@@ -225,6 +225,13 @@
             </e>
           </e>
         </e>
+        <e p="Shaders" t="Include">
+          <e p="BoxBlur.shader" t="Include" />
+          <e p="Composite.cs" t="Include" />
+          <e p="Composite.shader" t="Include" />
+          <e p="GlowPrepass.cs" t="Include" />
+          <e p="Wireframe.shader" t="Include" />
+        </e>
       </e>
       <e p="Bullet Hack.sln" t="IncludeFlat" />
       <e p="Library" t="ExcludeRecursive" />
