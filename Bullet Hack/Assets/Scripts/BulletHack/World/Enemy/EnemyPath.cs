@@ -18,8 +18,10 @@ namespace BulletHack.World.Enemy
 
         private bool isWait = false;
 
+        #if UNITY_EDITOR
         // Used for gizmo drawing
         private List<Vector3> absolutePath;
+        #endif
         
         private void Awake()
         {    
