@@ -221,6 +221,9 @@
             <e p="Utility.cs" t="Include" />
             <e p="World" t="Include">
               <e p="CameraSystem.cs" t="Include" />
+              <e p="Enemy" t="Include">
+                <e p="EnemyPath.cs" t="Include" />
+              </e>
               <e p="PlayerController.cs" t="Include" />
             </e>
           </e>
