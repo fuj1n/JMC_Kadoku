@@ -6,6 +6,7 @@ namespace BulletHack.Scripting.Entity.Ticking
     public class Powerup : TickingEntity
     {
         public PowerupType type;
+        public int turns = 3;
         
         private void Start()
         {
@@ -14,7 +15,10 @@ namespace BulletHack.Scripting.Entity.Ticking
 
         public override void Tick()
         {
-            Destroy(gameObject);
+            turns--;
+            
+            if(turns <= 0)
+                Destroy(gameObject);
         }
 
         public override bool RegisterOnAwake() => false;
