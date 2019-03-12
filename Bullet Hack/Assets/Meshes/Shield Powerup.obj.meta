@@ -1,21 +1,16 @@
 fileFormatVersion: 2
-guid: 89c3903469f6c5144a3904923f2483a2
+guid: 6bc1567606250674fabedc6766e74df6
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Cube
+    100000: Shield
     100002: //RootNode
-    100004: Render
-    400000: Cube
+    400000: Shield
     400002: //RootNode
-    400004: Render
-    2100000: PowerupHealth
-    2300000: Cube
-    2300002: Render
-    3300000: Cube
-    3300002: Render
-    4300000: Cube
-    4300002: Render
+    2100000: ProBuilderDefault
+    2300000: Shield
+    3300000: Shield
+    4300000: Shield
   externalObjects: {}
   materials:
     importMaterials: 0

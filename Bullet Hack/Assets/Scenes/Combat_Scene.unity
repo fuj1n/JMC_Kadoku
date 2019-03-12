@@ -2829,6 +2829,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Ship
       objectReference: {fileID: 0}
+    - target: {fileID: 1008445317594968, guid: f5eccd1eed2910a458869c10c9066d7e, type: 3}
+      propertyPath: m_TagString
+      value: Character
+      objectReference: {fileID: 0}
     - target: {fileID: 4179216466411588, guid: f5eccd1eed2910a458869c10c9066d7e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14
@@ -3775,6 +3779,10 @@ PrefabInstance:
     - target: {fileID: 1914970514447346, guid: ae47fb22cb50dfb41b0a03c78c5ff36e, type: 3}
       propertyPath: m_Name
       value: Player Ship
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914970514447346, guid: ae47fb22cb50dfb41b0a03c78c5ff36e, type: 3}
+      propertyPath: m_TagString
+      value: Character
       objectReference: {fileID: 0}
     - target: {fileID: 4462417560974634, guid: ae47fb22cb50dfb41b0a03c78c5ff36e, type: 3}
       propertyPath: m_LocalPosition.x

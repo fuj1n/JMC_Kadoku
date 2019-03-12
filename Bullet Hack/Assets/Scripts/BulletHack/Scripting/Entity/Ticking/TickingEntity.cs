@@ -9,10 +9,12 @@ namespace BulletHack.Scripting.Entity.Ticking
 
         private void Awake()
         {
-            CombatManager.Instance.Script.AddTickingEntity(this, BoundsAware());
+            if(RegisterOnAwake())
+                CombatManager.Instance.Script.AddTickingEntity(this, BoundsAware());
         }
 
         public abstract void Tick();
         public virtual bool BoundsAware() => true;
+        public virtual bool RegisterOnAwake() => true;
     }
 }

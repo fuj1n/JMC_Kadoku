@@ -6,6 +6,7 @@ namespace BulletHack.Scripting.Entity.Ticking
     public class PowerupTimer : TickingEntity
     {
         public TextMeshPro timeDisplay;
+        public GameObject template;
 
         private int appearTime;
 
@@ -24,6 +25,8 @@ namespace BulletHack.Scripting.Entity.Ticking
             if (appearTime <= 0F)
             {
                 Destroy(gameObject);
+                if (template)
+                    Instantiate(template, transform.parent).transform.SetPositionAndRotation(transform.position, transform.rotation);
             }
         }
 

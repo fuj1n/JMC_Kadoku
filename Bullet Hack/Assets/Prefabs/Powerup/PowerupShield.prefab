@@ -413,3 +413,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tweenSpeed: 0
   timeDisplay: {fileID: 3287673481183235511}
+  template: {fileID: 6530649473069626984, guid: ec38cf635a89e0a4bb0517926b4f4f43,
+    type: 3}
