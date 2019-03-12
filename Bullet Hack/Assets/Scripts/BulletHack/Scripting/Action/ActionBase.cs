@@ -73,7 +73,7 @@ namespace BulletHack.Scripting.Action
         }
 
         [AttributeUsage(AttributeTargets.Field)]
-        [MeansImplicitUse(ImplicitUseTargetFlags.WithMembers)]
+        [MeansImplicitUse(ImplicitUseTargetFlags.Members)]
         public sealed class InputVarAttribute : Attribute
         {
             public bool Reverse { get; set; }
