@@ -83,7 +83,7 @@ namespace BulletHack.Scripting
                 if (!gameOver)
                 {
                     gameOver = true;
-                    Invoke(nameof(Restart), 2F);
+                    Invoke(nameof(CombatFinished), 2F);
                 }
 
                 return;
@@ -205,6 +205,10 @@ namespace BulletHack.Scripting
             entities.ForEach(e =>
             {
                 e.tweenSpeed = tweenSpeed;
+                
+                if(e.transform.parent == null)
+                    e.transform.SetParent(CombatManager.Instance.combatWorld.transform, true);
+                
                 e.Tick();
             });
 
@@ -235,9 +239,9 @@ namespace BulletHack.Scripting
             Gizmos.DrawWireCube(transform.position + gameArea.center, gameArea.size);
         }
 
-        private void Restart()
+        private void CombatFinished()
         {
-            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+            CombatManager.Instance.OnCombatFinish();
         }
 
         private void UpdateTurnCounter(float tweenSpeed)

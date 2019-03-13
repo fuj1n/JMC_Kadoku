@@ -155,6 +155,7 @@
               <e p="PlatformColorizer.cs" t="Include" />
               <e p="RotateEffect.cs" t="Include" />
             </e>
+            <e p="GameData.cs" t="Include" />
             <e p="ScriptableCharacter.cs" t="Include" />
             <e p="Scripting" t="Include">
               <e p="Action" t="Include">
@@ -218,6 +219,10 @@
             </e>
             <e p="Utility.cs" t="Include" />
             <e p="World" t="Include">
+              <e p="BattleEntry" t="Include">
+                <e p="BattleEntryBase.cs" t="Include" />
+                <e p="ConeBattleEntry.cs" t="Include" />
+              </e>
               <e p="BattleEntryPoint.cs" t="Include" />
               <e p="CameraSystem.cs" t="Include" />
               <e p="Enemy" t="Include">

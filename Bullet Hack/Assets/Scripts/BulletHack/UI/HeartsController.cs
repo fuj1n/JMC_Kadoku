@@ -30,7 +30,7 @@ namespace BulletHack.UI
 
         private void Update()
         {
-            if (character.maxHealth != hearts.Length)
+            if (character.MaxHealth != hearts.Length)
                 SetupHearts();
 
             int health = character.Health;
@@ -63,9 +63,9 @@ namespace BulletHack.UI
             cachedHealth = int.MinValue;
 
             transform2D.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, spriteSize);
-            transform2D.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, spriteSize * character.maxHealth);
+            transform2D.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, spriteSize * character.MaxHealth);
 
-            hearts = new Image[character.maxHealth];
+            hearts = new Image[character.MaxHealth];
 
             for (int i = 0; i < hearts.Length; i++)
             {

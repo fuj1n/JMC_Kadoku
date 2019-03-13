@@ -15453,6 +15453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69f0f6ab5c4295749955566f6f2fb0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usePlayerHealth: 1
   health: 3
   maxHealth: 3
   rotateIntensity: 30
