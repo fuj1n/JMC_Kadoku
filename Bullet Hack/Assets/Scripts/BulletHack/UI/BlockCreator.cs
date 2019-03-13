@@ -10,6 +10,9 @@ namespace BulletHack.UI
 
         public void Create(string id)
         {
+            if (CombatManager.Instance.Script.IsRunning)
+                return;
+            
             CodeBlockDrag drag = BlockLoader.CreateBlock(id, root).GetComponent<CodeBlockDrag>();
 
             if (startBlock)
