@@ -2,36 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84682f92-91d4-4b62-b5e0-a3379472445a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/csc.rsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Bullet Hack/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bullet Hack/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Bullet Hack/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bullet Hack/riderModule.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHack/CombatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHack/CombatManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHack/FX/RotateEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHack/FX/RotateEffect.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHack/GameData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHack/GameData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHack/ScriptableCharacter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHack/ScriptableCharacter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/BlockAction/ActionBlockBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/BlockAction/ActionBlockBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/MoveAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/MoveAction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/Powerup/ActionPowerupHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/Powerup/ActionPowerupHealth.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/Powerup/ActionPowerupShield.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/Powerup/ActionPowerupShield.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Entity/Ticking/Powerup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Entity/Ticking/Powerup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Entity/Ticking/PowerupTimer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Entity/Ticking/PowerupTimer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Entity/Ticking/TickingEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Entity/Ticking/TickingEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/PowerupHost.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/PowerupHost.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/ScriptController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/ScriptController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/Binder/ValueBinder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/Binder/ValueBinder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/BlockCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/BlockCreator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/HeartsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/HeartsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/Tooltip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/Tooltip.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/TooltipRenderer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/TooltipRenderer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHack/Util/CodeGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHack/Util/CodeGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHack/Utility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHack/Utility.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHack/World/BattleEntry/BattleEntryBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHack/World/BattleEntry/BattleEntryBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHack/World/BattleEntry/ConeBattleEntry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHack/World/BattleEntry/ConeBattleEntry.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHack/World/BattleEntryPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHack/World/BattleEntryPoint.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHack/World/CameraSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHack/World/CameraSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Enemy/EnemyPath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Enemy/EnemyPath.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHack/World/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHack/World/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHack/World/WorldController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHack/World/WorldController.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -215,11 +186,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/Blocks/BracketBlockManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            <state relative-caret-position="120">
+              <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
               <folding>
                 <marker date="1550310528862" expanded="true" signature="50:2472" ph="{...}" />
                 <marker date="1550310528862" expanded="true" signature="104:2470" ph="{...}" />
@@ -238,21 +209,21 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/Binder/ValueBinder.cs">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/GameData.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+            <state relative-caret-position="690">
+              <caret line="46" column="32" lean-forward="true" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
               <folding>
-                <marker date="1552644159083" expanded="false" signature="6:78" ph="..." />
-                <marker date="1552644159083" expanded="true" signature="110:1360" ph="{...}" />
-                <marker date="1552644159083" expanded="true" signature="184:1358" ph="{...}" />
-                <marker date="1552644159083" expanded="true" signature="312:358" ph="{...}" />
-                <marker date="1552644159083" expanded="true" signature="403:1201" ph="{...}" />
-                <marker date="1552644159083" expanded="true" signature="797:1157" ph="{...}" />
-                <marker date="1552644159083" expanded="true" signature="863:1003" ph="{...}" />
-                <marker date="1552644159083" expanded="true" signature="1063:1143" ph="{...}" />
-                <marker date="1552644159083" expanded="true" signature="1232:1352" ph="{...}" />
+                <marker date="1552645319190" expanded="true" signature="6:32" ph="..." />
+                <marker date="1552645319190" expanded="true" signature="89:1228" ph="{...}" />
+                <marker date="1552645319190" expanded="true" signature="133:1226" ph="{...}" />
+                <marker date="1552645319190" expanded="true" signature="325:578" ph="{...}" />
+                <marker date="1552645319190" expanded="true" signature="361:450" ph="{...}" />
+                <marker date="1552645319190" expanded="true" signature="609:1056" ph="{...}" />
+                <marker date="1552645319190" expanded="true" signature="729:1046" ph="{...}" />
+                <marker date="1552645319190" expanded="true" signature="785:974" ph="{...}" />
+                <marker date="1552645319190" expanded="true" signature="1084:1220" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -316,6 +287,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/FX/RotateEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/MoveAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/Powerup/ActionPowerupHealth.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/GameData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/BreakAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../jmc-tmechs/Tyrannosaurus Mechs/Assets/Scripts/TMechs/Player/PlayerMovement.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/BlockAction/RepeatTimesBlock.cs" root0="FORCE_HIGHLIGHTING" />
@@ -376,7 +348,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/ActionBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/CombatManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/World/BattleEntry/BattleEntryBase.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/GameData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/HeartsController.cs" />
         <option value="$PROJECT_DIR$/Assets/csc.rsp" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/MoveAction.cs" />
@@ -389,6 +360,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/BlockAction/ActionBlockBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/Powerup/ActionPowerupShield.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Enemy/EnemyPath.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/GameData.cs" />
       </list>
     </option>
   </component>
@@ -553,12 +525,12 @@
       <workItem from="1552377955096" duration="52000" />
       <workItem from="1552393682977" duration="1784000" />
       <workItem from="1552458371397" duration="6402000" />
-      <workItem from="1552643753980" duration="978000" />
+      <workItem from="1552643753980" duration="1579000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70694000" />
+    <option name="totallyTimeSpent" value="71295000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -573,7 +545,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -589,7 +561,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Android Profiler" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Inspection Results" order="10" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Inspection Results" order="10" weight="0.32936078" />
       <window_info anchor="bottom" id="Performance Profiler" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="NuGet" order="13" show_stripe_button="false" />
@@ -810,7 +782,6 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DC10DD4A-D9F3-4AA9-8E69-1E49A48C7111/93/6e8c2087/ImplicitUseTargetFlags.cs" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DC10DD4A-D9F3-4AA9-8E69-1E49A48C7111/85/353becc4/MeansImplicitUseAttribute.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/BattleEntry/ConeBattleEntry.cs" />
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/GameData.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/ActionBase.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -1135,8 +1106,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/Blocks/BracketBlockManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        <state relative-caret-position="120">
+          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
           <folding>
             <marker date="1550310528862" expanded="true" signature="50:2472" ph="{...}" />
             <marker date="1550310528862" expanded="true" signature="104:2470" ph="{...}" />
@@ -1150,6 +1121,24 @@
             <marker date="1550310528862" expanded="true" signature="1868:2065" ph="{...}" />
             <marker date="1550310528862" expanded="true" signature="2152:2331" ph="{...}" />
             <marker date="1550310528862" expanded="true" signature="2369:2464" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/GameData.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="46" column="32" lean-forward="true" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
+          <folding>
+            <marker date="1552645319190" expanded="true" signature="6:32" ph="..." />
+            <marker date="1552645319190" expanded="true" signature="89:1228" ph="{...}" />
+            <marker date="1552645319190" expanded="true" signature="133:1226" ph="{...}" />
+            <marker date="1552645319190" expanded="true" signature="325:578" ph="{...}" />
+            <marker date="1552645319190" expanded="true" signature="361:450" ph="{...}" />
+            <marker date="1552645319190" expanded="true" signature="609:1056" ph="{...}" />
+            <marker date="1552645319190" expanded="true" signature="729:1046" ph="{...}" />
+            <marker date="1552645319190" expanded="true" signature="785:974" ph="{...}" />
+            <marker date="1552645319190" expanded="true" signature="1084:1220" ph="{...}" />
           </folding>
         </state>
       </provider>
