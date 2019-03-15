@@ -45,7 +45,7 @@ namespace BulletHack
                     health = ref GameData.Instance.playerHealth;
 
                 int maxHealth = usePlayerHealth ? GameData.Instance.playerMaxHealth : this.maxHealth;
-                
+
                 if (!powerups.shieldActive)
                 {
                     health = Mathf.Clamp(value, 0, maxHealth);
@@ -53,9 +53,9 @@ namespace BulletHack
                 }
 
                 powerups.shieldActive = false;
-                
+
                 if (health > 0) return;
-                
+
                 transform.DOKill();
                 Destroy(gameObject);
 
@@ -70,7 +70,7 @@ namespace BulletHack
         public ref int MaxHealth => ref usePlayerHealth ? ref GameData.Instance.playerMaxHealth : ref maxHealth;
 
         public bool usePlayerHealth;
-        
+
         [SerializeField]
         [ConditionalHide("usePlayerHealth", true, true)]
         private int health = 3;
@@ -167,7 +167,7 @@ namespace BulletHack
             }
         }
 
-        [System.Serializable]
+        [Serializable]
         public struct PowerupState
         {
             public int health, shield, spread;

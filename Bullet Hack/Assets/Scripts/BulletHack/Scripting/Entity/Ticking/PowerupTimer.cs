@@ -35,7 +35,7 @@ namespace BulletHack.Scripting.Entity.Ticking
             if (timeDisplay)
                 timeDisplay.text = turnsRemain.ToString();
         }
-        
+
         public override bool BoundsAware() => false;
     }
 }

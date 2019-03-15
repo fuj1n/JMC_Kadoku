@@ -147,7 +147,7 @@ namespace BulletHack
 
             return vector;
         }
-        
+
         private static float GetComponent(this Vector3 source, Axis component)
         {
             switch (component)

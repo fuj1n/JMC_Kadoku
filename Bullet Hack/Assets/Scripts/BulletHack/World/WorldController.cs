@@ -5,7 +5,7 @@ namespace BulletHack.World
     public class WorldController : MonoBehaviour
     {
         private static WorldController instance;
-        
+
         public GameObject theWorld;
 
         private void Awake()
@@ -17,7 +17,7 @@ namespace BulletHack.World
         {
             if (!instance)
                 return false;
-            
+
             instance.theWorld.SetActive(true);
 
             return true;
@@ -27,7 +27,7 @@ namespace BulletHack.World
         {
             if (!instance)
                 return false;
-            
+
             instance.theWorld.SetActive(false);
 
             return true;

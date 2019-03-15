@@ -13,12 +13,9 @@ namespace BulletHack.UI.Binder
 
         public Selectable sync;
 
-        private CodeBlockDrag drag;
-
         private void Start()
         {
             OnRegister();
-            drag = GetComponentInParent<CodeBlockDrag>();
         }
 
         protected virtual void OnRegister()

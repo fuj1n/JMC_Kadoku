@@ -15,16 +15,16 @@ namespace BulletHack.Scripting.Action
 
             switch (direction)
             {
-                case Direction.UP:
+                case Direction.Up:
                     character.Y--;
                     break;
-                case Direction.DOWN:
+                case Direction.Down:
                     character.Y++;
                     break;
-                case Direction.LEFT:
+                case Direction.Left:
                     character.X--;
                     break;
-                case Direction.RIGHT:
+                case Direction.Right:
                     character.X++;
                     break;
                 default:
@@ -36,10 +36,10 @@ namespace BulletHack.Scripting.Action
 
         public enum Direction
         {
-            UP,
-            DOWN,
-            LEFT,
-            RIGHT
+            Up,
+            Down,
+            Left,
+            Right
         }
     }
 }

@@ -7,7 +7,7 @@ namespace BulletHack.Scripting.Entity.Ticking
     {
         public PowerupType type;
         public int turns = 3;
-        
+
         private void Start()
         {
             CombatManager.Instance.Script.AddTickingEntity(this, BoundsAware());
@@ -16,8 +16,8 @@ namespace BulletHack.Scripting.Entity.Ticking
         public override void Tick()
         {
             turns--;
-            
-            if(turns <= 0)
+
+            if (turns <= 0)
                 Destroy(gameObject);
         }
 
@@ -32,31 +32,31 @@ namespace BulletHack.Scripting.Entity.Ticking
 
             if (!character)
                 return;
-            
-            switch(type)
+
+            switch (type)
             {
-                case PowerupType.HEALTH:
+                case PowerupType.Health:
                     character.powerups.health++;
                     break;
-                case PowerupType.SHIELD:
+                case PowerupType.Shield:
                     character.powerups.shield++;
                     break;
-                case PowerupType.SPREAD:
+                case PowerupType.Spread:
                     character.powerups.spread++;
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
             }
-            
+
             Destroy(gameObject);
         }
 
-        [System.Serializable]
+        [Serializable]
         public enum PowerupType
         {
-            HEALTH,
-            SHIELD,
-            SPREAD
+            Health,
+            Shield,
+            Spread
         }
     }
 }

@@ -13,10 +13,12 @@ namespace BulletHack.Scripting.Action.BlockAction
             if (!currentInstruction && ShouldExecute())
             {
                 Next();
-                currentInstruction = ((BracketBlockManager) manager).bracketConnector?.GetComponent<ActionBase>();
+
+                if (((BracketBlockManager) manager).bracketConnector != null)
+                    currentInstruction = ((BracketBlockManager) manager).bracketConnector.GetComponent<ActionBase>();
             }
 
-            if (!currentInstruction)
+            if (currentInstruction == null)
                 return;
 
             currentInstruction.Execute();

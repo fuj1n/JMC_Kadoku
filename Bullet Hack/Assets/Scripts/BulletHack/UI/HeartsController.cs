@@ -7,7 +7,7 @@ namespace BulletHack.UI
     public class HeartsController : MonoBehaviour
     {
         public ScriptableCharacter character;
-    
+
         private const int SPRITES_LENGTH = 2;
 
         private RectTransform transform2D;
@@ -16,7 +16,7 @@ namespace BulletHack.UI
         public Sprite[] sprites = { };
         public bool reverse;
         public Color colorMultiplier = Color.white;
-    
+
         private Image[] hearts;
 
         private int cachedHealth;
@@ -24,7 +24,7 @@ namespace BulletHack.UI
         private void Start()
         {
             transform2D = GetComponent<RectTransform>();
-        
+
             SetupHearts();
         }
 

@@ -7,34 +7,33 @@ namespace BulletHack.World.Enemy
 {
     public class EnemyPath : MonoBehaviour
     {
-        public Vector3[] path = {};
+        public Vector3[] path = { };
         public float tiltAmount = 15F;
         public float speed = 2F;
-        public float rotateTime = .25F;
         public float waitTime = .5F;
 
         private int index;
         private Tween motion;
 
-        private bool isWait = false;
+        private bool isWait;
 
-        #if UNITY_EDITOR
+#if UNITY_EDITOR
         // Used for gizmo drawing
         private List<Vector3> absolutePath;
-        #endif
-        
+#endif
+
         private void Awake()
-        {    
+        {
             Debug.Assert(path != null, "Path is null for " + name);
 
             System.Array.Resize(ref path, path.Length + 1);
             path[path.Length - 1] = -path.Aggregate((current, val) => current + val);
 
-            #if UNITY_EDITOR
+#if UNITY_EDITOR
             Vector3 curr = transform.position;
             absolutePath = path.Select(x => curr += x).ToList();
             absolutePath.Insert(0, transform.position);
-            #endif
+#endif
         }
 
         private void Update()
@@ -51,23 +50,23 @@ namespace BulletHack.World.Enemy
                 isWait = true;
                 return;
             }
-            
+
             motion = transform.DOBlendableMoveBy(path[index], path[index].magnitude / speed);
 
             Sequence sq = DOTween.Sequence();
             sq.Append(transform.DOLocalRotate(transform.localEulerAngles.Set(tiltAmount, Utility.Axis.X), .25F));
             sq.AppendInterval(path[index].magnitude / speed - .5F);
             sq.Append(transform.DOLocalRotate(transform.localEulerAngles.Set(0F, Utility.Axis.X), .25F));
-            
+
             motion.SetEase(Ease.InOutQuad);
-            
+
             index++;
             if (index >= path.Length)
                 index = 0;
             isWait = false;
         }
 
-        #if UNITY_EDITOR
+#if UNITY_EDITOR
         private void OnDrawGizmos()
         {
             if (path == null || path.Length == 0)
@@ -95,6 +94,6 @@ namespace BulletHack.World.Enemy
                     Gizmos.DrawLine(absolutePath[i - 1], absolutePath[i]);
             }
         }
-        #endif
+#endif
     }
 }

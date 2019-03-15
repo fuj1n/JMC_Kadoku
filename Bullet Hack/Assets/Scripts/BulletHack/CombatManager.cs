@@ -12,7 +12,7 @@ namespace BulletHack
         public ScriptController Script { get; private set; }
 
         public GameObject combatWorld;
-        
+
         private void Awake()
         {
             Instance = this;

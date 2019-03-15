@@ -10,15 +10,15 @@ namespace BulletHack
         [NonSerialized]
         public int playerHealth;
         public int playerMaxHealth;
-        
+
         private void Awake()
         {
-            if(Instance)
+            if (Instance)
             {
                 Destroy(gameObject);
                 return;
             }
-            
+
             Instance = this;
             DontDestroyOnLoad(gameObject);
 

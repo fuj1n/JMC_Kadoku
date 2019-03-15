@@ -13,17 +13,17 @@ namespace BulletHack.Scripting
 
         [ColorUsage(false)]
         public Color gizmo;
-        
+
         public void CreatePowerups()
         {
             foreach (Transform t in transform)
                 Destroy(t.gameObject);
-            
+
             if (powerupTypes.Length <= 0)
                 return;
 
             List<Vector2Int> taken = new List<Vector2Int>();
-            
+
             int count = Random.Range(powerupCount.x, powerupCount.y + 1);
 
             for (int i = 0; i < count; i++)
@@ -44,6 +44,7 @@ namespace BulletHack.Scripting
                     if (limit <= 0)
                         return;
                 } while (taken.Contains(pos));
+
                 taken.Add(pos);
 
                 while (pos.x > startPos.x)
@@ -71,7 +72,7 @@ namespace BulletHack.Scripting
                 }
             }
         }
-        
+
         private void OnDrawGizmos()
         {
             if (Application.isPlaying)
