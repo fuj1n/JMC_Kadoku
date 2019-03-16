@@ -102,6 +102,13 @@ namespace BulletHack
 
         public PowerupState powerups;
 
+        private Quaternion neutral;
+
+        private void Awake()
+        {
+            neutral = transform.rotation;
+        }
+
         private void Move(Vector3 val)
         {
             if (Math.Abs(val.sqrMagnitude) < .025F)
@@ -117,7 +124,7 @@ namespace BulletHack
 
             move.Append(transform.DOBlendableLocalRotateBy(-direction * rotateIntensity, tweenSpeed * .2F));
             move.AppendInterval(tweenSpeed * .6F);
-            move.Append(transform.DORotateQuaternion(transform.rotation, tweenSpeed * .2F));
+            move.Append(transform.DORotateQuaternion(neutral, tweenSpeed * .2F));
 
             transform.DOMove(transform.position + val, tweenSpeed).SetEase(Ease.InOutSine);
 
