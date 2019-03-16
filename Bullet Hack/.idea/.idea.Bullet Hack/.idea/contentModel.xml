@@ -149,11 +149,23 @@
               <e p="EmojiOne Attribution.txt" t="Include" />
             </e>
           </e>
+          <e p="UCLAGameLab" t="Include">
+            <e p="Wireframe" t="Include">
+              <e p="Shaders" t="Include">
+                <e p="UCLA GameLab Cutout Wireframe.shader" t="Include" />
+                <e p="UCLA GameLab Double-Sided Cutout Wireframe.shader" t="Include" />
+                <e p="UCLA GameLab Double-Sided Wireframe.shader" t="Include" />
+                <e p="UCLA GameLab Wireframe Functions.cginc" t="Include" />
+                <e p="UCLA GameLab Wireframe.shader" t="Include" />
+              </e>
+            </e>
+          </e>
         </e>
         <e p="Scripts" t="Include">
           <e p="BulletHack" t="Include">
             <e p="CombatManager.cs" t="Include" />
             <e p="FX" t="Include">
+              <e p="CollisionParticle.cs" t="Include" />
               <e p="PlatformColorizer.cs" t="Include" />
               <e p="RotateEffect.cs" t="Include" />
             </e>
@@ -235,13 +247,6 @@
               <e p="WorldController.cs" t="Include" />
             </e>
           </e>
-        </e>
-        <e p="Shaders" t="Include">
-          <e p="BoxBlur.shader" t="Include" />
-          <e p="Composite.cs" t="Include" />
-          <e p="Composite.shader" t="Include" />
-          <e p="GlowPrepass.cs" t="Include" />
-          <e p="Wireframe.shader" t="Include" />
         </e>
       </e>
       <e p="Bullet Hack.sln" t="IncludeFlat" />
