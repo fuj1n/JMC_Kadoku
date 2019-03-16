@@ -20,7 +20,8 @@ namespace BulletHack.World
         }
 
         private Camera nullCam;
-
+        private Camera activeCamera;
+        
         private void Awake()
         {
             Instance = this;
@@ -29,7 +30,18 @@ namespace BulletHack.World
         [NotNull]
         public Camera GetActiveCamera()
         {
-            return Camera.main != null ? Camera.main : NullCam;
+            return activeCamera != null ? activeCamera : NullCam;
+        }
+
+        public void SetActiveCamera(Camera c)
+        {
+            if (c == activeCamera)
+                return;
+            
+            if (activeCamera)
+                activeCamera.enabled = false;
+            activeCamera = c;
+            activeCamera.enabled = true;
         }
     }
 }

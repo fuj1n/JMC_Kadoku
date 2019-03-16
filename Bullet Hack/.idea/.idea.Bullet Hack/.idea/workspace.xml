@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84682f92-91d4-4b62-b5e0-a3379472445a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHack/GameData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHack/GameData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Bullet Hack/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bullet Hack/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHack/World/CameraSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHack/World/CameraSystem.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,79 +14,9 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/ScriptController.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-              <folding>
-                <marker date="1552644700203" expanded="true" signature="6:226" ph="..." />
-                <marker date="1552644700203" expanded="true" signature="258:7205" ph="{...}" />
-                <marker date="1552644700203" expanded="true" signature="310:7203" ph="{...}" />
-                <marker date="1552644700203" expanded="true" signature="1633:1846" ph="{...}" />
-                <marker date="1552644700203" expanded="true" signature="1876:1931" ph="{...}" />
-                <marker date="1552644700203" expanded="true" signature="1962:2561" ph="{...}" />
-                <marker date="1552644700203" expanded="true" signature="2019:2268" ph="{...}" />
-                <marker date="1552644700203" expanded="true" signature="2100:2229" ph="{...}" />
-                <marker date="1552644700203" expanded="true" signature="2461:2551" ph="{...}" />
-                <marker date="1552644700203" expanded="true" signature="2588:3048" ph="{...}" />
-                <marker date="1552644700203" expanded="true" signature="2626:2967" ph="{...}" />
-                <marker date="1552644700203" expanded="true" signature="3083:3218" ph="{...}" />
-                <marker date="1552644700203" expanded="true" signature="3247:3318" ph="{...}" />
-                <marker date="1552644700203" expanded="true" signature="3346:3492" ph="{...}" />
-                <marker date="1552644700203" expanded="true" signature="3530:3708" ph="{...}" />
-                <marker date="1552644700203" expanded="true" signature="3795:3981" ph="{...}" />
-                <marker date="1552644700203" expanded="true" signature="4010:6308" ph="{...}" />
-                <marker date="1552644700203" expanded="true" signature="4209:5123" ph="{...}" />
-                <marker date="1552644700203" expanded="true" signature="4257:4670" ph="{...}" />
-                <marker date="1552644700203" expanded="true" signature="4704:5109" ph="{...}" />
-                <marker date="1552644700203" expanded="true" signature="5263:5385" ph="{...}" />
-                <marker date="1552644700203" expanded="true" signature="5518:5760" ph="{...}" />
-                <marker date="1552644700203" expanded="true" signature="5803:5909" ph="{...}" />
-                <marker date="1552644700203" expanded="true" signature="5951:6298" ph="{...}" />
-                <marker date="1552644700203" expanded="true" signature="6345:6556" ph="{...}" />
-                <marker date="1552644700203" expanded="true" signature="6595:6668" ph="{...}" />
-                <marker date="1552644700203" expanded="true" signature="6726:7197" ph="{...}" />
-                <marker date="1552644700203" expanded="true" signature="6944:7187" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/ScriptableCharacter.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="169" column="9" selection-start-line="169" selection-start-column="9" selection-end-line="169" selection-end-column="9" />
-              <folding>
-                <marker date="1552644700300" expanded="false" signature="6:107" ph="..." />
-                <marker date="1552644700300" expanded="true" signature="129:5580" ph="{...}" />
-                <marker date="1552644700300" expanded="true" signature="184:5578" ph="{...}" />
-                <marker date="1552644700300" expanded="true" signature="211:496" ph="{...}" />
-                <marker date="1552644700300" expanded="true" signature="263:486" ph="{...}" />
-                <marker date="1552644700300" expanded="true" signature="518:805" ph="{...}" />
-                <marker date="1552644700300" expanded="true" signature="570:795" ph="{...}" />
-                <marker date="1552644700300" expanded="true" signature="832:1818" ph="{...}" />
-                <marker date="1552644700300" expanded="true" signature="936:1808" ph="{...}" />
-                <marker date="1552644700300" expanded="true" signature="1251:1379" ph="{...}" />
-                <marker date="1552644700300" expanded="true" signature="2830:3485" ph="{...}" />
-                <marker date="1552644700300" expanded="true" signature="2892:2969" ph="{...}" />
-                <marker date="1552644700300" expanded="true" signature="3514:3607" ph="{...}" />
-                <marker date="1552644700300" expanded="true" signature="3650:4186" ph="{...}" />
-                <marker date="1552644700300" expanded="true" signature="4217:4268" ph="{...}" />
-                <marker date="1552644700300" expanded="true" signature="4305:4904" ph="{...}" />
-                <marker date="1552644700300" expanded="true" signature="4643:4894" ph="{...}" />
-                <marker date="1552644700300" expanded="true" signature="4710:4880" ph="{...}" />
-                <marker date="1552644700300" expanded="true" signature="4963:5572" ph="{...}" />
-                <marker date="1552644700300" expanded="true" signature="5267:5562" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Entity/Ticking/Powerup.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
+            <state relative-caret-position="735">
               <caret line="56" column="19" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="19" />
               <folding>
                 <marker date="1552644700119" expanded="false" signature="6:32" ph="..." />
@@ -104,7 +35,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/BlockAction/ActionBlockBase.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="225">
               <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
               <folding>
                 <marker date="1552644700010" expanded="true" signature="78:2151" ph="{...}" />
@@ -153,7 +84,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/BattleEntry/BattleEntryBase.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="195">
               <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
               <folding>
                 <marker date="1552644699775" expanded="true" signature="58:520" ph="{...}" />
@@ -168,8 +99,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Enemy/EnemyPath.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+            <state relative-caret-position="105">
+              <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
               <folding>
                 <marker date="1552644699692" expanded="false" signature="6:90" ph="..." />
                 <marker date="1552644699692" expanded="true" signature="124:2945" ph="{...}" />
@@ -190,7 +121,7 @@
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/Blocks/BracketBlockManager.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+              <caret line="9" column="45" lean-forward="true" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
               <folding>
                 <marker date="1550310528862" expanded="true" signature="50:2472" ph="{...}" />
                 <marker date="1550310528862" expanded="true" signature="104:2470" ph="{...}" />
@@ -209,13 +140,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/GameData.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="46" column="32" lean-forward="true" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
+            <state relative-caret-position="645">
+              <caret line="50" column="1" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
               <folding>
-                <marker date="1552645319190" expanded="true" signature="6:32" ph="..." />
+                <marker date="1552645319190" expanded="false" signature="6:67" ph="..." />
                 <marker date="1552645319190" expanded="true" signature="89:1228" ph="{...}" />
                 <marker date="1552645319190" expanded="true" signature="133:1226" ph="{...}" />
                 <marker date="1552645319190" expanded="true" signature="325:578" ph="{...}" />
@@ -224,6 +155,41 @@
                 <marker date="1552645319190" expanded="true" signature="729:1046" ph="{...}" />
                 <marker date="1552645319190" expanded="true" signature="785:974" ph="{...}" />
                 <marker date="1552645319190" expanded="true" signature="1084:1220" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/CameraSystem.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="35" column="45" lean-forward="true" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
+              <folding>
+                <marker date="1552718165338" expanded="false" signature="6:47" ph="..." />
+                <marker date="1552718165338" expanded="true" signature="75:1116" ph="{...}" />
+                <marker date="1552718165338" expanded="true" signature="123:1114" ph="{...}" />
+                <marker date="1552718165338" expanded="true" signature="227:520" ph="{...}" />
+                <marker date="1552718165338" expanded="true" signature="253:510" ph="{...}" />
+                <marker date="1552718165338" expanded="true" signature="628:677" ph="{...}" />
+                <marker date="1552718165338" expanded="true" signature="736:822" ph="{...}" />
+                <marker date="1552718165338" expanded="true" signature="869:1108" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/CameraSwitcher.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="40" lean-forward="true" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+              <folding>
+                <marker date="1552717952079" expanded="true" signature="46:576" ph="{...}" />
+                <marker date="1552717952079" expanded="true" signature="96:574" ph="{...}" />
+                <marker date="1552717952079" expanded="true" signature="160:440" ph="{...}" />
+                <marker date="1552717952079" expanded="true" signature="245:396" ph="{...}" />
+                <marker date="1552717952079" expanded="true" signature="492:568" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -306,11 +272,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/ActionBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/WorldController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/Powerup/ActionPowerupShield.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/CameraSwitcher.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/Binder/BoolBinder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/Binder/EnumBinder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/StartAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/FX/PlatformColorizer.cs" />
@@ -333,7 +299,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/Powerup/ActionPowerup.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/Powerup/ActionPowerupSpread.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/Powerup/ActionPowerupHealth.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/World/CameraSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/Utility.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/World/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/PowerupHost.cs" />
@@ -361,6 +326,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/Powerup/ActionPowerupShield.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Enemy/EnemyPath.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/GameData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/World/CameraSwitcher.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/World/CameraSystem.cs" />
       </list>
     </option>
   </component>
@@ -381,7 +348,20 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="FileSystemExplorer" />
+      <pane id="AssemblyExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Project" type="5427d58d:AssemblyExplorerRootNode" />
+              <item name="UnityEngine.UI (1.0.0.0, msil, .Net Framework v3.5)" type="5e97225f:AssemblyExplorerNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="SolutionExplorer">
+        <option name="show-all-files" value="false" />
+      </pane>
       <pane id="UnityExplorer">
         <subPane>
           <expand>
@@ -448,20 +428,7 @@
         <option name="show-hidden-items" value="false" />
         <option name="show-project-names" value="true" />
       </pane>
-      <pane id="SolutionExplorer">
-        <option name="show-all-files" value="false" />
-      </pane>
-      <pane id="AssemblyExplorer">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Project" type="5427d58d:AssemblyExplorerRootNode" />
-              <item name="UnityEngine.UI (1.0.0.0, msil, .Net Framework v3.5)" type="5e97225f:AssemblyExplorerNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -525,12 +492,13 @@
       <workItem from="1552377955096" duration="52000" />
       <workItem from="1552393682977" duration="1784000" />
       <workItem from="1552458371397" duration="6402000" />
-      <workItem from="1552643753980" duration="1579000" />
+      <workItem from="1552643753980" duration="2560000" />
+      <workItem from="1552717679394" duration="1087000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71295000" />
+    <option name="totallyTimeSpent" value="73363000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -597,35 +565,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/CodeBlockDrag.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1067">
-          <caret line="77" column="36" selection-start-line="77" selection-start-column="36" selection-end-line="77" selection-end-column="36" />
-          <folding>
-            <marker date="1550312679602" expanded="false" signature="6:125" ph="..." />
-            <marker date="1550312679602" expanded="true" signature="292:5890" ph="{...}" />
-            <marker date="1550312679602" expanded="true" signature="695:881" ph="{...}" />
-            <marker date="1550312679602" expanded="true" signature="942:1498" ph="{...}" />
-            <marker date="1550312679602" expanded="true" signature="1101:1239" ph="{...}" />
-            <marker date="1550312679602" expanded="true" signature="1554:2063" ph="{...}" />
-            <marker date="1550312679602" expanded="true" signature="1735:1846" ph="{...}" />
-            <marker date="1550312679602" expanded="true" signature="1863:1973" ph="{...}" />
-            <marker date="1550312679602" expanded="true" signature="2122:2511" ph="{...}" />
-            <marker date="1550312679602" expanded="true" signature="2575:2902" ph="{...}" />
-            <marker date="1550312679602" expanded="true" signature="2965:3143" ph="{...}" />
-            <marker date="1550312679602" expanded="true" signature="3212:3294" ph="{...}" />
-            <marker date="1550312679602" expanded="true" signature="3364:4273" ph="{...}" />
-            <marker date="1550312679602" expanded="true" signature="3773:4185" ph="{...}" />
-            <marker date="1550312679602" expanded="true" signature="3917:4171" ph="{...}" />
-            <marker date="1550312679602" expanded="true" signature="4349:5884" ph="{...}" />
-            <marker date="1550312679602" expanded="true" signature="4536:4713" ph="{...}" />
-            <marker date="1550312679602" expanded="true" signature="4770:5874" ph="{...}" />
-            <marker date="1550312679602" expanded="true" signature="5349:5772" ph="{...}" />
-            <marker date="1550312679602" expanded="true" signature="5416:5698" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AC823E2B-B42B-41BD-A679-24A45A0173C3/23/128c774a/IntPtr.cs" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DC10DD4A-D9F3-4AA9-8E69-1E49A48C7111/f1/5e1717ed/Object.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/Blocks/BlockManagerBase.cs">
@@ -675,13 +614,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/CameraSystem.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -946,42 +878,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/ScriptableCharacter.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="169" column="9" selection-start-line="169" selection-start-column="9" selection-end-line="169" selection-end-column="9" />
-          <folding>
-            <marker date="1552644700300" expanded="false" signature="6:107" ph="..." />
-            <marker date="1552644700300" expanded="true" signature="129:5580" ph="{...}" />
-            <marker date="1552644700300" expanded="true" signature="184:5578" ph="{...}" />
-            <marker date="1552644700300" expanded="true" signature="211:496" ph="{...}" />
-            <marker date="1552644700300" expanded="true" signature="263:486" ph="{...}" />
-            <marker date="1552644700300" expanded="true" signature="518:805" ph="{...}" />
-            <marker date="1552644700300" expanded="true" signature="570:795" ph="{...}" />
-            <marker date="1552644700300" expanded="true" signature="832:1818" ph="{...}" />
-            <marker date="1552644700300" expanded="true" signature="936:1808" ph="{...}" />
-            <marker date="1552644700300" expanded="true" signature="1251:1379" ph="{...}" />
-            <marker date="1552644700300" expanded="true" signature="2830:3485" ph="{...}" />
-            <marker date="1552644700300" expanded="true" signature="2892:2969" ph="{...}" />
-            <marker date="1552644700300" expanded="true" signature="3514:3607" ph="{...}" />
-            <marker date="1552644700300" expanded="true" signature="3650:4186" ph="{...}" />
-            <marker date="1552644700300" expanded="true" signature="4217:4268" ph="{...}" />
-            <marker date="1552644700300" expanded="true" signature="4305:4904" ph="{...}" />
-            <marker date="1552644700300" expanded="true" signature="4643:4894" ph="{...}" />
-            <marker date="1552644700300" expanded="true" signature="4710:4880" ph="{...}" />
-            <marker date="1552644700300" expanded="true" signature="4963:5572" ph="{...}" />
-            <marker date="1552644700300" expanded="true" signature="5267:5562" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/ScriptController.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
           <folding>
-            <marker date="1552644700203" expanded="true" signature="6:226" ph="..." />
-            <marker date="1552644700203" expanded="true" signature="258:7205" ph="{...}" />
             <marker date="1552644700203" expanded="true" signature="310:7203" ph="{...}" />
             <marker date="1552644700203" expanded="true" signature="1633:1846" ph="{...}" />
             <marker date="1552644700203" expanded="true" signature="1876:1931" ph="{...}" />
@@ -1012,9 +913,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/ScriptableCharacter.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2325">
+          <caret line="169" column="9" selection-start-line="169" selection-start-column="9" selection-end-line="169" selection-end-column="9" />
+          <folding>
+            <marker date="1552644700300" expanded="false" signature="6:107" ph="..." />
+            <marker date="1552644700300" expanded="true" signature="129:5580" ph="{...}" />
+            <marker date="1552644700300" expanded="true" signature="184:5578" ph="{...}" />
+            <marker date="1552644700300" expanded="true" signature="211:496" ph="{...}" />
+            <marker date="1552644700300" expanded="true" signature="263:486" ph="{...}" />
+            <marker date="1552644700300" expanded="true" signature="518:805" ph="{...}" />
+            <marker date="1552644700300" expanded="true" signature="570:795" ph="{...}" />
+            <marker date="1552644700300" expanded="true" signature="832:1818" ph="{...}" />
+            <marker date="1552644700300" expanded="true" signature="936:1808" ph="{...}" />
+            <marker date="1552644700300" expanded="true" signature="1251:1379" ph="{...}" />
+            <marker date="1552644700300" expanded="true" signature="2830:3485" ph="{...}" />
+            <marker date="1552644700300" expanded="true" signature="2892:2969" ph="{...}" />
+            <marker date="1552644700300" expanded="true" signature="3514:3607" ph="{...}" />
+            <marker date="1552644700300" expanded="true" signature="3650:4186" ph="{...}" />
+            <marker date="1552644700300" expanded="true" signature="4217:4268" ph="{...}" />
+            <marker date="1552644700300" expanded="true" signature="4305:4904" ph="{...}" />
+            <marker date="1552644700300" expanded="true" signature="4643:4894" ph="{...}" />
+            <marker date="1552644700300" expanded="true" signature="4710:4880" ph="{...}" />
+            <marker date="1552644700300" expanded="true" signature="4963:5572" ph="{...}" />
+            <marker date="1552644700300" expanded="true" signature="5267:5562" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Entity/Ticking/Powerup.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
+        <state relative-caret-position="735">
           <caret line="56" column="19" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="19" />
           <folding>
             <marker date="1552644700119" expanded="false" signature="6:32" ph="..." />
@@ -1031,7 +961,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/BlockAction/ActionBlockBase.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="225">
           <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
           <folding>
             <marker date="1552644700010" expanded="true" signature="78:2151" ph="{...}" />
@@ -1074,7 +1004,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/BattleEntry/BattleEntryBase.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="195">
           <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
           <folding>
             <marker date="1552644699775" expanded="true" signature="58:520" ph="{...}" />
@@ -1087,8 +1017,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Enemy/EnemyPath.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        <state relative-caret-position="105">
+          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
           <folding>
             <marker date="1552644699692" expanded="false" signature="6:90" ph="..." />
             <marker date="1552644699692" expanded="true" signature="124:2945" ph="{...}" />
@@ -1107,7 +1037,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/Blocks/BracketBlockManager.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+          <caret line="9" column="45" lean-forward="true" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
           <folding>
             <marker date="1550310528862" expanded="true" signature="50:2472" ph="{...}" />
             <marker date="1550310528862" expanded="true" signature="104:2470" ph="{...}" />
@@ -1127,10 +1057,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/GameData.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="46" column="32" lean-forward="true" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
+        <state relative-caret-position="645">
+          <caret line="50" column="1" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
           <folding>
-            <marker date="1552645319190" expanded="true" signature="6:32" ph="..." />
+            <marker date="1552645319190" expanded="false" signature="6:67" ph="..." />
             <marker date="1552645319190" expanded="true" signature="89:1228" ph="{...}" />
             <marker date="1552645319190" expanded="true" signature="133:1226" ph="{...}" />
             <marker date="1552645319190" expanded="true" signature="325:578" ph="{...}" />
@@ -1139,6 +1069,37 @@
             <marker date="1552645319190" expanded="true" signature="729:1046" ph="{...}" />
             <marker date="1552645319190" expanded="true" signature="785:974" ph="{...}" />
             <marker date="1552645319190" expanded="true" signature="1084:1220" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/CameraSwitcher.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="40" lean-forward="true" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+          <folding>
+            <marker date="1552717952079" expanded="true" signature="46:576" ph="{...}" />
+            <marker date="1552717952079" expanded="true" signature="96:574" ph="{...}" />
+            <marker date="1552717952079" expanded="true" signature="160:440" ph="{...}" />
+            <marker date="1552717952079" expanded="true" signature="245:396" ph="{...}" />
+            <marker date="1552717952079" expanded="true" signature="492:568" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/CameraSystem.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="35" column="45" lean-forward="true" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
+          <folding>
+            <marker date="1552718165338" expanded="false" signature="6:47" ph="..." />
+            <marker date="1552718165338" expanded="true" signature="75:1116" ph="{...}" />
+            <marker date="1552718165338" expanded="true" signature="123:1114" ph="{...}" />
+            <marker date="1552718165338" expanded="true" signature="227:520" ph="{...}" />
+            <marker date="1552718165338" expanded="true" signature="253:510" ph="{...}" />
+            <marker date="1552718165338" expanded="true" signature="628:677" ph="{...}" />
+            <marker date="1552718165338" expanded="true" signature="736:822" ph="{...}" />
+            <marker date="1552718165338" expanded="true" signature="869:1108" ph="{...}" />
           </folding>
         </state>
       </provider>

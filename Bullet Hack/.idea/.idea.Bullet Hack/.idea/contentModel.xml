@@ -226,6 +226,7 @@
                 <e p="ConeBattleEntry.cs" t="Include" />
               </e>
               <e p="BattleEntryPoint.cs" t="Include" />
+              <e p="CameraSwitcher.cs" t="Include" />
               <e p="CameraSystem.cs" t="Include" />
               <e p="Enemy" t="Include">
                 <e p="EnemyPath.cs" t="Include" />
