@@ -56,7 +56,7 @@ namespace BulletHack.FX
             Gizmos.color = new Color(0F, .5F, .5F, .1F);
             
             BoxCollider col = GetComponent<BoxCollider>();
-            if (!col)
+            if (!col || !col.enabled)
                 return;
             Gizmos.matrix = transform.localToWorldMatrix;
             

@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84682f92-91d4-4b62-b5e0-a3379472445a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Bullet Hack/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bullet Hack/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Bullet Hack/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bullet Hack/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NonCombat_Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/NonCombat_Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Composite.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHack/FX/CollisionParticle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHack/FX/CollisionParticle.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,16 +64,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/FX/CollisionParticle.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="583">
-              <caret line="55" column="52" selection-start-line="55" selection-start-column="52" selection-end-line="55" selection-end-column="52" />
+            <state relative-caret-position="613">
+              <caret line="57" column="25" lean-forward="true" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
               <folding>
-                <marker date="1552729227797" expanded="true" signature="43:1938" ph="{...}" />
-                <marker date="1552729227797" expanded="true" signature="137:1936" ph="{...}" />
-                <marker date="1552729227797" expanded="true" signature="386:1166" ph="{...}" />
-                <marker date="1552729227797" expanded="true" signature="429:620" ph="{...}" />
-                <marker date="1552729227797" expanded="true" signature="722:856" ph="{...}" />
-                <marker date="1552729227797" expanded="true" signature="1197:1577" ph="{...}" />
-                <marker date="1552729227797" expanded="true" signature="1614:1930" ph="{...}" />
+                <marker date="1552731298535" expanded="true" signature="43:1955" ph="{...}" />
+                <marker date="1552731298535" expanded="true" signature="137:1953" ph="{...}" />
+                <marker date="1552731298535" expanded="true" signature="386:1166" ph="{...}" />
+                <marker date="1552731298535" expanded="true" signature="429:620" ph="{...}" />
+                <marker date="1552731298535" expanded="true" signature="722:856" ph="{...}" />
+                <marker date="1552731298535" expanded="true" signature="1197:1577" ph="{...}" />
+                <marker date="1552731298535" expanded="true" signature="1614:1947" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -508,12 +505,12 @@
       <workItem from="1552393682977" duration="1784000" />
       <workItem from="1552458371397" duration="6402000" />
       <workItem from="1552643753980" duration="2560000" />
-      <workItem from="1552717679394" duration="9628000" />
+      <workItem from="1552717679394" duration="10933000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81904000" />
+    <option name="totallyTimeSpent" value="83209000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -526,7 +523,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -3089,16 +3085,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/FX/CollisionParticle.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="55" column="52" selection-start-line="55" selection-start-column="52" selection-end-line="55" selection-end-column="52" />
+        <state relative-caret-position="613">
+          <caret line="57" column="25" lean-forward="true" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
           <folding>
-            <marker date="1552729227797" expanded="true" signature="43:1938" ph="{...}" />
-            <marker date="1552729227797" expanded="true" signature="137:1936" ph="{...}" />
-            <marker date="1552729227797" expanded="true" signature="386:1166" ph="{...}" />
-            <marker date="1552729227797" expanded="true" signature="429:620" ph="{...}" />
-            <marker date="1552729227797" expanded="true" signature="722:856" ph="{...}" />
-            <marker date="1552729227797" expanded="true" signature="1197:1577" ph="{...}" />
-            <marker date="1552729227797" expanded="true" signature="1614:1930" ph="{...}" />
+            <marker date="1552731298535" expanded="true" signature="43:1955" ph="{...}" />
+            <marker date="1552731298535" expanded="true" signature="137:1953" ph="{...}" />
+            <marker date="1552731298535" expanded="true" signature="386:1166" ph="{...}" />
+            <marker date="1552731298535" expanded="true" signature="429:620" ph="{...}" />
+            <marker date="1552731298535" expanded="true" signature="722:856" ph="{...}" />
+            <marker date="1552731298535" expanded="true" signature="1197:1577" ph="{...}" />
+            <marker date="1552731298535" expanded="true" signature="1614:1947" ph="{...}" />
           </folding>
         </state>
       </provider>
