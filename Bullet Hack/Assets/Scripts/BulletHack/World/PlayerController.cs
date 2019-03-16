@@ -19,11 +19,12 @@ namespace BulletHack.World
         private float yDampVelocity;
         private float xDampVelocity;
 
-        private Rigidbody rb;
+        private CharacterController controller;
+        private float yVelocity;
 
         private void Awake()
         {
-            rb = GetComponent<Rigidbody>();
+            controller = GetComponent<CharacterController>();
         }
 
         private void Update()
@@ -51,7 +52,11 @@ namespace BulletHack.World
                 main.startSpeed = Mathf.Lerp(particleMinSpeed, particleMaxSpeed, movement.magnitude);
             }
 
-            rb.velocity = movement * movementSpeed;
+            yVelocity -= 9.81F * Time.deltaTime;
+            controller.Move((movement * movementSpeed + Vector3.up * yVelocity) * Time.deltaTime);
+
+            if (controller.isGrounded)
+                yVelocity = 0F;
         }
     }
 }
