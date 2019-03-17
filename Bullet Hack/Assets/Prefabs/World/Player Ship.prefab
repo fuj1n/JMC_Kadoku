@@ -1637,7 +1637,7 @@ ParticleSystem:
     flipU: 0
     flipV: 0
   VelocityModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
       minMaxState: 0
@@ -6844,7 +6844,7 @@ ParticleSystem:
     flipU: 0
     flipV: 0
   VelocityModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
       minMaxState: 0
@@ -11696,7 +11696,7 @@ ParticleSystem:
     flipU: 0
     flipV: 0
   VelocityModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
       minMaxState: 0
@@ -15478,7 +15478,7 @@ MonoBehaviour:
   - {fileID: 198945736325758690}
   - {fileID: 198030419568645232}
   - {fileID: 198233287097602686}
-  particleMinSpeed: 5
+  particleMinSpeed: 0
   particleMaxSpeed: 7.5
 --- !u!1 &1936302780919586
 GameObject:

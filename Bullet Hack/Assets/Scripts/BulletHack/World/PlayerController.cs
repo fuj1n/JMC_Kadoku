@@ -13,8 +13,8 @@ namespace BulletHack.World
 
         [Header("Particles")]
         public ParticleSystem[] particles;
-        public float particleMinSpeed = 5F;
-        public float particleMaxSpeed = 10F;
+        public float particleMinSpeed;
+        public float particleMaxSpeed = 7.5F;
 
         private float yDampVelocity;
         private float xDampVelocity;
@@ -46,15 +46,15 @@ namespace BulletHack.World
             float tilt = Mathf.SmoothDampAngle(transform.eulerAngles.x, tiltAmount * movement.magnitude, ref xDampVelocity, tiltDamping);
             transform.eulerAngles = transform.eulerAngles.Set(tilt, Utility.Axis.X);
 
-            foreach (ParticleSystem particle in particles)
-            {
-                ParticleSystem.MainModule main = particle.main;
-                main.startSpeed = Mathf.Lerp(particleMinSpeed, particleMaxSpeed, movement.magnitude);
-            }
-
             yVelocity -= 9.81F * Time.deltaTime;
             controller.Move((movement * movementSpeed + Vector3.up * yVelocity) * Time.deltaTime);
 
+            foreach (ParticleSystem particle in particles)
+            {
+                ParticleSystem.VelocityOverLifetimeModule mod = particle.velocityOverLifetime;
+                mod.z = Mathf.Lerp(particleMinSpeed, particleMaxSpeed, controller.velocity.magnitude);
+            }
+            
             if (controller.isGrounded)
                 yVelocity = 0F;
         }
