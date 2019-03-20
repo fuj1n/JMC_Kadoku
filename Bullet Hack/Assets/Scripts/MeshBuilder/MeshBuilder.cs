@@ -28,7 +28,6 @@ namespace Plugins.MeshBuilder
 
         private int meshPrecision;
         private Face lastCreatedFace = null;
-        private float baseNormalAngle = 90F;
 
         private MeshBuilder()
         { }

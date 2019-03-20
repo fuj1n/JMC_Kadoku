@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 4058465188620135360}
   - component: {fileID: 4058465188620135361}
   - component: {fileID: 4058465188620135362}
-  m_Layer: 0
-  m_Name: GameObject
+  m_Layer: 2
+  m_Name: WorldBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
