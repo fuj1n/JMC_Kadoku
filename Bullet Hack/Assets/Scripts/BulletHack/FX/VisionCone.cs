@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-using Plugins.MeshBuilder;
+﻿using Plugins.MeshBuilder;
 using UnityEngine;
 
 namespace BulletHack.FX
@@ -54,7 +52,9 @@ namespace BulletHack.FX
 
                 if (Physics.Raycast(index, direction, out RaycastHit hit, distance, ~LayerMask.GetMask("Ignore Raycast"), QueryTriggerInteraction.Ignore))
                 {
-//                    Debug.DrawLine(index, index + direction * hit.distance);
+                    #if UNITY_EDITOR
+                    Debug.DrawLine(index, index + direction * hit.distance);
+                    #endif
                     verts[i] = indexVector + hit.distance / transform.lossyScale.z * Vector3.Normalize(vertSnapshot[i] - indexVector);
                 }
                 else
