@@ -63,7 +63,6 @@ MonoBehaviour:
   path: []
   tiltAmount: 5
   speed: 6
-  rotateTime: 0.25
   waitTime: 0.5
 --- !u!114 &8171876436019675987
 MonoBehaviour:
@@ -1051,11 +1050,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4179216466411588}
     m_Modifications:
-    - target: {fileID: 6228473707970630821, guid: 81a2d7e6978a61644b00bdc917b53291,
-        type: 3}
-      propertyPath: m_Name
-      value: Detection Cone
-      objectReference: {fileID: 0}
     - target: {fileID: 6228473707970726021, guid: 81a2d7e6978a61644b00bdc917b53291,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1125,6 +1119,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6228473707970630821, guid: 81a2d7e6978a61644b00bdc917b53291,
+        type: 3}
+      propertyPath: m_Name
+      value: Detection Cone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81a2d7e6978a61644b00bdc917b53291, type: 3}
