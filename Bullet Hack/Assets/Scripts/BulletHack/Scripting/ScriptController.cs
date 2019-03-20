@@ -6,7 +6,6 @@ using BulletHack.Util;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace BulletHack.Scripting
@@ -40,7 +39,10 @@ namespace BulletHack.Scripting
 
         public Color maxTurnsFull = Color.green;
         public Color maxTurnsEmpty = Color.red;
-        
+
+        [Space]
+        public PowerupHost powerupHost;
+
         private int currentTurn = -1;
 
         private float currentSpeed;
@@ -56,18 +58,21 @@ namespace BulletHack.Scripting
         private bool gameOver;
 
         private CodeGenerator generator;
-        
+
         private void Awake()
         {
             gameArea.center += transform.position;
             generator = enemyStart.GetComponent<CodeGenerator>();
+
+            if (powerupHost)
+                powerupHost.CreatePowerups();
         }
 
         private void Start()
         {
             UpdateTurnCounter(0F);
         }
-        
+
         private void Update()
         {
             if (!playerAvatar || !enemyAvatar)
@@ -77,7 +82,7 @@ namespace BulletHack.Scripting
                 if (!gameOver)
                 {
                     gameOver = true;
-                    Invoke(nameof(Restart), 2F);
+                    Invoke(nameof(CombatFinished), 2F);
                 }
 
                 return;
@@ -199,6 +204,10 @@ namespace BulletHack.Scripting
             entities.ForEach(e =>
             {
                 e.tweenSpeed = tweenSpeed;
+
+                if (e.transform.parent == null)
+                    e.transform.SetParent(CombatManager.Instance.combatWorld.transform, true);
+
                 e.Tick();
             });
 
@@ -206,13 +215,17 @@ namespace BulletHack.Scripting
             {
                 currentTurn++;
                 UpdateTurnCounter(tweenSpeed);
-            } else if (entities.Count == 0)
+            }
+            else if (entities.Count == 0)
             {
                 IsRunning = false;
                 generator.startPos = new Vector2Int(enemyAvatar.X, enemyAvatar.Y);
                 generator.GenerateCode();
                 currentTurn = -1;
                 UpdateTurnCounter(1.5F);
+
+                if (powerupHost)
+                    powerupHost.CreatePowerups();
             }
         }
 
@@ -226,21 +239,21 @@ namespace BulletHack.Scripting
             Gizmos.DrawWireCube(transform.position + gameArea.center, gameArea.size);
         }
 
-        private void Restart()
+        private void CombatFinished()
         {
-            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+            CombatManager.Instance.OnCombatFinish();
         }
 
         private void UpdateTurnCounter(float tweenSpeed)
         {
             int currentTurn = Mathf.Clamp(this.currentTurn, 0, maxTurns);
-            
+
             if (maxTurnsText)
                 maxTurnsText.text = (maxTurns - currentTurn).ToString();
             if (maxTurnsFill)
             {
                 maxTurnsFill.DOFillAmount(1F - (float) currentTurn / maxTurns, tweenSpeed);
-                maxTurnsFill.DOColor(Color.Lerp(maxTurnsFull, maxTurnsEmpty, (float)currentTurn / maxTurns), tweenSpeed);
+                maxTurnsFill.DOColor(Color.Lerp(maxTurnsFull, maxTurnsEmpty, (float) currentTurn / maxTurns), tweenSpeed);
             }
         }
     }

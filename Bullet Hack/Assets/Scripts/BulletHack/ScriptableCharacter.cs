@@ -36,9 +36,16 @@ namespace BulletHack
 
         public int Health
         {
-            get => health;
+            get => usePlayerHealth ? GameData.Instance.playerHealth : health;
             set
             {
+                ref int health = ref this.health;
+
+                if (usePlayerHealth)
+                    health = ref GameData.Instance.playerHealth;
+
+                int maxHealth = usePlayerHealth ? GameData.Instance.playerMaxHealth : this.maxHealth;
+
                 if (!powerups.shieldActive)
                 {
                     health = Mathf.Clamp(value, 0, maxHealth);
@@ -46,9 +53,9 @@ namespace BulletHack
                 }
 
                 powerups.shieldActive = false;
-                
+
                 if (health > 0) return;
-                
+
                 transform.DOKill();
                 Destroy(gameObject);
 
@@ -60,9 +67,16 @@ namespace BulletHack
             }
         }
 
+        public ref int MaxHealth => ref usePlayerHealth ? ref GameData.Instance.playerMaxHealth : ref maxHealth;
+
+        public bool usePlayerHealth;
+
         [SerializeField]
+        [ConditionalHide("usePlayerHealth", true, true)]
         private int health = 3;
-        public int maxHealth = 3;
+        [SerializeField]
+        [ConditionalHide("usePlayerHealth", true, true)]
+        private int maxHealth = 3;
 
         public float rotateIntensity = 2F;
 
@@ -88,6 +102,13 @@ namespace BulletHack
 
         public PowerupState powerups;
 
+        private Quaternion neutral;
+
+        private void Awake()
+        {
+            neutral = transform.rotation;
+        }
+
         private void Move(Vector3 val)
         {
             if (Math.Abs(val.sqrMagnitude) < .025F)
@@ -103,7 +124,7 @@ namespace BulletHack
 
             move.Append(transform.DOBlendableLocalRotateBy(-direction * rotateIntensity, tweenSpeed * .2F));
             move.AppendInterval(tweenSpeed * .6F);
-            move.Append(transform.DORotateQuaternion(transform.rotation, tweenSpeed * .2F));
+            move.Append(transform.DORotateQuaternion(neutral, tweenSpeed * .2F));
 
             transform.DOMove(transform.position + val, tweenSpeed).SetEase(Ease.InOutSine);
 
@@ -153,7 +174,7 @@ namespace BulletHack
             }
         }
 
-        [System.Serializable]
+        [Serializable]
         public struct PowerupState
         {
             public int health, shield, spread;

@@ -149,13 +149,27 @@
               <e p="EmojiOne Attribution.txt" t="Include" />
             </e>
           </e>
+          <e p="UCLAGameLab" t="Include">
+            <e p="Wireframe" t="Include">
+              <e p="Shaders" t="Include">
+                <e p="UCLA GameLab Cutout Wireframe.shader" t="Include" />
+                <e p="UCLA GameLab Double-Sided Cutout Wireframe.shader" t="Include" />
+                <e p="UCLA GameLab Double-Sided Wireframe.shader" t="Include" />
+                <e p="UCLA GameLab Wireframe Functions.cginc" t="Include" />
+                <e p="UCLA GameLab Wireframe.shader" t="Include" />
+              </e>
+            </e>
+          </e>
         </e>
         <e p="Scripts" t="Include">
           <e p="BulletHack" t="Include">
             <e p="CombatManager.cs" t="Include" />
             <e p="FX" t="Include">
+              <e p="CollisionParticle.cs" t="Include" />
               <e p="PlatformColorizer.cs" t="Include" />
+              <e p="RotateEffect.cs" t="Include" />
             </e>
+            <e p="GameData.cs" t="Include" />
             <e p="ScriptableCharacter.cs" t="Include" />
             <e p="Scripting" t="Include">
               <e p="Action" t="Include">
@@ -180,9 +194,12 @@
               <e p="Entity" t="Include">
                 <e p="Ticking" t="Include">
                   <e p="Bullet.cs" t="Include" />
+                  <e p="Powerup.cs" t="Include" />
+                  <e p="PowerupTimer.cs" t="Include" />
                   <e p="TickingEntity.cs" t="Include" />
                 </e>
               </e>
+              <e p="PowerupHost.cs" t="Include" />
               <e p="ScriptController.cs" t="Include" />
               <e p="SerializedBlock.cs" t="Include" />
             </e>
@@ -202,8 +219,6 @@
               </e>
               <e p="CodeBlockDrag.cs" t="Include" />
               <e p="CodeRunningOverlay.cs" t="Include" />
-              <e p="Expandable.cs" t="Include" />
-              <e p="ExpandableExitHide.cs" t="Include" />
               <e p="HeartsController.cs" t="Include" />
               <e p="ScrollableArea.cs" t="Include" />
               <e p="SerializeDeserializeController.cs" t="Include" />
@@ -215,6 +230,21 @@
               <e p="CommonResources.cs" t="Include" />
               <e p="DeathTimer.cs" t="Include" />
               <e p="Utils.cs" t="Include" />
+            </e>
+            <e p="Utility.cs" t="Include" />
+            <e p="World" t="Include">
+              <e p="BattleEntry" t="Include">
+                <e p="BattleEntryBase.cs" t="Include" />
+                <e p="ConeBattleEntry.cs" t="Include" />
+              </e>
+              <e p="BattleEntryPoint.cs" t="Include" />
+              <e p="CameraSwitcher.cs" t="Include" />
+              <e p="CameraSystem.cs" t="Include" />
+              <e p="Enemy" t="Include">
+                <e p="EnemyPath.cs" t="Include" />
+              </e>
+              <e p="PlayerController.cs" t="Include" />
+              <e p="WorldController.cs" t="Include" />
             </e>
           </e>
         </e>

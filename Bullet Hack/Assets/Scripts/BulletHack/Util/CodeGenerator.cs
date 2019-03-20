@@ -15,7 +15,7 @@ namespace BulletHack.Util
         public Vector2Int startPos = new Vector2Int(1, 1);
 
         private Vector2Int maxPos;
-    
+
         private BlockManagerBase manager;
         private Transform root;
 
@@ -31,8 +31,6 @@ namespace BulletHack.Util
         private void Start()
         {
             GenerateCode();
-            
-            GenerateCode();
         }
 
         public void GenerateCode()
@@ -43,9 +41,9 @@ namespace BulletHack.Util
                 manager.Disconnect(man);
                 Destroy(man.gameObject);
             }
-            
+
             Vector2Int pos = startPos;
-            
+
             SerializedBlock rootBlock = new SerializedBlock("repeat.forever");
 
             SerializedBlock current = Generate(ref pos);
@@ -58,8 +56,8 @@ namespace BulletHack.Util
                 current = next;
             }
 
-//            current.child = GenerateReturnPath(pos);
-            
+            current.child = GenerateReturnPath(pos);
+
             SerializedBlock.Deserialize(rootBlock, root).GetComponent<CodeBlockDrag>().ConnectTo(manager.outAnchor.parent);
         }
 
@@ -69,32 +67,32 @@ namespace BulletHack.Util
             SerializedBlock block = new SerializedBlock("move");
 
             List<MoveAction.Direction> directions = new List<MoveAction.Direction>();
-            
-            if(pos.x > 0)
-                directions.Add(MoveAction.Direction.LEFT);
-            if(pos.x < maxPos.x)
-                directions.Add(MoveAction.Direction.RIGHT);
-            if(pos.y > 0)
-                directions.Add(MoveAction.Direction.UP);
-            if(pos.y < maxPos.y)
-                directions.Add(MoveAction.Direction.DOWN);
+
+            if (pos.x > 0)
+                directions.Add(MoveAction.Direction.Left);
+            if (pos.x < maxPos.x)
+                directions.Add(MoveAction.Direction.Right);
+            if (pos.y > 0)
+                directions.Add(MoveAction.Direction.Up);
+            if (pos.y < maxPos.y)
+                directions.Add(MoveAction.Direction.Down);
 
             MoveAction.Direction dir = directions[Random.Range(0, directions.Count)];
-            
-            block.values.Add("direction", (int)dir);
+
+            block.values.Add("direction", (int) dir);
 
             switch (dir)
             {
-                case MoveAction.Direction.UP:
+                case MoveAction.Direction.Up:
                     pos.y--;
                     break;
-                case MoveAction.Direction.DOWN:
+                case MoveAction.Direction.Down:
                     pos.y++;
                     break;
-                case MoveAction.Direction.LEFT:
+                case MoveAction.Direction.Left:
                     pos.x--;
                     break;
-                case MoveAction.Direction.RIGHT:
+                case MoveAction.Direction.Right:
                     pos.x++;
                     break;
                 default:
@@ -107,7 +105,7 @@ namespace BulletHack.Util
         private SerializedBlock GenerateReturnPath(Vector2Int pos)
         {
             SerializedBlock current = null;
-            
+
             while (pos != startPos)
             {
                 SerializedBlock block = new SerializedBlock("move");
@@ -117,26 +115,26 @@ namespace BulletHack.Util
 
                 current = block;
 
-                MoveAction.Direction dir = MoveAction.Direction.UP;
+                MoveAction.Direction dir = MoveAction.Direction.Up;
 
                 if (pos.x > startPos.x)
                 {
-                    dir = MoveAction.Direction.LEFT;
+                    dir = MoveAction.Direction.Left;
                     pos.x--;
                 }
                 else if (pos.x < startPos.x)
                 {
-                    dir = MoveAction.Direction.RIGHT;
+                    dir = MoveAction.Direction.Right;
                     pos.x++;
                 }
                 else if (pos.y > startPos.y)
                 {
-                    dir = MoveAction.Direction.UP;
+                    dir = MoveAction.Direction.Up;
                     pos.y--;
                 }
                 else if (pos.y < startPos.y)
                 {
-                    dir = MoveAction.Direction.DOWN;
+                    dir = MoveAction.Direction.Down;
                     pos.y++;
                 }
 

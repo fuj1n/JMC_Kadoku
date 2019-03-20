@@ -1,4 +1,6 @@
 ﻿using BulletHack.Scripting;
+using BulletHack.World;
+using BulletHack.World.BattleEntry;
 using UnityEngine;
 
 namespace BulletHack
@@ -9,12 +11,21 @@ namespace BulletHack
 
         public ScriptController Script { get; private set; }
 
+        public GameObject combatWorld;
+
         private void Awake()
         {
             Instance = this;
 
             Script = GetComponent<ScriptController>();
             Debug.Assert(Script, "Script controller is not present on the game manager " + gameObject.name);
+        }
+
+        public void OnCombatFinish()
+        {
+            Destroy(BattleEntryBase.lastEnemyTrigger);
+            Destroy(combatWorld);
+            WorldController.Enable();
         }
     }
 }

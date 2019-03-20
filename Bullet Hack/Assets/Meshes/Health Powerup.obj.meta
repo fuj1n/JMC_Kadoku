@@ -5,12 +5,17 @@ ModelImporter:
   fileIDToRecycleName:
     100000: Cube
     100002: //RootNode
+    100004: Render
     400000: Cube
     400002: //RootNode
+    400004: Render
     2100000: PowerupHealth
     2300000: Cube
+    2300002: Render
     3300000: Cube
+    3300002: Render
     4300000: Cube
+    4300002: Render
   externalObjects: {}
   materials:
     importMaterials: 0
@@ -73,7 +78,7 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  importAnimation: 1
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
