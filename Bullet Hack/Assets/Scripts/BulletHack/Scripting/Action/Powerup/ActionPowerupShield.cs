@@ -10,7 +10,7 @@ namespace BulletHack.Scripting.Action.Powerup
 
         public override void Powerup()
         {
-            CombatManager.Instance.Script.currentAvatar.powerups.shieldActive = true;
+            CombatManager.Instance.Script.currentAvatar.powerups.ShieldActive = true;
         }
 
         public override int GetPowerupCount() => CombatManager.Instance.Script.currentAvatar.powerups.shield;

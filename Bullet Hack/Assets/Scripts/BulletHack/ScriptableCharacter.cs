@@ -3,6 +3,7 @@ using BulletHack.Scripting.Entity.Ticking;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace BulletHack
 {
@@ -46,13 +47,13 @@ namespace BulletHack
 
                 int maxHealth = usePlayerHealth ? GameData.Instance.playerMaxHealth : this.maxHealth;
 
-                if (!powerups.shieldActive)
+                if (!powerups.ShieldActive)
                 {
                     health = Mathf.Clamp(value, 0, maxHealth);
                     Shake();
                 }
 
-                powerups.shieldActive = false;
+                powerups.ShieldActive = false;
 
                 if (health > 0) return;
 
@@ -100,6 +101,7 @@ namespace BulletHack
         public GameObject bullet;
         public GameObject deathParticles;
 
+        [Space]
         public PowerupState powerups;
 
         private Quaternion neutral;
@@ -152,7 +154,7 @@ namespace BulletHack
 
         private void Update()
         {
-            powerups.Update();
+            powerups.Update(tweenSpeed);
         }
 
         private void OnDrawGizmos()
@@ -179,14 +181,33 @@ namespace BulletHack
         {
             public int health, shield, spread;
 
-            public bool shieldActive;
+            public bool ShieldActive
+            {
+                get => shieldActive;
+                set
+                {
+                    if (shieldActive == value)
+                        return;
+
+                    shieldActive = value;
+
+                    if (shieldOverlay)
+                        shieldOverlay.material.DOFade(shieldActive ? shieldOpacity : 0F, tweenSpeed);
+                }
+            }
+            [SerializeField]
+            private bool shieldActive;
 
             [Header("Display")]
             public TextMeshProUGUI healthText;
             public TextMeshProUGUI shieldText;
             public TextMeshProUGUI spreadText;
+            public Renderer shieldOverlay;
+            public float shieldOpacity;
 
-            public void Update()
+            private float tweenSpeed;
+
+            public void Update(float tweenSpeed)
             {
                 if (healthText)
                     healthText.text = health.ToString();
@@ -194,6 +215,8 @@ namespace BulletHack
                     shieldText.text = shield.ToString();
                 if (spreadText)
                     spreadText.text = spread.ToString();
+
+                this.tweenSpeed = tweenSpeed;
             }
         }
     }
