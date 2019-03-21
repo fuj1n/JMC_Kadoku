@@ -27,8 +27,11 @@ namespace BulletHack.World.Enemy
             Debug.Assert(path != null, "Path is null for " + name);
 
             if (path.Length == 0)
+            {
+                Destroy(this);
                 return;
-            
+            }
+
             System.Array.Resize(ref path, path.Length + 1);
             path[path.Length - 1] = -path.Aggregate((current, val) => current + val);
 
@@ -41,7 +44,7 @@ namespace BulletHack.World.Enemy
 
         private void Update()
         {
-            if (path.Length == 0 || (motion != null && motion.IsPlaying()))
+            if (motion != null && motion.IsPlaying())
                 return;
 
             if (!isWait)
