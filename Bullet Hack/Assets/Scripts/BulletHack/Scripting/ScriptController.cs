@@ -58,6 +58,7 @@ namespace BulletHack.Scripting
         private bool gameOver;
 
         private CodeGenerator generator;
+        private static readonly int NEW_ROUND = Animator.StringToHash("New Round");
 
         private void Awake()
         {
@@ -223,6 +224,9 @@ namespace BulletHack.Scripting
                 generator.GenerateCode();
                 currentTurn = -1;
                 UpdateTurnCounter(1.5F);
+                
+                if(CombatManager.Instance.combatAnimator)
+                    CombatManager.Instance.combatAnimator.SetTrigger(NEW_ROUND);
 
                 if (powerupHost)
                     powerupHost.CreatePowerups();
