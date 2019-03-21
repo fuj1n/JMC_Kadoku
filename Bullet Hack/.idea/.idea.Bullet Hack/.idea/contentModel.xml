@@ -3,6 +3,8 @@
   <component name="ContentModelStore">
     <e p="C:\Users\fuj1n\.Rider2018.3\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\fuj1n\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Bullet Hack.1592839508.00" t="ExcludeRecursive" />
+    <e p="C:\Users\fuj1n\AppData\local\Android\Sdk\Platforms\android-28\data\res" t="IncludeRecursive" />
+    <e p="C:\Users\fuj1n\AppData\local\Android\Sdk\sources\android-28" t="IncludeRecursive" />
     <e p="D:\Libraries\Documents\Unity Projects\JMC_Kadoku\Bullet Hack" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
@@ -238,6 +240,7 @@
                 <e p="ConeBattleEntry.cs" t="Include" />
               </e>
               <e p="BattleEntryPoint.cs" t="Include" />
+              <e p="CameraRail.cs" t="Include" />
               <e p="CameraSwitcher.cs" t="Include" />
               <e p="CameraSystem.cs" t="Include" />
               <e p="Enemy" t="Include">

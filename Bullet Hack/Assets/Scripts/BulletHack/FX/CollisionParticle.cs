@@ -53,7 +53,7 @@ namespace BulletHack.FX
 
         private void OnDrawGizmos()
         {
-            Gizmos.color = new Color(0F, .5F, .5F, .1F);
+            Gizmos.color = new Color(0F, .5F, .5F, .4F);
             
             BoxCollider col = GetComponent<BoxCollider>();
             if (!col || !col.enabled)
