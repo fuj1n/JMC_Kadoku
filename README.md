@@ -9,3 +9,4 @@ Team
 | Arthur Uzulin | Programmer |
 | Fabian Figueroa | Artist/Designer |
 | Teng Jing Lun | 3D Artist |
+| Acxell Leandro | Artist |
