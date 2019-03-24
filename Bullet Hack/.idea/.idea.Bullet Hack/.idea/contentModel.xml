@@ -166,8 +166,13 @@
             <e p="CombatManager.cs" t="Include" />
             <e p="FX" t="Include">
               <e p="CollisionParticle.cs" t="Include" />
+              <e p="GaussianFade.cs" t="Include" />
               <e p="PlatformColorizer.cs" t="Include" />
               <e p="RotateEffect.cs" t="Include" />
+              <e p="Sprites" t="Include">
+                <e p="SpriteAnimator.cs" t="Include" />
+                <e p="SpriteSheet.cs" t="Include" />
+              </e>
               <e p="TextureAnimation.cs" t="Include" />
               <e p="VisionCone.cs" t="Include" />
             </e>
