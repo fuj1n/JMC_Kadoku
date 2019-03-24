@@ -386,7 +386,7 @@ MonoBehaviour:
   range: 1.3
   material: {fileID: 2100000, guid: 5347aec8110b20644b2d1e84d6172d16, type: 2}
   height: 0.01
-  edgeCount: 256
+  edgeCount: 36
 --- !u!4 &1422119772
 Transform:
   m_ObjectHideFlags: 0

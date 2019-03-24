@@ -5,6 +5,7 @@ namespace BulletHack.FX
 {
     public class VisionCone : MonoBehaviour
     {
+        [Range(1F, 360F)]
         public float angle = 45F;
         public float range = 1.3F;
 

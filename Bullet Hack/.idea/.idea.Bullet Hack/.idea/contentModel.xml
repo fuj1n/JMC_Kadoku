@@ -222,6 +222,7 @@
               <e p="CodeBlockDrag.cs" t="Include" />
               <e p="CodeRunningOverlay.cs" t="Include" />
               <e p="HeartsController.cs" t="Include" />
+              <e p="PopupMessageUi.cs" t="Include" />
               <e p="ScrollableArea.cs" t="Include" />
               <e p="SerializeDeserializeController.cs" t="Include" />
               <e p="Tooltip.cs" t="Include" />
@@ -245,6 +246,10 @@
               <e p="CameraSystem.cs" t="Include" />
               <e p="Enemy" t="Include">
                 <e p="EnemyPath.cs" t="Include" />
+              </e>
+              <e p="Messaging" t="Include">
+                <e p="CreatePopup.cs" t="Include" />
+                <e p="DestroyOnClose.cs" t="Include" />
               </e>
               <e p="PlayerController.cs" t="Include" />
               <e p="WorldController.cs" t="Include" />
