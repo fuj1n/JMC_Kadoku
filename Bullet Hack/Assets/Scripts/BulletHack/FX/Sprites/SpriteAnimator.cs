@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 namespace BulletHack.FX.Sprites
@@ -14,15 +15,14 @@ namespace BulletHack.FX.Sprites
 		public int framesPerSecond = 15;
 		public bool reverse = false;
 		public bool ditherAnimation = false;
-		public bool useDeltaTime = true;
+		public bool useScaledTime = true;
 
 		public LoopbackMode loopbackMode = LoopbackMode.Loop;
 
 		private SpriteSheet sheet;
 
 		private double tick;
-		private float lastTime;
-
+		
 		private void Start ()
 		{
 			sheet = GetComponent<SpriteSheet> ();
@@ -30,20 +30,14 @@ namespace BulletHack.FX.Sprites
 			if (ditherAnimation && sheet)
 				sheet.Index = Random.Range (minIndex, maxIndex);
 
-			lastTime = Time.realtimeSinceStartup;
 		}
 
 		private void Update ()
 		{
 			if (!running)
 				return;
-		
-			if(useDeltaTime)
-				tick += Time.deltaTime;
-			else
-				tick += Time.realtimeSinceStartup - lastTime;
 
-			lastTime = Time.realtimeSinceStartup;
+			tick += useScaledTime ? Time.deltaTime : Time.unscaledDeltaTime;
 			
 			if (tick > 1F / framesPerSecond) {
 				tick = 0;

@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84682f92-91d4-4b62-b5e0-a3379472445a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Bullet Hack/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bullet Hack/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Bullet Hack/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bullet Hack/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Popups/PopupLeftFacing.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Popups/PopupLeftFacing.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHack/FX/GaussianFade.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHack/FX/GaussianFade.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHack/FX/Sprites/SpriteAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHack/FX/Sprites/SpriteAnimator.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -126,37 +125,70 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/FX/Sprites/SpriteAnimator.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="45" column="49" lean-forward="true" selection-start-line="45" selection-start-column="49" selection-end-line="45" selection-end-column="49" />
+            <state relative-caret-position="73">
+              <caret line="30" column="48" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
               <folding>
-                <marker date="1553437907956" expanded="true" signature="6:67" ph="..." />
-                <marker date="1553437907956" expanded="true" signature="100:1636" ph="{...}" />
-                <marker date="1553437907956" expanded="true" signature="189:1634" ph="{...}" />
-                <marker date="1553437907956" expanded="true" signature="580:758" ph="{...}" />
-                <marker date="1553437907956" expanded="true" signature="784:1554" ph="{...}" />
-                <marker date="1553437907956" expanded="true" signature="1009:1550" ph="{...}" />
-                <marker date="1553437907956" expanded="true" signature="1186:1521" ph="{...}" />
-                <marker date="1553437907956" expanded="true" signature="1215:1472" ph="{...}" />
-                <marker date="1553437907956" expanded="true" signature="1582:1631" ph="{...}" />
+                <marker date="1553443190813" expanded="true" signature="6:100" ph="..." />
+                <marker date="1553443190813" expanded="true" signature="133:1523" ph="{...}" />
+                <marker date="1553443190813" expanded="true" signature="222:1521" ph="{...}" />
+                <marker date="1553443190813" expanded="true" signature="590:727" ph="{...}" />
+                <marker date="1553443190813" expanded="true" signature="753:1441" ph="{...}" />
+                <marker date="1553443190813" expanded="true" signature="896:1437" ph="{...}" />
+                <marker date="1553443190813" expanded="true" signature="1073:1408" ph="{...}" />
+                <marker date="1553443190813" expanded="true" signature="1102:1359" ph="{...}" />
+                <marker date="1553443190813" expanded="true" signature="1469:1518" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/FX/GaussianFade.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+            <state relative-caret-position="285">
+              <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
               <folding>
-                <marker date="1553438652336" expanded="true" signature="6:40" ph="..." />
-                <marker date="1553438652336" expanded="true" signature="65:629" ph="{...}" />
-                <marker date="1553438652336" expanded="true" signature="113:627" ph="{...}" />
-                <marker date="1553438652336" expanded="true" signature="300:367" ph="{...}" />
-                <marker date="1553438652336" expanded="true" signature="398:621" ph="{...}" />
+                <marker date="1553443093481" expanded="true" signature="6:40" ph="..." />
+                <marker date="1553443093481" expanded="true" signature="65:621" ph="{...}" />
+                <marker date="1553443093481" expanded="true" signature="113:619" ph="{...}" />
+                <marker date="1553443093481" expanded="true" signature="300:367" ph="{...}" />
+                <marker date="1553443093481" expanded="true" signature="398:613" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DC10DD4A-D9F3-4AA9-8E69-1E49A48C7111/7d/d9c20812/Time.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+              <folding>
+                <marker date="1553443017787" expanded="true" signature="0:328" ph="/* Decompiled with JetBrains decompiler ... */" />
+                <marker date="1553443017787" expanded="false" signature="336:396" ph="..." />
+                <marker date="1553443017787" expanded="true" signature="419:5752" ph="{...}" />
+                <marker date="1553443017787" expanded="true" signature="424:525" ph="///   &lt;para&gt;The interface to get time information from Unity.&lt;/para&gt; ... " />
+                <marker date="1553443017787" expanded="true" signature="656:5750" ph="{...}" />
+                <marker date="1553443017787" expanded="true" signature="665:830" ph="///   &lt;para&gt;The time at the beginning of this frame (Read Only). This is the time in seconds since the start of t ... " />
+                <marker date="1553443017787" expanded="true" signature="958:1124" ph="///   &lt;para&gt;The time this frame has started (Read Only). This is the time in seconds since the last level has bee ... " />
+                <marker date="1553443017787" expanded="true" signature="1277:1400" ph="///   &lt;para&gt;The time in seconds it took to complete the last frame (Read Only).&lt;/para&gt; ... " />
+                <marker date="1553443017787" expanded="true" signature="1501:1684" ph="///   &lt;para&gt;The time the latest MonoBehaviour.FixedUpdate has started (Read Only). This is the time in seconds si ... " />
+                <marker date="1553443017787" expanded="true" signature="1785:1956" ph="///   &lt;para&gt;The timeScale-independant time for this frame (Read Only). This is the time in seconds since the star ... " />
+                <marker date="1553443017787" expanded="true" signature="2060:2265" ph="///   &lt;para&gt;The TimeScale-independant time the latest MonoBehaviour.FixedUpdate has started (Read Only). This is  ... " />
+                <marker date="1553443017787" expanded="true" signature="2374:2527" ph="///   &lt;para&gt;The timeScale-independent interval in seconds from the last frame to the current one (Read Only).&lt;/pa ... " />
+                <marker date="1553443017787" expanded="true" signature="2636:2795" ph="///   &lt;para&gt;The timeScale-independent interval in seconds from the last fixed frame to the current one (Read Only ... " />
+                <marker date="1553443017787" expanded="true" signature="2909:3104" ph="///   &lt;para&gt;The interval in seconds at which physics and other fixed frame rate updates (like MonoBehaviour's Mon ... " />
+                <marker date="1553443017787" expanded="true" signature="3260:3502" ph="///   &lt;para&gt;The maximum time a frame can take. Physics and other fixed frame rate updates (like MonoBehaviour's M ... " />
+                <marker date="1553443017787" expanded="true" signature="3660:3758" ph="///   &lt;para&gt;A smoothed out Time.deltaTime (Read Only).&lt;/para&gt; ... " />
+                <marker date="1553443017787" expanded="true" signature="3865:4067" ph="///   &lt;para&gt;The maximum time a frame can spend on particle updates. If the frame takes longer than this, then upd ... " />
+                <marker date="1553443017787" expanded="true" signature="4233:4370" ph="///   &lt;para&gt;The scale at which the time is passing. This can be used for slow motion effects.&lt;/para&gt; ... " />
+                <marker date="1553443017787" expanded="true" signature="4521:4633" ph="///   &lt;para&gt;The total number of frames that have passed (Read Only).&lt;/para&gt; ... " />
+                <marker date="1553443017787" expanded="true" signature="4877:4993" ph="///   &lt;para&gt;The real time in seconds since the game started (Read Only).&lt;/para&gt; ... " />
+                <marker date="1553443017787" expanded="true" signature="5138:5267" ph="///   &lt;para&gt;Slows game playback time to allow screenshots to be saved between frames.&lt;/para&gt; ... " />
+                <marker date="1553443017787" expanded="true" signature="5423:5610" ph="///   &lt;para&gt;Returns true if called inside a fixed time step callback (like MonoBehaviour's MonoBehaviour.FixedUpd ... " />
               </folding>
             </state>
           </provider>
@@ -215,22 +247,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/FX/TextureAnimation.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-              <folding>
-                <marker date="1553098122479" expanded="true" signature="43:958" ph="{...}" />
-                <marker date="1553098122479" expanded="true" signature="95:956" ph="{...}" />
-                <marker date="1553098122479" expanded="true" signature="391:464" ph="{...}" />
-                <marker date="1553098122479" expanded="true" signature="495:950" ph="{...}" />
-                <marker date="1553098122479" expanded="true" signature="578:940" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -280,6 +296,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Enemy/EnemyPath.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/CombatManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Util/CommonResources.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DC10DD4A-D9F3-4AA9-8E69-1E49A48C7111/7d/d9c20812/Time.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/BlockCreator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Entity/Ticking/TickingEntity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Util/CodeGenerator.cs" root0="FORCE_HIGHLIGHTING" />
@@ -388,8 +405,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/PopupMessageUi.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Messaging/CreatePopup.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/FX/Sprites/SpriteSheet.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/FX/Sprites/SpriteAnimator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/FX/GaussianFade.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/FX/Sprites/SpriteAnimator.cs" />
       </list>
     </option>
   </component>
@@ -547,12 +564,12 @@
       <workItem from="1552803477257" duration="216000" />
       <workItem from="1553071198960" duration="307000" />
       <workItem from="1553141397733" duration="5856000" />
-      <workItem from="1553406644055" duration="8930000" />
+      <workItem from="1553406644055" duration="9676000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112349000" />
+    <option name="totallyTimeSpent" value="113095000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -565,7 +582,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -576,7 +592,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3997833" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -619,23 +635,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Entity/Ticking/Bullet.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <marker date="1551875387925" expanded="false" signature="6:37" ph="..." />
-            <marker date="1551875387925" expanded="true" signature="84:1257" ph="{...}" />
-            <marker date="1551875387925" expanded="true" signature="126:1255" ph="{...}" />
-            <marker date="1551875387925" expanded="true" signature="297:361" ph="{...}" />
-            <marker date="1551875387925" expanded="true" signature="392:481" ph="{...}" />
-            <marker date="1551875387925" expanded="true" signature="518:624" ph="{...}" />
-            <marker date="1551875387925" expanded="true" signature="677:1249" ph="{...}" />
-            <marker date="1551875387925" expanded="true" signature="730:1239" ph="{...}" />
-            <marker date="1551875387925" expanded="true" signature="941:1187" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/HeartsController.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="915">
@@ -1621,34 +1620,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/FX/Sprites/SpriteAnimator.cs">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DC10DD4A-D9F3-4AA9-8E69-1E49A48C7111/7d/d9c20812/Time.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="45" column="49" lean-forward="true" selection-start-line="45" selection-start-column="49" selection-end-line="45" selection-end-column="49" />
+        <state relative-caret-position="315">
+          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
           <folding>
-            <marker date="1553437907956" expanded="true" signature="6:67" ph="..." />
-            <marker date="1553437907956" expanded="true" signature="100:1636" ph="{...}" />
-            <marker date="1553437907956" expanded="true" signature="189:1634" ph="{...}" />
-            <marker date="1553437907956" expanded="true" signature="580:758" ph="{...}" />
-            <marker date="1553437907956" expanded="true" signature="784:1554" ph="{...}" />
-            <marker date="1553437907956" expanded="true" signature="1009:1550" ph="{...}" />
-            <marker date="1553437907956" expanded="true" signature="1186:1521" ph="{...}" />
-            <marker date="1553437907956" expanded="true" signature="1215:1472" ph="{...}" />
-            <marker date="1553437907956" expanded="true" signature="1582:1631" ph="{...}" />
+            <marker date="1553443017787" expanded="true" signature="0:328" ph="/* Decompiled with JetBrains decompiler ... */" />
+            <marker date="1553443017787" expanded="false" signature="336:396" ph="..." />
+            <marker date="1553443017787" expanded="true" signature="419:5752" ph="{...}" />
+            <marker date="1553443017787" expanded="true" signature="424:525" ph="///   &lt;para&gt;The interface to get time information from Unity.&lt;/para&gt; ... " />
+            <marker date="1553443017787" expanded="true" signature="656:5750" ph="{...}" />
+            <marker date="1553443017787" expanded="true" signature="665:830" ph="///   &lt;para&gt;The time at the beginning of this frame (Read Only). This is the time in seconds since the start of t ... " />
+            <marker date="1553443017787" expanded="true" signature="958:1124" ph="///   &lt;para&gt;The time this frame has started (Read Only). This is the time in seconds since the last level has bee ... " />
+            <marker date="1553443017787" expanded="true" signature="1277:1400" ph="///   &lt;para&gt;The time in seconds it took to complete the last frame (Read Only).&lt;/para&gt; ... " />
+            <marker date="1553443017787" expanded="true" signature="1501:1684" ph="///   &lt;para&gt;The time the latest MonoBehaviour.FixedUpdate has started (Read Only). This is the time in seconds si ... " />
+            <marker date="1553443017787" expanded="true" signature="1785:1956" ph="///   &lt;para&gt;The timeScale-independant time for this frame (Read Only). This is the time in seconds since the star ... " />
+            <marker date="1553443017787" expanded="true" signature="2060:2265" ph="///   &lt;para&gt;The TimeScale-independant time the latest MonoBehaviour.FixedUpdate has started (Read Only). This is  ... " />
+            <marker date="1553443017787" expanded="true" signature="2374:2527" ph="///   &lt;para&gt;The timeScale-independent interval in seconds from the last frame to the current one (Read Only).&lt;/pa ... " />
+            <marker date="1553443017787" expanded="true" signature="2636:2795" ph="///   &lt;para&gt;The timeScale-independent interval in seconds from the last fixed frame to the current one (Read Only ... " />
+            <marker date="1553443017787" expanded="true" signature="2909:3104" ph="///   &lt;para&gt;The interval in seconds at which physics and other fixed frame rate updates (like MonoBehaviour's Mon ... " />
+            <marker date="1553443017787" expanded="true" signature="3260:3502" ph="///   &lt;para&gt;The maximum time a frame can take. Physics and other fixed frame rate updates (like MonoBehaviour's M ... " />
+            <marker date="1553443017787" expanded="true" signature="3660:3758" ph="///   &lt;para&gt;A smoothed out Time.deltaTime (Read Only).&lt;/para&gt; ... " />
+            <marker date="1553443017787" expanded="true" signature="3865:4067" ph="///   &lt;para&gt;The maximum time a frame can spend on particle updates. If the frame takes longer than this, then upd ... " />
+            <marker date="1553443017787" expanded="true" signature="4233:4370" ph="///   &lt;para&gt;The scale at which the time is passing. This can be used for slow motion effects.&lt;/para&gt; ... " />
+            <marker date="1553443017787" expanded="true" signature="4521:4633" ph="///   &lt;para&gt;The total number of frames that have passed (Read Only).&lt;/para&gt; ... " />
+            <marker date="1553443017787" expanded="true" signature="4877:4993" ph="///   &lt;para&gt;The real time in seconds since the game started (Read Only).&lt;/para&gt; ... " />
+            <marker date="1553443017787" expanded="true" signature="5138:5267" ph="///   &lt;para&gt;Slows game playback time to allow screenshots to be saved between frames.&lt;/para&gt; ... " />
+            <marker date="1553443017787" expanded="true" signature="5423:5610" ph="///   &lt;para&gt;Returns true if called inside a fixed time step callback (like MonoBehaviour's MonoBehaviour.FixedUpd ... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/FX/GaussianFade.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+        <state relative-caret-position="285">
+          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
           <folding>
-            <marker date="1553438652336" expanded="true" signature="6:40" ph="..." />
-            <marker date="1553438652336" expanded="true" signature="65:629" ph="{...}" />
-            <marker date="1553438652336" expanded="true" signature="113:627" ph="{...}" />
-            <marker date="1553438652336" expanded="true" signature="300:367" ph="{...}" />
-            <marker date="1553438652336" expanded="true" signature="398:621" ph="{...}" />
+            <marker date="1553443093481" expanded="true" signature="6:40" ph="..." />
+            <marker date="1553443093481" expanded="true" signature="65:621" ph="{...}" />
+            <marker date="1553443093481" expanded="true" signature="113:619" ph="{...}" />
+            <marker date="1553443093481" expanded="true" signature="300:367" ph="{...}" />
+            <marker date="1553443093481" expanded="true" signature="398:613" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/FX/Sprites/SpriteAnimator.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="30" column="48" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
+          <folding>
+            <marker date="1553443190813" expanded="true" signature="6:100" ph="..." />
+            <marker date="1553443190813" expanded="true" signature="133:1523" ph="{...}" />
+            <marker date="1553443190813" expanded="true" signature="222:1521" ph="{...}" />
+            <marker date="1553443190813" expanded="true" signature="590:727" ph="{...}" />
+            <marker date="1553443190813" expanded="true" signature="753:1441" ph="{...}" />
+            <marker date="1553443190813" expanded="true" signature="896:1437" ph="{...}" />
+            <marker date="1553443190813" expanded="true" signature="1073:1408" ph="{...}" />
+            <marker date="1553443190813" expanded="true" signature="1102:1359" ph="{...}" />
+            <marker date="1553443190813" expanded="true" signature="1469:1518" ph="{...}" />
           </folding>
         </state>
       </provider>

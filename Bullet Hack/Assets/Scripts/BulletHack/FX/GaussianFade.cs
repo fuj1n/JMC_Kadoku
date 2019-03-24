@@ -20,7 +20,7 @@ namespace BulletHack.FX
         private void Update()
         {
             Color c = graphic.color;
-            c.a = Mathf.Clamp01(amplitude * Mathf.PerlinNoise(useScaledTime ? Time.time : Time.realtimeSinceStartup * frequency, 0F));
+            c.a = Mathf.Clamp01(amplitude * Mathf.PerlinNoise(useScaledTime ? Time.time : Time.unscaledTime * frequency, 0F));
             graphic.color = c;
         }
     }
