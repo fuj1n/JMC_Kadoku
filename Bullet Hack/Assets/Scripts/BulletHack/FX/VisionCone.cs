@@ -79,16 +79,16 @@ namespace BulletHack.FX
             }
 
             float theta = angle / (edgeCount - 1F);
-            float tanFactor = Mathf.Tan(theta);
-            float radFactor = Mathf.Cos(theta);
-
-            float sx = range * Mathf.Cos(startAngle);
-            float sy = range * Mathf.Sin(startAngle);
+            float cos = Mathf.Cos(theta);
+            float sin = Mathf.Sin(theta);
+            
+            float x = range * Mathf.Cos(startAngle);
+            float y = range * Mathf.Sin(startAngle);
 
             for (int seg = 1; seg <= edgeCount; seg++)
             {
-                verts[0][seg] = new Vector3(sx, 0, sy);
-                verts[1][seg] = new Vector3(sx, height, sy);
+                verts[0][seg] = new Vector3(x, 0, y);
+                verts[1][seg] = new Vector3(x, height, y);
 
 
                 if (seg > 1)
@@ -97,11 +97,9 @@ namespace BulletHack.FX
                     builder.CreateFace(new[] {verts[1][0], verts[1][seg - 1], verts[1][seg]}).GetFace().Reverse();
                 }
 
-                sx += -sy * tanFactor;
-                sy += sx * tanFactor;
-
-                sx *= radFactor;
-                sy *= radFactor;
+                float t = x;
+                x = cos * x - sin * y;
+                y = sin * t + cos * y;
             }
 
             Mesh m = builder.Build();
