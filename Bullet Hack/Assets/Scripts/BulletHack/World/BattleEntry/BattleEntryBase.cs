@@ -4,7 +4,8 @@ namespace BulletHack.World.BattleEntry
 {
     public abstract class BattleEntryBase : MonoBehaviour
     {
-        public static GameObject lastEnemyTrigger;
+        public static BattleFinishedCallback onBattleFinish;
+        public delegate void BattleFinishedCallback();
 
         public BattleEntryPoint EntryPoint { get; private set; }
 
@@ -15,8 +16,16 @@ namespace BulletHack.World.BattleEntry
 
         protected virtual void OnEntry()
         {
+            onBattleFinish = OnBattleFinished;
             EntryPoint.EnterBattle();
-            lastEnemyTrigger = EntryPoint.gameObject;
+        }
+
+        private void OnBattleFinished()
+        {
+            if (GameData.Instance.playerHealth > 0)
+                EntryPoint.SendMessage("OnEnemyDefeated", SendMessageOptions.DontRequireReceiver);
+            
+            Destroy(EntryPoint.gameObject);
         }
     }
 }

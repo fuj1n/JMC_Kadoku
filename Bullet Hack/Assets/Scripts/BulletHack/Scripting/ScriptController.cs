@@ -227,8 +227,11 @@ namespace BulletHack.Scripting
         private void NextRound(bool triggerAnim = true)
         {
             IsRunning = false;
+            
             generator.startPos = new Vector2Int(enemyAvatar.X, enemyAvatar.Y);
+            generator.turnCount = maxTurns;
             generator.GenerateCode();
+            
             currentTurn = -1;
             UpdateTurnCounter(1.5F);
                 
@@ -237,16 +240,6 @@ namespace BulletHack.Scripting
 
             if (powerupHost)
                 powerupHost.CreatePowerups();
-        }
-
-        private void OnDrawGizmos()
-        {
-            if (Application.isPlaying)
-                return;
-
-            Gizmos.color = Color.green;
-
-            Gizmos.DrawWireCube(transform.position + gameArea.center, gameArea.size);
         }
 
         private void CombatFinished()
@@ -265,6 +258,16 @@ namespace BulletHack.Scripting
                 maxTurnsFill.DOFillAmount(1F - (float) currentTurn / maxTurns, tweenSpeed);
                 maxTurnsFill.DOColor(Color.Lerp(maxTurnsFull, maxTurnsEmpty, (float) currentTurn / maxTurns), tweenSpeed);
             }
+        }
+        
+        private void OnDrawGizmos()
+        {
+            if (Application.isPlaying)
+                return;
+
+            Gizmos.color = Color.green;
+
+            Gizmos.DrawWireCube(transform.position + gameArea.center, gameArea.size);
         }
     }
 }

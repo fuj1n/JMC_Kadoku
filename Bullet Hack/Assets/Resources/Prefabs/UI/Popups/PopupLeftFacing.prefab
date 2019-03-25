@@ -186,7 +186,7 @@ MonoBehaviour:
   framesPerSecond: 15
   reverse: 0
   ditherAnimation: 0
-  useDeltaTime: 0
+  useScaledTime: 0
   loopbackMode: 1
 --- !u!114 &5000546138378423953
 MonoBehaviour:
