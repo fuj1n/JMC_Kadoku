@@ -72,6 +72,7 @@ namespace BulletHack.Scripting
         private void Start()
         {
             UpdateTurnCounter(0F);
+            NextRound(false);
         }
 
         private void Update()
@@ -219,18 +220,23 @@ namespace BulletHack.Scripting
             }
             else if (entities.Count == 0)
             {
-                IsRunning = false;
-                generator.startPos = new Vector2Int(enemyAvatar.X, enemyAvatar.Y);
-                generator.GenerateCode();
-                currentTurn = -1;
-                UpdateTurnCounter(1.5F);
-                
-                if(CombatManager.Instance.combatAnimator)
-                    CombatManager.Instance.combatAnimator.SetTrigger(NEW_ROUND);
-
-                if (powerupHost)
-                    powerupHost.CreatePowerups();
+                NextRound();
             }
+        }
+
+        private void NextRound(bool triggerAnim = true)
+        {
+            IsRunning = false;
+            generator.startPos = new Vector2Int(enemyAvatar.X, enemyAvatar.Y);
+            generator.GenerateCode();
+            currentTurn = -1;
+            UpdateTurnCounter(1.5F);
+                
+            if(triggerAnim && CombatManager.Instance.combatAnimator)
+                CombatManager.Instance.combatAnimator.SetTrigger(NEW_ROUND);
+
+            if (powerupHost)
+                powerupHost.CreatePowerups();
         }
 
         private void OnDrawGizmos()

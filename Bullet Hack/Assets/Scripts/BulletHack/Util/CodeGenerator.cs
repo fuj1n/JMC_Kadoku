@@ -12,7 +12,10 @@ namespace BulletHack.Util
     public class CodeGenerator : MonoBehaviour
     {
         public Vector2Int gridSize = new Vector2Int(3, 3);
+        [NonSerialized]
         public Vector2Int startPos = new Vector2Int(1, 1);
+        [NonSerialized]
+        public int turnCount = 10;
 
         private Vector2Int maxPos;
 
@@ -28,11 +31,6 @@ namespace BulletHack.Util
             maxPos = gridSize - Vector2Int.one;
         }
 
-        private void Start()
-        {
-            GenerateCode();
-        }
-
         public void GenerateCode()
         {
             if (manager.outConnector)
@@ -44,19 +42,20 @@ namespace BulletHack.Util
 
             Vector2Int pos = startPos;
 
-            SerializedBlock rootBlock = new SerializedBlock("repeat.forever");
-
-            SerializedBlock current = Generate(ref pos);
-            rootBlock.blockIn = current;
-
-            for (int i = 0; i < Random.Range(5, 20); i++)
+            SerializedBlock current = null;
+            SerializedBlock rootBlock = null;
+            
+            for (int i = 1; i < turnCount; i++)
             {
                 SerializedBlock next = Generate(ref pos);
-                current.child = next;
+
+                if (current != null)
+                    current.child = next;
+                else
+                    rootBlock = next;   
+                    
                 current = next;
             }
-
-            current.child = GenerateReturnPath(pos);
 
             SerializedBlock.Deserialize(rootBlock, root).GetComponent<CodeBlockDrag>().ConnectTo(manager.outAnchor.parent);
         }
@@ -100,48 +99,6 @@ namespace BulletHack.Util
             }
 
             return block;
-        }
-
-        private SerializedBlock GenerateReturnPath(Vector2Int pos)
-        {
-            SerializedBlock current = null;
-
-            while (pos != startPos)
-            {
-                SerializedBlock block = new SerializedBlock("move");
-
-                if (current != null)
-                    current.child = block;
-
-                current = block;
-
-                MoveAction.Direction dir = MoveAction.Direction.Up;
-
-                if (pos.x > startPos.x)
-                {
-                    dir = MoveAction.Direction.Left;
-                    pos.x--;
-                }
-                else if (pos.x < startPos.x)
-                {
-                    dir = MoveAction.Direction.Right;
-                    pos.x++;
-                }
-                else if (pos.y > startPos.y)
-                {
-                    dir = MoveAction.Direction.Up;
-                    pos.y--;
-                }
-                else if (pos.y < startPos.y)
-                {
-                    dir = MoveAction.Direction.Down;
-                    pos.y++;
-                }
-
-                block.values.Add("direction", (int) dir);
-            }
-
-            return current;
         }
     }
 }
