@@ -21,6 +21,7 @@ ModelImporter:
     100030: pCylinder8
     100032: //RootNode
     100034: polySurface16_pCylinder6
+    100036: playerShip
     400000: pCube13
     400002: pCube4
     400004: pCylinder4
@@ -39,6 +40,7 @@ ModelImporter:
     400030: pCylinder8
     400032: //RootNode
     400034: polySurface16_pCylinder6
+    400036: playerShip
     2100000: pCube13Mat
     2100002: pCube4Mat
     2100004: pCylinder4Mat
@@ -73,6 +75,7 @@ ModelImporter:
     2300028: pCylinder7
     2300030: pCylinder8
     2300032: polySurface16_pCylinder6
+    2300034: playerShip
     3300000: pCube13
     3300002: pCube4
     3300004: pCylinder4
@@ -90,6 +93,7 @@ ModelImporter:
     3300028: pCylinder7
     3300030: pCylinder8
     3300032: polySurface16_pCylinder6
+    3300034: playerShip
     4300000: pCube13
     4300002: pCube4
     4300004: pCylinder4
@@ -107,6 +111,7 @@ ModelImporter:
     4300028: pCylinder7
     4300030: pCylinder8
     4300032: polySurface16_pCylinder6
+    4300034: playerShip
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
@@ -142,6 +147,7 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -166,6 +172,9 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
   importAnimation: 0
   copyAvatar: 0
   humanDescription:
@@ -180,7 +189,6 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1

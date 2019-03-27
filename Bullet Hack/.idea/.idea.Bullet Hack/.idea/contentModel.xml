@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\fuj1n\.Rider2018.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\fuj1n\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Bullet Hack.1592839508.00" t="ExcludeRecursive" />
-    <e p="C:\Users\fuj1n\AppData\local\Android\Sdk\Platforms\android-28\data\res" t="IncludeRecursive" />
-    <e p="C:\Users\fuj1n\AppData\local\Android\Sdk\sources\android-28" t="IncludeRecursive" />
-    <e p="D:\Libraries\Documents\Unity Projects\JMC_Kadoku\Bullet Hack" t="IncludeRecursive">
+    <e p="C:\Users\AUzulins\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\AUzulins\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Bullet Hack.-2064519268.00" t="ExcludeRecursive" />
+    <e p="C:\Users\AUzulins\Desktop\JMC_Kadoku\Bullet Hack" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -264,6 +262,10 @@
             <e p="MeshBuilder.cs" t="Include" />
             <e p="PolygonBuilder.cs" t="Include" />
           </e>
+        </e>
+        <e p="Shaders" t="Include">
+          <e p="Unlit-Color.shader" t="Include" />
+          <e p="Unlit-Normal.shader" t="Include" />
         </e>
       </e>
       <e p="Bullet Hack.sln" t="IncludeFlat" />

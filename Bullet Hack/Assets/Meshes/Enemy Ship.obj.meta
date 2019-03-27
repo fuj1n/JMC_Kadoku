@@ -16,6 +16,7 @@ ModelImporter:
     100020: pSphere1_polySurface9
     100022: pSphere2
     100024: pSphere3
+    100026: enemyShip
     400000: //RootNode
     400002: pCylinder1
     400004: pCylinder4_polySurface1
@@ -29,6 +30,7 @@ ModelImporter:
     400020: pSphere1_polySurface9
     400022: pSphere2
     400024: pSphere3
+    400026: enemyShip
     2100000: pCylinder1Mat
     2100002: pCylinder4_polySurface1Mat
     2100004: pCylinder4_polySurface2Mat
@@ -53,6 +55,7 @@ ModelImporter:
     2300018: pSphere1_polySurface9
     2300020: pSphere2
     2300022: pSphere3
+    2300024: enemyShip
     3300000: pCylinder1
     3300002: pCylinder4_polySurface1
     3300004: pCylinder4_polySurface2
@@ -65,6 +68,7 @@ ModelImporter:
     3300018: pSphere1_polySurface9
     3300020: pSphere2
     3300022: pSphere3
+    3300024: enemyShip
     4300000: pCylinder1
     4300002: pCylinder4_polySurface1
     4300004: pCylinder4_polySurface2
@@ -77,6 +81,7 @@ ModelImporter:
     4300018: pSphere1_polySurface9
     4300020: pSphere2
     4300022: pSphere3
+    4300024: enemyShip
   externalObjects: {}
   materials:
     importMaterials: 0
@@ -111,6 +116,7 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -135,6 +141,9 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
   importAnimation: 0
   copyAvatar: 0
   humanDescription:
@@ -149,7 +158,6 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
