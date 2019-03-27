@@ -166,8 +166,15 @@
             <e p="CombatManager.cs" t="Include" />
             <e p="FX" t="Include">
               <e p="CollisionParticle.cs" t="Include" />
+              <e p="GaussianFade.cs" t="Include" />
               <e p="PlatformColorizer.cs" t="Include" />
               <e p="RotateEffect.cs" t="Include" />
+              <e p="Sprites" t="Include">
+                <e p="SpriteAnimator.cs" t="Include" />
+                <e p="SpriteSheet.cs" t="Include" />
+              </e>
+              <e p="TextureAnimation.cs" t="Include" />
+              <e p="VisionCone.cs" t="Include" />
             </e>
             <e p="GameData.cs" t="Include" />
             <e p="ScriptableCharacter.cs" t="Include" />
@@ -220,6 +227,7 @@
               <e p="CodeBlockDrag.cs" t="Include" />
               <e p="CodeRunningOverlay.cs" t="Include" />
               <e p="HeartsController.cs" t="Include" />
+              <e p="PopupMessageUi.cs" t="Include" />
               <e p="ScrollableArea.cs" t="Include" />
               <e p="SerializeDeserializeController.cs" t="Include" />
               <e p="Tooltip.cs" t="Include" />
@@ -238,14 +246,23 @@
                 <e p="ConeBattleEntry.cs" t="Include" />
               </e>
               <e p="BattleEntryPoint.cs" t="Include" />
+              <e p="CameraRail.cs" t="Include" />
               <e p="CameraSwitcher.cs" t="Include" />
               <e p="CameraSystem.cs" t="Include" />
               <e p="Enemy" t="Include">
                 <e p="EnemyPath.cs" t="Include" />
               </e>
+              <e p="Messaging" t="Include">
+                <e p="CreatePopup.cs" t="Include" />
+                <e p="DestroyOnClose.cs" t="Include" />
+              </e>
               <e p="PlayerController.cs" t="Include" />
               <e p="WorldController.cs" t="Include" />
             </e>
+          </e>
+          <e p="MeshBuilder" t="Include">
+            <e p="MeshBuilder.cs" t="Include" />
+            <e p="PolygonBuilder.cs" t="Include" />
           </e>
         </e>
       </e>

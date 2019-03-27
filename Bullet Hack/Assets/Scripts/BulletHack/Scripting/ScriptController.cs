@@ -58,6 +58,7 @@ namespace BulletHack.Scripting
         private bool gameOver;
 
         private CodeGenerator generator;
+        private static readonly int NEW_ROUND = Animator.StringToHash("New Round");
 
         private void Awake()
         {
@@ -71,6 +72,7 @@ namespace BulletHack.Scripting
         private void Start()
         {
             UpdateTurnCounter(0F);
+            NextRound(false);
         }
 
         private void Update()
@@ -218,25 +220,26 @@ namespace BulletHack.Scripting
             }
             else if (entities.Count == 0)
             {
-                IsRunning = false;
-                generator.startPos = new Vector2Int(enemyAvatar.X, enemyAvatar.Y);
-                generator.GenerateCode();
-                currentTurn = -1;
-                UpdateTurnCounter(1.5F);
-
-                if (powerupHost)
-                    powerupHost.CreatePowerups();
+                NextRound();
             }
         }
 
-        private void OnDrawGizmos()
+        private void NextRound(bool triggerAnim = true)
         {
-            if (Application.isPlaying)
-                return;
+            IsRunning = false;
+            
+            generator.startPos = new Vector2Int(enemyAvatar.X, enemyAvatar.Y);
+            generator.turnCount = maxTurns;
+            generator.GenerateCode();
+            
+            currentTurn = -1;
+            UpdateTurnCounter(1.5F);
+                
+            if(triggerAnim && CombatManager.Instance.combatAnimator)
+                CombatManager.Instance.combatAnimator.SetTrigger(NEW_ROUND);
 
-            Gizmos.color = Color.green;
-
-            Gizmos.DrawWireCube(transform.position + gameArea.center, gameArea.size);
+            if (powerupHost)
+                powerupHost.CreatePowerups();
         }
 
         private void CombatFinished()
@@ -255,6 +258,16 @@ namespace BulletHack.Scripting
                 maxTurnsFill.DOFillAmount(1F - (float) currentTurn / maxTurns, tweenSpeed);
                 maxTurnsFill.DOColor(Color.Lerp(maxTurnsFull, maxTurnsEmpty, (float) currentTurn / maxTurns), tweenSpeed);
             }
+        }
+        
+        private void OnDrawGizmos()
+        {
+            if (Application.isPlaying)
+                return;
+
+            Gizmos.color = Color.green;
+
+            Gizmos.DrawWireCube(transform.position + gameArea.center, gameArea.size);
         }
     }
 }

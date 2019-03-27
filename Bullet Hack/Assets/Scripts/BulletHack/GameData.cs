@@ -37,8 +37,9 @@ namespace BulletHack
                     Debug.LogError("Player max health is set to 0, the player is instead immortal to avoid infinite loops");
                     return;
                 }
-                
-                Invoke(nameof(Die), 2F);
+
+                playerHealth = int.MaxValue;
+                Invoke(nameof(Die), 1F);
             }
         }
 
