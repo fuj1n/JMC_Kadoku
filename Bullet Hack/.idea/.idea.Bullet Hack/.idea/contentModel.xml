@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\AUzulins\.Rider2018.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\AUzulins\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Bullet Hack.-2064519268.00" t="ExcludeRecursive" />
-    <e p="C:\Users\AUzulins\Desktop\JMC_Kadoku\Bullet Hack" t="IncludeRecursive">
+    <e p="C:\Users\fuj1n\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\fuj1n\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Bullet Hack.1592839508.00" t="ExcludeRecursive" />
+    <e p="C:\Users\fuj1n\AppData\local\Android\Sdk\Platforms\android-28\data\res" t="IncludeRecursive" />
+    <e p="C:\Users\fuj1n\AppData\local\Android\Sdk\sources\android-28" t="IncludeRecursive" />
+    <e p="D:\Libraries\Documents\Unity Projects\JMC_Kadoku\Bullet Hack" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -208,6 +210,8 @@
               <e p="ScriptController.cs" t="Include" />
               <e p="SerializedBlock.cs" t="Include" />
             </e>
+            <e p="SettingsData.cs" t="Include" />
+            <e p="SoundManager.cs" t="Include" />
             <e p="UI" t="Include">
               <e p="Binder" t="Include">
                 <e p="BoolBinder.cs" t="Include" />
@@ -228,8 +232,12 @@
               <e p="PopupMessageUi.cs" t="Include" />
               <e p="ScrollableArea.cs" t="Include" />
               <e p="SerializeDeserializeController.cs" t="Include" />
+              <e p="Settings" t="Include">
+                <e p="VolumeLoader.cs" t="Include" />
+              </e>
               <e p="Tooltip.cs" t="Include" />
               <e p="TooltipRenderer.cs" t="Include" />
+              <e p="UiNavigation.cs" t="Include" />
             </e>
             <e p="Util" t="Include">
               <e p="CodeGenerator.cs" t="Include" />
