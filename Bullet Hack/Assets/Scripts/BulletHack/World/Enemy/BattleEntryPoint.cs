@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace BulletHack.World
+namespace BulletHack.World.Enemy
 {
     public class BattleEntryPoint : MonoBehaviour
     {

@@ -11,8 +11,11 @@ namespace BulletHack.World
         {
             get
             {
-                if (!nullCam)
-                    nullCam = new Camera {enabled = false, name = "NULL Camera"};
+                if (nullCam == null)
+                {
+                    nullCam = new GameObject("NULL Camera").AddComponent<Camera>();
+                    nullCam.gameObject.SetActive(false);
+                }
 
                 Debug.LogWarning("[WARN] No active camera, returning null camera");
                 return nullCam;
