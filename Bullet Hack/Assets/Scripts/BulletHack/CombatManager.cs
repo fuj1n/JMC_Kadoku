@@ -1,6 +1,6 @@
 ﻿using BulletHack.Scripting;
 using BulletHack.World;
-using BulletHack.World.BattleEntry;
+using BulletHack.World.Enemy.BattleEntry;
 using UnityEngine;
 
 namespace BulletHack
@@ -24,11 +24,11 @@ namespace BulletHack
 
         public void OnCombatFinish()
         {
-            if(BattleEntryBase.onBattleFinish != null)
-                BattleEntryBase.onBattleFinish();
-
             Destroy(combatWorld);
             WorldController.Enable();
+
+            if(BattleEntryBase.onBattleFinish != null)
+                BattleEntryBase.onBattleFinish();
         }
     }
 }

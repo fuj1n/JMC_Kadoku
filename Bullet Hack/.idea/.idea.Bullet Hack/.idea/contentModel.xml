@@ -29,6 +29,21 @@
             </e>
             <e p="readme.txt" t="Include" />
           </e>
+          <e p="Event Delegate System" t="Include">
+            <e p="UI" t="Include">
+              <e p="EventDelegate" t="Include">
+                <e p="EDFlagAttribute.cs" t="Include" />
+                <e p="Editor" t="Include">
+                  <e p="DrawerTools.cs" t="Include" />
+                  <e p="EventDelegateDrawer.cs" t="Include" />
+                  <e p="FlagDrawer.cs" t="Include" />
+                  <e p="ReorderableDelegateDrawer.cs" t="Include" />
+                </e>
+                <e p="EventDelegate.cs" t="Include" />
+                <e p="ReorderableList.cs" t="Include" />
+              </e>
+            </e>
+          </e>
           <e p="Json.NET" t="Include">
             <e p="Newtonsoft.Json.xml" t="Include" />
           </e>
@@ -169,6 +184,7 @@
               <e p="GaussianFade.cs" t="Include" />
               <e p="PlatformColorizer.cs" t="Include" />
               <e p="RotateEffect.cs" t="Include" />
+              <e p="SineFader.cs" t="Include" />
               <e p="Sprites" t="Include">
                 <e p="SpriteAnimator.cs" t="Include" />
                 <e p="SpriteSheet.cs" t="Include" />
@@ -210,6 +226,8 @@
               <e p="ScriptController.cs" t="Include" />
               <e p="SerializedBlock.cs" t="Include" />
             </e>
+            <e p="SettingsData.cs" t="Include" />
+            <e p="SoundManager.cs" t="Include" />
             <e p="UI" t="Include">
               <e p="Binder" t="Include">
                 <e p="BoolBinder.cs" t="Include" />
@@ -230,8 +248,12 @@
               <e p="PopupMessageUi.cs" t="Include" />
               <e p="ScrollableArea.cs" t="Include" />
               <e p="SerializeDeserializeController.cs" t="Include" />
+              <e p="Settings" t="Include">
+                <e p="VolumeLoader.cs" t="Include" />
+              </e>
               <e p="Tooltip.cs" t="Include" />
               <e p="TooltipRenderer.cs" t="Include" />
+              <e p="UiNavigation.cs" t="Include" />
             </e>
             <e p="Util" t="Include">
               <e p="CodeGenerator.cs" t="Include" />
@@ -241,20 +263,27 @@
             </e>
             <e p="Utility.cs" t="Include" />
             <e p="World" t="Include">
-              <e p="BattleEntry" t="Include">
-                <e p="BattleEntryBase.cs" t="Include" />
-                <e p="ConeBattleEntry.cs" t="Include" />
-              </e>
-              <e p="BattleEntryPoint.cs" t="Include" />
               <e p="CameraRail.cs" t="Include" />
               <e p="CameraSwitcher.cs" t="Include" />
               <e p="CameraSystem.cs" t="Include" />
+              <e p="Door.cs" t="Include" />
               <e p="Enemy" t="Include">
+                <e p="BattleEntry" t="Include">
+                  <e p="BattleEntryBase.cs" t="Include" />
+                  <e p="ConeBattleEntry.cs" t="Include" />
+                </e>
+                <e p="BattleEntryPoint.cs" t="Include" />
                 <e p="EnemyPath.cs" t="Include" />
+              </e>
+              <e p="Event" t="Include">
+                <e p="EventCallback.cs" t="Include" />
+                <e p="OnEnemyDefeat.cs" t="Include" />
+                <e p="OnMessageClosed.cs" t="Include" />
+                <e p="OnTrigger.cs" t="Include" />
+                <e p="OnUntrigger.cs" t="Include" />
               </e>
               <e p="Messaging" t="Include">
                 <e p="CreatePopup.cs" t="Include" />
-                <e p="DestroyOnClose.cs" t="Include" />
               </e>
               <e p="PlayerController.cs" t="Include" />
               <e p="WorldController.cs" t="Include" />
@@ -264,6 +293,10 @@
             <e p="MeshBuilder.cs" t="Include" />
             <e p="PolygonBuilder.cs" t="Include" />
           </e>
+        </e>
+        <e p="Shaders" t="Include">
+          <e p="Unlit-Color.shader" t="Include" />
+          <e p="Unlit-Normal.shader" t="Include" />
         </e>
       </e>
       <e p="Bullet Hack.sln" t="IncludeFlat" />

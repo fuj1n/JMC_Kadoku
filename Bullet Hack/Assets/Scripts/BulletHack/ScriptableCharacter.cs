@@ -64,7 +64,7 @@ namespace BulletHack
                     Instantiate(deathParticles).transform.position = transform.position;
 
                 if (deathSound)
-                    AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position);
+                    SoundManager.PlayClip(deathSound, SoundManager.Channel.SoundEffect);
             }
         }
 
@@ -149,7 +149,7 @@ namespace BulletHack
                 bObj.target = CombatManager.Instance.Script.OtherAvatar.transform;
 
             if (shootSound)
-                AudioSource.PlayClipAtPoint(shootSound, Camera.main.transform.position);
+                SoundManager.PlayClip(shootSound, SoundManager.Channel.SoundEffect);
         }
 
         private void Update()

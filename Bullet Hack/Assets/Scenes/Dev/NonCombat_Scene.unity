@@ -6311,7 +6311,7 @@ PrefabInstance:
     - target: {fileID: 5316477290709919528, guid: b0c05a1de30174b4a832296e98e5fb6c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5316477290709919528, guid: b0c05a1de30174b4a832296e98e5fb6c,
         type: 3}
@@ -6333,6 +6333,48 @@ PrefabInstance:
 --- !u!4 &122382498 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5316477290709919528, guid: b0c05a1de30174b4a832296e98e5fb6c,
+    type: 3}
+  m_PrefabInstance: {fileID: 122382497}
+  m_PrefabAsset: {fileID: 0}
+--- !u!33 &122382499 stripped
+MeshFilter:
+  m_CorrespondingSourceObject: {fileID: 312001908632541651, guid: b0c05a1de30174b4a832296e98e5fb6c,
+    type: 3}
+  m_PrefabInstance: {fileID: 122382497}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &122382500 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7277536156815153694, guid: b0c05a1de30174b4a832296e98e5fb6c,
+    type: 3}
+  m_PrefabInstance: {fileID: 122382497}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948999078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00986fc8ef55c59418870490c036865e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &122382501 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1458556402012313344, guid: b0c05a1de30174b4a832296e98e5fb6c,
+    type: 3}
+  m_PrefabInstance: {fileID: 122382497}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948999078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dba7ac08d41345e419384224d20c0a14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &122382502 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 7131778277520622502, guid: b0c05a1de30174b4a832296e98e5fb6c,
+    type: 3}
+  m_PrefabInstance: {fileID: 122382497}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &122382503 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 4874939975477239855, guid: b0c05a1de30174b4a832296e98e5fb6c,
     type: 3}
   m_PrefabInstance: {fileID: 122382497}
   m_PrefabAsset: {fileID: 0}
@@ -14922,6 +14964,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 277967558}
+  - component: {fileID: 277967559}
   - component: {fileID: 277967557}
   m_Layer: 0
   m_Name: Global
@@ -14957,6 +15000,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &277967559
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277967556}
+  m_Enabled: 1
 --- !u!1001 &278511991
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26082,7 +26133,7 @@ PrefabInstance:
     - target: {fileID: 5316477290709919528, guid: b0c05a1de30174b4a832296e98e5fb6c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5316477290709919528, guid: b0c05a1de30174b4a832296e98e5fb6c,
         type: 3}
@@ -26109,6 +26160,48 @@ PrefabInstance:
 --- !u!4 &513497730 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5316477290709919528, guid: b0c05a1de30174b4a832296e98e5fb6c,
+    type: 3}
+  m_PrefabInstance: {fileID: 513497729}
+  m_PrefabAsset: {fileID: 0}
+--- !u!33 &513497731 stripped
+MeshFilter:
+  m_CorrespondingSourceObject: {fileID: 312001908632541651, guid: b0c05a1de30174b4a832296e98e5fb6c,
+    type: 3}
+  m_PrefabInstance: {fileID: 513497729}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &513497732 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7277536156815153694, guid: b0c05a1de30174b4a832296e98e5fb6c,
+    type: 3}
+  m_PrefabInstance: {fileID: 513497729}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73112000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00986fc8ef55c59418870490c036865e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &513497733 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1458556402012313344, guid: b0c05a1de30174b4a832296e98e5fb6c,
+    type: 3}
+  m_PrefabInstance: {fileID: 513497729}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73112000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dba7ac08d41345e419384224d20c0a14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &513497734 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 7131778277520622502, guid: b0c05a1de30174b4a832296e98e5fb6c,
+    type: 3}
+  m_PrefabInstance: {fileID: 513497729}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &513497735 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 4874939975477239855, guid: b0c05a1de30174b4a832296e98e5fb6c,
     type: 3}
   m_PrefabInstance: {fileID: 513497729}
   m_PrefabAsset: {fileID: 0}
@@ -39878,11 +39971,256 @@ MonoBehaviour:
   m_GameObject: {fileID: 815228894}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aacbc051cf51c554c884551cb70a067c, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ff43e2547cce4641892ceeaaf29b04f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targets:
-  - {fileID: 73112000}
+  onCallback:
+    List:
+    - mEventName: Open Door
+      mShowGroup: 1
+      mUpdateEntryList: 0
+      mEntryList:
+      - target: {fileID: 73112000}
+        name: active
+      - target: {fileID: 513497735}
+        name: additionalVertexStreams
+      - target: {fileID: 513497735}
+        name: allowOcclusionWhenDynamic
+      - target: {fileID: 513497735}
+        name: castShadows
+      - target: {fileID: 513497734}
+        name: center
+      - target: {fileID: 513497734}
+        name: contactOffset
+      - target: {fileID: 513497733}
+        name: enabled
+      - target: {fileID: 513497734}
+        name: enabled
+      - target: {fileID: 513497735}
+        name: enabled
+      - target: {fileID: 513497732}
+        name: enabled
+      - target: {fileID: 513497730}
+        name: eulerAngles
+      - target: {fileID: 513497734}
+        name: extents
+      - target: {fileID: 513497733}
+        name: fadeTime
+      - target: {fileID: 513497730}
+        name: forward
+      - target: {fileID: 513497732}
+        name: fps
+      - target: {fileID: 513497732}
+        name: frameCount
+      - target: {fileID: 513497730}
+        name: hasChanged
+      - target: {fileID: 513497732}
+        name: hideFlags
+      - target: {fileID: 513497734}
+        name: hideFlags
+      - target: {fileID: 73112000}
+        name: hideFlags
+      - target: {fileID: 513497735}
+        name: hideFlags
+      - target: {fileID: 513497733}
+        name: hideFlags
+      - target: {fileID: 513497731}
+        name: hideFlags
+      - target: {fileID: 513497730}
+        name: hideFlags
+      - target: {fileID: 513497730}
+        name: hierarchyCapacity
+      - target: {fileID: 73112000}
+        name: isStatic
+      - target: {fileID: 513497734}
+        name: isTrigger
+      - target: {fileID: 73112000}
+        name: layer
+      - target: {fileID: 513497735}
+        name: lightmapIndex
+      - target: {fileID: 513497735}
+        name: lightmapScaleOffset
+      - target: {fileID: 513497735}
+        name: lightmapTilingOffset
+      - target: {fileID: 513497735}
+        name: lightProbeAnchor
+      - target: {fileID: 513497735}
+        name: lightProbeProxyVolumeOverride
+      - target: {fileID: 513497735}
+        name: lightProbeUsage
+      - target: {fileID: 513497730}
+        name: localEulerAngles
+      - target: {fileID: 513497730}
+        name: localPosition
+      - target: {fileID: 513497730}
+        name: localRotation
+      - target: {fileID: 513497730}
+        name: localScale
+      - target: {fileID: 513497734}
+        name: material
+      - target: {fileID: 513497735}
+        name: material
+      - target: {fileID: 513497735}
+        name: materials
+      - target: {fileID: 513497731}
+        name: mesh
+      - target: {fileID: 513497735}
+        name: motionVectorGenerationMode
+      - target: {fileID: 513497735}
+        name: motionVectors
+      - target: {fileID: 513497731}
+        name: name
+      - target: {fileID: 73112000}
+        name: name
+      - target: {fileID: 513497734}
+        name: name
+      - target: {fileID: 513497730}
+        name: name
+      - target: {fileID: 513497733}
+        name: name
+      - target: {fileID: 513497735}
+        name: name
+      - target: {fileID: 513497732}
+        name: name
+      - target: {fileID: 513497730}
+        name: parent
+      - target: {fileID: 513497730}
+        name: position
+      - target: {fileID: 513497735}
+        name: probeAnchor
+      - target: {fileID: 513497735}
+        name: realtimeLightmapIndex
+      - target: {fileID: 513497735}
+        name: realtimeLightmapScaleOffset
+      - target: {fileID: 513497735}
+        name: receiveShadows
+      - target: {fileID: 513497735}
+        name: reflectionProbeUsage
+      - target: {fileID: 513497735}
+        name: rendererPriority
+      - target: {fileID: 513497735}
+        name: renderingLayerMask
+      - target: {fileID: 513497730}
+        name: right
+      - target: {fileID: 513497730}
+        name: rotation
+      - target: {fileID: 513497732}
+        name: runInEditMode
+      - target: {fileID: 513497733}
+        name: runInEditMode
+      - target: {fileID: 513497735}
+        name: shadowCastingMode
+      - target: {fileID: 513497735}
+        name: sharedMaterial
+      - target: {fileID: 513497734}
+        name: sharedMaterial
+      - target: {fileID: 513497735}
+        name: sharedMaterials
+      - target: {fileID: 513497731}
+        name: sharedMesh
+      - target: {fileID: 513497734}
+        name: size
+      - target: {fileID: 513497735}
+        name: sortingLayerID
+      - target: {fileID: 513497735}
+        name: sortingLayerName
+      - target: {fileID: 513497735}
+        name: sortingOrder
+      - target: {fileID: 513497735}
+        name: tag
+      - target: {fileID: 73112000}
+        name: tag
+      - target: {fileID: 513497730}
+        name: tag
+      - target: {fileID: 513497733}
+        name: tag
+      - target: {fileID: 513497734}
+        name: tag
+      - target: {fileID: 513497731}
+        name: tag
+      - target: {fileID: 513497732}
+        name: tag
+      - target: {fileID: 513497732}
+        name: textureSize
+      - target: {fileID: 513497730}
+        name: up
+      - target: {fileID: 513497733}
+        name: useGUILayout
+      - target: {fileID: 513497732}
+        name: useGUILayout
+      - target: {fileID: 513497735}
+        name: useLightProbes
+      - target: {fileID: 513497734}
+        name: ClosestPoint (Vector3 position)
+      - target: {fileID: 513497734}
+        name: ClosestPointOnBounds (Vector3 position)
+      - target: {fileID: 73112000}
+        name: CreatePrimitive (PrimitiveType type)
+      - target: {fileID: 513497730}
+        name: DetachChildren ()
+      - target: {fileID: 513497730}
+        name: Find (String n)
+      - target: {fileID: 73112000}
+        name: Find (String name)
+      - target: {fileID: 513497730}
+        name: FindChild (String n)
+      - target: {fileID: 73112000}
+        name: FindGameObjectsWithTag (String tag)
+      - target: {fileID: 73112000}
+        name: FindGameObjectWithTag (String tag)
+      - target: {fileID: 73112000}
+        name: FindWithTag (String tag)
+      - target: {fileID: 513497730}
+        name: GetChild (Int32 index)
+      - target: {fileID: 513497730}
+        name: GetChildCount ()
+      - target: {fileID: 513497735}
+        name: GetClosestReflectionProbes (ReflectionProbeBlendInfo] result)
+      - target: {fileID: 513497730}
+        name: GetEnumerator ()
+      - target: {fileID: 513497735}
+        name: GetMaterials (Material] m)
+      - target: {fileID: 513497735}
+        name: GetSharedMaterials (Material] m)
+      - target: {fileID: 513497730}
+        name: GetSiblingIndex ()
+      - target: {fileID: 513497735}
+        name: HasPropertyBlock ()
+      - target: {fileID: 513497730}
+        name: IsChildOf (Transform parent)
+      - target: {fileID: 513497733}
+        name: Open ()
+      - target: {fileID: 73112000}
+        name: PlayAnimation (Object animation)
+      - target: {fileID: 513497734}
+        name: Raycast (Ray ray, RaycastHit& hitInfo, Single maxDistance)
+      - target: {fileID: 513497730}
+        name: RotateAroundLocal (Vector3 axis, Single angle)
+      - target: {fileID: 73112000}
+        name: SampleAnimation (Object clip, Single time)
+      - target: {fileID: 73112000}
+        name: SetActive (Boolean value)
+      - target: {fileID: 73112000}
+        name: SetActiveRecursively (Boolean state)
+      - target: {fileID: 513497730}
+        name: SetAsFirstSibling ()
+      - target: {fileID: 513497730}
+        name: SetAsLastSibling ()
+      - target: {fileID: 513497730}
+        name: SetPositionAndRotation (Vector3 position, Quaternion rotation)
+      - target: {fileID: 513497730}
+        name: SetSiblingIndex (Int32 index)
+      - target: {fileID: 513497732}
+        name: StopAllCoroutines ()
+      - target: {fileID: 513497733}
+        name: StopAllCoroutines ()
+      - target: {fileID: 73112000}
+        name: StopAnimation ()
+      mTarget: {fileID: 513497733}
+      mMethodName: Open
+      mParameters: []
+      mCached: 0
+      oneShot: 0
 --- !u!114 &815228897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59605,11 +59943,256 @@ MonoBehaviour:
   m_GameObject: {fileID: 1247132118}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aacbc051cf51c554c884551cb70a067c, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ff43e2547cce4641892ceeaaf29b04f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targets:
-  - {fileID: 1948999078}
+  onCallback:
+    List:
+    - mEventName: Open Door
+      mShowGroup: 1
+      mUpdateEntryList: 0
+      mEntryList:
+      - target: {fileID: 1948999078}
+        name: active
+      - target: {fileID: 122382503}
+        name: additionalVertexStreams
+      - target: {fileID: 122382503}
+        name: allowOcclusionWhenDynamic
+      - target: {fileID: 122382503}
+        name: castShadows
+      - target: {fileID: 122382502}
+        name: center
+      - target: {fileID: 122382502}
+        name: contactOffset
+      - target: {fileID: 122382501}
+        name: enabled
+      - target: {fileID: 122382502}
+        name: enabled
+      - target: {fileID: 122382503}
+        name: enabled
+      - target: {fileID: 122382500}
+        name: enabled
+      - target: {fileID: 122382498}
+        name: eulerAngles
+      - target: {fileID: 122382502}
+        name: extents
+      - target: {fileID: 122382501}
+        name: fadeTime
+      - target: {fileID: 122382498}
+        name: forward
+      - target: {fileID: 122382500}
+        name: fps
+      - target: {fileID: 122382500}
+        name: frameCount
+      - target: {fileID: 122382498}
+        name: hasChanged
+      - target: {fileID: 122382500}
+        name: hideFlags
+      - target: {fileID: 122382502}
+        name: hideFlags
+      - target: {fileID: 1948999078}
+        name: hideFlags
+      - target: {fileID: 122382503}
+        name: hideFlags
+      - target: {fileID: 122382501}
+        name: hideFlags
+      - target: {fileID: 122382499}
+        name: hideFlags
+      - target: {fileID: 122382498}
+        name: hideFlags
+      - target: {fileID: 122382498}
+        name: hierarchyCapacity
+      - target: {fileID: 1948999078}
+        name: isStatic
+      - target: {fileID: 122382502}
+        name: isTrigger
+      - target: {fileID: 1948999078}
+        name: layer
+      - target: {fileID: 122382503}
+        name: lightmapIndex
+      - target: {fileID: 122382503}
+        name: lightmapScaleOffset
+      - target: {fileID: 122382503}
+        name: lightmapTilingOffset
+      - target: {fileID: 122382503}
+        name: lightProbeAnchor
+      - target: {fileID: 122382503}
+        name: lightProbeProxyVolumeOverride
+      - target: {fileID: 122382503}
+        name: lightProbeUsage
+      - target: {fileID: 122382498}
+        name: localEulerAngles
+      - target: {fileID: 122382498}
+        name: localPosition
+      - target: {fileID: 122382498}
+        name: localRotation
+      - target: {fileID: 122382498}
+        name: localScale
+      - target: {fileID: 122382502}
+        name: material
+      - target: {fileID: 122382503}
+        name: material
+      - target: {fileID: 122382503}
+        name: materials
+      - target: {fileID: 122382499}
+        name: mesh
+      - target: {fileID: 122382503}
+        name: motionVectorGenerationMode
+      - target: {fileID: 122382503}
+        name: motionVectors
+      - target: {fileID: 122382499}
+        name: name
+      - target: {fileID: 1948999078}
+        name: name
+      - target: {fileID: 122382502}
+        name: name
+      - target: {fileID: 122382498}
+        name: name
+      - target: {fileID: 122382501}
+        name: name
+      - target: {fileID: 122382503}
+        name: name
+      - target: {fileID: 122382500}
+        name: name
+      - target: {fileID: 122382498}
+        name: parent
+      - target: {fileID: 122382498}
+        name: position
+      - target: {fileID: 122382503}
+        name: probeAnchor
+      - target: {fileID: 122382503}
+        name: realtimeLightmapIndex
+      - target: {fileID: 122382503}
+        name: realtimeLightmapScaleOffset
+      - target: {fileID: 122382503}
+        name: receiveShadows
+      - target: {fileID: 122382503}
+        name: reflectionProbeUsage
+      - target: {fileID: 122382503}
+        name: rendererPriority
+      - target: {fileID: 122382503}
+        name: renderingLayerMask
+      - target: {fileID: 122382498}
+        name: right
+      - target: {fileID: 122382498}
+        name: rotation
+      - target: {fileID: 122382500}
+        name: runInEditMode
+      - target: {fileID: 122382501}
+        name: runInEditMode
+      - target: {fileID: 122382503}
+        name: shadowCastingMode
+      - target: {fileID: 122382503}
+        name: sharedMaterial
+      - target: {fileID: 122382502}
+        name: sharedMaterial
+      - target: {fileID: 122382503}
+        name: sharedMaterials
+      - target: {fileID: 122382499}
+        name: sharedMesh
+      - target: {fileID: 122382502}
+        name: size
+      - target: {fileID: 122382503}
+        name: sortingLayerID
+      - target: {fileID: 122382503}
+        name: sortingLayerName
+      - target: {fileID: 122382503}
+        name: sortingOrder
+      - target: {fileID: 122382503}
+        name: tag
+      - target: {fileID: 1948999078}
+        name: tag
+      - target: {fileID: 122382498}
+        name: tag
+      - target: {fileID: 122382501}
+        name: tag
+      - target: {fileID: 122382502}
+        name: tag
+      - target: {fileID: 122382499}
+        name: tag
+      - target: {fileID: 122382500}
+        name: tag
+      - target: {fileID: 122382500}
+        name: textureSize
+      - target: {fileID: 122382498}
+        name: up
+      - target: {fileID: 122382501}
+        name: useGUILayout
+      - target: {fileID: 122382500}
+        name: useGUILayout
+      - target: {fileID: 122382503}
+        name: useLightProbes
+      - target: {fileID: 122382502}
+        name: ClosestPoint (Vector3 position)
+      - target: {fileID: 122382502}
+        name: ClosestPointOnBounds (Vector3 position)
+      - target: {fileID: 1948999078}
+        name: CreatePrimitive (PrimitiveType type)
+      - target: {fileID: 122382498}
+        name: DetachChildren ()
+      - target: {fileID: 122382498}
+        name: Find (String n)
+      - target: {fileID: 1948999078}
+        name: Find (String name)
+      - target: {fileID: 122382498}
+        name: FindChild (String n)
+      - target: {fileID: 1948999078}
+        name: FindGameObjectsWithTag (String tag)
+      - target: {fileID: 1948999078}
+        name: FindGameObjectWithTag (String tag)
+      - target: {fileID: 1948999078}
+        name: FindWithTag (String tag)
+      - target: {fileID: 122382498}
+        name: GetChild (Int32 index)
+      - target: {fileID: 122382498}
+        name: GetChildCount ()
+      - target: {fileID: 122382503}
+        name: GetClosestReflectionProbes (ReflectionProbeBlendInfo] result)
+      - target: {fileID: 122382498}
+        name: GetEnumerator ()
+      - target: {fileID: 122382503}
+        name: GetMaterials (Material] m)
+      - target: {fileID: 122382503}
+        name: GetSharedMaterials (Material] m)
+      - target: {fileID: 122382498}
+        name: GetSiblingIndex ()
+      - target: {fileID: 122382503}
+        name: HasPropertyBlock ()
+      - target: {fileID: 122382498}
+        name: IsChildOf (Transform parent)
+      - target: {fileID: 122382501}
+        name: Open ()
+      - target: {fileID: 1948999078}
+        name: PlayAnimation (Object animation)
+      - target: {fileID: 122382502}
+        name: Raycast (Ray ray, RaycastHit& hitInfo, Single maxDistance)
+      - target: {fileID: 122382498}
+        name: RotateAroundLocal (Vector3 axis, Single angle)
+      - target: {fileID: 1948999078}
+        name: SampleAnimation (Object clip, Single time)
+      - target: {fileID: 1948999078}
+        name: SetActive (Boolean value)
+      - target: {fileID: 1948999078}
+        name: SetActiveRecursively (Boolean state)
+      - target: {fileID: 122382498}
+        name: SetAsFirstSibling ()
+      - target: {fileID: 122382498}
+        name: SetAsLastSibling ()
+      - target: {fileID: 122382498}
+        name: SetPositionAndRotation (Vector3 position, Quaternion rotation)
+      - target: {fileID: 122382498}
+        name: SetSiblingIndex (Int32 index)
+      - target: {fileID: 122382500}
+        name: StopAllCoroutines ()
+      - target: {fileID: 122382501}
+        name: StopAllCoroutines ()
+      - target: {fileID: 1948999078}
+        name: StopAnimation ()
+      mTarget: {fileID: 122382501}
+      mMethodName: Open
+      mParameters: []
+      mCached: 0
+      oneShot: 0
 --- !u!114 &1247132121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83484,7 +84067,7 @@ PrefabInstance:
     - target: {fileID: 5316477290709919528, guid: b0c05a1de30174b4a832296e98e5fb6c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5316477290709919528, guid: b0c05a1de30174b4a832296e98e5fb6c,
         type: 3}
@@ -83506,6 +84089,48 @@ PrefabInstance:
 --- !u!4 &1687282650 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5316477290709919528, guid: b0c05a1de30174b4a832296e98e5fb6c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1687282649}
+  m_PrefabAsset: {fileID: 0}
+--- !u!33 &1687282651 stripped
+MeshFilter:
+  m_CorrespondingSourceObject: {fileID: 312001908632541651, guid: b0c05a1de30174b4a832296e98e5fb6c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1687282649}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1687282652 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7277536156815153694, guid: b0c05a1de30174b4a832296e98e5fb6c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1687282649}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900158617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00986fc8ef55c59418870490c036865e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1687282653 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1458556402012313344, guid: b0c05a1de30174b4a832296e98e5fb6c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1687282649}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900158617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dba7ac08d41345e419384224d20c0a14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1687282654 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 7131778277520622502, guid: b0c05a1de30174b4a832296e98e5fb6c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1687282649}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1687282655 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 4874939975477239855, guid: b0c05a1de30174b4a832296e98e5fb6c,
     type: 3}
   m_PrefabInstance: {fileID: 1687282649}
   m_PrefabAsset: {fileID: 0}
@@ -94105,11 +94730,256 @@ MonoBehaviour:
   m_GameObject: {fileID: 1880255234}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aacbc051cf51c554c884551cb70a067c, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ff43e2547cce4641892ceeaaf29b04f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targets:
-  - {fileID: 1900158617}
+  onCallback:
+    List:
+    - mEventName: Open Door
+      mShowGroup: 1
+      mUpdateEntryList: 0
+      mEntryList:
+      - target: {fileID: 1900158617}
+        name: active
+      - target: {fileID: 1687282655}
+        name: additionalVertexStreams
+      - target: {fileID: 1687282655}
+        name: allowOcclusionWhenDynamic
+      - target: {fileID: 1687282655}
+        name: castShadows
+      - target: {fileID: 1687282654}
+        name: center
+      - target: {fileID: 1687282654}
+        name: contactOffset
+      - target: {fileID: 1687282653}
+        name: enabled
+      - target: {fileID: 1687282654}
+        name: enabled
+      - target: {fileID: 1687282655}
+        name: enabled
+      - target: {fileID: 1687282652}
+        name: enabled
+      - target: {fileID: 1687282650}
+        name: eulerAngles
+      - target: {fileID: 1687282654}
+        name: extents
+      - target: {fileID: 1687282653}
+        name: fadeTime
+      - target: {fileID: 1687282650}
+        name: forward
+      - target: {fileID: 1687282652}
+        name: fps
+      - target: {fileID: 1687282652}
+        name: frameCount
+      - target: {fileID: 1687282650}
+        name: hasChanged
+      - target: {fileID: 1687282652}
+        name: hideFlags
+      - target: {fileID: 1687282654}
+        name: hideFlags
+      - target: {fileID: 1900158617}
+        name: hideFlags
+      - target: {fileID: 1687282655}
+        name: hideFlags
+      - target: {fileID: 1687282653}
+        name: hideFlags
+      - target: {fileID: 1687282651}
+        name: hideFlags
+      - target: {fileID: 1687282650}
+        name: hideFlags
+      - target: {fileID: 1687282650}
+        name: hierarchyCapacity
+      - target: {fileID: 1900158617}
+        name: isStatic
+      - target: {fileID: 1687282654}
+        name: isTrigger
+      - target: {fileID: 1900158617}
+        name: layer
+      - target: {fileID: 1687282655}
+        name: lightmapIndex
+      - target: {fileID: 1687282655}
+        name: lightmapScaleOffset
+      - target: {fileID: 1687282655}
+        name: lightmapTilingOffset
+      - target: {fileID: 1687282655}
+        name: lightProbeAnchor
+      - target: {fileID: 1687282655}
+        name: lightProbeProxyVolumeOverride
+      - target: {fileID: 1687282655}
+        name: lightProbeUsage
+      - target: {fileID: 1687282650}
+        name: localEulerAngles
+      - target: {fileID: 1687282650}
+        name: localPosition
+      - target: {fileID: 1687282650}
+        name: localRotation
+      - target: {fileID: 1687282650}
+        name: localScale
+      - target: {fileID: 1687282654}
+        name: material
+      - target: {fileID: 1687282655}
+        name: material
+      - target: {fileID: 1687282655}
+        name: materials
+      - target: {fileID: 1687282651}
+        name: mesh
+      - target: {fileID: 1687282655}
+        name: motionVectorGenerationMode
+      - target: {fileID: 1687282655}
+        name: motionVectors
+      - target: {fileID: 1687282651}
+        name: name
+      - target: {fileID: 1900158617}
+        name: name
+      - target: {fileID: 1687282654}
+        name: name
+      - target: {fileID: 1687282650}
+        name: name
+      - target: {fileID: 1687282653}
+        name: name
+      - target: {fileID: 1687282655}
+        name: name
+      - target: {fileID: 1687282652}
+        name: name
+      - target: {fileID: 1687282650}
+        name: parent
+      - target: {fileID: 1687282650}
+        name: position
+      - target: {fileID: 1687282655}
+        name: probeAnchor
+      - target: {fileID: 1687282655}
+        name: realtimeLightmapIndex
+      - target: {fileID: 1687282655}
+        name: realtimeLightmapScaleOffset
+      - target: {fileID: 1687282655}
+        name: receiveShadows
+      - target: {fileID: 1687282655}
+        name: reflectionProbeUsage
+      - target: {fileID: 1687282655}
+        name: rendererPriority
+      - target: {fileID: 1687282655}
+        name: renderingLayerMask
+      - target: {fileID: 1687282650}
+        name: right
+      - target: {fileID: 1687282650}
+        name: rotation
+      - target: {fileID: 1687282652}
+        name: runInEditMode
+      - target: {fileID: 1687282653}
+        name: runInEditMode
+      - target: {fileID: 1687282655}
+        name: shadowCastingMode
+      - target: {fileID: 1687282655}
+        name: sharedMaterial
+      - target: {fileID: 1687282654}
+        name: sharedMaterial
+      - target: {fileID: 1687282655}
+        name: sharedMaterials
+      - target: {fileID: 1687282651}
+        name: sharedMesh
+      - target: {fileID: 1687282654}
+        name: size
+      - target: {fileID: 1687282655}
+        name: sortingLayerID
+      - target: {fileID: 1687282655}
+        name: sortingLayerName
+      - target: {fileID: 1687282655}
+        name: sortingOrder
+      - target: {fileID: 1687282655}
+        name: tag
+      - target: {fileID: 1900158617}
+        name: tag
+      - target: {fileID: 1687282650}
+        name: tag
+      - target: {fileID: 1687282653}
+        name: tag
+      - target: {fileID: 1687282654}
+        name: tag
+      - target: {fileID: 1687282651}
+        name: tag
+      - target: {fileID: 1687282652}
+        name: tag
+      - target: {fileID: 1687282652}
+        name: textureSize
+      - target: {fileID: 1687282650}
+        name: up
+      - target: {fileID: 1687282653}
+        name: useGUILayout
+      - target: {fileID: 1687282652}
+        name: useGUILayout
+      - target: {fileID: 1687282655}
+        name: useLightProbes
+      - target: {fileID: 1687282654}
+        name: ClosestPoint (Vector3 position)
+      - target: {fileID: 1687282654}
+        name: ClosestPointOnBounds (Vector3 position)
+      - target: {fileID: 1900158617}
+        name: CreatePrimitive (PrimitiveType type)
+      - target: {fileID: 1687282650}
+        name: DetachChildren ()
+      - target: {fileID: 1687282650}
+        name: Find (String n)
+      - target: {fileID: 1900158617}
+        name: Find (String name)
+      - target: {fileID: 1687282650}
+        name: FindChild (String n)
+      - target: {fileID: 1900158617}
+        name: FindGameObjectsWithTag (String tag)
+      - target: {fileID: 1900158617}
+        name: FindGameObjectWithTag (String tag)
+      - target: {fileID: 1900158617}
+        name: FindWithTag (String tag)
+      - target: {fileID: 1687282650}
+        name: GetChild (Int32 index)
+      - target: {fileID: 1687282650}
+        name: GetChildCount ()
+      - target: {fileID: 1687282655}
+        name: GetClosestReflectionProbes (ReflectionProbeBlendInfo] result)
+      - target: {fileID: 1687282650}
+        name: GetEnumerator ()
+      - target: {fileID: 1687282655}
+        name: GetMaterials (Material] m)
+      - target: {fileID: 1687282655}
+        name: GetSharedMaterials (Material] m)
+      - target: {fileID: 1687282650}
+        name: GetSiblingIndex ()
+      - target: {fileID: 1687282655}
+        name: HasPropertyBlock ()
+      - target: {fileID: 1687282650}
+        name: IsChildOf (Transform parent)
+      - target: {fileID: 1687282653}
+        name: Open ()
+      - target: {fileID: 1900158617}
+        name: PlayAnimation (Object animation)
+      - target: {fileID: 1687282654}
+        name: Raycast (Ray ray, RaycastHit& hitInfo, Single maxDistance)
+      - target: {fileID: 1687282650}
+        name: RotateAroundLocal (Vector3 axis, Single angle)
+      - target: {fileID: 1900158617}
+        name: SampleAnimation (Object clip, Single time)
+      - target: {fileID: 1900158617}
+        name: SetActive (Boolean value)
+      - target: {fileID: 1900158617}
+        name: SetActiveRecursively (Boolean state)
+      - target: {fileID: 1687282650}
+        name: SetAsFirstSibling ()
+      - target: {fileID: 1687282650}
+        name: SetAsLastSibling ()
+      - target: {fileID: 1687282650}
+        name: SetPositionAndRotation (Vector3 position, Quaternion rotation)
+      - target: {fileID: 1687282650}
+        name: SetSiblingIndex (Int32 index)
+      - target: {fileID: 1687282652}
+        name: StopAllCoroutines ()
+      - target: {fileID: 1687282653}
+        name: StopAllCoroutines ()
+      - target: {fileID: 1900158617}
+        name: StopAnimation ()
+      mTarget: {fileID: 1687282653}
+      mMethodName: Open
+      mParameters: []
+      mCached: 0
+      oneShot: 0
 --- !u!114 &1880255237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101789,11 +102659,256 @@ MonoBehaviour:
   m_GameObject: {fileID: 2015070724}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aacbc051cf51c554c884551cb70a067c, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ff43e2547cce4641892ceeaaf29b04f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targets:
-  - {fileID: 8010985298097365215}
+  onCallback:
+    List:
+    - mEventName: Open Door
+      mShowGroup: 1
+      mUpdateEntryList: 0
+      mEntryList:
+      - target: {fileID: 8010985298097365215}
+        name: active
+      - target: {fileID: 8010985298097365220}
+        name: additionalVertexStreams
+      - target: {fileID: 8010985298097365220}
+        name: allowOcclusionWhenDynamic
+      - target: {fileID: 8010985298097365220}
+        name: castShadows
+      - target: {fileID: 8010985298097365219}
+        name: center
+      - target: {fileID: 8010985298097365219}
+        name: contactOffset
+      - target: {fileID: 8010985298097365218}
+        name: enabled
+      - target: {fileID: 8010985298097365219}
+        name: enabled
+      - target: {fileID: 8010985298097365220}
+        name: enabled
+      - target: {fileID: 8010985298097365217}
+        name: enabled
+      - target: {fileID: 5316477290709919528}
+        name: eulerAngles
+      - target: {fileID: 8010985298097365219}
+        name: extents
+      - target: {fileID: 8010985298097365218}
+        name: fadeTime
+      - target: {fileID: 5316477290709919528}
+        name: forward
+      - target: {fileID: 8010985298097365217}
+        name: fps
+      - target: {fileID: 8010985298097365217}
+        name: frameCount
+      - target: {fileID: 5316477290709919528}
+        name: hasChanged
+      - target: {fileID: 8010985298097365217}
+        name: hideFlags
+      - target: {fileID: 8010985298097365219}
+        name: hideFlags
+      - target: {fileID: 8010985298097365215}
+        name: hideFlags
+      - target: {fileID: 8010985298097365220}
+        name: hideFlags
+      - target: {fileID: 8010985298097365218}
+        name: hideFlags
+      - target: {fileID: 8010985298097365216}
+        name: hideFlags
+      - target: {fileID: 5316477290709919528}
+        name: hideFlags
+      - target: {fileID: 5316477290709919528}
+        name: hierarchyCapacity
+      - target: {fileID: 8010985298097365215}
+        name: isStatic
+      - target: {fileID: 8010985298097365219}
+        name: isTrigger
+      - target: {fileID: 8010985298097365215}
+        name: layer
+      - target: {fileID: 8010985298097365220}
+        name: lightmapIndex
+      - target: {fileID: 8010985298097365220}
+        name: lightmapScaleOffset
+      - target: {fileID: 8010985298097365220}
+        name: lightmapTilingOffset
+      - target: {fileID: 8010985298097365220}
+        name: lightProbeAnchor
+      - target: {fileID: 8010985298097365220}
+        name: lightProbeProxyVolumeOverride
+      - target: {fileID: 8010985298097365220}
+        name: lightProbeUsage
+      - target: {fileID: 5316477290709919528}
+        name: localEulerAngles
+      - target: {fileID: 5316477290709919528}
+        name: localPosition
+      - target: {fileID: 5316477290709919528}
+        name: localRotation
+      - target: {fileID: 5316477290709919528}
+        name: localScale
+      - target: {fileID: 8010985298097365219}
+        name: material
+      - target: {fileID: 8010985298097365220}
+        name: material
+      - target: {fileID: 8010985298097365220}
+        name: materials
+      - target: {fileID: 8010985298097365216}
+        name: mesh
+      - target: {fileID: 8010985298097365220}
+        name: motionVectorGenerationMode
+      - target: {fileID: 8010985298097365220}
+        name: motionVectors
+      - target: {fileID: 8010985298097365216}
+        name: name
+      - target: {fileID: 8010985298097365215}
+        name: name
+      - target: {fileID: 8010985298097365219}
+        name: name
+      - target: {fileID: 5316477290709919528}
+        name: name
+      - target: {fileID: 8010985298097365218}
+        name: name
+      - target: {fileID: 8010985298097365220}
+        name: name
+      - target: {fileID: 8010985298097365217}
+        name: name
+      - target: {fileID: 5316477290709919528}
+        name: parent
+      - target: {fileID: 5316477290709919528}
+        name: position
+      - target: {fileID: 8010985298097365220}
+        name: probeAnchor
+      - target: {fileID: 8010985298097365220}
+        name: realtimeLightmapIndex
+      - target: {fileID: 8010985298097365220}
+        name: realtimeLightmapScaleOffset
+      - target: {fileID: 8010985298097365220}
+        name: receiveShadows
+      - target: {fileID: 8010985298097365220}
+        name: reflectionProbeUsage
+      - target: {fileID: 8010985298097365220}
+        name: rendererPriority
+      - target: {fileID: 8010985298097365220}
+        name: renderingLayerMask
+      - target: {fileID: 5316477290709919528}
+        name: right
+      - target: {fileID: 5316477290709919528}
+        name: rotation
+      - target: {fileID: 8010985298097365217}
+        name: runInEditMode
+      - target: {fileID: 8010985298097365218}
+        name: runInEditMode
+      - target: {fileID: 8010985298097365220}
+        name: shadowCastingMode
+      - target: {fileID: 8010985298097365220}
+        name: sharedMaterial
+      - target: {fileID: 8010985298097365219}
+        name: sharedMaterial
+      - target: {fileID: 8010985298097365220}
+        name: sharedMaterials
+      - target: {fileID: 8010985298097365216}
+        name: sharedMesh
+      - target: {fileID: 8010985298097365219}
+        name: size
+      - target: {fileID: 8010985298097365220}
+        name: sortingLayerID
+      - target: {fileID: 8010985298097365220}
+        name: sortingLayerName
+      - target: {fileID: 8010985298097365220}
+        name: sortingOrder
+      - target: {fileID: 8010985298097365220}
+        name: tag
+      - target: {fileID: 8010985298097365215}
+        name: tag
+      - target: {fileID: 5316477290709919528}
+        name: tag
+      - target: {fileID: 8010985298097365218}
+        name: tag
+      - target: {fileID: 8010985298097365219}
+        name: tag
+      - target: {fileID: 8010985298097365216}
+        name: tag
+      - target: {fileID: 8010985298097365217}
+        name: tag
+      - target: {fileID: 8010985298097365217}
+        name: textureSize
+      - target: {fileID: 5316477290709919528}
+        name: up
+      - target: {fileID: 8010985298097365218}
+        name: useGUILayout
+      - target: {fileID: 8010985298097365217}
+        name: useGUILayout
+      - target: {fileID: 8010985298097365220}
+        name: useLightProbes
+      - target: {fileID: 8010985298097365219}
+        name: ClosestPoint (Vector3 position)
+      - target: {fileID: 8010985298097365219}
+        name: ClosestPointOnBounds (Vector3 position)
+      - target: {fileID: 8010985298097365215}
+        name: CreatePrimitive (PrimitiveType type)
+      - target: {fileID: 5316477290709919528}
+        name: DetachChildren ()
+      - target: {fileID: 5316477290709919528}
+        name: Find (String n)
+      - target: {fileID: 8010985298097365215}
+        name: Find (String name)
+      - target: {fileID: 5316477290709919528}
+        name: FindChild (String n)
+      - target: {fileID: 8010985298097365215}
+        name: FindGameObjectsWithTag (String tag)
+      - target: {fileID: 8010985298097365215}
+        name: FindGameObjectWithTag (String tag)
+      - target: {fileID: 8010985298097365215}
+        name: FindWithTag (String tag)
+      - target: {fileID: 5316477290709919528}
+        name: GetChild (Int32 index)
+      - target: {fileID: 5316477290709919528}
+        name: GetChildCount ()
+      - target: {fileID: 8010985298097365220}
+        name: GetClosestReflectionProbes (ReflectionProbeBlendInfo] result)
+      - target: {fileID: 5316477290709919528}
+        name: GetEnumerator ()
+      - target: {fileID: 8010985298097365220}
+        name: GetMaterials (Material] m)
+      - target: {fileID: 8010985298097365220}
+        name: GetSharedMaterials (Material] m)
+      - target: {fileID: 5316477290709919528}
+        name: GetSiblingIndex ()
+      - target: {fileID: 8010985298097365220}
+        name: HasPropertyBlock ()
+      - target: {fileID: 5316477290709919528}
+        name: IsChildOf (Transform parent)
+      - target: {fileID: 8010985298097365218}
+        name: Open ()
+      - target: {fileID: 8010985298097365215}
+        name: PlayAnimation (Object animation)
+      - target: {fileID: 8010985298097365219}
+        name: Raycast (Ray ray, RaycastHit& hitInfo, Single maxDistance)
+      - target: {fileID: 5316477290709919528}
+        name: RotateAroundLocal (Vector3 axis, Single angle)
+      - target: {fileID: 8010985298097365215}
+        name: SampleAnimation (Object clip, Single time)
+      - target: {fileID: 8010985298097365215}
+        name: SetActive (Boolean value)
+      - target: {fileID: 8010985298097365215}
+        name: SetActiveRecursively (Boolean state)
+      - target: {fileID: 5316477290709919528}
+        name: SetAsFirstSibling ()
+      - target: {fileID: 5316477290709919528}
+        name: SetAsLastSibling ()
+      - target: {fileID: 5316477290709919528}
+        name: SetPositionAndRotation (Vector3 position, Quaternion rotation)
+      - target: {fileID: 5316477290709919528}
+        name: SetSiblingIndex (Int32 index)
+      - target: {fileID: 8010985298097365217}
+        name: StopAllCoroutines ()
+      - target: {fileID: 8010985298097365218}
+        name: StopAllCoroutines ()
+      - target: {fileID: 8010985298097365215}
+        name: StopAnimation ()
+      mTarget: {fileID: 8010985298097365218}
+      mMethodName: Open
+      mParameters: []
+      mCached: 0
+      oneShot: 0
 --- !u!114 &2015070727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109482,7 +110597,7 @@ PrefabInstance:
     - target: {fileID: 5316477290709919528, guid: b0c05a1de30174b4a832296e98e5fb6c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5316477290709919528, guid: b0c05a1de30174b4a832296e98e5fb6c,
         type: 3}
@@ -109504,6 +110619,48 @@ PrefabInstance:
 --- !u!1 &8010985298097365215 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2460929850201237837, guid: b0c05a1de30174b4a832296e98e5fb6c,
+    type: 3}
+  m_PrefabInstance: {fileID: 8010985298097365214}
+  m_PrefabAsset: {fileID: 0}
+--- !u!33 &8010985298097365216 stripped
+MeshFilter:
+  m_CorrespondingSourceObject: {fileID: 312001908632541651, guid: b0c05a1de30174b4a832296e98e5fb6c,
+    type: 3}
+  m_PrefabInstance: {fileID: 8010985298097365214}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8010985298097365217 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7277536156815153694, guid: b0c05a1de30174b4a832296e98e5fb6c,
+    type: 3}
+  m_PrefabInstance: {fileID: 8010985298097365214}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8010985298097365215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00986fc8ef55c59418870490c036865e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8010985298097365218 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1458556402012313344, guid: b0c05a1de30174b4a832296e98e5fb6c,
+    type: 3}
+  m_PrefabInstance: {fileID: 8010985298097365214}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8010985298097365215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dba7ac08d41345e419384224d20c0a14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &8010985298097365219 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 7131778277520622502, guid: b0c05a1de30174b4a832296e98e5fb6c,
+    type: 3}
+  m_PrefabInstance: {fileID: 8010985298097365214}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &8010985298097365220 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 4874939975477239855, guid: b0c05a1de30174b4a832296e98e5fb6c,
     type: 3}
   m_PrefabInstance: {fileID: 8010985298097365214}
   m_PrefabAsset: {fileID: 0}
