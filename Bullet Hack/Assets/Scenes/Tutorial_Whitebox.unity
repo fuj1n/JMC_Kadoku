@@ -20,13 +20,13 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0, g: 0, b: 0, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 73b1e2ea9d98f3149ac0e3e7d4548d7c, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0.21722943, b: 0.49098337, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -49784,38 +49784,38 @@ Transform:
   - {fileID: 1643476474}
   - {fileID: 950745168}
   - {fileID: 1690661434}
+  - {fileID: 303669485}
   - {fileID: 232826325}
   - {fileID: 1164274104}
   - {fileID: 1255418667}
   - {fileID: 1127288258}
+  - {fileID: 1172671322}
   - {fileID: 251502428}
   - {fileID: 111948483}
+  - {fileID: 807744548}
   - {fileID: 1066467287}
+  - {fileID: 1621321419}
   - {fileID: 665501153}
+  - {fileID: 1411451567}
   - {fileID: 1027082618}
+  - {fileID: 1696091399}
   - {fileID: 1278662793}
   - {fileID: 502346912}
   - {fileID: 2038766503}
+  - {fileID: 1818400438}
   - {fileID: 655801605}
-  - {fileID: 303669485}
+  - {fileID: 1885279029}
+  - {fileID: 68108557}
+  - {fileID: 1850267418}
   - {fileID: 1342145233}
-  - {fileID: 1172671322}
+  - {fileID: 1796792742}
+  - {fileID: 696695801}
   - {fileID: 1915382068}
+  - {fileID: 518145795}
+  - {fileID: 1804651603}
   - {fileID: 256701526}
   - {fileID: 1863734869}
-  - {fileID: 1818400438}
-  - {fileID: 1411451567}
   - {fileID: 1267477751}
-  - {fileID: 696695801}
-  - {fileID: 518145795}
-  - {fileID: 1696091399}
-  - {fileID: 1796792742}
-  - {fileID: 68108557}
-  - {fileID: 1885279029}
-  - {fileID: 1621321419}
-  - {fileID: 1850267418}
-  - {fileID: 807744548}
-  - {fileID: 1804651603}
   m_Father: {fileID: 283899037}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -51006,7 +51006,7 @@ Camera:
   m_GameObject: {fileID: 1020658025}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
