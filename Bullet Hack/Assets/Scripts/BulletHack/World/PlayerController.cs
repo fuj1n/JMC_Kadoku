@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace BulletHack.World
 {
@@ -22,17 +23,37 @@ namespace BulletHack.World
         private CharacterController controller;
         private float yVelocity;
 
+        [Header("Spawn Effect")]
+        public GameObject[] showObjects;
+        public float spawnTime = 1F;
+
         private void Awake()
         {
             controller = GetComponent<CharacterController>();
+            
+            if(spawnTime > 0F)
+                foreach(GameObject ob in showObjects)
+                    ob.SetActive(false);
         }
 
         private void Update()
         {
+            if (spawnTime > 0)
+            {
+                spawnTime -= Time.deltaTime;
+                
+                if(spawnTime <= 0)
+                    foreach(GameObject ob in showObjects)
+                        ob.SetActive(true);
+            }
+            
             Quaternion camera = Quaternion.Euler(CameraSystem.Instance.GetActiveCamera().transform.eulerAngles.Isolate(Utility.Axis.Y));
 
             Vector3 movement = new Vector3(Input.GetAxisRaw("Horizontal"), 0F, Input.GetAxisRaw("Vertical"));
             movement = camera * movement;
+
+            if (spawnTime > 0 || Time.timeScale < Mathf.Epsilon)
+                movement *= 0F;
 
             if (movement.magnitude > Mathf.Epsilon)
             {
