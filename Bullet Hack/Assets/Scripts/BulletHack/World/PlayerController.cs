@@ -41,10 +41,12 @@ namespace BulletHack.World
             if (spawnTime > 0)
             {
                 spawnTime -= Time.deltaTime;
-                
-                if(spawnTime <= 0)
-                    foreach(GameObject ob in showObjects)
+
+                if (spawnTime <= 0)
+                    foreach (GameObject ob in showObjects)
                         ob.SetActive(true);
+                else
+                    return;
             }
             
             Quaternion camera = Quaternion.Euler(CameraSystem.Instance.GetActiveCamera().transform.eulerAngles.Isolate(Utility.Axis.Y));

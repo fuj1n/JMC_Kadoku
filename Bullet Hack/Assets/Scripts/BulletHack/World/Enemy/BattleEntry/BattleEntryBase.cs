@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace BulletHack.World.Enemy.BattleEntry
 {
-    public abstract class BattleEntryBase : MonoBehaviour
+    public class BattleEntryBase : MonoBehaviour
     {
         public static Action onBattleFinish;
 
@@ -14,7 +14,7 @@ namespace BulletHack.World.Enemy.BattleEntry
             EntryPoint = GetComponentInParent<BattleEntryPoint>();
         }
 
-        protected virtual void OnEntry()
+        public virtual void OnEntry()
         {
             onBattleFinish = OnBattleFinished;
             EntryPoint.EnterBattle();
