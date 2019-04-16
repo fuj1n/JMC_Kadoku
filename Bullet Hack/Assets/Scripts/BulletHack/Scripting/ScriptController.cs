@@ -3,6 +3,7 @@ using System.Linq;
 using BulletHack.Scripting.Action;
 using BulletHack.Scripting.Entity.Ticking;
 using BulletHack.Util;
+using BulletHack.World;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -67,6 +68,16 @@ namespace BulletHack.Scripting
 
             if (powerupHost)
                 powerupHost.CreatePowerups();
+
+            if (CombatManager.properties)
+            {
+                CombatProperties properties = CombatManager.properties;
+                if (enemyAvatar)
+                {
+                    enemyAvatar.MaxHealth = properties.enemyHealth;
+                    enemyAvatar.Health = properties.enemyHealth;
+                }
+            }
         }
 
         private void Start()

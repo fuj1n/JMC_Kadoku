@@ -16,6 +16,8 @@ namespace BulletHack.World.Enemy.BattleEntry
 
         public virtual void OnEntry()
         {
+            CombatManager.properties = GetComponentInParent<CombatProperties>();
+            
             onBattleFinish = OnBattleFinished;
             EntryPoint.EnterBattle();
         }

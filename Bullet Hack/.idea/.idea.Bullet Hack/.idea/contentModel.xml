@@ -266,6 +266,7 @@
               <e p="CameraRail.cs" t="Include" />
               <e p="CameraSwitcher.cs" t="Include" />
               <e p="CameraSystem.cs" t="Include" />
+              <e p="CombatProperties.cs" t="Include" />
               <e p="Door.cs" t="Include" />
               <e p="Enemy" t="Include">
                 <e p="BattleEntry" t="Include">

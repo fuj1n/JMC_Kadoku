@@ -1,6 +1,4 @@
 ﻿using JetBrains.Annotations;
-using UIEventDelegate;
-using UnityEngine;
 
 namespace BulletHack.World.Event
 {
