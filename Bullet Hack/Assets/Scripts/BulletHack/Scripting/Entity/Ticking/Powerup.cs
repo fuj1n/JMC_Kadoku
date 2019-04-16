@@ -25,33 +25,16 @@ namespace BulletHack.Scripting.Entity.Ticking
 
         private void OnTriggerEnter(Collider other)
         {
-            if (!other.CompareTag("Character"))
+            if (!other.CompareTag("Character") && !other.CompareTag("Player"))
                 return;
 
-            ScriptableCharacter character = other.GetComponent<ScriptableCharacter>();
-
-            if (!character)
+            if (!GameData.Instance)
                 return;
-
-            switch (type)
-            {
-                case PowerupType.Health:
-                    character.powerups.health++;
-                    break;
-                case PowerupType.Shield:
-                    character.powerups.shield++;
-                    break;
-                case PowerupType.Spread:
-                    character.powerups.spread++;
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
-
+            
+            GameData.Instance.powerups[type]++;
             Destroy(gameObject);
         }
 
-        [Serializable]
         public enum PowerupType
         {
             Health,

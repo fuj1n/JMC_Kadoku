@@ -7,7 +7,7 @@ namespace BulletHack.World
     public class Door : MonoBehaviour
     {
         public float fadeTime = 1F;
-    
+
         [UsedImplicitly]
         public void Open()
         {

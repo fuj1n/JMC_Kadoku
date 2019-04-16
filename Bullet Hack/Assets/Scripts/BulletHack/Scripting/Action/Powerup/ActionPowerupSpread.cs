@@ -14,10 +14,7 @@ namespace BulletHack.Scripting.Action.Powerup
                 CombatManager.Instance.Script.currentAvatar.Shoot(i);
         }
 
-        public override int GetPowerupCount() => CombatManager.Instance.Script.currentAvatar.powerups.spread;
-
-        public override void DecrPowerupCount() => CombatManager.Instance.Script.currentAvatar.powerups.spread--;
-
         public override Color GetColor() => Color.red;
+        public override Entity.Ticking.Powerup.PowerupType GetPowerupType() => Entity.Ticking.Powerup.PowerupType.Spread;
     }
 }

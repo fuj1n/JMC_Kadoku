@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using BulletHack.Scripting.Entity.Ticking;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -13,6 +16,9 @@ namespace BulletHack
         public int playerMaxHealth;
         [NonSerialized]
         public bool isDead;
+        
+        public Dictionary<Powerup.PowerupType, int> powerups = Enum.GetValues(typeof(Powerup.PowerupType))
+                .Cast<Powerup.PowerupType>().ToDictionary(x => x, x => 0);
 
         public IDeathHandler customDeathHandler;
 

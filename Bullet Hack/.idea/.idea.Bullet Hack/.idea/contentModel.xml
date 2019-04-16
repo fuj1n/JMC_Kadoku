@@ -188,6 +188,7 @@
               <e p="GaussianFade.cs" t="Include" />
               <e p="PlatformColorizer.cs" t="Include" />
               <e p="RotateEffect.cs" t="Include" />
+              <e p="ScanLine.cs" t="Include" />
               <e p="SineFader.cs" t="Include" />
               <e p="Sprites" t="Include">
                 <e p="SpriteAnimator.cs" t="Include" />
@@ -287,12 +288,16 @@
                 <e p="OnTrigger.cs" t="Include" />
                 <e p="OnUntrigger.cs" t="Include" />
               </e>
+              <e p="FX" t="Include">
+                <e p="PingableCamera.cs" t="Include" />
+              </e>
               <e p="Messaging" t="Include">
                 <e p="CreatePopup.cs" t="Include" />
                 <e p="ICombatEntryEvent.cs" t="Include" />
                 <e p="TutorialSafeCombatCancel.cs" t="Include" />
               </e>
               <e p="PlayerController.cs" t="Include" />
+              <e p="Switch.cs" t="Include" />
               <e p="Tutorial" t="Include">
                 <e p="TutorialDeathHandler.cs" t="Include" />
                 <e p="TutorialSetCheckpoint.cs" t="Include" />
