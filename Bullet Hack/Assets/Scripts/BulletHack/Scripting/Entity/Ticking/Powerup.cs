@@ -10,7 +10,8 @@ namespace BulletHack.Scripting.Entity.Ticking
 
         private void Start()
         {
-            CombatManager.Instance.Script.AddTickingEntity(this, BoundsAware());
+            if(CombatManager.Instance)
+                CombatManager.Instance.Script.AddTickingEntity(this, BoundsAware());
         }
 
         public override void Tick()

@@ -4,7 +4,8 @@
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -137,3 +138,8 @@ MonoBehaviour:
     IsRecursive: 0
     SmallIcon: {fileID: 2800000, guid: 27bb0c12d809b1e4fb2851723d50cde6, type: 3}
     LargeIcon: {fileID: 2800000, guid: f61940b61bdca1843bed2dbc93de9038, type: 3}
+  - Type: 0
+    Key: PostProcessing
+    IsRecursive: 0
+    SmallIcon: {fileID: 2800000, guid: 8d50cf779e5b4f54a831bdefc32b044c, type: 3}
+    LargeIcon: {fileID: 2800000, guid: 5c32cf9ad519d0c4aacb16805c45eab3, type: 3}
