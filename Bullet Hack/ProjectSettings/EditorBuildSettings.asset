@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/0MainMenu.unity
     guid: 68a3a1b1517cb014bb91e7e2ad89c49f
   - enabled: 1
-    path: Assets/Scenes/Dev/NonCombat_Scene.unity
-    guid: a9ef9c519df631040a60eb431343c173
+    path: Assets/Scenes/Tutorial.unity
+    guid: 934fc5a67314b8b4cbba7d7b8c248f0f
+  - enabled: 1
+    path: Assets/Scenes/Mission_1.unity
+    guid: ac3e75e6cc4a2334d8c31543f7ef4d83
+  - enabled: 1
+    path: Assets/Scenes/Mission_2.unity
+    guid: c22780b117d02634c8dab78037decadf
   m_configObjects: {}
