@@ -280,6 +280,7 @@
                 </e>
                 <e p="BattleEntryPoint.cs" t="Include" />
                 <e p="EnemyPath.cs" t="Include" />
+                <e p="EnemySweep.cs" t="Include" />
               </e>
               <e p="Event" t="Include">
                 <e p="EventCallback.cs" t="Include" />
@@ -292,6 +293,7 @@
                 <e p="PingableCamera.cs" t="Include" />
               </e>
               <e p="Messaging" t="Include">
+                <e p="CombatSubstitute.cs" t="Include" />
                 <e p="CreatePopup.cs" t="Include" />
                 <e p="ICombatEntryEvent.cs" t="Include" />
                 <e p="TutorialSafeCombatCancel.cs" t="Include" />

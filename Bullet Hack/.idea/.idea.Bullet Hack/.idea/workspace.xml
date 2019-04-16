@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84682f92-91d4-4b62-b5e0-a3379472445a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FX/Target.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/Target.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mission_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Mission_1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/World/Wall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/World/Wall.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mission_2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Mission_2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProBuilderSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProBuilderSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,24 +63,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/FX/ScanLine.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
-              <folding>
-                <marker date="1555441941960" expanded="true" signature="43:843" ph="{...}" />
-                <marker date="1555441941960" expanded="true" signature="87:841" ph="{...}" />
-                <marker date="1555441941960" expanded="true" signature="219:286" ph="{...}" />
-                <marker date="1555441941960" expanded="true" signature="317:835" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Door.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
+            <state relative-caret-position="94">
               <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
               <folding>
                 <marker date="1555444702315" expanded="false" signature="6:73" ph="..." />
@@ -94,6 +75,36 @@
                 <marker date="1555444702315" expanded="true" signature="334:1018" ph="{...}" />
                 <marker date="1555444702315" expanded="true" signature="603:962" ph="{...}" />
                 <marker date="1555444702315" expanded="true" signature="707:896" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Messaging/CombatSubstitute.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="29" selection-start-column="29" selection-end-column="29" />
+              <folding>
+                <marker date="1555448188793" expanded="true" signature="67:292" ph="{...}" />
+                <marker date="1555448188793" expanded="true" signature="138:290" ph="{...}" />
+                <marker date="1555448188793" expanded="true" signature="183:284" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Enemy/EnemySweep.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="30" column="63" lean-forward="true" selection-start-line="30" selection-start-column="63" selection-end-line="30" selection-end-column="63" />
+              <folding>
+                <marker date="1555450099279" expanded="true" signature="52:982" ph="{...}" />
+                <marker date="1555450099279" expanded="true" signature="98:980" ph="{...}" />
+                <marker date="1555450099279" expanded="true" signature="459:536" ph="{...}" />
+                <marker date="1555450099279" expanded="true" signature="567:974" ph="{...}" />
+                <marker date="1555450099279" expanded="true" signature="718:865" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -142,7 +153,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/UiNavigation.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="600">
@@ -203,81 +214,41 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/SettingsData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/78AFCDD7-A608-4612-8C49-45F03EB135B8/c7/e85c1354/Nullable.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/SerializedBlock.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Messaging/CreatePopup.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/FX/PlatformColorizer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/FX/TextureAnimation.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/78AFCDD7-A608-4612-8C49-45F03EB135B8/d2/e8448ae3/Nullable`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Door.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/ScriptController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Util/Utils.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Entity/Ticking/Powerup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Util/DeathTimer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Utility.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/FX/CollisionParticle.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Enemy/EnemyPath.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/CombatManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Util/CommonResources.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/BlockCreator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Entity/Ticking/TickingEntity.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/DOTween/Modules/DOTweenModuleUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Util/CodeGenerator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Event/OnMessageClosed.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/Powerup/ActionPowerupSpread.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Entity/Ticking/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/SoundManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Event/OnEnemyDefeat.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/DOTween/Modules/DOTweenModuleAudio.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/SerializeDeserializeController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/UiNavigation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/ScrollableArea.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Messaging/TutorialSafeCombatCancel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../jmc-tmechs/Tyrannosaurus Mechs/Assets/Scripts/TMechs/Player/Behaviour/Grapple.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/PowerupHost.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A472C64C-4DD8-4280-8AE1-2CA6BB00788E/98/37d55883/JsonSerializerSettings.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/FX/SineFader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/CodeRunningOverlay.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Messaging/ICombatEntryEvent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/ScriptableCharacter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/CodeBlockDrag.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Entity/Ticking/PowerupTimer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Editor/EditorUtils.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/Blocks/BracketBlockManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/FX/PingableCamera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AC823E2B-B42B-41BD-A679-24A45A0173C3/9b/90278be1/Object.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/PopupMessageUi.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/Blocks/BlockManagerBase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Enemy/BattleEntry/BattleEntryBase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/HeartsController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/Blocks/BlockManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/StartAction.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Enemy/BattleEntry/ConeBattleEntry.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/CameraSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DC10DD4A-D9F3-4AA9-8E69-1E49A48C7111/c2/130dd8c3/UnityEvent`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/TextMesh Pro/Resources/Shaders/TMPro.cginc" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/ShootAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/FX/RotateEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/MoveAction.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/CombatProperties.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/ConditionalHideAttribute/Editor/ConditionalHidePropertyDrawer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/GameData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/Powerup/ActionPowerupHealth.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Tutorial/TutorialDeathHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/BreakAction.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/FX/ScanLine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../jmc-tmechs/Tyrannosaurus Mechs/Assets/Scripts/TMechs/Player/PlayerMovement.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/BlockAction/RepeatTimesBlock.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Event/OnUntrigger.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Event Delegate System/UI/EventDelegate/EventDelegate.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/BlockLoader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/BlockAction/RepeatForeverBlock.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/Settings/VolumeLoader.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DC10DD4A-D9F3-4AA9-8E69-1E49A48C7111/31/84e76f12/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/BlockAction/ActionBlockBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/Tooltip.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Event/OnTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/BlockConnectorIn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/Binder/ValueBinder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/Binder/EnumBinder.cs" root0="FORCE_HIGHLIGHTING" />
@@ -285,24 +256,64 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Event/EventCallback.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/TooltipRenderer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/AwaitAction.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Tutorial/TutorialSetCheckpoint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/FX/GaussianFade.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/Powerup/ActionPowerup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/ActionBase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/05523276-EF37-492A-8918-C36E7BB297B4/f1/43dbc789/AudioClip.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DC10DD4A-D9F3-4AA9-8E69-1E49A48C7111/f7/14368fd8/Color.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/WorldController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/Powerup/ActionPowerupShield.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Enemy/BattleEntryPoint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Switch.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/CameraRail.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Event Delegate System/UI/EventDelegate/Editor/EventDelegateDrawer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/78AFCDD7-A608-4612-8C49-45F03EB135B8/c7/e85c1354/Nullable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/SerializedBlock.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/FX/PlatformColorizer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/78AFCDD7-A608-4612-8C49-45F03EB135B8/d2/e8448ae3/Nullable`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Door.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/ScriptController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Messaging/CombatSubstitute.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Entity/Ticking/Powerup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Utility.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/FX/CollisionParticle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Enemy/EnemyPath.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/CombatManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/BlockCreator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Entity/Ticking/TickingEntity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/DOTween/Modules/DOTweenModuleUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Event/OnMessageClosed.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Entity/Ticking/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/SoundManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Event/OnEnemyDefeat.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/DOTween/Modules/DOTweenModuleAudio.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Enemy/EnemySweep.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/UiNavigation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Messaging/TutorialSafeCombatCancel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../jmc-tmechs/Tyrannosaurus Mechs/Assets/Scripts/TMechs/Player/Behaviour/Grapple.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Messaging/ICombatEntryEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/ScriptableCharacter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Entity/Ticking/PowerupTimer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Editor/EditorUtils.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/PopupMessageUi.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Enemy/BattleEntry/BattleEntryBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/HeartsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Enemy/BattleEntry/ConeBattleEntry.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/CameraSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/TextMesh Pro/Resources/Shaders/TMPro.cginc" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/CombatProperties.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/ConditionalHideAttribute/Editor/ConditionalHidePropertyDrawer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/Powerup/ActionPowerupHealth.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/FX/ScanLine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Event Delegate System/UI/EventDelegate/EventDelegate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DC10DD4A-D9F3-4AA9-8E69-1E49A48C7111/31/84e76f12/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Event/OnTrigger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Tutorial/TutorialSetCheckpoint.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/Scripting/Action/Powerup/ActionPowerup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/05523276-EF37-492A-8918-C36E7BB297B4/f1/43dbc789/AudioClip.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Enemy/BattleEntryPoint.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/CameraRail.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/PopupMessageUi.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/FX/Sprites/SpriteSheet.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/FX/GaussianFade.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/FX/Sprites/SpriteAnimator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/Util/CodeGenerator.cs" />
@@ -352,6 +363,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/World/FX/PingableCamera.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Event/OnUntrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Event/OnTrigger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Messaging/CombatSubstitute.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Enemy/EnemySweep.cs" />
       </list>
     </option>
   </component>
@@ -541,12 +554,12 @@
       <workItem from="1554246824289" duration="4155000" />
       <workItem from="1554634582379" duration="1274000" />
       <workItem from="1555341253219" duration="676000" />
-      <workItem from="1555415594748" duration="15918000" />
+      <workItem from="1555415594748" duration="18442000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145766000" />
+    <option name="totallyTimeSpent" value="148290000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -662,136 +675,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A472C64C-4DD8-4280-8AE1-2CA6BB00788E/98/37d55883/JsonSerializerSettings.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-960">
-          <caret line="167" column="63" selection-start-line="167" selection-start-column="63" selection-end-line="167" selection-end-column="63" />
-          <folding>
-            <marker date="1553865953400" expanded="true" signature="0:357" ph="/* Decompiled with JetBrains decompiler ... */" />
-            <marker date="1553865953400" expanded="false" signature="365:580" ph="..." />
-            <marker date="1553865953400" expanded="true" signature="607:20829" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="612:732" ph="/// Specifies the settings on a &lt;see cref=&quot;T:Newtonsoft.Json.JsonSerializer&quot; /&gt; object. ... " />
-            <marker date="1553865953400" expanded="true" signature="770:20827" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="4043:4302" ph="/// Gets or sets how reference loops (e.g. a class referencing itself) are handled. ... " />
-            <marker date="1553865953400" expanded="true" signature="4357:4569" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="4373:4464" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="4474:4563" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="4575:4890" ph="/// Gets or sets how missing members (e.g. JSON contains a property that isn't a member on the object) are handle ... " />
-            <marker date="1553865953400" expanded="true" signature="4945:5158" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="4961:5053" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="5063:5152" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="5164:5409" ph="/// Gets or sets how objects are created during deserialization. ... " />
-            <marker date="1553865953400" expanded="true" signature="5466:5681" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="5482:5574" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="5584:5675" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="5687:5943" ph="/// Gets or sets how null values are handled during serialization and deserialization. ... " />
-            <marker date="1553865953400" expanded="true" signature="5990:6188" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="6006:6091" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="6101:6182" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="6194:6463" ph="/// Gets or sets how default values are handled during serialization and deserialization. ... " />
-            <marker date="1553865953400" expanded="true" signature="6516:6726" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="6532:6623" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="6633:6720" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="6732:6924" ph="/// Gets or sets a &lt;see cref=&quot;T:Newtonsoft.Json.JsonConverter&quot; /&gt; collection that will be used during serializati ... " />
-            <marker date="1553865953400" expanded="true" signature="6987:7247" ph="/// Gets or sets how object references are preserved by the serializer. ... " />
-            <marker date="1553865953400" expanded="true" signature="7312:7543" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="7328:7428" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="7438:7537" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="7549:8249" ph="/// Gets or sets how type name writing and reading is handled by the serializer. ... " />
-            <marker date="1553865953400" expanded="true" signature="8294:8485" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="8310:8390" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="8400:8479" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="8491:8754" ph="/// Gets or sets how metadata properties are used during deserialization. ... " />
-            <marker date="1553865953400" expanded="true" signature="8815:9041" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="8831:8930" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="8940:9035" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="9047:9339" ph="/// Gets or sets how a type name assembly is written and resolved by the serializer. ... " />
-            <marker date="1553865953400" expanded="true" signature="9494:9721" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="9510:9603" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="9613:9715" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="9727:10003" ph="/// Gets or sets how a type name assembly is written and resolved by the serializer. ... " />
-            <marker date="1553865953400" expanded="true" signature="10076:10325" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="10092:10202" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="10212:10319" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="10331:10574" ph="/// Gets or sets how constructors are used during deserialization. ... " />
-            <marker date="1553865953400" expanded="true" signature="10625:10831" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="10641:10730" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="10740:10825" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="10837:11043" ph="/// Gets or sets the contract resolver used by the serializer when ... " />
-            <marker date="1553865953400" expanded="true" signature="11109:11280" ph="/// Gets or sets the equality comparer used by the serializer when comparing references. ... " />
-            <marker date="1553865953400" expanded="true" signature="11346:11566" ph="/// Gets or sets the &lt;see cref=&quot;T:Newtonsoft.Json.Serialization.IReferenceResolver&quot; /&gt; used by the serializer whe ... " />
-            <marker date="1553865953400" expanded="true" signature="11798:12196" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="11814:12031" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="12041:12190" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="12202:12566" ph="/// Gets or sets a function that creates the &lt;see cref=&quot;T:Newtonsoft.Json.Serialization.IReferenceResolver&quot; /&gt; us ... " />
-            <marker date="1553865953400" expanded="true" signature="12648:12858" ph="/// Gets or sets the &lt;see cref=&quot;T:Newtonsoft.Json.Serialization.ITraceWriter&quot; /&gt; used by the serializer when writ ... " />
-            <marker date="1553865953400" expanded="true" signature="12914:13132" ph="/// Gets or sets the &lt;see cref=&quot;P:Newtonsoft.Json.JsonSerializerSettings.SerializationBinder&quot; /&gt; used by the seri ... " />
-            <marker date="1553865953400" expanded="true" signature="13270:13874" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="13286:13699" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="13709:13868" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="13880:14090" ph="/// Gets or sets the &lt;see cref=&quot;T:Newtonsoft.Json.Serialization.ISerializationBinder&quot; /&gt; used by the serializer w ... " />
-            <marker date="1553865953400" expanded="true" signature="14162:14372" ph="/// Gets or sets the error handler called during serialization and deserialization. ... " />
-            <marker date="1553865953400" expanded="true" signature="14438:14663" ph="/// Gets or sets the &lt;see cref=&quot;T:System.Runtime.Serialization.StreamingContext&quot; /&gt; used by the serializer when i ... " />
-            <marker date="1553865953400" expanded="true" signature="14699:14888" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="14715:14802" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="14812:14882" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="14894:15211" ph="/// Gets or sets how &lt;see cref=&quot;T:System.DateTime&quot; /&gt; and &lt;see cref=&quot;T:System.DateTimeOffset&quot; /&gt; values are forma ... " />
-            <marker date="1553865953400" expanded="true" signature="15246:15475" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="15262:15361" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="15371:15469" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="15481:15760" ph="/// Gets or sets the maximum depth allowed when reading JSON. Reading past this depth will throw a &lt;see cref=&quot;T:N ... " />
-            <marker date="1553865953400" expanded="true" signature="15785:16170" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="15801:15848" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="15858:16164" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="16176:16340" ph="/// Indicates how JSON text output is formatted. ... " />
-            <marker date="1553865953400" expanded="true" signature="16373:16540" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="16389:16457" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="16467:16534" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="16546:16731" ph="/// Gets or sets how dates are written to JSON text. ... " />
-            <marker date="1553865953400" expanded="true" signature="16780:16988" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="16796:16889" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="16899:16982" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="16994:17247" ph="/// Gets or sets how &lt;see cref=&quot;T:System.DateTime&quot; /&gt; time zones are handled during serialization and deserializa ... " />
-            <marker date="1553865953400" expanded="true" signature="17300:17516" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="17316:17413" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="17423:17510" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="17522:17793" ph="/// Gets or sets how date formatted strings, e.g. &lt;c&gt;&quot;\/Date(1198908717056)\/&quot;&lt;/c&gt; and &lt;c&gt;&quot;2012-03-21T05:40Z&quot;&lt;/c&gt; ... " />
-            <marker date="1553865953400" expanded="true" signature="17840:18039" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="17856:17942" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="17952:18033" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="18045:18403" ph="/// Gets or sets how special floating point numbers, e.g. &lt;see cref=&quot;F:System.Double.NaN&quot; /&gt;, ... " />
-            <marker date="1553865953400" expanded="true" signature="18454:18659" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="18470:18558" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="18568:18653" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="18665:18888" ph="/// Gets or sets how floating point numbers, e.g. 1.0 and 9.9, are parsed when reading JSON text. ... " />
-            <marker date="1553865953400" expanded="true" signature="18937:19138" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="18953:19039" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="19049:19132" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="19144:19337" ph="/// Gets or sets how strings are escaped when writing JSON text. ... " />
-            <marker date="1553865953400" expanded="true" signature="19390:19600" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="19406:19497" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="19507:19594" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="19606:19792" ph="/// Gets or sets the culture used when reading JSON. ... " />
-            <marker date="1553865953400" expanded="true" signature="19823:19989" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="19839:19926" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="19936:19983" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="19995:20344" ph="/// Gets a value indicating whether there will be a check for additional content after deserializing an object. ... " />
-            <marker date="1553865953400" expanded="true" signature="20383:20558" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="20399:20469" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="20479:20552" ph="{...}" />
-            <marker date="1553865953400" expanded="true" signature="20564:20701" ph="/// Initializes a new instance of the &lt;see cref=&quot;T:Newtonsoft.Json.JsonSerializerSettings&quot; /&gt; class. ... " />
-            <marker date="1553865953400" expanded="true" signature="20737:20823" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/05523276-EF37-492A-8918-C36E7BB297B4/f1/43dbc789/AudioClip.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="42" column="62" selection-start-line="42" selection-start-column="62" selection-end-line="42" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/UI/Settings/VolumeLoader.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1405,22 +1288,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Door.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding>
-            <marker date="1555444702315" expanded="false" signature="6:73" ph="..." />
-            <marker date="1555444702315" expanded="true" signature="101:1026" ph="{...}" />
-            <marker date="1555444702315" expanded="true" signature="141:1024" ph="{...}" />
-            <marker date="1555444702315" expanded="true" signature="236:295" ph="{...}" />
-            <marker date="1555444702315" expanded="true" signature="334:1018" ph="{...}" />
-            <marker date="1555444702315" expanded="true" signature="603:962" ph="{...}" />
-            <marker date="1555444702315" expanded="true" signature="707:896" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/FX/PingableCamera.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -1488,6 +1355,48 @@
             <marker date="1555433094553" expanded="true" signature="552:675" ph="{...}" />
             <marker date="1555433094553" expanded="true" signature="715:865" ph="{...}" />
             <marker date="1555433094553" expanded="false" signature="883:1316" ph="Settings" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Door.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+          <folding>
+            <marker date="1555444702315" expanded="false" signature="6:73" ph="..." />
+            <marker date="1555444702315" expanded="true" signature="101:1026" ph="{...}" />
+            <marker date="1555444702315" expanded="true" signature="141:1024" ph="{...}" />
+            <marker date="1555444702315" expanded="true" signature="236:295" ph="{...}" />
+            <marker date="1555444702315" expanded="true" signature="334:1018" ph="{...}" />
+            <marker date="1555444702315" expanded="true" signature="603:962" ph="{...}" />
+            <marker date="1555444702315" expanded="true" signature="707:896" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Messaging/CombatSubstitute.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="29" selection-start-column="29" selection-end-column="29" />
+          <folding>
+            <marker date="1555448188793" expanded="true" signature="67:292" ph="{...}" />
+            <marker date="1555448188793" expanded="true" signature="138:290" ph="{...}" />
+            <marker date="1555448188793" expanded="true" signature="183:284" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletHack/World/Enemy/EnemySweep.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="30" column="63" lean-forward="true" selection-start-line="30" selection-start-column="63" selection-end-line="30" selection-end-column="63" />
+          <folding>
+            <marker date="1555450099279" expanded="true" signature="52:982" ph="{...}" />
+            <marker date="1555450099279" expanded="true" signature="98:980" ph="{...}" />
+            <marker date="1555450099279" expanded="true" signature="459:536" ph="{...}" />
+            <marker date="1555450099279" expanded="true" signature="567:974" ph="{...}" />
+            <marker date="1555450099279" expanded="true" signature="718:865" ph="{...}" />
           </folding>
         </state>
       </provider>
