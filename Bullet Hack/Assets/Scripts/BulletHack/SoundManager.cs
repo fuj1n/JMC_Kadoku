@@ -20,8 +20,6 @@ namespace BulletHack
 
             if (listener)
                 location = listener.transform.position;
-            else
-                Debug.LogWarning("No audio listener found");
             
             PlayClipAtPoint(clip, channel, location);
         }
