@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using BulletHack.World.Messaging;
 using UnityEngine;
 
 namespace BulletHack.World.Enemy.BattleEntry
@@ -16,6 +18,12 @@ namespace BulletHack.World.Enemy.BattleEntry
 
         public virtual void OnEntry()
         {
+            ICombatEntryEvent[] receivers = GetComponentsInParent<ICombatEntryEvent>();
+
+            bool cancel = receivers.Aggregate(false, (current, receiver) => current && !receiver.OnPreCombatEnter());
+            if (cancel)
+                return;
+            
             CombatManager.properties = GetComponentInParent<CombatProperties>();
             
             onBattleFinish = OnBattleFinished;
