@@ -13,12 +13,12 @@ namespace BulletHack.World
 
         private Vector3 dampVelocity;
         
-        private void Awake()
+        private void Start()
         {
             min += transform.position;
             max += transform.position;
 
-            player = GameObject.FindGameObjectWithTag("Player").transform;
+            player = PlayerController.Instance.transform;
         }
 
         private void Update()

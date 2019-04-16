@@ -26,10 +26,11 @@ namespace BulletHack
         public void OnCombatFinish()
         {
             Destroy(combatWorld);
-            WorldController.Enable();
 
             if(BattleEntryBase.onBattleFinish != null)
                 BattleEntryBase.onBattleFinish();
+            
+            WorldController.Enable();
         }
     }
 }

@@ -5,6 +5,8 @@ namespace BulletHack.World
 {
     public class PlayerController : MonoBehaviour
     {
+        public static PlayerController Instance { get; private set; }
+        
         public float movementSpeed = 25F;
 
         [Header("Animation")]
@@ -29,6 +31,8 @@ namespace BulletHack.World
 
         private void Awake()
         {
+            Instance = this;
+            
             controller = GetComponent<CharacterController>();
             
             if(spawnTime > 0F)

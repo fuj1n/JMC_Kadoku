@@ -4,8 +4,6 @@ namespace BulletHack.World.Enemy.BattleEntry
 {
     public class ConeBattleEntry : BattleEntryBase
     {
-        public bool disableColliderOnEnter = true;
-
         private void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag("Player"))
@@ -18,10 +16,6 @@ namespace BulletHack.World.Enemy.BattleEntry
                     if (!hit.transform.CompareTag("Player"))
                         return;
 
-                if (disableColliderOnEnter)
-                    foreach (Collider c in GetComponents<Collider>())
-                        if (c.isTrigger)
-                            c.enabled = false;
                 OnEntry();
             }
         }

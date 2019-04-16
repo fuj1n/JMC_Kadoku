@@ -20,7 +20,7 @@ namespace BulletHack.World.Enemy.BattleEntry
         {
             ICombatEntryEvent[] receivers = GetComponentsInParent<ICombatEntryEvent>();
 
-            bool cancel = receivers.Aggregate(false, (current, receiver) => current && !receiver.OnPreCombatEnter());
+            bool cancel = receivers.Aggregate(false, (current, receiver) => current || receiver.OnPreCombatEnter());
             if (cancel)
                 return;
             
@@ -32,10 +32,17 @@ namespace BulletHack.World.Enemy.BattleEntry
 
         private void OnBattleFinished()
         {
-            if (GameData.Instance.playerHealth > 0)
-                SendMessageUpwards("OnEnemyDefeated", SendMessageOptions.DontRequireReceiver);
-            
-            Destroy(EntryPoint.gameObject);
+            if (!GameData.Instance.isDead)
+            {
+                foreach(IEnemyDefeatedHandler handler in GetComponentsInParent<IEnemyDefeatedHandler>(true))
+                    handler.OnEnemyDefeated();
+                Destroy(EntryPoint.gameObject);
+            }
+        }
+
+        public interface IEnemyDefeatedHandler
+        {
+            void OnEnemyDefeated();
         }
     }
 }

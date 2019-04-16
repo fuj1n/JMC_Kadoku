@@ -1,10 +1,9 @@
-﻿using JetBrains.Annotations;
+﻿using BulletHack.World.Enemy.BattleEntry;
 
 namespace BulletHack.World.Event
 {
-    public class OnEnemyDefeat : EventCallback
+    public class OnEnemyDefeat : EventCallback, BattleEntryBase.IEnemyDefeatedHandler
     {
-        [UsedImplicitly]
-        private void OnEnemyDefeated() => Execute();
+        public void OnEnemyDefeated() => Execute();
     }
 }

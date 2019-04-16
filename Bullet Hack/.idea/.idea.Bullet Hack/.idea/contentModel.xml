@@ -7,6 +7,7 @@
     <e p="C:\Users\fuj1n\AppData\local\Android\Sdk\sources\android-28" t="IncludeRecursive" />
     <e p="D:\Libraries\Documents\Unity Projects\JMC_Kadoku\Bullet Hack" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -179,6 +180,9 @@
         <e p="Scripts" t="Include">
           <e p="BulletHack" t="Include">
             <e p="CombatManager.cs" t="Include" />
+            <e p="Editor" t="Include">
+              <e p="EditorUtils.cs" t="Include" />
+            </e>
             <e p="FX" t="Include">
               <e p="CollisionParticle.cs" t="Include" />
               <e p="GaussianFade.cs" t="Include" />
@@ -289,6 +293,10 @@
                 <e p="TutorialSafeCombatCancel.cs" t="Include" />
               </e>
               <e p="PlayerController.cs" t="Include" />
+              <e p="Tutorial" t="Include">
+                <e p="TutorialDeathHandler.cs" t="Include" />
+                <e p="TutorialSetCheckpoint.cs" t="Include" />
+              </e>
               <e p="WorldController.cs" t="Include" />
             </e>
           </e>

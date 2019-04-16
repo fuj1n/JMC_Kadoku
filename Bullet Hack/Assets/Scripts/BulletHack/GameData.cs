@@ -11,6 +11,10 @@ namespace BulletHack
         [NonSerialized]
         public int playerHealth;
         public int playerMaxHealth;
+        [NonSerialized]
+        public bool isDead;
+
+        public IDeathHandler customDeathHandler;
 
         private void Awake()
         {
@@ -30,6 +34,9 @@ namespace BulletHack
         {
             playerHealth = Mathf.Clamp(playerHealth, 0, playerMaxHealth);
 
+            if (isDead)
+                return;
+            
             if (playerHealth <= 0)
             {
                 if (playerMaxHealth <= 0)
@@ -38,15 +45,32 @@ namespace BulletHack
                     return;
                 }
 
-                playerHealth = int.MaxValue;
+                isDead = true;
                 Invoke(nameof(Die), 1F);
             }
         }
 
         private void Die()
         {
+            if (customDeathHandler != null)
+            {
+                customDeathHandler.OnDeath();
+                return;
+            }
+            
             Destroy(gameObject);
             SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+        }
+
+        public void ResetDead()
+        {
+            isDead = false;
+            playerHealth = playerMaxHealth;
+        }
+
+        public interface IDeathHandler
+        {
+            void OnDeath();
         }
     }
 }

@@ -9,13 +9,12 @@ namespace BulletHack.World.Messaging
 
         public bool OnPreCombatEnter()
         {
-            GameObject.FindGameObjectWithTag("Player").transform.position = restorePoint;
             PopupMessageUi.Open(new PopupMessageUi.PopupData()
             {
                     color = Color.red,
                     direction = PopupMessageUi.PopupDirection.Left,
                     text = "Avoid the enemy to proceed"
-            });
+            }, () => PlayerController.Instance.transform.position = restorePoint);
             
             return true;
         }
