@@ -62,7 +62,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   path: []
   tiltAmount: 5
-  speed: 6
+  speed: 18
   waitTime: 0.5
 --- !u!114 &8171876436019675987
 MonoBehaviour:

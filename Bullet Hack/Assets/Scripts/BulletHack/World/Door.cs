@@ -8,10 +8,21 @@ namespace BulletHack.World
     {
         public float fadeTime = 1F;
 
+        private bool openScheduled;
+        
         [UsedImplicitly]
         public void Open()
         {
-            StartCoroutine(FadeOut());
+            openScheduled = true;
+        }
+
+        private void Update()
+        {
+            if (openScheduled)
+            {
+                StartCoroutine(FadeOut());
+                openScheduled = false;
+            }
         }
 
         private IEnumerator FadeOut()

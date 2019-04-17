@@ -29,6 +29,8 @@ namespace BulletHack.World
         public GameObject[] showObjects;
         public float spawnTime = 1F;
 
+        private Quaternion lastCamera = Quaternion.identity;
+        
         private void Awake()
         {
             Instance = this;
@@ -56,7 +58,11 @@ namespace BulletHack.World
             Quaternion camera = Quaternion.Euler(CameraSystem.Instance.GetActiveCamera().transform.eulerAngles.Isolate(Utility.Axis.Y));
 
             Vector3 movement = new Vector3(Input.GetAxisRaw("Horizontal"), 0F, Input.GetAxisRaw("Vertical"));
-            movement = camera * movement;
+            
+            if (movement.magnitude <= Mathf.Epsilon)
+                lastCamera = camera;
+            
+            movement = lastCamera * movement;
 
             if (spawnTime > 0 || Time.timeScale < Mathf.Epsilon)
                 movement *= 0F;
