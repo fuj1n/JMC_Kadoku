@@ -28,6 +28,7 @@ namespace BulletHack.World
         [Header("Spawn Effect")]
         public GameObject[] showObjects;
         public float spawnTime = 1F;
+        public AudioClip spawnSound;
 
         private Quaternion lastCamera = Quaternion.identity;
         
@@ -36,10 +37,15 @@ namespace BulletHack.World
             Instance = this;
             
             controller = GetComponent<CharacterController>();
-            
-            if(spawnTime > 0F)
-                foreach(GameObject ob in showObjects)
+
+            if (spawnTime > 0F)
+            {
+                foreach (GameObject ob in showObjects)
                     ob.SetActive(false);
+                
+                if(spawnSound)
+                    SoundManager.PlayClip(spawnSound, SoundManager.Channel.SoundEffect);
+            }
         }
 
         private void Update()

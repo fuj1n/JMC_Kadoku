@@ -10,10 +10,12 @@ namespace BulletHack
         private static SoundManager instance;
         
         private static SoundSettings soundSettings = new SoundSettings();
-        
+
+        // ReSharper disable once Unity.NoNullPropogation
+        public static Vector3 Position => instance?.transform.position ?? Vector3.zero;
+
         public static void PlayClip(AudioClip clip, Channel channel)
-                // ReSharper disable once Unity.NoNullPropogation
-            => PlayClipAtPoint(clip, channel, instance?.transform.position ?? Vector3.zero);
+            => PlayClipAtPoint(clip, channel, Position);
 
         public static void PlayClipAtPoint(AudioClip clip, Channel channel, Vector3 point)
         {

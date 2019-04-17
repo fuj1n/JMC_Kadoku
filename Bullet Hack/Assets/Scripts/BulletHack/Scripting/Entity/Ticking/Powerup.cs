@@ -8,6 +8,8 @@ namespace BulletHack.Scripting.Entity.Ticking
         public PowerupType type;
         public int turns = 3;
 
+        public AudioClip pickupSound;
+
         private void Start()
         {
             if(CombatManager.Instance)
@@ -33,6 +35,10 @@ namespace BulletHack.Scripting.Entity.Ticking
                 return;
             
             GameData.Instance.powerups[type]++;
+            
+            if(pickupSound)
+                SoundManager.PlayClip(pickupSound, SoundManager.Channel.SoundEffect);
+            
             Destroy(gameObject);
         }
 

@@ -14281,6 +14281,7 @@ MonoBehaviour:
   - {fileID: 1461935723903406}
   - {fileID: 9021162614615044901}
   spawnTime: 1
+  spawnSound: {fileID: 8300000, guid: d72423affa2ea1b4f9ce68e9e996db92, type: 3}
 --- !u!1 &9021162614615044901
 GameObject:
   m_ObjectHideFlags: 0
@@ -14321,11 +14322,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4880855113962806}
     m_Modifications:
-    - target: {fileID: 162992856551992880, guid: e92950af8bc7cd34e86f8030b8329540,
-        type: 3}
-      propertyPath: m_Name
-      value: Light Beam
-      objectReference: {fileID: 0}
     - target: {fileID: 162992856551992879, guid: e92950af8bc7cd34e86f8030b8329540,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14380,6 +14376,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 162992856551992880, guid: e92950af8bc7cd34e86f8030b8329540,
+        type: 3}
+      propertyPath: m_Name
+      value: Light Beam
       objectReference: {fileID: 0}
     - target: {fileID: 162992856551992878, guid: e92950af8bc7cd34e86f8030b8329540,
         type: 3}

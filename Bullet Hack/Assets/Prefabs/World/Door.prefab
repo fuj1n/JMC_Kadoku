@@ -121,3 +121,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeTime: 1
+  unpowerSound: {fileID: 8300000, guid: 9a5c599bd1a51164299f8d44e245ff71, type: 3}

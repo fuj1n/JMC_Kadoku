@@ -93,6 +93,7 @@ MonoBehaviour:
   tweenSpeed: 0
   type: 0
   turns: 3
+  pickupSound: {fileID: 8300000, guid: d9c1601fe70c1cf4b8bb28deba01b8c1, type: 3}
 --- !u!65 &6268730391961371214
 BoxCollider:
   m_ObjectHideFlags: 0
