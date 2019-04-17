@@ -23,12 +23,17 @@ namespace BulletHack.FX
                 return;
             }
 
-            player = PlayerController.Instance.transform;
+            player = PlayerController.Instance ? PlayerController.Instance.transform : null;
             if (!player)
             {
-                Debug.LogError("No player found");
-                Destroy(this);
-                return;
+                player = GameObject.FindGameObjectWithTag("Player")?.transform;
+
+                if (!player)
+                {
+                    Debug.LogError("No player found");
+                    Destroy(this);
+                    return;
+                }
             }
             
             effectInstance = Instantiate(effectTemplate, transform);

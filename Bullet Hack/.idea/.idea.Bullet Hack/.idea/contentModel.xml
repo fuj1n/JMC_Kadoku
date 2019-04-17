@@ -178,6 +178,7 @@
         <e p="Scripts" t="Include">
           <e p="BulletHack" t="Include">
             <e p="CombatManager.cs" t="Include" />
+            <e p="CreditsScroll.cs" t="Include" />
             <e p="Editor" t="Include">
               <e p="EditorUtils.cs" t="Include" />
             </e>
