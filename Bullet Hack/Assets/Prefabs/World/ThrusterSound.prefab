@@ -45,6 +45,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: b759c94bc90e06c499d4cbb69cb65af1, type: 3}
   channel: 1
-  volumeMultiplier: 0.5
+  volumeMultiplier: 0.15
   loop: 1
   moveToManager: 1
