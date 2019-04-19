@@ -64,7 +64,7 @@ namespace BulletHack
                 return;
             }
             
-            Destroy(gameObject);
+            DestroyActiveInstance();
             SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
         }
 
@@ -72,6 +72,12 @@ namespace BulletHack
         {
             isDead = false;
             playerHealth = playerMaxHealth;
+        }
+
+        public static void DestroyActiveInstance()
+        {
+            if(Instance)
+                Destroy(Instance.gameObject);
         }
 
         public interface IDeathHandler

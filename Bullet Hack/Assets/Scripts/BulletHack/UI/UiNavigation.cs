@@ -52,6 +52,11 @@ namespace BulletHack.UI
             if(menuClick)
                 SoundManager.PlayClip(menuClick, (SoundManager.Channel)channel);
         }
+
+        public void ClearData()
+        {
+            GameData.DestroyActiveInstance();
+        }
         
         #region Settings
 

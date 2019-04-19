@@ -33143,6 +33143,412 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 739285086}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &739615855
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 739615858}
+  - component: {fileID: 739615856}
+  m_Layer: 0
+  m_Name: ResetData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &739615856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739615855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79fb57b6f3fe21e409d55a091ca7185b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onCallback:
+    List:
+    - mEventName: Destroy Active Game Data
+      mShowGroup: 1
+      mUpdateEntryList: 0
+      mEntryList:
+      - target: {fileID: 828183960}
+        name: active
+      - target: {fileID: 828183965}
+        name: additionalShaderChannels
+      - target: {fileID: 828183961}
+        name: allowActivationOnMobileDevice
+      - target: {fileID: 828183966}
+        name: anchoredPosition
+      - target: {fileID: 828183966}
+        name: anchoredPosition3D
+      - target: {fileID: 828183966}
+        name: anchorMax
+      - target: {fileID: 828183966}
+        name: anchorMin
+      - target: {fileID: 828183963}
+        name: blockingObjects
+      - target: {fileID: 828183961}
+        name: cancelButton
+      - target: {fileID: 828183964}
+        name: defaultSpriteDPI
+      - target: {fileID: 828183964}
+        name: dynamicPixelsPerUnit
+      - target: {fileID: 828183965}
+        name: enabled
+      - target: {fileID: 828183964}
+        name: enabled
+      - target: {fileID: 828183967}
+        name: enabled
+      - target: {fileID: 828183961}
+        name: enabled
+      - target: {fileID: 828183963}
+        name: enabled
+      - target: {fileID: 828183962}
+        name: enabled
+      - target: {fileID: 828183966}
+        name: eulerAngles
+      - target: {fileID: 828183964}
+        name: fallbackScreenDPI
+      - target: {fileID: 828183962}
+        name: firstSelectedGameObject
+      - target: {fileID: 828183961}
+        name: forceModuleActive
+      - target: {fileID: 828183966}
+        name: forward
+      - target: {fileID: 828183966}
+        name: hasChanged
+      - target: {fileID: 828183964}
+        name: hideFlags
+      - target: {fileID: 828183963}
+        name: hideFlags
+      - target: {fileID: 828183962}
+        name: hideFlags
+      - target: {fileID: 828183960}
+        name: hideFlags
+      - target: {fileID: 828183966}
+        name: hideFlags
+      - target: {fileID: 828183961}
+        name: hideFlags
+      - target: {fileID: 828183967}
+        name: hideFlags
+      - target: {fileID: 828183965}
+        name: hideFlags
+      - target: {fileID: 828183966}
+        name: hierarchyCapacity
+      - target: {fileID: 828183961}
+        name: horizontalAxis
+      - target: {fileID: 828183963}
+        name: ignoreReversedGraphics
+      - target: {fileID: 828183961}
+        name: inputActionsPerSecond
+      - target: {fileID: 828183961}
+        name: inputOverride
+      - target: {fileID: 828183960}
+        name: isStatic
+      - target: {fileID: 828183960}
+        name: layer
+      - target: {fileID: 828183966}
+        name: localEulerAngles
+      - target: {fileID: 828183966}
+        name: localPosition
+      - target: {fileID: 828183966}
+        name: localRotation
+      - target: {fileID: 828183966}
+        name: localScale
+      - target: {fileID: 828183964}
+        name: matchWidthOrHeight
+      - target: {fileID: 828183967}
+        name: menuClick
+      - target: {fileID: 828183964}
+        name: name
+      - target: {fileID: 828183967}
+        name: name
+      - target: {fileID: 828183965}
+        name: name
+      - target: {fileID: 828183961}
+        name: name
+      - target: {fileID: 828183966}
+        name: name
+      - target: {fileID: 828183962}
+        name: name
+      - target: {fileID: 828183963}
+        name: name
+      - target: {fileID: 828183960}
+        name: name
+      - target: {fileID: 828183965}
+        name: normalizedSortingGridSize
+      - target: {fileID: 828183966}
+        name: offsetMax
+      - target: {fileID: 828183966}
+        name: offsetMin
+      - target: {fileID: 828183965}
+        name: overridePixelPerfect
+      - target: {fileID: 828183965}
+        name: overrideSorting
+      - target: {fileID: 828183966}
+        name: parent
+      - target: {fileID: 828183964}
+        name: physicalUnit
+      - target: {fileID: 828183966}
+        name: pivot
+      - target: {fileID: 828183962}
+        name: pixelDragThreshold
+      - target: {fileID: 828183965}
+        name: pixelPerfect
+      - target: {fileID: 828183965}
+        name: planeDistance
+      - target: {fileID: 828183966}
+        name: position
+      - target: {fileID: 828183964}
+        name: referencePixelsPerUnit
+      - target: {fileID: 828183965}
+        name: referencePixelsPerUnit
+      - target: {fileID: 828183964}
+        name: referenceResolution
+      - target: {fileID: 828183965}
+        name: renderMode
+      - target: {fileID: 828183961}
+        name: repeatDelay
+      - target: {fileID: 828183966}
+        name: right
+      - target: {fileID: 828183966}
+        name: rotation
+      - target: {fileID: 828183961}
+        name: runInEditMode
+      - target: {fileID: 828183967}
+        name: runInEditMode
+      - target: {fileID: 828183962}
+        name: runInEditMode
+      - target: {fileID: 828183964}
+        name: runInEditMode
+      - target: {fileID: 828183963}
+        name: runInEditMode
+      - target: {fileID: 828183964}
+        name: scaleFactor
+      - target: {fileID: 828183965}
+        name: scaleFactor
+      - target: {fileID: 828183964}
+        name: screenMatchMode
+      - target: {fileID: 828183962}
+        name: sendNavigationEvents
+      - target: {fileID: 828183967}
+        name: settings
+      - target: {fileID: 828183966}
+        name: sizeDelta
+      - target: {fileID: 828183965}
+        name: sortingGridNormalizedSize
+      - target: {fileID: 828183965}
+        name: sortingLayerID
+      - target: {fileID: 828183965}
+        name: sortingLayerName
+      - target: {fileID: 828183965}
+        name: sortingOrder
+      - target: {fileID: 828183961}
+        name: submitButton
+      - target: {fileID: 828183960}
+        name: tag
+      - target: {fileID: 828183965}
+        name: tag
+      - target: {fileID: 828183967}
+        name: tag
+      - target: {fileID: 828183964}
+        name: tag
+      - target: {fileID: 828183963}
+        name: tag
+      - target: {fileID: 828183961}
+        name: tag
+      - target: {fileID: 828183966}
+        name: tag
+      - target: {fileID: 828183962}
+        name: tag
+      - target: {fileID: 828183965}
+        name: targetDisplay
+      - target: {fileID: 828183964}
+        name: uiScaleMode
+      - target: {fileID: 828183966}
+        name: up
+      - target: {fileID: 828183967}
+        name: useGUILayout
+      - target: {fileID: 828183961}
+        name: useGUILayout
+      - target: {fileID: 828183963}
+        name: useGUILayout
+      - target: {fileID: 828183962}
+        name: useGUILayout
+      - target: {fileID: 828183964}
+        name: useGUILayout
+      - target: {fileID: 828183961}
+        name: verticalAxis
+      - target: {fileID: 828183965}
+        name: worldCamera
+      - target: {fileID: 828183961}
+        name: ActivateModule ()
+      - target: {fileID: 828183966}
+        name: add_reapplyDrivenProperties (RectTransform+ReapplyDrivenProperties value)
+      - target: {fileID: 828183965}
+        name: add_willRenderCanvases (Canvas+WillRenderCanvases value)
+      - target: {fileID: 828183967}
+        name: ClearData ()
+      - target: {fileID: 828183967}
+        name: ClickSound ()
+      - target: {fileID: 828183967}
+        name: ClickSoundOn (Int32 channel)
+      - target: {fileID: 828183967}
+        name: CloseSettings ()
+      - target: {fileID: 828183960}
+        name: CreatePrimitive (PrimitiveType type)
+      - target: {fileID: 828183961}
+        name: DeactivateModule ()
+      - target: {fileID: 828183966}
+        name: DetachChildren ()
+      - target: {fileID: 828183967}
+        name: ExitGame ()
+      - target: {fileID: 828183966}
+        name: Find (String n)
+      - target: {fileID: 828183960}
+        name: Find (String name)
+      - target: {fileID: 828183966}
+        name: FindChild (String n)
+      - target: {fileID: 828183960}
+        name: FindGameObjectsWithTag (String tag)
+      - target: {fileID: 828183960}
+        name: FindGameObjectWithTag (String tag)
+      - target: {fileID: 828183960}
+        name: FindWithTag (String tag)
+      - target: {fileID: 828183965}
+        name: ForceUpdateCanvases ()
+      - target: {fileID: 828183966}
+        name: ForceUpdateRectTransforms ()
+      - target: {fileID: 828183966}
+        name: GetChild (Int32 index)
+      - target: {fileID: 828183966}
+        name: GetChildCount ()
+      - target: {fileID: 828183965}
+        name: GetDefaultCanvasMaterial ()
+      - target: {fileID: 828183965}
+        name: GetDefaultCanvasTextMaterial ()
+      - target: {fileID: 828183966}
+        name: GetEnumerator ()
+      - target: {fileID: 828183965}
+        name: GetETC1SupportedCanvasMaterial ()
+      - target: {fileID: 828183966}
+        name: GetLocalCorners (Vector3[] fourCornersArray)
+      - target: {fileID: 828183966}
+        name: GetSiblingIndex ()
+      - target: {fileID: 828183966}
+        name: GetWorldCorners (Vector3[] fourCornersArray)
+      - target: {fileID: 828183964}
+        name: IsActive ()
+      - target: {fileID: 828183963}
+        name: IsActive ()
+      - target: {fileID: 828183961}
+        name: IsActive ()
+      - target: {fileID: 828183962}
+        name: IsActive ()
+      - target: {fileID: 828183966}
+        name: IsChildOf (Transform parent)
+      - target: {fileID: 828183961}
+        name: IsDestroyed ()
+      - target: {fileID: 828183962}
+        name: IsDestroyed ()
+      - target: {fileID: 828183964}
+        name: IsDestroyed ()
+      - target: {fileID: 828183963}
+        name: IsDestroyed ()
+      - target: {fileID: 828183961}
+        name: IsModuleSupported ()
+      - target: {fileID: 828183961}
+        name: IsPointerOverGameObject (Int32 pointerId)
+      - target: {fileID: 828183967}
+        name: LoadScene (String name)
+      - target: {fileID: 828183967}
+        name: OpenSettings ()
+      - target: {fileID: 828183960}
+        name: PlayAnimation (Object animation)
+      - target: {fileID: 828183961}
+        name: Process ()
+      - target: {fileID: 828183963}
+        name: Raycast (PointerEventData eventData, RaycastResult] resultAppendList)
+      - target: {fileID: 828183962}
+        name: RaycastAll (PointerEventData eventData, RaycastResult] raycastResults)
+      - target: {fileID: 828183966}
+        name: remove_reapplyDrivenProperties (RectTransform+ReapplyDrivenProperties
+          value)
+      - target: {fileID: 828183965}
+        name: remove_willRenderCanvases (Canvas+WillRenderCanvases value)
+      - target: {fileID: 828183966}
+        name: RotateAroundLocal (Vector3 axis, Single angle)
+      - target: {fileID: 828183960}
+        name: SampleAnimation (Object clip, Single time)
+      - target: {fileID: 828183960}
+        name: SetActive (Boolean value)
+      - target: {fileID: 828183960}
+        name: SetActiveRecursively (Boolean state)
+      - target: {fileID: 828183966}
+        name: SetAsFirstSibling ()
+      - target: {fileID: 828183966}
+        name: SetAsLastSibling ()
+      - target: {fileID: 828183966}
+        name: SetInsetAndSizeFromParentEdge (RectTransform+Edge edge, Single inset,
+          Single size)
+      - target: {fileID: 828183967}
+        name: SetMaster (Single value)
+      - target: {fileID: 828183967}
+        name: SetMusic (Single value)
+      - target: {fileID: 828183966}
+        name: SetPositionAndRotation (Vector3 position, Quaternion rotation)
+      - target: {fileID: 828183967}
+        name: SetSfx (Single value)
+      - target: {fileID: 828183966}
+        name: SetSiblingIndex (Int32 index)
+      - target: {fileID: 828183966}
+        name: SetSizeWithCurrentAnchors (RectTransform+Axis axis, Single size)
+      - target: {fileID: 828183967}
+        name: SetVolume (SoundManager+Channel channel, Single value)
+      - target: {fileID: 828183961}
+        name: ShouldActivateModule ()
+      - target: {fileID: 828183964}
+        name: StopAllCoroutines ()
+      - target: {fileID: 828183967}
+        name: StopAllCoroutines ()
+      - target: {fileID: 828183963}
+        name: StopAllCoroutines ()
+      - target: {fileID: 828183961}
+        name: StopAllCoroutines ()
+      - target: {fileID: 828183962}
+        name: StopAllCoroutines ()
+      - target: {fileID: 828183960}
+        name: StopAnimation ()
+      - target: {fileID: 828183961}
+        name: UpdateModule ()
+      - target: {fileID: 828183962}
+        name: UpdateModules ()
+      mTarget: {fileID: 828183967}
+      mMethodName: ClearData
+      mParameters: []
+      mCached: 0
+      oneShot: 0
+--- !u!4 &739615858
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739615855}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 432.19156, y: 408.14517, z: -290.61542}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &742704470
 PrefabInstance:
   m_ObjectHideFlags: 0
