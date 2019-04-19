@@ -238,11 +238,14 @@ namespace BulletHack.Scripting
         private void NextRound(bool triggerAnim = true)
         {
             IsRunning = false;
-            
-            generator.startPos = new Vector2Int(enemyAvatar.X, enemyAvatar.Y);
-            generator.turnCount = maxTurns;
-            generator.GenerateCode();
-            
+
+            if (generator)
+            {
+                generator.startPos = new Vector2Int(enemyAvatar.X, enemyAvatar.Y);
+                generator.turnCount = maxTurns;
+                generator.GenerateCode();
+            }
+
             currentTurn = -1;
             UpdateTurnCounter(1.5F);
                 

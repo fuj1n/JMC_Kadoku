@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using BulletHack.Scripting.Action;
 using BulletHack.UI;
@@ -11,6 +12,7 @@ using UnityEngine;
 namespace BulletHack.Scripting
 {
     [UsedImplicitly(ImplicitUseTargetFlags.Members)]
+    [Serializable]
     public class SerializedBlock
     {
         public string id;

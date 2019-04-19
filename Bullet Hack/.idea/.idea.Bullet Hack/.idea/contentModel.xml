@@ -265,6 +265,7 @@
             </e>
             <e p="Util" t="Include">
               <e p="CodeGenerator.cs" t="Include" />
+              <e p="CodeLoader.cs" t="Include" />
               <e p="CommonResources.cs" t="Include" />
               <e p="DeathTimer.cs" t="Include" />
               <e p="Utils.cs" t="Include" />
@@ -305,6 +306,7 @@
               <e p="PlayerController.cs" t="Include" />
               <e p="Switch.cs" t="Include" />
               <e p="Tutorial" t="Include">
+                <e p="TutorialCombatController.cs" t="Include" />
                 <e p="TutorialDeathHandler.cs" t="Include" />
                 <e p="TutorialSetCheckpoint.cs" t="Include" />
               </e>
