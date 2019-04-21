@@ -8,6 +8,7 @@ namespace BulletHack
     public class CombatManager : MonoBehaviour
     {
         public static CombatManager Instance { get; private set; }
+        public static CombatProperties properties;
 
         public ScriptController Script { get; private set; }
 
@@ -25,10 +26,11 @@ namespace BulletHack
         public void OnCombatFinish()
         {
             Destroy(combatWorld);
-            WorldController.Enable();
 
             if(BattleEntryBase.onBattleFinish != null)
                 BattleEntryBase.onBattleFinish();
+            
+            WorldController.Enable();
         }
     }
 }

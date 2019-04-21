@@ -12,6 +12,10 @@ namespace BulletHack.World.Enemy
         public float speed = 2F;
         public float waitTime = .5F;
 
+        public bool waitForRange;
+        [ConditionalHide("waitForRange", true)]
+        public float range;
+        
         private int index;
         private Tween motion;
 
@@ -44,6 +48,13 @@ namespace BulletHack.World.Enemy
 
         private void Update()
         {
+            if (waitForRange)
+            {
+                if (PlayerController.Instance && Vector3.Distance(PlayerController.Instance.transform.position, transform.position) <= range)
+                    waitForRange = false;
+                return;
+            }
+            
             if (motion != null && motion.IsPlaying())
                 return;
 
@@ -99,6 +110,15 @@ namespace BulletHack.World.Enemy
                 for (int i = 1; i < absolutePath.Count; i++)
                     Gizmos.DrawLine(absolutePath[i - 1], absolutePath[i]);
             }
+        }
+
+        private void OnDrawGizmosSelected()
+        {
+            if (!waitForRange)
+                return;
+            
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireSphere(transform.position, range);
         }
 #endif
     }

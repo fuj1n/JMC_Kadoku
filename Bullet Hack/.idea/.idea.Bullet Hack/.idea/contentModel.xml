@@ -7,6 +7,7 @@
     <e p="C:\Users\fuj1n\AppData\local\Android\Sdk\sources\android-28" t="IncludeRecursive" />
     <e p="D:\Libraries\Documents\Unity Projects\JMC_Kadoku\Bullet Hack" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -179,11 +180,18 @@
         <e p="Scripts" t="Include">
           <e p="BulletHack" t="Include">
             <e p="CombatManager.cs" t="Include" />
+            <e p="CreditsScroll.cs" t="Include" />
+            <e p="Editor" t="Include">
+              <e p="EditorUtils.cs" t="Include" />
+            </e>
+            <e p="EscapeListener.cs" t="Include" />
             <e p="FX" t="Include">
+              <e p="Alarm.cs" t="Include" />
               <e p="CollisionParticle.cs" t="Include" />
               <e p="GaussianFade.cs" t="Include" />
               <e p="PlatformColorizer.cs" t="Include" />
               <e p="RotateEffect.cs" t="Include" />
+              <e p="ScanLine.cs" t="Include" />
               <e p="SineFader.cs" t="Include" />
               <e p="Sprites" t="Include">
                 <e p="SpriteAnimator.cs" t="Include" />
@@ -193,6 +201,7 @@
               <e p="VisionCone.cs" t="Include" />
             </e>
             <e p="GameData.cs" t="Include" />
+            <e p="ManagedSoundSource.cs" t="Include" />
             <e p="ScriptableCharacter.cs" t="Include" />
             <e p="Scripting" t="Include">
               <e p="Action" t="Include">
@@ -257,6 +266,7 @@
             </e>
             <e p="Util" t="Include">
               <e p="CodeGenerator.cs" t="Include" />
+              <e p="CodeLoader.cs" t="Include" />
               <e p="CommonResources.cs" t="Include" />
               <e p="DeathTimer.cs" t="Include" />
               <e p="Utils.cs" t="Include" />
@@ -266,6 +276,7 @@
               <e p="CameraRail.cs" t="Include" />
               <e p="CameraSwitcher.cs" t="Include" />
               <e p="CameraSystem.cs" t="Include" />
+              <e p="CombatProperties.cs" t="Include" />
               <e p="Door.cs" t="Include" />
               <e p="Enemy" t="Include">
                 <e p="BattleEntry" t="Include">
@@ -274,18 +285,32 @@
                 </e>
                 <e p="BattleEntryPoint.cs" t="Include" />
                 <e p="EnemyPath.cs" t="Include" />
+                <e p="EnemySweep.cs" t="Include" />
               </e>
               <e p="Event" t="Include">
                 <e p="EventCallback.cs" t="Include" />
                 <e p="OnEnemyDefeat.cs" t="Include" />
                 <e p="OnMessageClosed.cs" t="Include" />
+                <e p="OnStart.cs" t="Include" />
                 <e p="OnTrigger.cs" t="Include" />
                 <e p="OnUntrigger.cs" t="Include" />
               </e>
+              <e p="FX" t="Include">
+                <e p="PingableCamera.cs" t="Include" />
+              </e>
               <e p="Messaging" t="Include">
+                <e p="CombatSubstitute.cs" t="Include" />
                 <e p="CreatePopup.cs" t="Include" />
+                <e p="ICombatEntryEvent.cs" t="Include" />
+                <e p="TutorialSafeCombatCancel.cs" t="Include" />
               </e>
               <e p="PlayerController.cs" t="Include" />
+              <e p="Switch.cs" t="Include" />
+              <e p="Tutorial" t="Include">
+                <e p="TutorialCombatController.cs" t="Include" />
+                <e p="TutorialDeathHandler.cs" t="Include" />
+                <e p="TutorialSetCheckpoint.cs" t="Include" />
+              </e>
               <e p="WorldController.cs" t="Include" />
             </e>
           </e>

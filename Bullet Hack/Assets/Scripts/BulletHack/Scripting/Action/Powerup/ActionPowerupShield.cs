@@ -13,10 +13,7 @@ namespace BulletHack.Scripting.Action.Powerup
             CombatManager.Instance.Script.currentAvatar.powerups.ShieldActive = true;
         }
 
-        public override int GetPowerupCount() => CombatManager.Instance.Script.currentAvatar.powerups.shield;
-
-        public override void DecrPowerupCount() => CombatManager.Instance.Script.currentAvatar.powerups.shield--;
-
         public override Color GetColor() => Color.yellow;
+        public override Entity.Ticking.Powerup.PowerupType GetPowerupType() => Entity.Ticking.Powerup.PowerupType.Shield;
     }
 }

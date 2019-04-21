@@ -8,9 +8,12 @@ namespace BulletHack.Scripting.Entity.Ticking
         public PowerupType type;
         public int turns = 3;
 
+        public AudioClip pickupSound;
+
         private void Start()
         {
-            CombatManager.Instance.Script.AddTickingEntity(this, BoundsAware());
+            if(CombatManager.Instance)
+                CombatManager.Instance.Script.AddTickingEntity(this, BoundsAware());
         }
 
         public override void Tick()
@@ -25,33 +28,20 @@ namespace BulletHack.Scripting.Entity.Ticking
 
         private void OnTriggerEnter(Collider other)
         {
-            if (!other.CompareTag("Character"))
+            if (!other.CompareTag("Character") && !other.CompareTag("Player"))
                 return;
 
-            ScriptableCharacter character = other.GetComponent<ScriptableCharacter>();
-
-            if (!character)
+            if (!GameData.Instance)
                 return;
-
-            switch (type)
-            {
-                case PowerupType.Health:
-                    character.powerups.health++;
-                    break;
-                case PowerupType.Shield:
-                    character.powerups.shield++;
-                    break;
-                case PowerupType.Spread:
-                    character.powerups.spread++;
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
-
+            
+            GameData.Instance.powerups[type]++;
+            
+            if(pickupSound)
+                SoundManager.PlayClip(pickupSound, SoundManager.Channel.SoundEffect);
+            
             Destroy(gameObject);
         }
 
-        [Serializable]
         public enum PowerupType
         {
             Health,

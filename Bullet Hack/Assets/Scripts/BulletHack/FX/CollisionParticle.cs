@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using BulletHack.World;
+using UnityEngine;
 
 namespace BulletHack.FX
 {
@@ -13,7 +14,7 @@ namespace BulletHack.FX
         private new Collider collider;
         private Transform player;
         
-        private void Awake()
+        private void Start()
         {
             if (!effectTemplate)
             {
@@ -22,12 +23,17 @@ namespace BulletHack.FX
                 return;
             }
 
-            player = GameObject.FindGameObjectWithTag("Player")?.transform;
+            player = PlayerController.Instance ? PlayerController.Instance.transform : null;
             if (!player)
             {
-                Debug.LogError("No player found");
-                Destroy(this);
-                return;
+                player = GameObject.FindGameObjectWithTag("Player")?.transform;
+
+                if (!player)
+                {
+                    Debug.LogError("No player found");
+                    Destroy(this);
+                    return;
+                }
             }
             
             effectInstance = Instantiate(effectTemplate, transform);

@@ -6,6 +6,7 @@ namespace BulletHack.UI
     public class UiNavigation : MonoBehaviour
     {
         public GameObject settings;
+        public AudioClip menuClick;
 
         private void Awake()
         {
@@ -39,6 +40,22 @@ namespace BulletHack.UI
 #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
 #endif
+        }
+
+        public void ClickSound()
+        {
+            ClickSoundOn((int)SoundManager.Channel.SoundEffect);
+        }
+
+        public void ClickSoundOn(int channel)
+        {
+            if(menuClick)
+                SoundManager.PlayClip(menuClick, (SoundManager.Channel)channel);
+        }
+
+        public void ClearData()
+        {
+            GameData.DestroyActiveInstance();
         }
         
         #region Settings

@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using BulletHack.Scripting.Entity.Ticking;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,6 +14,13 @@ namespace BulletHack
         [NonSerialized]
         public int playerHealth;
         public int playerMaxHealth;
+        [NonSerialized]
+        public bool isDead;
+        
+        public Dictionary<Powerup.PowerupType, int> powerups = Enum.GetValues(typeof(Powerup.PowerupType))
+                .Cast<Powerup.PowerupType>().ToDictionary(x => x, x => 0);
+
+        public IDeathHandler customDeathHandler;
 
         private void Awake()
         {
@@ -30,6 +40,9 @@ namespace BulletHack
         {
             playerHealth = Mathf.Clamp(playerHealth, 0, playerMaxHealth);
 
+            if (isDead)
+                return;
+            
             if (playerHealth <= 0)
             {
                 if (playerMaxHealth <= 0)
@@ -38,15 +51,38 @@ namespace BulletHack
                     return;
                 }
 
-                playerHealth = int.MaxValue;
+                isDead = true;
                 Invoke(nameof(Die), 1F);
             }
         }
 
         private void Die()
         {
-            Destroy(gameObject);
+            if (customDeathHandler != null)
+            {
+                customDeathHandler.OnDeath();
+                return;
+            }
+            
+            DestroyActiveInstance();
             SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+        }
+
+        public void ResetDead()
+        {
+            isDead = false;
+            playerHealth = playerMaxHealth;
+        }
+
+        public static void DestroyActiveInstance()
+        {
+            if(Instance)
+                Destroy(Instance.gameObject);
+        }
+
+        public interface IDeathHandler
+        {
+            void OnDeath();
         }
     }
 }

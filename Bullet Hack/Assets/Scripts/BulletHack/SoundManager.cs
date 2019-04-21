@@ -5,26 +5,17 @@ using Object = UnityEngine.Object;
 
 namespace BulletHack
 {
-    public static class SoundManager
+    public class SoundManager : MonoBehaviour
     {
-        private static SoundSettings soundSettings = new SoundSettings();
+        private static SoundManager instance;
         
-        private static AudioListener listener;
+        private static SoundSettings soundSettings = new SoundSettings();
+
+        // ReSharper disable once Unity.NoNullPropogation
+        public static Vector3 Position => instance?.transform.position ?? Vector3.zero;
 
         public static void PlayClip(AudioClip clip, Channel channel)
-        {
-            if (!listener)
-                listener = Object.FindObjectOfType<AudioListener>();
-
-            Vector3 location = Vector3.zero;
-
-            if (listener)
-                location = listener.transform.position;
-            else
-                Debug.LogWarning("No audio listener found");
-            
-            PlayClipAtPoint(clip, channel, location);
-        }
+            => PlayClipAtPoint(clip, channel, Position);
 
         public static void PlayClipAtPoint(AudioClip clip, Channel channel, Vector3 point)
         {
@@ -52,6 +43,15 @@ namespace BulletHack
         private static void Init()
         {
             SettingsData.RegisterListener("sound", Load);
+        }
+
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
+        private static void Create()
+        {
+            GameObject go = new GameObject("Sound Manager");
+            instance = go.AddComponent<SoundManager>();
+            go.AddComponent<AudioListener>();
+            DontDestroyOnLoad(go);   
         }
 
         private static void Load(object value)

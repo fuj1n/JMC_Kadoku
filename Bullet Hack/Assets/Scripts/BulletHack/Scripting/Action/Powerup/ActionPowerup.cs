@@ -4,9 +4,12 @@ namespace BulletHack.Scripting.Action.Powerup
     {
         public override void Execute()
         {
-            if (GetPowerupCount() > 0)
+            if (!GameData.Instance)
+                return;
+            
+            if (GameData.Instance.powerups[GetPowerupType()] > 0)
             {
-                DecrPowerupCount();
+                GameData.Instance.powerups[GetPowerupType()]--;
                 Powerup();
             }
             else
@@ -16,7 +19,6 @@ namespace BulletHack.Scripting.Action.Powerup
         }
 
         public abstract void Powerup();
-        public abstract int GetPowerupCount();
-        public abstract void DecrPowerupCount();
+        public abstract Entity.Ticking.Powerup.PowerupType GetPowerupType();
     }
 }

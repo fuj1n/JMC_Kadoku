@@ -13,12 +13,12 @@ namespace BulletHack.World
 
         private Vector3 dampVelocity;
         
-        private void Awake()
+        private void Start()
         {
             min += transform.position;
             max += transform.position;
 
-            player = GameObject.FindGameObjectWithTag("Player").transform;
+            player = PlayerController.Instance.transform;
         }
 
         private void Update()
@@ -27,7 +27,7 @@ namespace BulletHack.World
                 return;
 
             intendedPosition = (player.position + playerOffset).Clamp(min, max);
-            transform.position = Vector3.SmoothDamp(transform.position, intendedPosition, ref dampVelocity, .5F);
+            transform.position = Vector3.SmoothDamp(transform.position, intendedPosition, ref dampVelocity, .25F);
         }
 
 #if UNITY_EDITOR
@@ -42,11 +42,11 @@ namespace BulletHack.World
                 max += transform.position;
             }
             
-            Gizmos.color = Color.green;
-            Gizmos.DrawLine(min, max);
-            Gizmos.color = Color.cyan;
-            Gizmos.DrawSphere(min, 0.25F);
-            Gizmos.DrawSphere(max, 0.25F);
+            Gizmos.color = Color.magenta;
+            Gizmos.DrawWireCube((max + min) / 2F, max - min);
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireSphere(min, 0.25F);
+            Gizmos.DrawWireSphere(max, 0.25F);
         }
         #endif
     }

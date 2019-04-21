@@ -4,6 +4,10 @@ namespace BulletHack.World.Event
 {
     public class OnUntrigger : EventCallback
     {
-        private void OnTriggerExit(Collider other) => Execute();
+        private void OnTriggerExit(Collider other)
+        {
+            if (other.CompareTag("Player"))
+                Execute();
+        }
     }
 }

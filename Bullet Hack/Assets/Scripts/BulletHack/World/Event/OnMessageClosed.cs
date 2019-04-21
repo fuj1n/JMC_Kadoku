@@ -1,12 +1,9 @@
-﻿using JetBrains.Annotations;
-using UIEventDelegate;
-using UnityEngine;
+﻿using BulletHack.World.Messaging;
 
 namespace BulletHack.World.Event
 {
-    public class OnMessageClosed : EventCallback
+    public class OnMessageClosed : EventCallback, CreatePopup.IPopupCloseHandler
     {
-        [UsedImplicitly]
-        private void OnPopupClosed() => Execute();
+        public void OnPopupClosed() => Execute();
     }
 }

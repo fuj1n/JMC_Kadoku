@@ -17,8 +17,14 @@ namespace BulletHack.World.Messaging
 
         private void OnPopupClose()
         {
-            SendMessage("OnPopupClosed", SendMessageOptions.DontRequireReceiver);
+            foreach(IPopupCloseHandler handler in GetComponentsInParent<IPopupCloseHandler>(true))   
+                    handler.OnPopupClosed();
             Destroy(this);
+        }
+
+        public interface IPopupCloseHandler
+        {
+            void OnPopupClosed();
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using BulletHack.Scripting.Entity.Ticking;
 using DG.Tweening;
 using TMPro;
@@ -179,8 +180,6 @@ namespace BulletHack
         [Serializable]
         public struct PowerupState
         {
-            public int health, shield, spread;
-
             public bool ShieldActive
             {
                 get => shieldActive;
@@ -209,12 +208,17 @@ namespace BulletHack
 
             public void Update(float tweenSpeed)
             {
+                if (!GameData.Instance)
+                    return;
+                    
+                Dictionary<Powerup.PowerupType, int> powerups = GameData.Instance.powerups;
+                
                 if (healthText)
-                    healthText.text = health.ToString();
+                    healthText.text = powerups[Powerup.PowerupType.Health].ToString();
                 if (shieldText)
-                    shieldText.text = shield.ToString();
+                    shieldText.text = powerups[Powerup.PowerupType.Shield].ToString();
                 if (spreadText)
-                    spreadText.text = spread.ToString();
+                    spreadText.text = powerups[Powerup.PowerupType.Spread].ToString();
 
                 this.tweenSpeed = tweenSpeed;
             }

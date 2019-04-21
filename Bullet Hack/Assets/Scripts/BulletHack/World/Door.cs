@@ -7,11 +7,27 @@ namespace BulletHack.World
     public class Door : MonoBehaviour
     {
         public float fadeTime = 1F;
-    
+
+        public AudioClip unpowerSound;
+        
+        private bool openScheduled;
+        
         [UsedImplicitly]
         public void Open()
         {
-            StartCoroutine(FadeOut());
+            openScheduled = true;
+        }
+
+        private void Update()
+        {
+            if (openScheduled)
+            {
+                if(unpowerSound)
+                    SoundManager.PlayClip(unpowerSound, SoundManager.Channel.SoundEffect);
+                
+                StartCoroutine(FadeOut());
+                openScheduled = false;
+            }
         }
 
         private IEnumerator FadeOut()
