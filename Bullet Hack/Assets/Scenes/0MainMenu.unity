@@ -43378,6 +43378,54 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 988164226}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &989619661
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 989619663}
+  - component: {fileID: 989619662}
+  m_Layer: 0
+  m_Name: Music
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &989619662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989619661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9700cd8c11809a4db58b86b1c4b3518, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 20554a1b1fc697b4e8a870f7f8d3d3a1, type: 3}
+  channel: 0
+  volumeMultiplier: 1
+  loop: 1
+  moveToManager: 1
+--- !u!4 &989619663
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989619661}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 408.818, y: -911.9165, z: 371.1374}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &991951293
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59573,6 +59621,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Ship
       objectReference: {fileID: 0}
+    - target: {fileID: 9193467951168187030, guid: 508bac89fba174e47ae43c0fceebd11f,
+        type: 3}
+      propertyPath: path.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9193467951168187030, guid: 508bac89fba174e47ae43c0fceebd11f,
+        type: 3}
+      propertyPath: path.Array.data[0].z
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 4179216466411588, guid: 508bac89fba174e47ae43c0fceebd11f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -19
@@ -59628,16 +59686,6 @@ PrefabInstance:
     - target: {fileID: 4179216466411588, guid: 508bac89fba174e47ae43c0fceebd11f, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 9193467951168187030, guid: 508bac89fba174e47ae43c0fceebd11f,
-        type: 3}
-      propertyPath: path.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9193467951168187030, guid: 508bac89fba174e47ae43c0fceebd11f,
-        type: 3}
-      propertyPath: path.Array.data[0].z
-      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 508bac89fba174e47ae43c0fceebd11f, type: 3}
@@ -75708,6 +75756,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Ship
       objectReference: {fileID: 0}
+    - target: {fileID: 9193467951168187030, guid: 508bac89fba174e47ae43c0fceebd11f,
+        type: 3}
+      propertyPath: path.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9193467951168187030, guid: 508bac89fba174e47ae43c0fceebd11f,
+        type: 3}
+      propertyPath: path.Array.data[0].z
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 9193467951168187030, guid: 508bac89fba174e47ae43c0fceebd11f,
+        type: 3}
+      propertyPath: path.Array.data[1].z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9193467951168187030, guid: 508bac89fba174e47ae43c0fceebd11f,
+        type: 3}
+      propertyPath: path.Array.data[1].x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 9193467951168187030, guid: 508bac89fba174e47ae43c0fceebd11f,
+        type: 3}
+      propertyPath: path.Array.data[2].z
+      value: -20
+      objectReference: {fileID: 0}
     - target: {fileID: 4179216466411588, guid: 508bac89fba174e47ae43c0fceebd11f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 33
@@ -75763,31 +75836,6 @@ PrefabInstance:
     - target: {fileID: 4179216466411588, guid: 508bac89fba174e47ae43c0fceebd11f, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 9193467951168187030, guid: 508bac89fba174e47ae43c0fceebd11f,
-        type: 3}
-      propertyPath: path.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 9193467951168187030, guid: 508bac89fba174e47ae43c0fceebd11f,
-        type: 3}
-      propertyPath: path.Array.data[0].z
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 9193467951168187030, guid: 508bac89fba174e47ae43c0fceebd11f,
-        type: 3}
-      propertyPath: path.Array.data[1].z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9193467951168187030, guid: 508bac89fba174e47ae43c0fceebd11f,
-        type: 3}
-      propertyPath: path.Array.data[1].x
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 9193467951168187030, guid: 508bac89fba174e47ae43c0fceebd11f,
-        type: 3}
-      propertyPath: path.Array.data[2].z
-      value: -20
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8171876436019675987, guid: 508bac89fba174e47ae43c0fceebd11f, type: 3}
@@ -83521,6 +83569,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Ship
       objectReference: {fileID: 0}
+    - target: {fileID: 9193467951168187030, guid: 508bac89fba174e47ae43c0fceebd11f,
+        type: 3}
+      propertyPath: path.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4179216466411588, guid: 508bac89fba174e47ae43c0fceebd11f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -51
@@ -83576,11 +83629,6 @@ PrefabInstance:
     - target: {fileID: 4179216466411588, guid: 508bac89fba174e47ae43c0fceebd11f, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.25000012
-      objectReference: {fileID: 0}
-    - target: {fileID: 9193467951168187030, guid: 508bac89fba174e47ae43c0fceebd11f,
-        type: 3}
-      propertyPath: path.Array.size
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 508bac89fba174e47ae43c0fceebd11f, type: 3}

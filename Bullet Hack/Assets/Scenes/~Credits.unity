@@ -904,64 +904,14 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: '<b><size=42>The Kadoku Project</size></b>
-
-
-    <b>Lead Designer:</b>
-
-    Fabian Figueroa
-
-
-    <b>Lead Programmer:</b>
-
-    Arthur Uzulin
-
-
-    <b>Lead 3D Artist:</b>
-
-    Teng Jing Lun
-
-
-    <b>Lead 2D Artist:</b>
-
-    Acxell Leandro
-
-
-    <b>Artists</b>
-
-    Fabian Figueroa
-
-
-    <b>Sound FX Designers:</b>
-
-    Arthur Uzulin
-
-    Fabian Figueroa
-
-
-    <b>Music:</b>
-
-    <i>Missingno</i>
-
-
-    <b><size=38>Tools:</size></b>
-
-
-
-
-
-
-
-
-    <b><size=38>Made Possible By:</size></b>
-
-
-
-
-
-
-
-    <b><size=48>Thank you for playing</size></b>'
+  m_text: "<b><size=42>The Kadoku Project</size></b>\r\n\r\n<b>Lead Designer:</b>\r\nFabian
+    Figueroa\r\n\r\n<b>Lead Programmer:</b>\r\nArthur Uzulin\r\n\r\n<b>Lead 3D Artist:</b>\r\nTeng
+    Jing Lun\r\n\r\n<b>Lead 2D Artist:</b>\r\nAcxell Leandro\r\n\r\n<b>Artists</b>\r\nFabian
+    Figueroa\r\n\r\n<b>Sound FX Designers:</b>\r\nArthur Uzulin\r\nFabian Figueroa\r\n\r\n<b>Music:</b>\r\n<b>Kevin
+    MacLeod</b> - Backbeat\r\n<b>Kevin MacLeod</b> - Arpent\n<b>Kevin MacLeod</b>
+    - Goodnightmare\r\n<b>Kevin MacLeod</b> - Beat One\r\n<b>Rafael Krux</b> - Spec
+    Ops\r\n\r\n<b><size=38>Tools:</size></b>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n<b><size=38>Made
+    Possible By:</size></b>\r\n\r\n\r\n\r\n\r\n\r\n\r\n<b><size=48>Thank you for playing</size></b>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1030,12 +980,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 969073115}
-    characterCount: 300
+    characterCount: 458
     spriteCount: 0
-    spaceCount: 62
-    wordCount: 42
+    spaceCount: 83
+    wordCount: 63
     linkCount: 0
-    lineCount: 40
+    lineCount: 44
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
@@ -1177,7 +1127,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -1235}
+  m_AnchoredPosition: {x: 0, y: -1402.2305}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1211370585
@@ -1237,7 +1187,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -1547.7247}
+  m_AnchoredPosition: {x: 0, y: -1714.498}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &1962629837
